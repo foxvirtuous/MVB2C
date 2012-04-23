@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    The Terms object definitions for the Data Access Objects.
+  </description>
+
+  <!-- Database and NHibernate Configuration -->
+
+
+  <object id="BussHibernateTransactionManager" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="BussDbProvider"/>
+    <property name="SessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object id="BussHibernateTransactionManager_dbEn" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="BussDbProvider_dbCn"/>
+    <property name="SessionFactory" ref="ProductSessionFactory_dbCn"/>
+  </object>
+
+  <object id="ProductHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+    <property name="SessionFactory" ref="ProductSessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+  <object id="ProductHibernateTemplate_dbCn" type="Spring.Data.NHibernate.HibernateTemplate">
+    <property name="SessionFactory" ref="ProductSessionFactory_dbCn" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+  <object id="ProductSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="BussDbProvider"/>
+    <property name="MappingAssemblies">
+      <list>
+        <value>Terms.Product.Dao.NHibernate</value>
+        <value>Terms.Security.Dao.NHibernate</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="hibernate.dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
+        <entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+        <entry key="hibernate.current_session_context_class" value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate12"/>
+      </dictionary>
+    </property>
+  </object>
+
+  <object id="ProductSessionFactory_dbCn" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="BussDbProvider_dbCn"/>
+    <property name="MappingAssemblies">
+      <list>
+        <value>Terms.Product.Dao.NHibernate</value>
+        <value>Terms.Security.Dao.NHibernate</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="hibernate.dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
+        <entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+        <entry key="hibernate.current_session_context_class" value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate12"/>
+      </dictionary>
+    </property>
+  </object>
+
+  <object id="ProductDao"  type="Terms.Product.Dao.NHibernate.HibernatetProductDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="ProductDao_dbCn"  type="Terms.Product.Dao.NHibernate.HibernatetProductDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate_dbCn"/>
+  </object>
+
+  <object id="ProductItemDao"  type="Terms.Product.Dao.NHibernate.HibernateProductItemDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="ProductItemDao_dbCn"  type="Terms.Product.Dao.NHibernate.HibernateProductItemDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate_dbCn"/>
+  </object>
+
+  <object id="HotelMarkUpDao"  type="Terms.Product.Dao.NHibernate.HibernateHotelMarkUpDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="SubMarkUpDao"  type="Terms.Product.Dao.NHibernate.HibernateSubMarkUpDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="PackageSubMarkUpDao"  type="Terms.Product.Dao.NHibernate.HibernatePackageSubMarkUpDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="HotelProductItemDao"  type="Terms.Product.Dao.NHibernate.HibernateHotelProductItemDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="PackageMarkupDao"  type="Terms.Product.Dao.NHibernate.HibernatePackageMarkupDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="AirProductItemDao"  type="Terms.Product.Dao.NHibernate.HibernateAirProductItemDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="AirSearchRuleDao"  type="Terms.Product.Dao.NHibernate.HibernateAirSearchRuleDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="AirMarkUpDao"  type="Terms.Product.Dao.NHibernate.HibernateAirMarkUpDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="ProductItemGroupDao"  type="Terms.Product.Dao.NHibernate.HibernateProductItemGroupDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="ProductItemGroupDao_dbCn"  type="Terms.Product.Dao.NHibernate.HibernateProductItemGroupDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate_dbCn"/>
+  </object>
+
+  <object id="HotelSearchRuleDao"  type="Terms.Product.Dao.NHibernate.HibernateTHotelSearchRuleDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+ 
+  <object id="FareMasterDao" type="Terms.Product.Dao.NHibernate.HibernateFareMasterDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object> 
+
+  <object id="AreaMasterDao" type="Terms.Product.Dao.NHibernate.HibernateAreaMasterDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="AreaDetailDao" type="Terms.Product.Dao.NHibernate.HibernateAreaDetailDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="ProductAttachmentMasterDao" type="Terms.Base.Dao.NHibernate.AttachmentMasterDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="ProductAttachmentMasterDao_dbCn" type="Terms.Base.Dao.NHibernate.AttachmentMasterDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate_dbCn"/>
+  </object>
+
+  <object id="ProductAttachedTextDao" type="Terms.Base.Dao.NHibernate.AttachedTextDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="ProductAttachedTextDao_dbCn" type="Terms.Base.Dao.NHibernate.AttachedTextDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate_dbCn"/>
+  </object>
+
+  <object id="ProductAttachedImageDao" type="Terms.Base.Dao.NHibernate.AttachedImageDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="TourPassedCityDao" type="Terms.Product.Dao.NHibernate.HibernateTourPassedCityDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="TourProductProfileDao" type="Terms.Product.Dao.NHibernate.HibernateTourProductProfileDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="TourProductProfileDao_dbCn" type="Terms.Product.Dao.NHibernate.HibernateTourProductProfileDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate_dbCn"/>
+  </object>
+
+  <object id="TourUsedAirlinesDao" type="Terms.Product.Dao.NHibernate.HibernateTourUsedAirlinesDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="TourItineraryProfileDao" type="Terms.Product.Dao.NHibernate.HibernateTourItineraryProfileDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="TourItineraryProfileDaoCn" type="Terms.Product.Dao.NHibernate.HibernateTourItineraryProfileDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate_dbCn"/>
+  </object>
+
+  <object id="TourPriceDao" type="Terms.Product.Dao.NHibernate.HibernateTourPriceDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="HibernateDistributionDao" type="Terms.Product.Dao.NHibernate.HibernateDistributionDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="MarkupMasterDao" type="Terms.Product.Dao.NHibernate.HibernateMarkupMasterDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="AirMarkupRuleDao" type="Terms.Product.Dao.NHibernate.HibernateAirMarkupRuleDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  
+  <object id="AirMarkupRuleMasterDao" type="Terms.Product.Dao.NHibernate.HibernateAirMarkupRuleMasterDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="AirMarkupRuleDetailDao" type="Terms.Product.Dao.NHibernate.HibernateAirMarkupRuleDetailDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="HotelMarkupRuleDetailDao" type="Terms.Product.Dao.NHibernate.HibernateHotelMarkupRuleDetailDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="TourMarkupRuleDetailDao" type="Terms.Product.Dao.NHibernate.HibernateTourMarkupRuleDetailDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="GeneralMarkupDao" type="Terms.Product.Dao.NHibernate.HibernateGeneralMarkupDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="RangeMarkupMasterDao" type="Terms.Product.Dao.NHibernate.HibernateRangeMarkupMasterDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="RangeMarkupSectionDao" type="Terms.Product.Dao.NHibernate.HibernateRangeMarkupSectionDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="ProductPeriodDao" type="Terms.Product.Dao.NHibernate.HibernateProductPeriodDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="SuggestedRetailPriceDao" type="Terms.Product.Dao.NHibernate.HibernateSuggestedRetailPriceDao, Terms.Product.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+	<object id="VehicleProductItemDao"  type="Terms.Product.Dao.NHibernate.HibernateVehicleProductItemDao, Terms.Product.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+	</object>
+
+	<object id="VehicleSearchRuleDao"  type="Terms.Product.Dao.NHibernate.HibernateVehicleSearchRuleDao, Terms.Product.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+	</object>
+</objects>

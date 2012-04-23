@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TourInfos>
+	<Tour>
+		<CityList>
+			<city code="NYC">New York City</city>
+		</CityList>
+		<ShowArea>East Coast</ShowArea>
+	</Tour>
+	<Tour>
+		<CityList>
+			<city code="LAX">LOS ANGELES</city>
+		</CityList>
+		<ShowArea>West Coast</ShowArea>
+	</Tour>
+	<Tour>
+		<CityList>
+			<city code="ORL">Orlando</city>
+		</CityList>
+		<ShowArea>Orlando</ShowArea>
+	</Tour>
+	<Tour>
+		<CityList>
+			<city code="BKH">Kekaha</city>
+			<city code="HPV">Hanalei</city>
+			<city code="ITO">Hilo</city>
+			<city code="HNL">Honolulu</city>
+		</CityList>
+		<ShowArea>Hawaii</ShowArea>
+	</Tour>
+	<Tour>
+		<CityList>
+			<city code="PEK">beijing</city>
+			<city code="SHA">shanghai</city>
+			<city code="HKG">hong kong</city>
+			<city code="TYO">Tokyo</city>
+			<city code="OSA">Osaka</city>
+			<city code="SEL">Seoul</city>
+			<city code="TPE">Taipei</city>
+		</CityList>
+		<ShowArea>Asia</ShowArea>
+	</Tour>
+	<!--<Tour>
+		<Name>Japan &amp; Korea</Name>
+		<CityList>
+			<city code="TYO">Tokyo</city>
+			<city code="OSA">Osaka</city>
+			<city code="SEL">Seoul</city>
+		</CityList>
+		<Image>grp_l06.jpg</Image>
+		<TourArea>Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Europe</Name>
+		<CityList>
+			<city code="PAR">Paris</city>
+		</CityList>
+		<Image>grp_l07.jpg</Image>
+		<TourArea>Europe</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Mexico &amp; Caribbean</Name>
+		<CityList>
+			<city code=""></city>
+		</CityList>
+		<Image>grp_l08.jpg</Image>
+		<TourArea>Tour-Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Taiwan</Name>
+		<CityList>
+			<city code="TPE">Taipei</city>
+		</CityList>
+		<Image>grp_l10.jpg</Image>
+		<TourArea>Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>South East Asia</Name>
+		<CityList>
+			<city code="SIN">Singapore</city>
+			<city code="BKK">Bangkok</city>
+			<city code="SGN">Saigon</city>
+		</CityList>
+		<Image>grp_l09.jpg</Image>
+		<TourArea>Southeast Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Middle East &amp; Africa</Name>
+		<CityList>
+			<city code="CAI">Cairo</city>
+		</CityList>
+		<Image>grp_l11.jpg</Image>
+		<TourArea>Middle East &amp; Africa</TourArea>
+	</Tour>
+	<Tour>
+		<Name>South America</Name>
+		<CityList>
+			<city code=""></city>
+		</CityList>
+		<Image>grp_l12.jpg</Image>
+		<TourArea>South America</TourArea>
+	</Tour>-->
+</TourInfos>

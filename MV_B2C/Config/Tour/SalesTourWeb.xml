@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<object name="TourBookingPageForm"  type="~/Page/Tour/TourBookingPage.Master">
+		<property name="AirService" ref="AirService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="TopDestinationsDetailConfigService" ref="TopDestinationsDetailConfigService" />
+		<property name="AdvertiseService" ref="AdvertiseService" />
+		<!--<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />-->
+	</object>
+
+
+
+	<object name="TourSearchResultForm" type="~/Page/Tour/TourSearchResultForm.aspx" parent="SalseBasePage">
+		<!--<property name="AirService" ref="AirService" />-->
+		<!--<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+	</object>
+	<object name="TourMoreSearchResultForm" type="~/Page/Tour/TourMoreSearchResultForm.aspx" parent="SalseBasePage">
+	</object>
+	<object name="NewTourMoreSearchResultForm" type="~/Page/Tour/NewTourMoreSearchResultForm.aspx" parent="SalseBasePage">
+		<property name="TopDestinationsDetailConfigService" ref="TopDestinationsDetailConfigService" />
+	</object>
+	<object name="NewTourSelectTourForm" type="~/Page/Tour/NewTourSelectTourForm.aspx" parent="SalseBasePage">
+	</object>
+	<object name="TourSelectTourForm" type="~/Page/Tour/TourSelectTourForm.aspx" parent="SalseBasePage">
+		<property name="AirService" ref="AirService" />
+		<!--<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+	</object>
+	<object name="TourSelectAirForm" type="~/Page/Tour/TourSelectAirForm.aspx" parent="SalseBasePage">
+		<property name="AirService" ref="AirService" />
+		<!--<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+	</object>
+	<!--<object name="TourSearchingAirForm" type="~/Page/Tour/TourSearchingAirForm.aspx" parent="SalseBasePage">
+    -->
+	<!--<property name="AirService" ref="AirService" />-->
+	<!--
+    -->
+	<!--<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+	<!--
+  </object>-->
+	<!--<object name="TourPaymentInfoForm" type="~/Page/Tour/TourPaymentInfoForm.aspx" parent="SalseBasePage">
+    -->
+	<!--<property name="AirService" ref="AirService" />-->
+	<!--
+    -->
+	<!--<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+	<!--
+  </object>-->
+	<object name="TourSuccessInfoForm" type="~/Page/Tour/TourSuccessInfoForm.aspx" parent="SalseBasePage">
+		<!--<property name="AirService" ref="AirService" />-->
+		<!--<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+	</object>
+	<object name="TourTravelerInfoForm" type="~/Page/Tour/TourTravelerInfoForm.aspx" parent="SalseBasePage">
+		<property name="SaleOrderService" ref="SaleOrderService" />
+		<property name="AirService" ref="AirService" />
+		<!--<property name="AirService" ref="AirService" />-->
+		<!--<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+	</object>
+	<object name="SearchConditionsMeassageTForm" type="~/Page/Tour/SearchConditionsMeassageTForm.aspx" parent="SalseBasePage">
+	</object>
+
+	<object name="EmailTourPDF" type="~/Page/Tour/EmailTourPDF.aspx" parent="SalseBasePage">
+	</object>
+
+	<object name="NewTourSearchEngineerListForm" type="~/Page/Tour/NewTourSearchEngineerListForm.aspx" parent="SalseBasePage">
+	</object>
+
+	<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+		<property name="ObjectNames">
+			<list>
+				<value>*Form</value>
+			</list>
+		</property>
+		<property name="InterceptorNames">
+			<list>
+				<value>AutoAfterThrowAdvice</value>
+			</list>
+		</property>
+	</object>
+</objects>

@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+	<object id="DayOfWeekGroupDao" type="Terms.Contract.Dao.NHibernate_0407.DayOfWeekGroupDao, Terms.Contract.Dao.NHibernate_0407">
+		<property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+	</object>
+</objects>

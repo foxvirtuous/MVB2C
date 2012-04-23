@@ -1,0 +1,26 @@
+﻿<NewDataSet>
+  <LAX>
+    <CityCode>LAX,SAN,ALH,SNA,DEN,PDX</CityCode>
+    <SalesName>Rhonda Eggers,Terru Guo</SalesName>
+    <SalesEmail>reggers@majestic-vacations.com,tguo@majestic-vacations.com</SalesEmail>
+    <SalesTel>1-(888)-288-7528</SalesTel>
+  </LAX>
+  <SFO>
+    <CityCode>SFO,BUR,OAK,SJC,SEA</CityCode>
+    <SalesName>Eva Deng,Tracy Poon</SalesName>
+    <SalesEmail>eva.bur@gtttravel.com,tracy.sfo@gtttravel.com</SalesEmail>
+    <SalesTel>1-(888)-288-7528</SalesTel>
+  </SFO>
+  <NYC>
+    <CityCode>NYC,BOS,IAD,PHL,MIA</CityCode>
+    <SalesName>Celia Yu,Yvonne Leung,Geoff Wong</SalesName>
+    <SalesEmail>cyu@majestic-vacations.com,yvonne.usa@gtttravel.com,gtt.usa@gtttravel.com</SalesEmail>
+    <SalesTel>1-(888)-288-7528</SalesTel>
+  </NYC>
+  <DEFAULT>
+    <CityCode></CityCode>
+    <SalesName>Christine Chiang,Kathryn Potitha</SalesName>
+    <SalesEmail>cchiang@majestic-vacations.com,kpotitha@majestic-vacations.com</SalesEmail>
+    <SalesTel>1-(888)-288-7528 ext. 6268 or 6269</SalesTel>
+  </DEFAULT>
+</NewDataSet>

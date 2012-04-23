@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+	<object type="~/Terms.Base.Web/HotelMainFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/EventMainFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/EventEditFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/VesselMainFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/VesselEditFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/RestaurantMainFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+
+	</object>
+
+	<object type="~/Terms.Base.Web/RestaurantEditFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/FoodMainFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/FoodEditFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/CoachMainFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/CoachEditFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/SightMainFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/SightEditFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/HotelRoomMainFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/HotelRoomEditFrom.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/AttachmentMasterMainForm.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Base.Web/AttachmentMasterEditForm.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+
+	<object type="~/testSelectHotelRoom.aspx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+  <object type="~/Terms.Base.Web/AttachedImageEditForm.aspx">
+    <property name="BaseService" ref="BaseService" />
+  </object>
+
+  <!--<object type="~/Terms.Base.Web/TypeMasterForm.aspx">
+    <property name="BaseService" ref="BaseService" />
+  </object>-->
+
+  <object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+</objects>

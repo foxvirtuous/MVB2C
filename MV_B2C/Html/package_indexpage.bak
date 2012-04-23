@@ -1,0 +1,176 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Language" content="en-us" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Untitled Page</title>
+    <style type="text/css">
+    body{ margin:0px; padding:0px;}
+      table.T_sale01   { font-size: 10px; line-height: 12px; color: #000000; font-family: Verdana;}
+      table.T_sale   { background: #CCCCCC; border: 0;}
+      .head03{ color:#FF3300; font-size: 12px; line-height: 16px; font-family: Verdana; font-weight: bold;}
+      a.d02 {  font-size: 10px; line-height: 20px; color: #CC0000; text-decoration: none; font-family: Verdana; font-weight: bold;}
+      a.d02:hover {  font-size: 10px; line-height: 20px; color: #CC0000; text-decoration: underline; font-family: Verdana; font-weight: bold;}
+      a.d03 {  font-size: 10px; line-height: 20px; color: #005599; text-decoration: none; font-family: Verdana;}
+      a.d03:hover {  font-size: 10px; line-height: 20px; color: #FF3300; text-decoration: none; font-family: Verdana;}
+      a.d04 {  font-size: 10px; line-height: 14px; color: #005599; text-decoration: none; font-family: Verdana; font-weight: bold;}
+      a.d04:hover {  font-size: 10px; line-height: 14px; color: #005599; text-decoration: underline; font-family: Verdana; font-weight: bold;}
+      .txt01{ color:#CC0000; font-size: 10px; line-height: 14px; font-family: Verdana; font-weight: bold;}
+      tr.R_cost   { font-size: 10px; line-height: 14px; color: #000000; font-family: Verdana;}
+      tr.R_top  { font-size: 9px; line-height: 14px; color: #CC0000; font-family: Verdana;}
+      a.grp_name {  font-size: 11px; line-height: 24px; color: #005599; text-decoration: none; font-family: Arial;}
+      a.grp_name:hover {  font-size: 11px; line-height: 24px; color: #FF6600; text-decoration: none; font-family: Arial;}
+      a.grp_more {  font-size: 11px; color: #005599; text-decoration: underline; font-family: Verdana;}
+      a.grp_more:hover {  font-size: 11px; color: #005599; text-decoration: none; font-family: Verdana;}
+    </style>
+</head>
+<body>
+    <table width="605" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td height="10">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table width="605" border="0" cellpadding="0" cellspacing="1" class="T_sale">
+                    <tr>
+                        <td align="left" bgcolor="#FFFFFF">
+                            <table width="603" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="8">
+                                    </td>
+                                    <td align="left" valign="top">
+                                        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="10" colspan="8">
+                                                </td>
+                                            </tr>
+                                            <tr align="left">
+                                                <td colspan="8">
+                                                    <font class="head03">Top Destinations</font></td>
+                                            </tr>
+                                            <tr>
+                                                <td height="8" colspan="8">
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                            <tr class="R_top">
+                                                <td align="center">
+                                                    <a href="/Page/Package/PackageRedirect.aspx?ToCity=HNL" class="d01" target="_top">
+                                                        <img src="/images/v2/top_pkg01.gif" hspace="3" border="0" align="absmiddle"><br>
+                                                        <u>Hawaii</u></a><br>
+                                                </td>
+                                                <td align="center">
+                                                    <a href="/Page/Package/PackageRedirect.aspx?ToCity=SFO" class="d01" target="_top">
+                                                        <img src="/images/v2/top_pkg02.gif" hspace="3" border="0" align="absmiddle"><br>
+                                                        <u>San Francisco</u></a><br>
+                                                </td>
+                                                <td align="center">
+                                                    <a href="/Page/Package/PackageRedirect.aspx?ToCity=MCO" class="d01" target="_top">
+                                                        <img src="/images/v2/top_pkg03.gif" hspace="3" border="0" align="absmiddle"><br>
+                                                        <u>Orlando</u></a><br>
+                                                </td>
+                                                <td align="center">
+                                                    <a href="/Page/Package/PackageRedirect.aspx?ToCity=LVS" class="d01" target="_top">
+                                                        <img src="/images/v2/top_pkg04.gif" hspace="3" border="0" align="absmiddle"><br>
+                                                        <u>Las Vegas</u></a><br>
+                                                </td>
+                                                <td align="center">
+                                                    <a href="/Page/Package/PackageRedirect.aspx?ToCity=TYO" class="d01" target="_top">
+                                                        <img src="/images/v2/top_pkg05.gif" hspace="3" border="0" align="absmiddle"><br>
+                                                        <u>Tokyo</u></a><br>
+                                                </td>
+                                                <td align="center">
+                                                    <a href="/Page/Package/PackageRedirect.aspx?ToCity=BKK" class="d01" target="_top">
+                                                        <img src="/images/v2/top_pkg06.gif" hspace="3" border="0" align="absmiddle"><br>
+                                                        <u>Bangkok</u></a><br>
+                                                </td>
+                                                <td align="center">
+                                                    <a href="/Page/Package/PackageRedirect.aspx?ToCity=TPE" class="d01" target="_top">
+                                                        <img src="/images/v2/top_pkg07.gif" hspace="3" border="0" align="absmiddle"><br>
+                                                        <u>Taipei</u></a><br>
+                                                </td>
+                                                <td align="center">
+                                                    <a href="/Page/Package/PackageRedirect.aspx?ToCity=HKG" class="d01" target="_top">
+                                                        <img src="/images/v2/top_pkg08.gif" hspace="3" border="0" align="absmiddle"><br>
+                                                        <u>Hong Kong</u></a><br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="10" colspan="8">
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="8">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td height="10">
+            </td>
+        </tr>
+        <tr>
+            <td height="10">
+                <table width="605" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td width="50%" align="center" valign="top">
+                            <table width="290" border="0" align="center" cellpadding="0" cellspacing="0" class="T_sale01">
+                                <tr align="left">
+                                    <td colspan="2">
+                                        <font class="head03">Featured Promos</font></td>
+                                </tr>
+                                <tr>
+                                    <td width="122" align="left" valign="top">
+                                        <img src="/images/v2/sale_pkg01.gif" vspace="5" border="0" align="absmiddle" /></td>
+                                    <td align="left" valign="top">
+                                        <a href="/Promos/hktdc_080925_2.htm" class="d06" target="_top">Hong Kong Special Fares From $881</a><br />
+                                        Exclusive Air & Hotel fares to HKTDC(Hong Kong Trade Development Council) trade
+                                        show customers.</td>
+                                </tr>
+                                <tr>
+                                    <td height="10" colspan="2">
+                                    </td>
+                                </tr>
+                            </table>
+                            <table width="290" border="0" align="center" cellpadding="0" cellspacing="0" class="T_sale01">
+                                <tr>
+                                    <td width="122" align="left" valign="top">
+                                        <img src="/images/v2/sale_pkg02.gif" vspace="5" border="0" align="absmiddle" /></td>
+                                    <td align="left" valign="top">
+                                        <a href="/Promos/081218.htm" class="d06" target="_top">Regal Oriental Hong Kong From $630</a><br />
+                                        Air & 5 Nights 4 Star Hotel Pakcage.</td>
+                                </tr>
+                                <tr>
+                                    <td height="10" colspan="2">
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td width="50%" valign="top">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="1" class="T_sale">
+                                <tr>
+                                    <td height="23" align="left" background="/images/v2/bg_t02.gif">
+                                        &nbsp;&nbsp;<font class="head03">Choose Your Destination</font></td>
+                                </tr>
+                                <tr>
+                                    <td height="23" align="left" bgcolor="#FFFFFF">
+        
+                                        <iframe src="/Html/map01.htm" width="305" height="150" name="ifrm" id="Iframe1" scrolling="no"
+                                            frameborder="0"></iframe>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

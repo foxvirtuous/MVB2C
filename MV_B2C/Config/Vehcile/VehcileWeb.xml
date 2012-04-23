@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<object name="SearchConditionsMeassageCForm" type="~/Page/Vehcile/SearchConditionsMeassageCForm.aspx" parent="SalseBasePage">
+		   
+	</object>
+
+	<object name="SearchConditionsErrorMeassageCForm" type="~/Page/Vehcile/SearchConditionsErrorMeassageCForm.aspx" parent="SalseBasePage">
+		<property name="CityService" ref="CityService" />
+		<property name="AirportService" ref="AirportService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+	</object>
+
+	<object name="VehcileInfoViewForm" type="~/Page/Vehcile/VehcileInfoViewForm.aspx" parent="SalseBasePage">
+	</object>
+
+	<object name="VehcilePriceForm" type="~/Page/Vehcile/VehcilePriceForm.aspx" parent="SalseBasePage">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object name="VehcilePriceTravelForm" type="~/Page/Vehcile/VehcilePriceTravelForm.aspx" parent="SalseBasePage">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object name="VehcileSuccForm" type="~/Page/Vehcile/VehcileSuccForm.aspx" parent="SalseBasePage">
+	</object>
+	
+	<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+		<property name="ObjectNames">
+			<list>
+				<value>*Form</value>
+			</list>
+		</property>
+		<property name="InterceptorNames">
+			<list>
+				<value>AutoAfterThrowAdvice</value>
+			</list>
+		</property>
+	</object>
+</objects>

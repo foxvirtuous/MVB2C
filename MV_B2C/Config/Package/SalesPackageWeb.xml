@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+  <object name="MerchandiseSearcherPage" abstract="true">
+    <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+  </object>
+  
+  <object id="PackageSearchMoreForm" type="~/Page/Package/PackageSearchMoreForm.aspx" parent="SalseBasePage">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object id="PackageSearchResultForm"  type="~/Page/Package/PackageSearchResultForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object id="PackageSearchForm"  type="~/Page/Package/PackageSearchForm.aspx" parent="SalseBasePage">
+    <property name="BaseService" ref="BaseService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="AirService" ref="AirService" />
+  </object>
+
+	<object id="PackageRedirect"  type="~/Page/Package/PackageRedirect.aspx">
+		<property name="CommonService" ref="CommonService" />
+		<property name="AirService" ref="AirService" />
+  </object>
+
+  <object id="SearchConditionsMeassageForm"  type="~/Page/Package/SearchConditionsMeassageForm.aspx" parent="SalseBasePage">
+    <property name="CommonService" ref="CommonService" /> 
+  </object>
+  
+  <object type="~/UserControls/ShowPackageHotelDetails.ascx">
+    <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object id="PackageSearch2dForm"  type="~/Page/Package/PackageSearch2dForm.aspx" parent="SalseBasePage">
+    <property name="CommonService" ref="CommonService" />
+	  <property name="AirService" ref="AirService" />
+	  <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+  </object>
+  
+  <object id="PackageSummaryFrom"  type="~/Page/Package/PackageSummaryFrom.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+  </object>
+
+  <object name="PackageChangeFlightForm"  type="~/Page/Package/PackageChangeFlightForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="PackageSearchResult2dForm"  type="~/Page/Package/PackageSearchResult2dForm.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+    <property name="OrderTermsConditionsService" ref="OrderTermsConditionsService" />
+  </object>
+
+  <object name="PackageSelectRoomsForm"  type="~/Page/Package/PackageSelectRoomsForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="PackageTravelerForm"  type="~/Page/Package/PackageTravelerForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="PackageCreditForm"  type="~/Page/Package/PackageCreditForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="PackageTravelerInsurance"  type="~/Page/Package/PackageTravelerInsurance.aspx" parent="SalseBasePage">
+  </object>
+
+  <object id="SelectRoomRates"  type="~/Page/Package2/SelectRoomRates.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+    <property name="OrderTermsConditionsService" ref="OrderTermsConditionsService" />
+  </object>
+
+  <object id="ViewYourPackages"  type="~/Page/Package2/ViewYourPackages.aspx" parent="SalseBasePage">
+  </object>
+
+  <object id="TravelersContactInformation"  type="~/Page/Package2/TravelersContactInformation.aspx" parent="SalseBasePage">
+  </object>
+
+  <object id="CreditCardInformation"  type="~/Page/Package2/CreditCardInformation.aspx" parent="SalseBasePage">
+  </object>
+
+  <object id="ChangeFlightsInformation"  type="~/Page/Package2/ChangeFlightsInformation.aspx" parent="SalseBasePage">
+  </object>
+
+  <object id="SucceedFrom"  type="~/Page/Package2/SucceedFrom.aspx" parent="SalseBasePage">
+  </object>
+
+  <object id="PackageSearchTwoDestinations"  type="~/Page/Package2/PackageSearchTwoDestinations.aspx" parent="SalseBasePage">
+    <property name="CommonService" ref="CommonService" />
+    <property name="AirService" ref="AirService" />
+    <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+  </object>
+
+  <object id="PackageMoreSearch" type="~/Page/Package2/PackageMoreSearch.aspx" parent="SalseBasePage">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+	<object id="SearchConditionsMeassageAHForm"  type="~/Page/Package2/SearchConditionsMeassageAHForm.aspx" parent="SalseBasePage">
+		<property name="CommonService" ref="CommonService" />
+		<property name="AirService" ref="AirService" />
+		<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+	</object>
+
+	
+	<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Form</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+</objects>

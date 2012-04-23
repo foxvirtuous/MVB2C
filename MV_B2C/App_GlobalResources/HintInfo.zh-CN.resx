@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Account" xml:space="preserve">
+    <value>帳戶</value>
+  </data>
+  <data name="Adult" xml:space="preserve">
+    <value>大人數</value>
+  </data>
+  <data name="AgeBigger" xml:space="preserve">
+    <value>年齡超過11歲!</value>
+  </data>
+  <data name="AirDateError" xml:space="preserve">
+    <value>航班出發日不可低於訂購日3日內,請重新選擇出發日期或請打服務專線 1-(888)-288-7528 ,由客服人員為您處理</value>
+  </data>
+  <data name="AndIs" xml:space="preserve">
+    <value>和密碼是</value>
+  </data>
+  <data name="AsOne" xml:space="preserve">
+    <value>如果無法得到您的原使密碼,我們將重新產生新密碼給您。</value>
+  </data>
+  <data name="Birthday" xml:space="preserve">
+    <value>生日</value>
+  </data>
+  <data name="BirthdayError" xml:space="preserve">
+    <value>輸入的日期格式錯誤。</value>
+  </data>
+  <data name="BookingFailed" xml:space="preserve">
+    <value>訂位失敗!</value>
+  </data>
+  <data name="BookingTicketFailure" xml:space="preserve">
+    <value>您選擇的機票無效，請更改搜尋條件後重新搜尋或撥打咨詢電話：</value>
+  </data>
+  <data name="BookingTime" xml:space="preserve">
+    <value>訂位時間</value>
+  </data>
+  <data name="BusinessClassWarnMessage" xml:space="preserve">
+    <value>短途旅行的機型可能沒有商務艙。</value>
+  </data>
+  <data name="CabinClass" xml:space="preserve">
+    <value>艙等</value>
+  </data>
+  <data name="CanNotBooking" xml:space="preserve">
+    <value>抱歉,無效的航段,請選擇其它航段!</value>
+  </data>
+  <data name="CaseNumber" xml:space="preserve">
+    <value>訂單編號</value>
+  </data>
+  <data name="ChangeFlightType" xml:space="preserve">
+    <value>更改航班</value>
+  </data>
+  <data name="CheckPassword" xml:space="preserve">
+    <value>請確認您目前的密碼。</value>
+  </data>
+  <data name="Child" xml:space="preserve">
+    <value>小孩數</value>
+  </data>
+  <data name="ConfirmationEmail" xml:space="preserve">
+    <value>我們將會在三個工作天內寄出確認email.</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="Dear" xml:space="preserve">
+    <value>親愛的</value>
+  </data>
+  <data name="DepDate" xml:space="preserve">
+    <value>出發時間</value>
+  </data>
+  <data name="DISP_MESSAGE" xml:space="preserve">
+    <value>訂購成功後,將會立即告知您確切抵達和出發的航班時間以及航空公司名稱。</value>
+  </data>
+  <data name="EmailAnother" xml:space="preserve">
+    <value>所輸入的email已有人使用,請選擇其它email。</value>
+  </data>
+  <data name="EmailNotRrecognized" xml:space="preserve">
+    <value>您所提供的email格式不正確,請重新輸入。</value>
+  </data>
+  <data name="EmptyID" xml:space="preserve">
+    <value>請輸入您的帳戶</value>
+  </data>
+  <data name="EmptyPassword" xml:space="preserve">
+    <value>請輸入您的帳戶密碼</value>
+  </data>
+  <data name="EnterAddress" xml:space="preserve">
+    <value>請確實輸入您的聯絡地址。</value>
+  </data>
+  <data name="EnterBirthday" xml:space="preserve">
+    <value>請確實輸入您的出生年月日。</value>
+  </data>
+  <data name="EnterCity" xml:space="preserve">
+    <value>請確實輸入您所居住的城市。</value>
+  </data>
+  <data name="EnterDPhone" xml:space="preserve">
+    <value>請確實輸入白天的聯絡電話。</value>
+  </data>
+  <data name="EnterFirst" xml:space="preserve">
+    <value>請確實輸入和護照相同的名。</value>
+  </data>
+  <data name="EnterLast" xml:space="preserve">
+    <value>請確實輸入和護照相同的姓。</value>
+  </data>
+  <data name="EnterPassword" xml:space="preserve">
+    <value>請確實輸入您的密碼。</value>
+  </data>
+  <data name="EnterPostal" xml:space="preserve">
+    <value>請確實輸入您居住的郵遞區號。</value>
+  </data>
+  <data name="EnterVerity" xml:space="preserve">
+    <value>請確認您的密碼是否正確。</value>
+  </data>
+  <data name="err1" xml:space="preserve">
+    <value>您所搜尋的條件已移除,請重新搜尋</value>
+  </data>
+  <data name="err10" xml:space="preserve">
+    <value>出發日必須是7天</value>
+  </data>
+  <data name="err11" xml:space="preserve">
+    <value>我們只接受</value>
+  </data>
+  <data name="err12" xml:space="preserve">
+    <value>和 12/27/2008 之間,請輸入日期</value>
+  </data>
+  <data name="err13" xml:space="preserve">
+    <value>無法找到</value>
+  </data>
+  <data name="err14" xml:space="preserve">
+    <value>email格式輸入錯誤</value>
+  </data>
+  <data name="err2" xml:space="preserve">
+    <value>確定麼?</value>
+  </data>
+  <data name="err3" xml:space="preserve">
+    <value>請確認所有的資訊都是正確的,然後點</value>
+  </data>
+  <data name="err4" xml:space="preserve">
+    <value>您搜尋的商品目前無法訂購,請選擇其它日期和目的地</value>
+  </data>
+  <data name="err5" xml:space="preserve">
+    <value>入住日必須是隔一天,請重新輸入</value>
+  </data>
+  <data name="err6" xml:space="preserve">
+    <value>退房日必須是入住日之後,請重新輸入</value>
+  </data>
+  <data name="err7" xml:space="preserve">
+    <value>出發日必須在回程日之前,請重新輸入</value>
+  </data>
+  <data name="err8" xml:space="preserve">
+    <value>回程日必須在退房日之後，請重新輸入</value>
+  </data>
+  <data name="err9" xml:space="preserve">
+    <value>回程日必需是7天</value>
+  </data>
+  <data name="ErrorMessage" xml:space="preserve">
+    <value>錯誤訊息.</value>
+  </data>
+  <data name="FlightNo" xml:space="preserve">
+    <value>航班</value>
+  </data>
+  <data name="FNError" xml:space="preserve">
+    <value>輸入的名格式錯誤。</value>
+  </data>
+  <data name="ForbiddenAirport" xml:space="preserve">
+    <value>Origin/Destination can not be booked online, please call our sales agent for booking.</value>
+  </data>
+  <data name="FORDETAIL" xml:space="preserve">
+    <value>以獲得幫助。</value>
+  </data>
+  <data name="HasForbiddenAirport" xml:space="preserve">
+    <value>Origin/Destination can not be booked online, please call our sales agent for booking.</value>
+  </data>
+  <data name="HasOverNightStay" xml:space="preserve">
+    <value>機场过夜</value>
+  </data>
+  <data name="hasSuccessfully" xml:space="preserve">
+    <value>成功了。</value>
+  </data>
+  <data name="Hotel_Date_Error1" xml:space="preserve">
+    <value>离店日期大于当前日期7天。</value>
+  </data>
+  <data name="Hotel_Date_Error2" xml:space="preserve">
+    <value>回程日期大于当前日期7天。</value>
+  </data>
+  <data name="Hotel_Date_Error3" xml:space="preserve">
+    <value>离店日期必须大于入住日期。</value>
+  </data>
+  <data name="Hotel_Date_Error4" xml:space="preserve">
+    <value>在入住日期必须大于当前日期。请更改日期。</value>
+  </data>
+  <data name="Hotel_Date_Error5" xml:space="preserve">
+    <value>在离店日期必须大于当前日期。请更改日期。</value>
+  </data>
+  <data name="Hotel_Error_City" xml:space="preserve">
+    <value>请输入正确的城市名称或者Code</value>
+  </data>
+  <data name="InvalidEmail" xml:space="preserve">
+    <value>無效的email,請重新輸入。</value>
+  </data>
+  <data name="InvalidPassword" xml:space="preserve">
+    <value>無效的密碼,請重新輸入。</value>
+  </data>
+  <data name="InvaluableSearch" xml:space="preserve">
+    <value>無效的搜尋條件。</value>
+  </data>
+  <data name="LargeChangedSoldoutMsg" xml:space="preserve">
+    <value>該價格的票可能已經售完，同條件的其他票，價格提高了 ${0}，您是否願意繼續訂購？</value>
+  </data>
+  <data name="LeavesArrives" xml:space="preserve">
+    <value>出發時間 / 抵達時間</value>
+  </data>
+  <data name="LittleChangedSoldoutMsg" xml:space="preserve">
+    <value>由于機票的價格可能會隨時發生浮動，當前機票價格上調了 ${0}，您是否願意繼續訂購？</value>
+  </data>
+  <data name="LSError" xml:space="preserve">
+    <value>輸入的姓格式錯誤。</value>
+  </data>
+  <data name="Meal" xml:space="preserve">
+    <value>餐食</value>
+  </data>
+  <data name="NamePassenger" xml:space="preserve">
+    <value>客戶姓名</value>
+  </data>
+  <data name="NewLogin" xml:space="preserve">
+    <value>新的登入帳戶</value>
+  </data>
+  <data name="NextTime" xml:space="preserve">
+    <value>時,請使用此密碼。</value>
+  </data>
+  <data name="NoAvailableFlight" xml:space="preserve">
+    <value>此航班已客滿!</value>
+  </data>
+  <data name="NoSearchConditions" xml:space="preserve">
+    <value>請完善搜尋條件</value>
+  </data>
+  <data name="NotConfirmed" xml:space="preserve">
+    <value>您的訂單尚未完全確認.</value>
+  </data>
+  <data name="NoteAddress" xml:space="preserve">
+    <value>這是系統自動發出的email,請不要直接回覆此mail。</value>
+  </data>
+  <data name="NotHearMsg" xml:space="preserve">
+    <value>如果您還是未收到確認email,請打 1-(888)-288-7528 與我們服務人員詢問.</value>
+  </data>
+  <data name="NoThisAccount" xml:space="preserve">
+    <value>帳戶不存在或密碼錯誤。</value>
+  </data>
+  <data name="OPStatus" xml:space="preserve">
+    <value>處理狀態</value>
+  </data>
+  <data name="Package_Date_Error1" xml:space="preserve">
+    <value>离店日期大于当前日期7天</value>
+  </data>
+  <data name="Package_Date_Error2" xml:space="preserve">
+    <value>回程日期大于当前日期7天。</value>
+  </data>
+  <data name="Package_Date_Error3" xml:space="preserve">
+    <value>离店日期大于当前日期7天。</value>
+  </data>
+  <data name="Package_Date_Error4" xml:space="preserve">
+    <value>回程日期大于当前日期7天。</value>
+  </data>
+  <data name="Package_Date_Error5" xml:space="preserve">
+    <value>入住日期必须大于当前日期。请更改日期。</value>
+  </data>
+  <data name="Package_Date_Error6" xml:space="preserve">
+    <value>离店日期必须大于入住日期。请更改日期。</value>
+  </data>
+  <data name="Package_Date_Error7" xml:space="preserve">
+    <value>出发日期必须大于回程日期。请更改日期。</value>
+  </data>
+  <data name="Package_Date_Error8" xml:space="preserve">
+    <value>入住日期小于出发日期。请更改日期。</value>
+  </data>
+  <data name="Package_Date_Error9" xml:space="preserve">
+    <value>退房日期不能大于返回日期</value>
+  </data>
+  <data name="Package_Error_City1" xml:space="preserve">
+    <value>请输入正确的出发城市名称或者Code</value>
+  </data>
+  <data name="Package_Error_City2" xml:space="preserve">
+    <value>请输入正确的返回城市名称或者Code</value>
+  </data>
+  <data name="Package_Error_City3" xml:space="preserve">
+    <value>我们没找到输入的出发城市或机场</value>
+  </data>
+  <data name="Package_Error_City4" xml:space="preserve">
+    <value>我们没找到输入的出发城市或机场</value>
+  </data>
+  <data name="PassportNumber" xml:space="preserve">
+    <value>護照號碼</value>
+  </data>
+  <data name="PasswordLong" xml:space="preserve">
+    <value>請輸入至少6-11字元的密碼。</value>
+  </data>
+  <data name="PaymentStatus" xml:space="preserve">
+    <value>付款狀態</value>
+  </data>
+  <data name="PleaseAgain" xml:space="preserve">
+    <value>請再次輸入新的密碼。</value>
+  </data>
+  <data name="PleaseBoxes" xml:space="preserve">
+    <value>請在此欄輸入相同的密碼。</value>
+  </data>
+  <data name="PLEASECALL" xml:space="preserve">
+    <value>請致電</value>
+  </data>
+  <data name="PleaseElects" xml:space="preserve">
+    <value>請閱讀合約條款及取消規定。</value>
+  </data>
+  <data name="PleasePassword" xml:space="preserve">
+    <value>請輸入舊密碼。</value>
+  </data>
+  <data name="PleaseSensitive" xml:space="preserve">
+    <value>當您下一登入</value>
+  </data>
+  <data name="PromotionalSweepstakes" xml:space="preserve">
+    <value>例如:促銷旅遊商品,電子報,便宜的飯店資訊等。</value>
+  </data>
+  <data name="RecordLocator" xml:space="preserve">
+    <value>機票訂位代號</value>
+  </data>
+  <data name="RequestedPassword" xml:space="preserve">
+    <value>您要求的密碼已在您的</value>
+  </data>
+  <data name="Routing" xml:space="preserve">
+    <value>航段</value>
+  </data>
+  <data name="SelectCardType" xml:space="preserve">
+    <value>請選擇信用卡種類!</value>
+  </data>
+  <data name="SelectCity" xml:space="preserve">
+    <value>請選擇城市!</value>
+  </data>
+  <data name="SelectCountry" xml:space="preserve">
+    <value>請選擇國家或區域!</value>
+  </data>
+  <data name="SelectState" xml:space="preserve">
+    <value>請選擇州別!</value>
+  </data>
+  <data name="ShouldBeEnglishName" xml:space="preserve">
+    <value>請提供英文拼寫的乘客姓和名。</value>
+  </data>
+  <data name="Sincerely" xml:space="preserve">
+    <value>謝謝</value>
+  </data>
+  <data name="SupportTeam" xml:space="preserve">
+    <value>支援團隊</value>
+  </data>
+  <data name="ThanksProgram" xml:space="preserve">
+    <value>感謝您註冊並成為我們的會員。</value>
+  </data>
+  <data name="TheBenefits" xml:space="preserve">
+    <value>。從現在起,你將享有本網站提供的一切服務。</value>
+  </data>
+  <data name="TheMembership" xml:space="preserve">
+    <value>您的會員編號為</value>
+  </data>
+  <data name="TheResearch" xml:space="preserve">
+    <value>請再重新輸入搜尋條件。</value>
+  </data>
+  <data name="TheWrong" xml:space="preserve">
+    <value>您輸入的email格式錯誤。</value>
+  </data>
+  <data name="Tour_Error1" xml:space="preserve">
+    <value>请选择地區</value>
+  </data>
+  <data name="Tour_Error2" xml:space="preserve">
+    <value>请选择國家或區域</value>
+  </data>
+  <data name="Tour_Error3" xml:space="preserve">
+    <value>请选择城市</value>
+  </data>
+  <data name="Tour_Error4" xml:space="preserve">
+    <value>请填写出发日期</value>
+  </data>
+  <data name="Tour_Error5" xml:space="preserve">
+    <value>航班出發日不可低於訂購日3日內,請重新選擇出發日期或請打服務專線 1-(888)-288-7528 ,由客服人員為您處理</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>型式</value>
+  </data>
+  <data name="UnknowError" xml:space="preserve">
+    <value>未知的錯誤!</value>
+  </data>
+  <data name="View" xml:space="preserve">
+    <value>瀏覽</value>
+  </data>
+  <data name="YouNPassword" xml:space="preserve">
+    <value>您的新密碼</value>
+  </data>
+  <data name="YourIs" xml:space="preserve">
+    <value>您的新密碼是</value>
+  </data>
+  <data name="YourOf" xml:space="preserve">
+    <value>您已經註冊</value>
+  </data>
+  <data name="YourSuccessfully" xml:space="preserve">
+    <value>您的GTT帳戶已經成功更新了。</value>
+  </data>
+</root>

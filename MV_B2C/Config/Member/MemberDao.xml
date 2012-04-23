@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		The Terms object definitions for the Data Access Objects.
+	</description>
+
+	<!-- Database and NHibernate Configuration -->
+
+	<object id="MemberHibernateTransactionManager"
+		  type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="MemberDbProvider"/>
+		<property name="SessionFactory" ref="MemberSessionFactory"/>
+	</object>
+
+	<object id="MemberHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+		<property name="SessionFactory" ref="MemberSessionFactory" />
+		<property name="TemplateFlushMode" value="Auto" />
+		<property name="CacheQueries" value="true" />
+	</object>
+
+	<object id="MemberSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="MemberDbProvider"/>
+		<property name="MappingAssemblies">
+			<list>
+				<value>Terms.Member.Dao.NHibernate</value>
+			</list>
+		</property>
+		<property name="HibernateProperties">
+			<dictionary>
+				<entry key="hibernate.connection.provider"
+					   value="NHibernate.Connection.DriverConnectionProvider"/>
+				<entry key="hibernate.dialect"
+					   value="NHibernate.Dialect.MsSql2000Dialect"/>
+				<entry key="hibernate.connection.driver_class"
+					   value="NHibernate.Driver.SqlClientDriver"/>
+			</dictionary>
+		</property>
+	</object>
+
+	<object id="IncreaseByDegreesDao" type="Terms.Member.Dao.NHibernate.HibernateIncreaseByDegreesDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="MemberadsDao" type="Terms.Member.Dao.NHibernate.HibernateMemberadsDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="MemberInformationDao" type="Terms.Member.Dao.NHibernate.HibernateMemberInformationDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="MemberQuestionAndAnswerDao" type="Terms.Member.Dao.NHibernate.HibernateMemberQuestionAndAnswerDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="MemberToDataSourceDao" type="Terms.Member.Dao.NHibernate.HibernateMemberToDataSourceDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="AdsServiceDao" type="Terms.Member.Dao.NHibernate.HibernateAdsServiceDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="ConstantMasterDao" type="Terms.Member.Dao.NHibernate.HibernateConstantMasterDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="ConstantDetailDao" type="Terms.Member.Dao.NHibernate.HibernateConstantDetailDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+	
+	<object id="UserDao" type="Terms.Member.Dao.NHibernate.HibernateUserDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="AnswerDao" type="Terms.Member.Dao.NHibernate.HibernateAnswerDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="QuestionDao" type="Terms.Member.Dao.NHibernate.HibernateQuestionDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="UserGroupDao" type="Terms.Member.Dao.NHibernate.HibernateUserGroupDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="UserUserGroupDao" type="Terms.Member.Dao.NHibernate.HibernateUserUserGroupDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="RoleUserGroupDao" type="Terms.Member.Dao.NHibernate.HibernateRoleUserGroupDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="RoleUserDao" type="Terms.Member.Dao.NHibernate.HibernateRoleUserDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="LimitDao" type="Terms.Member.Dao.NHibernate.HibernateLimitDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="RoleDao" type="Terms.Member.Dao.NHibernate.HibernateRoleDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="StuffDao" type="Terms.Member.Dao.NHibernate.HibernateStuffDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="DepartmentDao" type="Terms.Member.Dao.NHibernate.HibernateDepartmentDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="BranchOfficeDao" type="Terms.Member.Dao.NHibernate.HibernateBranchOfficeDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="PrincipalDao" type="Terms.Member.Dao.NHibernate.HibernatePrincipalDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="PrincipalItemDao" type="Terms.Member.Dao.NHibernate.HibernatePrincipalItemDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="MemberToOwnerDa" type="Terms.Member.Dao.NHibernate.HibernateMemberToOwnerDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+	<object id="OwnerDao" type="Terms.Member.Dao.NHibernate.HibernateOwnerDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+
+	<object id="MemberInfoByGTTDao" type="Terms.Member.Dao.NHibernate.HibernateMemberInfoByGTTDao, Terms.Member.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="MemberHibernateTemplate"/>
+	</object>
+
+</objects>

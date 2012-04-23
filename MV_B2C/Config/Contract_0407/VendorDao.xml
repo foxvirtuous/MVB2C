@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+	
+	<object id="VendorDao" type="Terms.Contract.Dao.NHibernate_0407.VendorDao, Terms.Contract.Dao.NHibernate_0407">
+		<property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+	</object>
+
+  <object id="VendorContactDao" type="Terms.Contract.Dao.NHibernate_0407.VendorContactDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+</objects>

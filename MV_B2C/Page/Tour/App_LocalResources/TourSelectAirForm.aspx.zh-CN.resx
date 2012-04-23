@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnBack.Text" xml:space="preserve">
+    <value>返回</value>
+  </data>
+  <data name="btnContinue.Text" xml:space="preserve">
+    <value>繼續</value>
+  </data>
+  <data name="lblAccommodate.Text" xml:space="preserve">
+    <value>入住Comfort Inn Universal Studio 每日提供歐式早餐</value>
+  </data>
+  <data name="lblAccommodations.Text" xml:space="preserve">
+    <value>酒店入住必須兩人同行入住,兒童(12歲以下)價格為不佔床價</value>
+  </data>
+  <data name="lblAccommodationsWest.Text" xml:space="preserve">
+    <value>酒店入住必須兩人同行入住,兒童(11歲以下)價格為不佔床價</value>
+  </data>
+  <data name="lblAddressOr.Text" xml:space="preserve">
+    <value>地址: 6101 Sand Lake Rd. Orlando FL 32819</value>
+  </data>
+  <data name="lblAdult.Text" xml:space="preserve">
+    <value>成人</value>
+  </data>
+  <data name="lblAgeLimit.Text" xml:space="preserve">
+    <value>旅客年齡限制: 成人: ( 12歲以上 )、兒童: ( 3-12歲以下 )、兒童 (不佔床): ( 0-2歲 ).</value>
+  </data>
+  <data name="lblAgeLimit2.Text" xml:space="preserve">
+    <value>旅客年齡限制: 成人: ( 9歲以上 )、兒童: ( 9歲以下 )、兒童 (不佔床): ( 2-9歲 )</value>
+  </data>
+  <data name="lblAgeLimit3.Text" xml:space="preserve">
+    <value>旅客年齡限制: 成人: ( 11歲以上 )、兒童: ( 11歲以下 )、兒童 (不佔床): ( 2-11歲 ).</value>
+  </data>
+  <data name="lblAgeLimit4.Text" xml:space="preserve">
+    <value>旅客年齡限制: 成人: ( 9歲以上 )、兒童: ( 9歲以下 )、兒童 (不佔床): ( 3-9歲 ).</value>
+  </data>
+  <data name="lblAgeLimit5.Text" xml:space="preserve">
+    <value>旅客年齡限制: 成人: ( 12歲以上 )、兒童: ( 12歲以下 )、兒童 (不佔床): ( 2-11歲 ).</value>
+  </data>
+  <data name="lblAgree.Text" xml:space="preserve">
+    <value>我已閱讀過完整的訂購須知，並接受所有規定事項</value>
+  </data>
+  <data name="lblChild.Text" xml:space="preserve">
+    <value>兒童</value>
+  </data>
+  <data name="lblChildWithOut.Text" xml:space="preserve">
+    <value>兒童 (不佔床)</value>
+  </data>
+  <data name="lblChoice.Text" xml:space="preserve">
+    <value>請選擇</value>
+  </data>
+  <data name="lblChoose.Text" xml:space="preserve">
+    <value>選擇旅客入住人數及房型</value>
+  </data>
+  <data name="lblConfirm.Text" xml:space="preserve">
+    <value>請確認所有的信息正確後,點擊</value>
+  </data>
+  <data name="lblExceed.Text" xml:space="preserve">
+    <value>依據旅遊當地酒店入住規定,雙人房型只提供2大床,三人房和四人房型也只提供兩大床</value>
+  </data>
+  <data name="lblNoExtra.Text" xml:space="preserve">
+    <value>酒店床型皆為兩大床. 對於兒童或是入住第3及第4位旅客, 不提供加床服務</value>
+  </data>
+  <data name="lblOr.Text" xml:space="preserve">
+    <value>或</value>
+  </data>
+  <data name="lblPassengersCombination.Text" xml:space="preserve">
+    <value>人數組合</value>
+  </data>
+  <data name="lblQuatRoom.Text" xml:space="preserve">
+    <value>四人房</value>
+  </data>
+  <data name="lblRecommendRoomType.Text" xml:space="preserve">
+    <value>建議房型</value>
+  </data>
+  <data name="lblReference.Text" xml:space="preserve">
+    <value>旅客人數與選擇房型參考表</value>
+  </data>
+  <data name="lblRemarks.Text" xml:space="preserve">
+    <value>備註＆說明</value>
+  </data>
+  <data name="lblReview.Text" xml:space="preserve">
+    <value>訂購明細</value>
+  </data>
+  <data name="lblSingleRoom.Text" xml:space="preserve">
+    <value>單人房</value>
+  </data>
+  <data name="lblTermsConditions.Text" xml:space="preserve">
+    <value>旅遊契約書</value>
+  </data>
+  <data name="lblTripleRoom.Text" xml:space="preserve">
+    <value>三人房</value>
+  </data>
+  <data name="lblTwinRoom.Text" xml:space="preserve">
+    <value>雙人房</value>
+  </data>
+  <data name="lblTwinRoom3rd.Text" xml:space="preserve">
+    <value>(三人同住一間雙人房)</value>
+  </data>
+  <data name="lblTwinRoomNeed.Text" xml:space="preserve">
+    <value>雙人房 (兒童需加床)</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>最便宜機票,酒店預訂,套裝行程,旅遊,郵輪, 旅遊渡假, 美國到中國機票,從美國出發, 旅遊同業代理商</value>
+  </data>
+</root>

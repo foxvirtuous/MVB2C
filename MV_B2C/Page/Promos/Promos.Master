@@ -1,0 +1,416 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Codebehind="Promos.master.cs" Inherits="Promos" %>
+<%@ Register Src="~/UserControls/LocationTextBoxControl.ascx" TagName="LocationTextBoxControl"
+    TagPrefix="uc6" %>
+<%@ Register Src="~/UserControls/ForbiddenAirportControl.ascx" TagName="ForbiddenAirportControl"
+    TagPrefix="uc2" %>
+<%@ Register Src="~/UserControls/Calendar.ascx" TagName="Calendar" TagPrefix="uc3" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Cheap airfare, Cheap tickets, online ticket booking : Majestic Vacations </title>
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="keywords" content="明星假期旅遊網, 美國國內機票, 亞洲機票, 台灣,香港,北京,上海 特廉機票, 中國國內機票優惠, 最便宜酒店, 全球酒店線上訂購, 套裝行程,機票+酒店, 旅遊, 超值旅遊,台灣旅遊,中國旅遊,美國東岸,西岸,夏威夷,奧蘭多, 亞洲旅遊, 兩人成行, 郵輪旅遊, 皇家旅遊,公主郵輪, 旅遊同業中心, 機票代理中心" /><meta name="description" content="明星假期旅遊, 最豐富,最便宜, 最便宜機票, 美國到中國機票, 酒店, 兩人成行自由行, 團體旅遊, 郵輪假期" />
+    <script language="javascript" type="text/javascript">
+    function ShowList(url){
+        window.open(url,"ORDERLIST", "height=600, width=800, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no");
+    }
+    function RefreshStatus(){
+        var btnRefresh = document.getElementById("ctl00$btnRefresh");
+        btnRefresh.click();
+    }
+    </script>
+
+    <link href="<%=SaleWebSuffix + MainCssPath + "style_new.css"%>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%=SaleWebSuffix + MainCssPath + "style_index.css"%>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%=SaleWebSuffix + MainCssPath + "style_step2.css"%>" rel="stylesheet"
+        type="text/css" />
+    
+</head>
+<body>
+    <form id="form2" runat="server">
+        <asp:Button ID="Button1" runat="server" Text="Button" Width="0px" Visible="false" />
+        <input id="FlightType" runat="server" name="FlightType" type="hidden" value="roundtrip" />
+        <asp:ScriptManager ID="MainScriptManager" runat="server" />
+        <iframe style="visibility: hidden; position: absolute; width: 148px; height: 194px;
+            z-index: 100; display: none; left: 9px; top: 0px;" id="calendarDateFrame" name="calendarDateFrame"
+            marginheight="0" marginwidth="0" noresize frameborder="0" scrolling="NO" src="../../CommJs/Mvcalx.htm">
+        </iframe>
+        <uc1:Header ID="Header1" runat="server" />
+        <table width="920" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <table width="920" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="15">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="10">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td height="25" align="right" valign="top">
+                                            <div class="P_table">
+                                                <asp:Table ID="tableStep" runat="server" Width="305" HorizontalAlign="right" CellPadding="0"
+                                                    CellSpacing="0" CssClass="T_step">
+                                                </asp:Table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="box">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="3" class="T_table" align="center">
+                            <tr>
+                                <td width="185" align="left" valign="top">
+                                    <!-- Left -->
+                                    <!-- Manage -->
+                                    <asp:PlaceHolder ID="phManage" runat="server">
+                                        <div class="P_Table">
+                                            <table width="95%" cellspacing="1" cellpadding="0" class="T_select">
+                                                <tr class="R_whiteS" align="center">
+                                                    <td>
+                                                        <strong>
+                                                            <asp:Label ID="lblBookingManage" runat="server" meta:resourcekey="lblBookingManage">Booking Manage</asp:Label>
+                                                        </strong>
+                                                    </td>
+                                                </tr>
+                                                <tr class="R_content">
+                                                    <td>
+                                                        <asp:UpdatePanel ID="updPnlManage" runat="server">
+                                                            <ContentTemplate>
+                                                                <table width="93%" border="0" align="center" cellpadding="0" cellspacing="2">
+                                                                    <tr class="R_content">
+                                                                        <td colspan="2">
+                                                                            <font class="P_blueS">Hi, <b>
+                                                                                <asp:Label ID="lbl_userName" runat="server"></asp:Label></b></font>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                                <table width="93%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                    <tr align="center" class="R_titleL">
+                                                                        <td colspan="2">
+                                                                            <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                                                <tr>
+                                                                                    <td align="left">
+                                                                                        &nbsp;<font class="P_blueS"><b><asp:Label ID="Label1" runat="server" meta:resourcekey="lblBookingStatus">Booking Status</asp:Label></b></font></td>
+                                                                                    <td align="right" valign="middle">
+                                                                                        <asp:ImageButton ID="btnRefresh" ImageUrl="images/reload.gif" runat="server" OnClick="btnRefresh_Click"
+                                                                                            CausesValidation="false" AlternateText="Refresh" />
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr align="center">
+                                                                        <td width="30%">
+                                                                            <asp:Label ID="lblHoldingAmount" runat="server" Text="0" CssClass="P_blueS"></asp:Label></td>
+                                                                        <td width="70%" align="left">
+                                                                            <a href="javascript:ShowList('Manage/OrderList.aspx?STATUS=HOLD')" class="P_blueS">
+                                                                                <asp:Label ID="Label2" runat="server" meta:resourcekey="lblHolding">Holding</asp:Label></a></td>
+                                                                    </tr>
+                                                                    <tr align="center">
+                                                                        <td width="30%">
+                                                                            <asp:Label ID="lblPurchasedAmount" runat="server" Text="0" CssClass="P_blueS"></asp:Label></td>
+                                                                        <td width="70%" align="left">
+                                                                            <a href="javascript:ShowList('Manage/OrderList.aspx?STATUS=PURCHASED')" class="P_blueS">
+                                                                                <asp:Label ID="Label3" runat="server" meta:resourcekey="lblPurchased">Purchased</asp:Label></a></td>
+                                                                    </tr>
+                                                                    <tr align="center">
+                                                                        <td width="30%">
+                                                                            <asp:Label ID="lblTicketedAmount" runat="server" Text="0" CssClass="P_blueS"></asp:Label></td>
+                                                                        <td width="70%" align="left">
+                                                                            <a href="javascript:ShowList('Manage/OrderList.aspx?STATUS=TKTED')" class="P_blueS">
+                                                                                <asp:Label ID="Label4" runat="server" meta:resourcekey="lblTicketed">Ticketed</asp:Label></a></td>
+                                                                    </tr>
+                                                                    <tr align="center">
+                                                                        <td width="30%">
+                                                                            <asp:Label ID="lblDiscrepancyAmount" runat="server" Text="0" CssClass="P_blueS"></asp:Label></td>
+                                                                        <td width="70%" align="left">
+                                                                            <a href="javascript:ShowList('Manage/OrderList.aspx?STATUS=DISCREPANCY')" class="P_blueS">
+                                                                                <asp:Label ID="Label5" runat="server" meta:resourcekey="lblDiscrepancy">Discrepancy</asp:Label></a></td>
+                                                                    </tr>
+                                                                    <tr align="center">
+                                                                        <td width="30%">
+                                                                            <asp:Label ID="lblCancelledAmount" runat="server" Text="0" CssClass="P_blueS"></asp:Label></td>
+                                                                        <td width="70%" align="left">
+                                                                            <a href="javascript:ShowList('Manage/OrderList.aspx?STATUS=CANCELLED')" class="P_blueS">
+                                                                                <asp:Label ID="Label6" runat="server" meta:resourcekey="lblCancelled">Cancelled</asp:Label></a></td>
+                                                                    </tr>
+                                                                    <tr align="center">
+                                                                        <td width="30%">
+                                                                            <asp:Label ID="lblMsgAmount" runat="server" Text="0" CssClass="P_blueS"></asp:Label></td>
+                                                                        <td width="70%" align="left">
+                                                                            <a href="javascript:ShowList('Manage/OrderList.aspx?STATUS=MSG')" class="P_blueS">
+                                                                                <asp:Label ID="Label7" runat="server" meta:resourcekey="lblNewMessage">New Message</asp:Label></a></td>
+                                                                    </tr>
+                                                                </table>
+                                                            </ContentTemplate>
+                                                        </asp:UpdatePanel>
+                                                        <table width="93%" border="0" align="center" cellpadding="0" cellspacing="0">
+                                                            <tr align="center" class="R_titleL">
+                                                                <td align="left">
+                                                                    &nbsp;<font class="P_blueS"><b><asp:Label ID="Label8" runat="server" meta:resourcekey="lblFindBooking">Find a Booking</asp:Label></b></font></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <font id="Font10"><b>
+                                                                        <asp:Label ID="Label9" runat="server" meta:resourcekey="lblbyPNR">by PNR</asp:Label>:</b></font><br />
+                                                                    <input name="PNR" type="text" size="15">
+                                                                    <input name="S26_22" type="BUTTON" value="Go">
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <font id="Font11"><b>
+                                                                        <asp:Label ID="Label10" runat="server" meta:resourcekey="lblbyPAXLastName">by PAX Last Name</asp:Label>:</b></font><br />
+                                                                    <input name="PNR2" type="text" size="15">
+                                                                    <input name="S26_222" type="button" onclick="handle_Button2_onClick(0);" value="Go">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table width="93%" border="0" align="center" cellpadding="0" cellspacing="2">
+                                                            <tr class="R_content">
+                                                            </tr>
+                                                            <tr valign="top">
+                                                                <td width="300%" height="5" align="center">
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <br />
+                                    </asp:PlaceHolder>
+                                    <!-- Modify Search -->
+                                    <asp:PlaceHolder ID="phModifySearch" runat="server">
+
+                                        <script type="text/javascript" language="javascript">
+		            function ChangeFlightType(type)
+		            {
+			            var flightType = document.forms[0].elements['ctl00_FlightType'];
+
+			            if( type == "roundtrip")
+			            {
+				            flightType.value = "roundtrip";
+				            document.getElementsByTagName("*").oneway1.style.display = "";
+				            document.getElementsByTagName("*").oneway2.style.display = "";
+				            document.getElementsByTagName("*").oneway3.style.display = "";
+				            document.getElementsByTagName("*").ctl00_ltxRtnFrom_txtCity.readOnly = true;
+				            document.getElementsByTagName("*").ctl00_ltxRtnTo_txtCity.readOnly = true;
+			            }
+			            else if(type == "oneway")
+			            {
+				            flightType.value = "oneway";
+				            document.getElementsByTagName("*").oneway1.style.display = "none";
+				            document.getElementsByTagName("*").oneway2.style.display = "none";
+				            document.getElementsByTagName("*").oneway3.style.display = "none";
+				            document.getElementsByTagName("*").ctl00_ltxRtnFrom_txtCity.readOnly = false;
+				            document.getElementsByTagName("*").ctl00_ltxRtnTo_txtCity.readOnly = false;
+			            }
+			            else if(type == "openjaw")
+			            {
+				            flightType.value = "openjaw";
+				            document.getElementsByTagName("*").oneway1.style.display = "";
+				            document.getElementsByTagName("*").oneway2.style.display = "";
+				            document.getElementsByTagName("*").oneway3.style.display = "";
+				            document.getElementsByTagName("*").ctl00_ltxRtnFrom_txtCity.readOnly = false;
+				            document.getElementsByTagName("*").ctl00_ltxRtnTo_txtCity.readOnly = false;
+			            }
+		            }
+            		
+		            function SetReturnCity()
+		            {
+			            var flightType = document.forms[0].elements['ctl00_FlightType'];
+                        var txtDepCity = document.forms[0].elements['ctl00_ltxFrom_txtCity'];
+                        var txtDesCity = document.forms[0].elements['ctl00_ltxTo_txtCity'];
+		                if (flightType.value == "roundtrip")
+		                {
+		                    var txtRtnFrom = document.forms[0].elements['ctl00_ltxRtnFrom_txtCity'];
+		                    var txtRtnTo = document.forms[0].elements['ctl00_ltxRtnTo_txtCity'];
+			                txtRtnFrom.value = txtDesCity.value;
+			                txtRtnTo.value = txtDepCity.value;
+			            }
+		            }
+            		
+		            function UpperCase(obj)
+		            {
+			            obj.value = obj.value.toUpperCase();
+		            }
+                                        </script>
+
+                                        <div>
+                                            <table cellpadding="0" cellspacing="1" width="170" class="T_step0l">
+                                                <tr align="center" class="R_step01">
+                                                    <td height="23">
+                                                        <asp:Label ID="Label11" runat="server" meta:resourcekey="lblChangYourSearch">Change Your Search</asp:Label></td>
+                                                </tr>
+                                                <tr class="R_stepbox">
+                                                    <td>
+                                                        <table align="center" border="0" cellpadding="3" cellspacing="0" width="95%">
+                                                            <tr>
+                                                                <td height="30">
+                                                                    <input onclick="ChangeFlightType('roundtrip')" type="radio" name="rdbType" id="rdbRoundTrip"
+                                                                        runat="server" checked="true" value="RoundTrip" /><font id="Font12"><asp:Label ID="Label12"
+                                                                            runat="server" meta:resourcekey="lblRoundTrip">Round Trip</asp:Label></font>
+                                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input onclick="ChangeFlightType('oneway')"
+                                                                        type="radio" name="rdbType" id="rdbOneway" runat="server" value="OneWay" /><font
+                                                                            id="Font13"><asp:Label ID="Label13" runat="server" meta:resourcekey="lblOneWay">One Way</asp:Label></font><br>
+                                                                    <input onclick="ChangeFlightType('openjaw')" type="radio" name="rdbType" id="rdbOpenjaw"
+                                                                        runat="server" value="OpenJaw" /><font id="Font14"><asp:Label ID="Label14" runat="server"
+                                                                            meta:resourcekey="lblMultipleCities">Multiple Cities</asp:Label></font>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table width="95%" border="0" align="center" cellpadding="3" cellspacing="0">
+                                                            <tr>
+                                                                <td colspan="2" class="D_stepb">
+                                                                    <asp:Label ID="Label15" runat="server" meta:resourcekey="lblDepartureFlight">Departure Flight</asp:Label></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td width="50%">
+                                                                    <font id="Font15">
+                                                                        <asp:Label ID="Label16" runat="server" meta:resourcekey="lblFrom">From</asp:Label></font><br>
+                                                                    <uc6:LocationTextBoxControl ID="ltxFrom" runat="server"></uc6:LocationTextBoxControl>
+                                                                </td>
+                                                                <td>
+                                                                    <font id="Font16">
+                                                                        <asp:Label ID="Label17" runat="server" meta:resourcekey="lblTo">To</asp:Label></font><br>
+                                                                    <uc6:LocationTextBoxControl ID="ltxTo" runat="server"></uc6:LocationTextBoxControl>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td colspan="2" class="D_stepb">
+                                                                    <asp:Label ID="Label18" runat="server" meta:resourcekey="lblDepartureDate">Departure Date</asp:Label><br>
+                                                                    <uc3:Calendar ID="depCalendar" runat="server" />
+                                                                </td>
+                                                            </tr>
+                                                            <tr id="oneway1">
+                                                                <td colspan="2" class="D_stepb">
+                                                                    <asp:Label ID="Label19" runat="server" meta:resourcekey="lblReturnFlight">Return Flight</asp:Label></td>
+                                                            </tr>
+                                                            <tr id="oneway2">
+                                                                <td width="50%">
+                                                                    <font id="Font18">
+                                                                        <asp:Label ID="Label20" runat="server" meta:resourcekey="lblFrom">From</asp:Label></font><br>
+                                                                    <uc6:LocationTextBoxControl ID="ltxRtnFrom" runat="server"></uc6:LocationTextBoxControl>
+                                                                </td>
+                                                                <td>
+                                                                    <font id="Font19">
+                                                                        <asp:Label ID="Label21" runat="server" meta:resourcekey="lblTo">To</asp:Label></font><br>
+                                                                    <uc6:LocationTextBoxControl ID="ltxRtnTo" runat="server"></uc6:LocationTextBoxControl>
+                                                                </td>
+                                                            </tr>
+                                                            <tr id="oneway3">
+                                                                <td colspan="2" class="D_stepb">
+                                                                    <asp:Label ID="Label22" runat="server" meta:resourcekey="lblReturnDate">Return Date</asp:Label><br>
+                                                                    <uc3:Calendar ID="rtnCalendar" runat="server" LowerLimitID="depCalendar" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table align="center" border="0" cellpadding="3" cellspacing="0" width="95%">
+                                                            <tr>
+                                                                <td width="33%">
+                                                                    <asp:Label ID="Label23" runat="server" meta:resourcekey="lblAdult">Adult(s)</asp:Label><br>
+                                                                    <font id="Font21">( 12+ )</font><br>
+                                                                    <asp:DropDownList ID="ddlAdult" runat="server">
+                                                                        <asp:ListItem>0</asp:ListItem>
+                                                                        <asp:ListItem Selected="True">1</asp:ListItem>
+                                                                        <asp:ListItem>2</asp:ListItem>
+                                                                        <asp:ListItem>3</asp:ListItem>
+                                                                        <asp:ListItem>4</asp:ListItem>
+                                                                        <asp:ListItem>5</asp:ListItem>
+                                                                        <asp:ListItem>6</asp:ListItem>
+                                                                        <asp:ListItem>7</asp:ListItem>
+                                                                        <asp:ListItem>8</asp:ListItem>
+                                                                        <asp:ListItem>9</asp:ListItem>
+                                                                        <asp:ListItem>10</asp:ListItem>
+                                                                    </asp:DropDownList>
+                                                                </td>
+                                                                <td width="34%">
+                                                                    <asp:Label ID="Label24" runat="server" meta:resourcekey="lblChild">Child(ren)</asp:Label><br>
+                                                                    <font id="Font22">( 2 - 11 )</font><br>
+                                                                    <asp:DropDownList ID="ddlChild" runat="server">
+                                                                        <asp:ListItem>0</asp:ListItem>
+                                                                        <asp:ListItem>1</asp:ListItem>
+                                                                        <asp:ListItem>2</asp:ListItem>
+                                                                        <asp:ListItem>3</asp:ListItem>
+                                                                        <asp:ListItem>4</asp:ListItem>
+                                                                        <asp:ListItem>5</asp:ListItem>
+                                                                        <asp:ListItem>6</asp:ListItem>
+                                                                        <asp:ListItem>7</asp:ListItem>
+                                                                        <asp:ListItem>8</asp:ListItem>
+                                                                        <asp:ListItem>9</asp:ListItem>
+                                                                        <asp:ListItem>10</asp:ListItem>
+                                                                    </asp:DropDownList>
+                                                                </td>
+                                                                <td width="33%">
+                                                                    <asp:DropDownList ID="ddlInfant" runat="server" Visible="false">
+                                                                        <asp:ListItem>0</asp:ListItem>
+                                                                        <asp:ListItem>1</asp:ListItem>
+                                                                        <asp:ListItem>2</asp:ListItem>
+                                                                        <asp:ListItem>3</asp:ListItem>
+                                                                        <asp:ListItem>4</asp:ListItem>
+                                                                        <asp:ListItem>5</asp:ListItem>
+                                                                        <asp:ListItem>6</asp:ListItem>
+                                                                        <asp:ListItem>7</asp:ListItem>
+                                                                        <asp:ListItem>8</asp:ListItem>
+                                                                        <asp:ListItem>9</asp:ListItem>
+                                                                        <asp:ListItem>10</asp:ListItem>
+                                                                    </asp:DropDownList>
+                                                                </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                                <td colspan="2" align="left">
+                                                                    <strong><span id="ctl00_MainContent_Label21">Class</span>:</strong>
+                                                                    <asp:DropDownList ID="ddlClass" runat="server" AutoPostBack="false">
+                                                                        <asp:ListItem meta:resourcekey="item4">All</asp:ListItem>
+                                                                        <asp:ListItem meta:resourcekey="item1">Economy</asp:ListItem>
+                                                                        <asp:ListItem meta:resourcekey="item2">Business</asp:ListItem>
+                                                                        <asp:ListItem meta:resourcekey="item3">First</asp:ListItem>
+                                                                    </asp:DropDownList>
+                                                                </td>
+                                                            </tr>
+                                                            <tr valign="top">
+                                                                <td colspan="2" align="center" height="35">
+                                                                    <asp:UpdatePanel ID="upSearch" runat="server">
+                                                                        <ContentTemplate>
+                                                                            <asp:Button ID="btn_Search" runat="server" Text="Search" OnClick="btn_Search_Click"
+                                                                                meta:resourcekey="btnSearch" />
+                                                                            <uc2:ForbiddenAirportControl ID="ForbiddenAirportControl1" runat="server" />
+                                                                        </ContentTemplate>
+                                                                    </asp:UpdatePanel>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </asp:PlaceHolder>
+                                </td>
+                                <td align="right" valign="top">
+                                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <uc2:Footer ID="Footer" runat="server" />
+                </td>
+            </tr>
+        </table>
+        <br />
+    </form>
+
+    <script language="javascript" type="text/javascript">
+        history.go(1);
+    </script>
+
+</body>
+</html>

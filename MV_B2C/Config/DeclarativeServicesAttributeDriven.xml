@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+  <!-- The rest of the config file is common no matter how many objects you add -->
+  <!-- that you would like to have declarative tx management applied to -->
+  <object id="autoProxyCreator" 
+          type="Spring.Aop.Framework.AutoProxy.DefaultAdvisorAutoProxyCreator, Spring.Aop">
+  </object>
+
+  <object id="transactionAdvisor"
+          type="Spring.Transaction.Interceptor.TransactionAttributeSourceAdvisor, Spring.Data">
+    <property name="TransactionInterceptor" ref="transactionInterceptor"/>
+  </object>
+
+   <!--Transaction Interceptor--> 
+  <!--<object id="transactionInterceptor" 
+          type="Spring.Transaction.Interceptor.TransactionInterceptor, Spring.Data">
+    <property name="TransactionManager" ref="BussHibernateTransactionManager"/>
+     --><!--note do not have converter from string to this property type registered--><!-- 
+    <property name="TransactionAttributeSource" ref="attributeTransactionAttributeSource"/>
+  </object>
+
+  <object id="attributeTransactionAttributeSource"
+          type="Spring.Transaction.Interceptor.AttributesTransactionAttributeSource, Spring.Data">
+  </object>-->
+  
+  <!-- transaction management -->
+  <!--<object id="transactionAdvisor"
+        type="Spring.Transaction.Interceptor.TransactionAttributeSourceAdvisor, Spring.Data"
+        autowire="constructor">
+  </object>-->
+  <object id="transactionInterceptor"
+        type="Spring.Transaction.Interceptor.TransactionInterceptor, Spring.Data">
+    <property name="TransactionManager" ref="BussHibernateTransactionManager"/>
+    <property name="TransactionAttributeSource" ref="attributeTransactionAttributeSource"/>
+    <!--<property name="TransactionAttributes">
+      <name-values>
+        --><!-- Add common methods across your services here --><!--
+        <add key="Process*" value="PROPAGATION_REQUIRED"/>
+        <add key="Save*" value="PROPAGATION_REQUIRED"/>
+        <add key="Delete*" value="PROPAGATION_REQUIRED"/>
+        <add key="Update*" value="PROPAGATION_REQUIRED"/>
+        <add key="Insert*" value="PROPAGATION_REQUIRED"/>
+        <add key="Add*" value="PROPAGATION_REQUIRED"/>
+
+        <add key="Get*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Find*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Load*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Select*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="*" value="PROPAGATION_REQUIRED,readOnly"/>
+      </name-values>
+    </property>-->
+  </object>
+  <object id="attributeTransactionAttributeSource"
+        type="Spring.Transaction.Interceptor.AttributesTransactionAttributeSource, Spring.Data">
+  </object>
+</objects>

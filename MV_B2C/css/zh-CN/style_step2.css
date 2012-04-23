@@ -1,0 +1,142 @@
+﻿    body{font-family:verdana; font-size:11px;}
+    ul,ol,li{ margin:0px; padding:0px; list-style:none;}
+    .outBord{ border:1px solid #CCCCCC; font-family:verdana; float:left; width:100%; border-right:none;}
+    .table_mode{  height:100%;}
+    .table_mode td{border-right:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC; background:#EAEAEA;}
+    .td_linkStyle a:link{ text-decoration:underline;}
+    .td_linkStyle a:hover{ text-decoration:none;}
+    .row1{ font-size:11px; color:#3366CC; text-decoration:underline;}
+    .priceride{ width:100%;}
+    .price1{ font-size:14px;color:#005599; text-decoration:underline;}
+    .price2{font-size:11px;color:#666666; text-decoration:none;}
+    .dataList{height:100%; width:100%;}
+    .dataList td{ border-right:1px solid #CCCCCC; border-bottom:1px solid #CCCCCC;}
+    .fare_Model{ float:left; width:60%; margin-top:30px;}
+    .sort_row{ float:left; border:1px solid #9DC0EC; background:#DCE8F8; height:24px;  vertical-align:middle; margin-bottom:4px;}
+    .sortClass{ display:block; padding:0px 3px; border-left:1px solid #54A8EC; float:left; color:#3366CC; text-decoration:underline; cursor:pointer;}
+    .gridviewBorder{ width:735px; float:left;border:1px solid #FF3300; margin-top:4px;}
+    .gridview{ width:100%; float:left;font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif; white-space: nowrap;padding-bottom: 10px; display:inline;}
+    .datalist2_flight{ width:98%; float:left; height:28px; line-height:28px; border-bottom:1px dotted #808080; margin-left:4px; display:inline;}
+.left{ float:left;}
+.right{ float:right;}
+.corpname{color: #005599;
+	font-weight: bold;}
+.Details{color: #3366D5; text-decoration: underline; cursor:pointer;}
+.perPerson{color: #666666; font-size: 9px; float:left; width:100%; margin-top:5px;}
+.T_line04{width: 20px; height: 18px; background: #159B19;
+                        text-align: center; font-size: 16px; color: #fff; font-weight: bold; margin-top: 10px;
+                        margin-bottom: 15px;}
+          .arrow_Button{width:11px; float:left;}
+          .Label11{margin-top: 10px; float: left; color: #3A3E88; width: 100%; text-align: left;}
+          .Ajax_Tab{ width:100%; float:left;position:relative;}
+          .Ajax_Tab li{float:left; margin-right:5px; text-align:center; line-height:25px; height:25px; font-weight:bold; font-size:12px; color:#292E2F;cursor:pointer;}
+          .active{ z-index:1000;position:relative; margin-bottom:-2px;}
+
+
+
+.Airfare_More{ background:url(../images/arrow_T.jpg) right no-repeat; width:60px; height:20px; line-height:20px; font-size:14px; color:#4E64D3; font-weight:bold; float:left; margin-left:15px; display:inline; cursor:pointer; text-align:left;}
+.Airfare_Hide{background:url(../images/arrow_T.jpg) center no-repeat; width:120px; height:20px; line-height:20px; font-size:14px; color:#4E64D3; font-weight:bold; float:left; margin-left:15px; display:inline;cursor:pointer;text-align:left;}
+
+
+.outside1T{float:left; border:2px solid #fff; width:720px;}
+.outside2T{border-bottom:2px solid #cccccc; float:left; width:700px; margin:5px; display:inline; padding-left:15px;}
+.dlSubTrips{	float: left;
+	padding-top: 3px;
+	background-color: #F3F3F3;
+	display: block;
+	height: 20px;
+	width: 580px;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+	margin-left: 10px;}
+.out2{width:50px; height:25px; position:relative; left:390px; top:0; margin:0; border:1px solid blue; background:yellow; z-index:1000;}
+
+.PriceByRed{font-size: 12px; font-weight: bold; color: #FF3300;}
+.blueByPrice{	font-size: 20px;
+	color: #005599;
+	float: left;
+	font-weight: bold;}
+.blueByPrice_span{font-size: 14px; color: #3384E6; float: left;}
+.blueColor{color:#005599;}
+.loadPage_lable{padding-left:15px; color:#2B4D87; font-size:16px; font-weight:bold; line-height:36px;}
+.loadPage{width:735px; border:2px solid #ff9900; background:#FCFCD9; height:36px; line-height:36px; text-align:left;}
+.TabFlight{  float:left; margin-bottom:-5px; position:relative;}
+.TabFlight li{	background:#EAEAEA;
+	height:26px;
+	line-height:26px;
+	padding:0px 24px;
+	font-size:12px;
+	color:#666666;
+	float:left;
+	margin-right:5px;
+	cursor:pointer;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #ccc;
+	border-right-color: #ccc;
+	border-left-color: #ccc;
+	}
+.TabFlight .selectedTab{	border:1px solid #FF3300;
+	background:#FF3300;
+	color:#fff;
+	position:relative;
+
+	margin-bottom:0px;
+	height:27px;
+	border-bottom:none;
+	font-weight: bold;
+	 }
+	 
+	 .TabFlight .AvailabledTab{
+	border:1px solid #FF3300;
+	background:#FF3300;
+	color:#fff;
+	position:relative;
+
+	margin-bottom:0px;
+	height:27px;
+	border-bottom:none;
+	font-weight: bold;
+}
+.tips_ConfirmAvailalbeContinue
+{
+	width:400px; height:140px;border:2px solid #FF3300; background:#f6f8fd; font-family:Verdana; font-size:11px; text-align:left; z-index:9999; position:absolute; display:none;
+}
+
+.message1
+{
+width:90%; line-height:22px; font-size:12px; color:#334262; font-family:Verdana;  margin:0 auto;margin-top:20px;
+}
+
+.message_btn
+{
+	width:100%; float:left; text-align:center; margin-top:20px;
+}
+
+p{margin:0px; padding:0px;}
+.left{ float:left;}
+.right{ float:right;}
+.searchFormMain{ width:920px; margin:0 auto; font-family:Arial, Helvetica, sans-serif; font-size:11px; margin-top:15px;}
+.searchFormMain_input{ font-size:11px; background:#fdfcfc; border:1px solid #8e8c8c;}
+.searchFormMain select{ font-size:10px;}
+.searchFormMain_Content{ width:600px; float:left; text-align:left;}
+.searchFormMain_Content_title{ width:100%; display:block; float:left; margin:0px; padding:0px; color:#ff3300; font-weight:bold; font-size:16px;}
+.searchFormMain_Tine01{ width:100%; float:left; line-height:18px; margin-top:8px;}
+.searchFormMain_Tine01_block{ width:15px; height:16px; background:#ff3300; color:#fff; font-weight:bold; text-align:center; float:left; line-height:16px;}
+.searchFormMain_Tine01_block_title{ float:left; font-weight:bold; font-size:13px;}
+.searchFormMain_Content_RB{ width:100%; float:left; line-height:20px; padding:12px 0px; border-bottom:1px solid #ffcc96;}
+.searchFormMain_Content_ww{ width:100%; float:left; padding:12px 0px; }
+.searchFormMain_Content_www{ width:50%; float:left; padding:12px 0px; }
+.searchFormMain_Content_sel{ width:100%; float:left;padding:12px 0px; border-bottom:1px solid #ffcc96;}
+.searchFormMain_Content_warn{ width:582px; border:1px solid #cc0000; line-height:16px; display:block; font-weight:bold; float:left; margin:10px 0px; padding:2px; color:#cc0000; font-size:11px; font-family:Verdana;}
+.searchFormMain_Content_warn_block{ width:12px; height:12px; line-height:12px; background:#cc0000; color:#fff; float:left; text-align:center; margin-top:2px;}
+

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+  <object name="HotelCreditForm" type="~/Page/Hotel/HotelCreditForm.aspx" parent="SalseBasePage">
+    <property name="SaleOrderService" ref="SaleOrderService" />
+  </object>
+
+  <object name="HotelViewForm" type="~/Page/Hotel/HotelViewForm.aspx" parent="SalseBasePage">
+    <property name="OrderTermsConditionsService" ref="OrderTermsConditionsService" />
+  </object>
+  
+
+  <object name="HotelDetailedInformationForm"  type="~/Page/Hotel/HotelDetailedInformationForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="HotelSelectForm"  type="~/Page/Hotel/HotelSelectForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="HotelTravelerForm"  type="~/Page/Hotel/HotelTravelerForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="HotelSearchConditionsMeaasageForm"  type="~/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx" parent="SalseBasePage">
+	  <property name="CityService" ref="CityService" />
+	  <property name="AirportService" ref="AirportService" />
+  </object>
+
+  <object name="SucceedForm" type="~/Page/Hotel/SucceedForm.aspx" parent="SalseBasePage">
+  </object>
+
+	<object name="SearchMoreForm" type="~/Page/Hotel/SearchMoreForm.aspx" parent="SalseBasePage">
+		<property name="CityService" ref="CityService" />
+		<property name="AirportService" ref="AirportService" />
+	</object>
+
+	<object name="SearchResultForm" type="~/Page/Hotel2/SearchResultForm.aspx" parent="SalseBasePage">
+	</object>
+	<object name="DetailForm" type="~/Page/Hotel2/DetailForm.aspx" parent="SalseBasePage">
+	</object>
+	<object name="PriceingForm" type="~/Page/Hotel2/PriceingForm.aspx" parent="SalseBasePage">
+		<property name="OrderTermsConditionsService" ref="OrderTermsConditionsService" />
+	</object>
+	<object name="TravelForm" type="~/Page/Hotel2/TravelForm.aspx" parent="SalseBasePage">
+	</object>
+	<object name="PaymentForm" type="~/Page/Hotel2/PaymentForm.aspx" parent="SalseBasePage">
+		<property name="SaleOrderService" ref="SaleOrderService" />
+	</object>
+	<object name="SuccForm" type="~/Page/Hotel2/SuccForm.aspx" parent="SalseBasePage">
+	</object>
+	<object name="SearchMoreCityForm" type="~/Page/Hotel2/SearchMoreCityForm.aspx" parent="SalseBasePage">
+		<property name="CityService" ref="CityService" />
+		<property name="AirportService" ref="AirportService" />
+	</object>
+	<object name="MapForm" type="~/Page/Hotel2/MapForm.aspx" parent="SalseBasePage">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object name="SearchConditionsMeassageHForm" type="~/Page/Hotel2/SearchConditionsMeassageHForm.aspx" parent="SalseBasePage">
+		<property name="CityService" ref="CityService" />
+		<property name="AirportService" ref="AirportService" />
+	</object>
+
+	<object name="HotelVoucherForm" type="~/Page/Hotel2/HotelVoucherForm.aspx" parent="SalseBasePage">
+		<property name="OPSaleOrderService" ref="OPSaleOrderService" />
+	</object>
+
+	<object name="HotelPrintInvoice" type="~/Page/Hotel2/HotelPrintInvoice.aspx" parent="SalseBasePage">
+		<property name="OrderService" ref="OrderService" />
+		<property name="SaleOrderService" ref="SaleOrderService" />
+		<property name="OrderContractService" ref="OrderContractService" />
+		<property name="OPSaleOrderService" ref="OPSaleOrderService" />
+	</object>
+
+	<object name="NewInsuranceSeachMainForm" type="~/Page/Insurance/NewInsuranceSeachMainForm.aspx" parent="SalseBasePage">
+	</object>
+	<object name="NewInsuranceSuccessInfoForm" type="~/Page/Insurance/NewInsuranceSuccessInfoForm.aspx" parent="SalseBasePage">
+	</object>
+	<object name="NewInsuranceTravelerInfoForm" type="~/Page/Insurance/NewInsuranceTravelerInfoForm.aspx" parent="SalseBasePage">
+	</object>
+
+  <object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Form</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+</objects>

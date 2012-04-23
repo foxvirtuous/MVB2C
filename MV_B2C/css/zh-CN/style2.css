@@ -1,0 +1,668 @@
+﻿/* style for MV2.0 */
+body{
+	 margin:0 auto;
+	 padding: 0;/*for opera*/
+	 text-align: center;/*for IE5.0*/
+	 font-family:Arial, Helvetica, sans-serif;
+	}
+select {font-family:Arial, Helvetica, sans-serif; font-size:12px;}	
+
+/* for index */
+#head {margin:0 auto;background:#fff url(../images/logo.gif) top left no-repeat; width:920px; height:98px;}
+#menu {
+       float:right; 
+	   margin-top:66px;
+	   >margin-top:60px;
+	   width:574px;
+	   background:#fff;
+	   border-bottom:solid 2px #da521e;
+	   }
+#menu ul {
+          list-style:none; 
+		  font-family: Verdana, Arial, Helvetica, sans-serif; 
+		  font-size:13px; 
+		  font-weight:bolder;
+		  color:#222;
+		  margin: 0px 0px 0px 0px;
+	      padding: 0;
+		  float:right;
+		  }
+#menu a {
+ display: block;
+ text-align:center;
+ padding:14px 20px 0 20px;
+ >padding:20px 20px 0 20px;
+ border-right:solid 1px #ccc;
+ }
+
+#menu a:link  {
+ color:#222; text-decoration:none;
+}
+#menu a:visited  {
+ color:#222;text-decoration:none;
+}
+#menu a:hover  {
+ color:#222;text-decoration:none;
+}
+#menu ul li {float:left; height:30px;}
+#menu ul li a:hover {
+                     border-top:solid 2px #FF9900;
+					 padding:12px 20px 0 20px;
+					 >padding:18px 20px 0 20px;
+					 }
+
+.userbar {
+          width:912px; 
+		  height:31px;
+		  margin:0 auto; 
+		  padding:4px;
+		  background:url(../images/bg_bar.jpg) top left repeat-x;
+		  font-family:Verdana, Arial, Helvetica, sans-serif;
+		  font-size:11px;
+		  font-weight:bold;
+		  text-align:left;
+		  }
+.log {width:665px; padding:4px;}
+.log .input{border:solid 1px #f93; background-color:#fdedbd; font-family:Verdana, Arial, Helvetica, sans-serif;font-size:12px;font-weight:normal;}
+.log a:link, .log a:visited {color:#000;}
+.log a:hover {color:#c63;}
+.bc {float:right; padding:4px;}
+.subindex_l {float:left; width:362px;}
+.subindex_r {float:right; width:558px;}
+.subindex_rl {
+              float:left; 
+			  width:317px; 
+			  margin:10px 10px 0 15px;
+			  >margin:10px 10px 0 8px;
+			  text-align:left;
+			  }
+.subindex_rr {
+              float:right; 
+			  width:206px; 
+			  background:#f7f7f7;
+			  padding:10px 5px 5px 5px;
+			  }
+.search {
+         float:left;width:362px;
+         background:#e3effe url(../images/bg_top.gif) top left no-repeat;
+		 font-family:Verdana, Arial, Helvetica, sans-serif;
+		 line-height:24px; 
+		 }
+.sear_nav {
+           margin:3px 0 0 0;
+		   background:#e3effe url(../images/bg_top.gif) right top repeat-y;
+		   padding:6px 6px 0 6px;
+		   font-family:Verdana, Arial, Helvetica, sans-serif;
+		   font-size:11px;
+		   color:#036;
+		   font-weight:bold;
+		   }
+.sear_choice {float:right; width:270px;}
+.sear_choice ul{list-style:none; margin:0; padding:0;}
+.sear_choice ul li{float:left; margin:0;}
+.sear_kj { background:#fff url(../images/bg_top.gif) right top repeat-y; padding:8px 5px 3px 5px;margin:0 0 0 5px; line-height:30px;}
+.sear_eg {font-size:11px; color:#369; font-family:Arial, Helvetica, sans-serif;}
+#index_ad1 { float:left;margin:6px 0; position: relative;}
+.pro_regi { 
+           float:left;
+		   width:347px;
+		   >width:352px;
+		   background:#fef4d7 top left no-repeat; 
+		   height:300px; 
+		   padding:42px 5px 10px 10px;
+		   >padding:42px 5px 5px 5px;
+		   font-family:Verdana, Arial, Helvetica, sans-serif;
+		   font-size:12px;
+		   color:#555;
+		   }
+.regi{margin:6px 6px 6px 6px; background:#ffe7a6; width:158px; float:left; padding:0; height:140px}
+.regi_con { 
+            margin:0 4px 4px 3px; 
+			border-bottom:solid 1px #f38822;
+			border-left:solid 1px #f38822;
+			border-right:solid 1px #f38822;
+			background:#fff;
+			padding:5px 5px 0px 5px;
+			height:110px;
+			}
+.pro_regi ul {list-style:none; margin:0; padding:0;}
+.pro_regi ul li {height:20px;}
+.pro_regi a:link,.pro_regi a:visited { display:block; color:#555; text-decoration:none;}
+.pro_regi a:hover {display:block; color:#fff; background-color:#f38822;}
+.pro_regi select {font-family:Verdana, Arial, Helvetica, sans-serif; width:125px;}
+.subindex_rl h1 {
+                 margin:0 0 10px 0; 
+				 padding:4px 6px 3px 14px; 
+				 border-bottom:solid 1px #ccc; 
+				 border-left: solid 5px #db4d1c; 
+				 background:#f7f7f7;
+				 font-family:Verdana, Arial, Helvetica, sans-serif;
+				 font-size:12px;
+				 font-weight:bold;
+				 color:#db531c;
+				 }
+.subindex_rl h1 span {float:right;}
+.subindex_rl a:link, .subindex_rl a:visited {font-size:12px; font-weight:bold; color:#f60; text-decoration:none;}
+.subindex_rl a:hover {color:#f60; text-decoration:underline;}
+.subindex_rl p {margin:0 0 6px 0; line-height:1.3em;}
+.hotpac {background:  top left no-repeat; padding:0 4px 5px 80px; border-bottom:dotted 1px #ccc; margin-bottom:10px; min-height:65px;>height:65px;}
+.hottour {background:  top left no-repeat; padding:0 4px 5px 80px; border-bottom:dotted 1px #ccc; margin-bottom:10px;min-height:65px;>height:65px;}
+.hothotel {background:  top left no-repeat; padding:0 4px 5px 80px; border-bottom:dotted 1px #ccc; margin-bottom:10px;min-height:65px;>height:65px;}
+.hotcru {background:  top left no-repeat; padding:0 4px 5px 80px; border-bottom:dotted 1px #ccc; margin-bottom:10px;min-height:65px;>height:65px;}
+.dealdata {font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px;}
+.dealpri {color:#06c; font-weight:bold;}
+#logoa { float:left;margin:15px; text-align:center; width:300px;}
+.focus {margin:0 0 20px 0;}
+.subindex_rr h2 {
+                 margin:0 0 10px 0; 
+				 padding:4px 6px 3px 10px; 
+				 border-bottom:solid 1px #999; 
+				 border-left: solid 5px #069; 
+				 background:#fff;
+				 font-family:Arial, Helvetica, sans-serif;
+				 font-size:12px;
+				 font-weight:bold;
+				 color:#069;
+				 }
+.subindex_rr h3 {
+                 margin:0 0 10px 0; 
+				 padding:4px 6px 3px 10px; 
+				 border-bottom:solid 1px #999; 
+				 border-left: solid 5px #f93; 
+				 background:#fff;
+				 font-family:Arial, Helvetica, sans-serif;
+				 font-size:12px;
+				 font-weight:bold;
+				 color:#f93;
+				 }
+.prolist {font-size:11px; margin-bottom:20px;}
+.prolist ul{list-style:none; margin:0; padding:0;line-height:20px;}
+.prolist ul li{height:20px; padding:3px; background:url(../images/doc.gif) bottom left repeat-x;}
+.prolist ul a:link, .prolist ul a:visited {display:block; color:#000; text-decoration:none; height:20px;}
+.prolist ul a:hover{display:block; color:#f63; background:#fff;text-decoration:none;}
+.prolist .price {font-weight:bold; color:#f60; font-family:Verdana, Arial, Helvetica, sans-serif;}
+
+#travelr {font-size:11px; margin-bottom:20px;}
+#travelr ul{list-style:none; margin:0; padding:0; line-height:20px;}
+#travelr ul li{height:20px; padding:3px; background:url(../images/doc.gif) bottom left repeat-x;}
+#travelr ul a:link, #travelr ul a:visited {display:block; color:#000; text-decoration:none; height:20px;}
+#travelr ul a:hover{display:block; color:#f63; background:#fff;text-decoration:none;}
+
+#foot{width:920px;margin:0 auto;}
+#tel {float:right; text-align:right; font-size:13px; font-weight:bolder; color:#069; width:920px;}
+#link {float:left; text-align:center; border-top: solid 1px #ccc; margin-top:5px;width:920px; padding:10px 0 10px 0; font-size:11px; color:#555;}
+#link a:link, #link a:visited {color:#c30; text-decoration:none;}
+#link a:hover {color:#c30; text-decoration:underline;}
+
+/*  package process  */
+#content {
+          width:920px;
+          margin:0 auto;
+		  text-align:left;
+		  font-size:12px;
+		  }
+.clear{clear:both; }
+#subcontent_l{float:left; width:920px}
+#subcontent_l_l { 
+               float:left;
+			   width:910px;
+			   font-size:12px;
+			   background:;
+			   padding:5px 5px 8px 5px;
+			   }
+
+.showopt{ margin:0; padding:4px; background:#f1f1f1; border:solid 1px #999}
+.showopt input, .showopt select{font-size:11px; font-family:Arial, Helvetica, sans-serif;}
+#subcontent_l_r{float:right;width:142px; background:#FEF4D7; padding:3px;}
+#right_ad{background:#fff;margin:20px 0 20px 0; border:solid 1px #ccc}
+#subcontent_r { 
+               float:left;
+			   width:170px;
+			   font-size:12px;
+			   background:#FEF4D7;
+			   padding:5px 5px 8px 5px;
+			   }
+/* #stepnav {
+          background-color:#fff;
+		  font-size:12px;
+		  font-family: Arial, Helvetica, sans-serif;
+		  padding:5px 5px 8px 5px;
+		  text-align:right;
+		  line-height:20px;
+		  margin:0 0 10px 0;
+          }
+#stepnav ul {
+             list-style:none;
+			 margin:0;
+			 padding:0;
+			 }
+#stepnav ul li {height:22px; background-color: #FDF1C1; padding:2px;}
+#stepnav ul li ul {list-style:none; margin:3px 0 3px auto; font-size:11px;}
+#stepnav ul li ul li {height:16px;}
+#stepnav a:link, #stepnav a:visited {color:#033; text-decoration:none}
+#stepnav a:hover {color:#F86500;} */
+.step{margin:5px 0 0 0; padding:3px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#777; height:16px;}
+.step ul{margin:0;padding:0;list-style:none;float:right; }
+.step ul li{float:left; display:block; border-top:solid 3px #ccc; padding:0 4px 0 4px; margin:0 0 0 2px;}
+.step .stepon{border-top:solid 3px #f85000; color:#f85000;}
+
+.hidden {display:none;} 
+h1 {
+    font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	font-weight:bold;
+	margin:10px 0 0px 0;
+	}
+
+.base{
+       margin-top:10px;
+	   border:solid 1px #999;
+	   background-color:#fff;
+	   padding:3px 0 3px 5px;
+	   font-size:11px;
+	   }
+.base a:link, .base a:visited{color: #0066FF; text-decoration:none;}
+.base a:hover{color:#f85000;}
+.bluelab { color:#006; font-weight:bold;}
+
+
+#baseprice {
+            float:right;
+			margin:-40px -1px 0 0;
+			font-family: verdana, Arial, Helvetica, sans-serif;
+			color:#036;
+			background-color:#fffeea;
+			text-align:right;
+			line-height:16px;
+			padding:5px;
+			border:solid 1px #DA521E;
+			font-size:12px;
+			}
+.price_11px {font-size:11px;}			
+.getFlight {
+            border:solid 1px #333;
+			font-size:11px;
+			background-color:#FEF8E0;
+            }
+.getFlight table {
+                  background-color:#fff;
+			     }
+.getFlight table a:link,.getFlight table a:visited {color:#06c;}
+.getFlight table a:hover{color:#f85000;}
+h2 {
+    font-size:12px; 
+	font-weight:bold; 
+	color:#fff; 
+	background-color:#F38822;
+	margin:0;
+	padding:3px 3px 3px 3px;
+	}			
+.DeptRet {
+       font-size:11px; 
+	   font-weight:bold; 
+	   color:#973720; 
+	   padding:3px 3px 3px 3px;
+	   background:#FEF8E0;
+	   }
+.note{color:#FF3300; background:#fff; padding:3px}
+.vacant {width:120px; float:left; text-align:left; }
+.option {
+         padding:3px;
+         background:#fffeea url(../images/bg_top.gif) top right no-repeat;
+		 text-align:right;
+		 border-top:solid 1px #333;
+		 }
+.option a{color:#0066CC;}
+#hotel {
+        margin-top:15px;
+        }
+#sort {
+       background-color:#F38822; 
+	   color:#fff; 
+	   font-size:11px;
+	   padding:3px;
+	   }
+#sort a:link, #sort a:visited{color:#FFF;}
+#sort a:hover{color:#333; background:#FFFFCC}
+
+.room_item{
+       background-color:#F38822; 
+	   color:#fff; 
+	   font-size:11px;
+	   padding:3px 0 0 3px;
+	   height:25px;
+	   width:577px;
+	   }
+.room_item span{color:#FFF; display:block;padding:5px; text-decoration:underline; cursor:hand}
+.room_item span:hover{color:#333; background:#fff;}
+.room_item ul{list-style:none;margin:0 0 0 5px; padding:0;}
+.room_item ul li{float:left; display:block; margin:0px 10px 0 0;}
+.room_item .chosed{background:#fff; border-top:solid 1px #000;border-right:solid 1px #000;border-left:solid 1px #000; }
+.room_item .chosed span{color:#333!important; text-decoration:none}
+.name {
+       
+	   font-family:Verdana, Helvetica, sans-serif;
+	   font-size:12px;
+	   font-weight:bold;
+	   color:#ff6600;
+	   }
+.name a:link, .name a:visited{color:#0033CC!important;}
+.name a:hover{color:#f85000!important;}
+
+.ShowHotel {
+            margin-bottom:5px;
+			border:solid 1px #999;
+			font-size:11px;
+			}
+.ShowHotel table {
+                  width:100%;
+				  background-color:#fff;
+				  line-height:1.4em;
+				  border-bottom:solid 1px #999;
+				  }
+.ShowHotel td {vertical-align:top;}
+.ShowHotel p{margin:5px 3px 0px 4px;}
+.ShowHotel a:link, .ShowHotel a:visited{color:#c60;}
+.ShowHotel a:hover{color:#f85000;}
+.singleHotel{}
+.hotel_ab{float:left; width:260px;}
+.hotelpic{margin:10px 0 0 0;}
+.hotelpic img{height:100px; width:100px; border:solid 1px #333;}
+.AHprice{float:right;position:relative;top:-5px; right:0px; bottom:0px; width:194px; z-index:10; }
+.AHprice div{border-left:solid 2px #FFECD9;border-right:solid 2px #FFECD9;border-bottom:solid 2px #FFECD9}
+.AHprice table{border:solid 2px #FF9900;}
+.AHprice .M_price{border-top:solid 1px #ccc; text-align:center; font-size:13px; color:#f85000;font-weight:bold;}
+
+.newprice{ 
+          float:right; 
+		  position:relative; 
+		  top:2px; right:5px; 
+		  width:175px;
+		  border:solid 2px #FFCC99;
+		  background:#FFFFCC; 
+		  padding:6px;
+		  }
+.HotelFeature{font-size:11px; border:solid 1px #333; padding:4px;}
+.tag{margin:0 0 8px 0; padding:3px 0 3px 6px; background:#fffeea }
+.tag a:link, .tag a:visited{color:#06c;}
+.tag a:hover{color:#f85000;}
+.description{border-bottom: solid 1px #ccc;}
+.description h5{margin:0 0 5px;}
+.description .smallpic{float:right; background: #FDF8EA; border:solid 1px #FFCC00; padding:5px;margin:0 5px 5px 5px;}
+.description .smallpic img{width:150px; height:100px;}
+.Location{font-size:11px; border:solid 1px #333; padding:4px;}
+.photo{font-size:11px; border:solid 1px #333; padding:4px;}
+.photo .show{text-align:center;}
+.photo a:link, .photo a:visited{color:#06c;}
+.photo a:hover{color:#f85000;}
+.roomopt{padding:4px; border:solid 1px #333;}
+.roomopt table{width:100%;}
+.roomoptlist{border:solid 1px #999;}
+.roomoptlist td{font-size:11px;background:#F4F8DA; border-bottom:solid 1px #CAD6A3;}
+/*.price_hotel {
+              text-align:center;
+			  font-size:14px;
+			  font-weight:bold;
+			  font-family: verdana, Arial, Helvetica, sans-serif;
+			  color:#036;
+			  background-color:#fffeea;
+			  }*/
+#call {text-align:center; margin-bottom:15px;}
+.refine {
+         border:solid 1px #DA521E;
+		 background-color:#fffeea;
+		 font-size:11px;
+		 }
+.refine input {
+               border:solid 1px #333;
+			   height:16px; 
+			   vertical-align:middle; 
+			   font-size:12px; 
+			   font-family:Arial, Helvetica, sans-serif;
+			   }
+.page {
+        
+	   padding:3px;
+	   background-color:#fff;
+	   font-size:11px;
+	   font-family:Verdana, Arial, Helvetica, sans-serif;
+	   margin-top:10px;
+	   }
+.page a:link, .page a:visited{color:#000;font-weight:bold;}
+.page a:hover{color:#f85000;}
+.turn {
+      width:200px; float:right; text-align:right;
+       }
+.turn a{color:#0066CC;}
+.otheropt{background-color: #fffeea;
+          border:solid 1px #DA521E;
+		  line-height:20px;
+		  padding:5px;
+		  }
+/*  .otheropt a:link,a:visited{color:#03c;}
+.otheropt a:hover{color:#fff; background-color:#03c;} */
+.singleroom{margin:5px 0 0 0;}
+.changeIO{border:solid 1px #DA521E; font-size:11px; background:#fff;}
+.changeIO select{font-size:11px;}
+.btn {
+      margin-top:10px; 
+	  text-align:right; 
+	  background-color:#fff;
+	  padding:5px;
+	  border:solid 1px #999; 
+	  font-size:12px;
+	  line-height:1.8em;
+	  }
+.btn a{color:#03c;}
+.btn_inbg{background:#f85000; border: solid 1px #fff; color:#fff;}
+
+.traveller{border:solid 1px #999; margin:0 0 5px 0;}
+.traveller input{ font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+.at{background:#edf1fa; border:solid 1px #92AFCF}
+.remark{width:575px;height:40px; font-family:Arial, Helvetica, sans-serif; font-size:12px;overflow-x:none;overflow-y:scroll}
+/* #pricesum {
+           border:solid 2px #fff; 
+		   background-color:#FFE6BE; 
+		   margin:10px 0 10px 0;
+		   font-family:Verdana, Arial, Helvetica, sans-serif;
+		   color:#036;
+		   }
+#pricesum table{width:100%;font-weight:bold; font-size:12px; text-align:left;}
+#pricesum .pt{ 
+              width:200px; 
+			  float:left; 
+			  font-size:11px; 
+			  text-align:right; 
+			  line-height:16px;
+			  }
+#pricesum .include {
+                   font-size:11px; 
+				   color:#333; 
+				   width:272px;
+				   margin-left:210px;
+				   border-left:solid 2px #fff;
+				   padding:3px;
+				   min-height:60px;
+				   >height:60px;
+				   } */
+#pricesum ol{
+              margin-top:2px; 
+			  margin-bottom:2px;
+			  list-style:square;
+			  }
+			  
+/* ct & at & TermsConditions*/
+.atct{margin:10px 0 0 0;}
+.ct {margin:5px 0 0 0;border:solid 1px #999; background:#E7F7DB}
+.ctline{border-bottom:solid 1px #ccc;}
+.at a:link, .at a:visited{color:#0066CC;}
+.at a:hover{color:#f85000;}
+.ct a:link, .ct a:visited{color:#0066CC;}
+.ct a:hover{color:#f85000;}
+#ct {margin-bottom:15px;}
+#ct table{background-color:#fff; border: solid 1px #333; margin-bottom:2px;}
+#at {margin-bottom:10px;}
+#at table{background-color:#fff; border: solid 1px #333; margin-bottom:2px;}
+#ct img{height:70px; width:70px; border:solid 1px #006;}
+#at img{height:70px; width:70px; border:solid 1px #006;}
+h3 {
+    font-size:16px; 
+	font-weight:bold; 
+	margin:15px 0 0 0;
+	padding:3px 3px 3px 0px;
+	background-color:#fff;
+	}
+.name2 {
+       background-color:#edf1fa;
+	   font-family:Arial, Helvetica, sans-serif;
+	   font-size:12px;
+	   font-weight:bold;
+	   line-height:20px;
+	    }
+.t_c{
+	 background:#EDF1FA;
+	 padding:3px 10px 5px 0;
+	 border:solid 1px #999;
+	 overflow:auto;
+	 height:100px;
+	 }
+h4{margin:4px 4px 4px 15px; font-size:13px;}
+.booklogin{width:420px; background:#FDF1C1; border: solid 1px #999; margin: 5px auto;}
+.booklogin a:link, .booklogin a:visited{color:#0066CC;}
+.booklogin a:hover{color:#f85000;}
+.booklogin input{font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+
+.orglab{color:#EF6C2E; font-weight:bold;}
+
+.register_ab{
+             background:#FDF1C1;
+			 font-family:Verdana, Arial, Helvetica, sans-serif;
+			 font-size:11px;
+			 line-height:1.4em;
+			 border: dotted 1px #ccc;
+			 padding:5px;
+			 margin:5px 0;
+			 }
+.register_ab ul{
+                list-style:square;
+                margin-top:0;
+				margin-bottom:0;
+				}
+.register_ab a:link, .register_ab a:visited{color:#06c;}
+.register_ab a:hover{color:#f85000;}
+
+ .reprice {
+          background-color:#F7FBFD;
+		  border:dotted 1px #ccc;
+		  }
+#showDes{ background-color:#fffeea;
+          border:solid 1px #EF6C2E;
+		  }	  
+
+/* Change Flight */
+
+.ShowFlight {
+            margin-bottom:5px;
+			border:solid 1px #999;
+			font-size:11px;
+			}
+.ShowFlight table {
+                  width:100%;
+				  background-color:#fff;
+				  line-height:18px;
+				  border-bottom:solid 1px #999;
+				  }
+.ShowFlight td {vertical-align:top;}
+.singleFlight{border-bottom: solid 3px #999;}
+#Flight {
+        margin-top:15px;
+        }
+		
+/* Change hotel */
+#getHotel {
+            border:solid 1px #DA521E;
+			font-size:11px;
+			background-color:#fffeea;
+            }
+#getHotel table {
+                  background-color:#fff;
+				  margin-bottom:3px;
+				  border-bottom:solid 1px #ccc;
+			     }
+#getHotel a:link, #getHotel a:visited{color:#06c;font-size:12px; font-weight:bold;}
+#getHotel a:hover{color:#f85000;}
+.addmore{margin:10px 0 0 0;}
+.hidenbtn{background:#fff; border: none; font-family:Arial, Helvetica, sans-serif; color: #f85000; font-size:12px; text-decoration:underline; width:180px;}
+/* passenger & payment Info */
+
+.info {
+	   border:solid 1px #999; 
+	   background:#f38822;
+	   font-size:12px;
+	   font-family:Arial, Helvetica, sans-serif;
+	   padding:4px;
+	   }
+.info table{background:#fff;}
+.info input{font-family:Arial, Helvetica, sans-serif;font-size:12px;}
+.redlab {color:#FF3300;}
+.change {text-align:right; font-size:11px;}
+
+/* order review */
+.cs{margin:4px 0px 5px 22px; line-height:1.5em;}
+.cs a:link, .cs a:visited{color:#0066CC; font-weight:bold}
+.cs a:hover{color:#f85000;}
+.order{border:solid 1px #999;}
+.order a{color:#06c;}
+
+/* Payment */
+.paytable{background:#666; margin:0 0 5px 0; text-align:center;}
+.paytable td{background:#fff;}
+
+.dotline{border-top:dotted 1px #ccc;}
+
+/*  tour process  */
+.list {margin:10px 5px 5px 5px; border:solid 1px #ccc;}
+.list table {border-bottom:solid 1px #ccc; background:#fffeea; margin-bottom:7px;}
+
+.pricebd { border-left:solid 1px #ccc; border-right:solid 1px #ccc;}
+.vdi {float:right; text-align:right;width:300px;}
+.vdi a:link, .vdi a:visited {color:#660;}
+.vdi a:hover {color:#fff; background:#660;}
+.tourinfo {border:solid 1px #ccc;}
+.tourbook {margin:10px 5px 5px 5px; border:solid 1px #ccc;}
+
+
+.actt{font-size:16px; color:#F38822; background:#fffeea; font-weight:bold;}
+
+/* Hotel Only */
+.changebtn{ text-align:right}
+.changebtn a:link, .changebtn a:visited{color:#06c;}
+.changebtn a:hover{color:#f85000;}
+.RoomDetail{margin:10px 0 0 0; border:solid 1px #333; width:280px; background:#fff; font-size:11px}
+.total{margin:10px 0 0 0;border-bottom:solid 2px #ccc;padding:5px; text-align:right;}
+.totalprice_15px{font-size:15px; color:#f85000; font-weight:bold;}
+
+/* Rating */
+.ratingStar {
+    font-size: 0pt;
+    width: 13px;
+    height: 12px;
+    margin: 0px;
+    padding: 0px;
+    cursor: pointer;
+    display: block;
+    background-repeat: no-repeat;
+}
+
+.filledRatingStar {
+    background-image: url(../images/FilledStar.png);
+
+}
+
+.emptyRatingStar {
+    background-image: url(../images/EmptyStar.png);
+}
+
+.savedRatingStar {
+    background-image: url(../images/SavedStar.png);
+}

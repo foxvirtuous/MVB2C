@@ -1,0 +1,558 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+
+  <object name="Pubinfo" type="~/Page/Distribution/Pubinfo.aspx">
+    <!--<property name="MarkupMasterController" ref="MarkupMasterController" />
+    <property name="DistributionController" ref="DistributionController" />-->
+  </object>
+
+  <object name="PublishForm" type="~/Page/Distribution/PublishForm.aspx">
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="RangeMarkupMasterController" ref="RangeMarkupMasterController" />
+    <!--<property name="MarkupMasterController" ref="MarkupMasterController" />-->
+    <!--<property name="DistributionController" ref="DistributionController" />-->
+  </object>
+
+  <object name="RangeMarkupSectionForm" type="~/Page/Distribution/RangeMarkupSectionForm.aspx">    
+    <property name="RangeMarkupMasterController" ref="RangeMarkupMasterController" />    
+  </object>
+
+  <object name="MarkupMasterController" type="MarkupMasterController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object name="DistributionController" type="DistributionController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object name="RangeMarkupMasterController" type="RangeMarkupMasterController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+  
+  <object name="TourProductController" type="NHibernateTourProductController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object name="MarkupRuleMasterController" type="AirMarkupRuleMasterController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object name="TourProductMainForm" type="~/Page/ProductNew/TourProductMainForm.aspx">
+    <!--<property name="ProductService" ref="ProductService" />-->
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="ObjectEditController" ref="AttachedEditController" />
+    <property name="LocationController" ref="LocationController" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="ProvinceService" ref="ProvinceService" />
+    <property name="CityService" ref="CityService" />
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="AreaDetailService" ref="AreaDetailService" />
+    <property name="BaseService" ref="BaseService" />
+    <property name="Results">
+      <dictionary>
+        <entry key="Edit" value="redirect:start2.aspx" />
+        <entry key="TransferToViewForm" value="redirect:TourProductDetailForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="TourProductEditForm"  type="~/Page/ProductNew/TourProductEditForm.aspx">
+    <!--<property name="ProductService" ref="ProductService" />-->
+    <property name="TourPassedCityService" ref="TourPassedCityService" />
+    <property name="TourUsedAirlinesService" ref="TourUsedAirlinesService" />
+    <!--<property name="TourProductProfileService" ref="TourProductProfileService" />-->
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+    <property name="ProductItemGroupService" ref="ProductItemGroupService" />
+    <property name="CityService" ref="CityService" />
+    <property name="Results">
+      <dictionary>
+        <entry key="Return" value="redirect:TourProductMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="TourProductDetailForm"  type="~/Page/ProductNew/TourProductDetailForm.aspx">
+    <property name="AirProductItemService" ref="AirProductItemService" />
+    <property name="AirSearchRuleService" ref="AirSearchRuleService" />
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+    <property name="Results">
+      <dictionary>
+        <entry key="ReturnToMainForm" value="redirect:TourProductMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="TourItineraryMainForm"  type="~/Page/ProductNew/TourItineraryMainForm.aspx">
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+    <!--<property name="TourItineraryProfileService" ref="TourItineraryProfileService" />-->
+    <property name="ProductService" ref="ProductService" />
+    <property name="HotelService" ref="HotelService" />
+  </object>
+
+  <object name="SelectHotelForm"  type="~/Page/ProductNew/SelectHotelForm.aspx">   
+    <property name="HotelService" ref="HotelService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="ProvinceService" ref="ProvinceService" />
+    <property name="CityService" ref="CityService" />
+  </object>
+
+  <object name="TourSeasonList"  type="~/Page/ProductNew/SeasonList.aspx">
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+    <property name="ProductService" ref="ProductService" />
+  </object>
+
+  <object name="BlackoutDateList"  type="~/Page/ProductNew/BlackoutDateList.aspx">
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+    <property name="ProductService" ref="ProductService" />
+  </object>
+
+  <object name="PeriodDefinition"  type="~/Page/ProductNew/PeriodDefinition.aspx">
+    <property name="ProductSeasonService" ref="ProductSeasonService" />
+    <property name="ProductService" ref="ProductService" />
+  </object>
+
+  <object name="TourPriceMainForm"  type="~/Page/ProductNew/TourPriceMainForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="CommConstantDetailService" ref="CommConstantDetailService" />
+    <property name="CommConstantMasterService" ref="CommConstantMasterService" />
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+    <property name="TourPriceService" ref="TourPriceService" />
+    <property name="CurrencyService" ref="CurrencyService" />
+  </object>
+
+  <object name="AreaMasterController" type="NHibernateAreaMasterController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+
+  <object name="TourPriceInfo"  type="~/Page/ProductNew/TourPriceInfo.aspx">
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+    <property name="ProductService" ref="ProductService" />
+  </object>
+
+
+  <object type="~/Page/ProductNew/AreaMasterMainForm.aspx">
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="AirProductController" ref="AirProductController" />
+    <property name="HotelProductController" ref="HotelProductController" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToEditForm" value="redirect:AreaMasterEditForm.aspx" />
+        <entry key="TransferToTreeViewForm" value="redirect:AreaMasterTreeViewForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object type="~/Page/ProductNew/AreaMasterEditForm.aspx">
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="AreaDetailService" ref="AreaDetailService" />
+    <property name="BaseService" ref="BaseService" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+  </object>
+
+  <object type="~/Page/ProductNew/AreaMasterTreeViewForm.aspx">
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="AreaDetailService" ref="AreaDetailService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="ProvinceService" ref="ProvinceService" />
+    <property name="CityService" ref="CityService" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToEditForm" value="redirect:AreaMasterEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object> 
+
+  <object type="~/Page/ProductNew/AreaDetailEditForm.aspx">
+    <property name="AreaDetailService" ref="AreaDetailService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="ProvinceService" ref="ProvinceService" />
+    <property name="CityService" ref="CityService" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="ReturnToMainForm" value="redirect:AreaMasterEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+
+  <object name="HotelProductController" type="NHibernateHotelProductController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object name="AttachedEditController" type="NHibernateAttachedEditController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object name="HotelProductMainForm" type="~/Page/ProductNew/HotelProductMainForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="SuggestedRetailPriceService" ref="SuggestedRetailPriceService" />
+    <property name="HotelProductController" ref="HotelProductController" />
+    <property name="HotelProductItemService" ref="HotelProductItemService" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="ObjectEditController" ref="AttachedEditController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="Edit" value="redirect:start2.aspx" />
+        <entry key="TransferToViewForm" value="redirect:HotelProductViewForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="HotelProductEditForm"  type="~/Page/ProductNew/HotelProductEditForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="HotelProductItemService" ref="HotelProductItemService" />
+    <property name="SuggestedRetailPriceService" ref="SuggestedRetailPriceService" />
+    <property name="ProductItemGroupService" ref="ProductItemGroupService" />
+    <property name="HotelProductController" ref="HotelProductController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="Return" value="redirect:HotelProductMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="HotelProductItemEditNewForm"  type="~/Page/ProductNew/HotelProductItemEditNewForm.aspx">
+    <property name="HotelProductItemService" ref="HotelProductItemService" />
+    <property name="ProductItemGroupService" ref="ProductItemGroupService" />
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="AreaDetailService" ref="AreaDetailService" />
+    <property name="HotelSearchRuleService" ref="HotelSearchRuleService" />
+    <property name="HotelProductController" ref="HotelProductController" />
+    <property name="ContractService" ref="ContractService" />
+    <property name="ContractPageService" ref="ContractPageService" />
+    <property name="ContractItemHotelService" ref="ContractItemHotelService" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="HotelService" ref="HotelService" />
+    <property name="CountryService" ref="CountryService" />
+    <property name="CityService" ref="CityService" />
+    <property name="ProvinceService" ref="ProvinceService" />
+    <property name="LocationController" ref="LocationController" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToAreaEdit" value="redirect:AreaMasterEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="HotelProductViewForm" type="~/Page/ProductNew/HotelProductViewForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="BaseService" ref="BaseService" />
+    <property name="HotelProductItemService" ref="HotelProductItemService" />
+    <property name="HotelMarkUpService" ref="HotelMarkUpService" />
+    <property name="SubMarkUpService" ref="SubMarkUpService" />
+    <property name="HotelSearchRuleService" ref="HotelSearchRuleService" />
+    <property name="HotelProductController" ref="HotelProductController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToViewForm" value="redirect:HotelProductViewForm.aspx" />
+        <entry key="ReturnToMainForm" value="redirect:HotelProductMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="HotelMarkupMainForm" type="~/Page/ProductNew/HotelMarkupMainForm.aspx">
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="HotelProductController" ref="HotelProductController" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="MarkupRuleMasterController" ref="MarkupRuleMasterController" />
+    <property name="RangeMarkupMasterController" ref="RangeMarkupMasterController" />
+    <property name="Results">
+      <dictionary>
+        <!--<entry key="TransferToEditForm" value="redirect:HotelMarkupEditForm.aspx" />-->
+        <entry key="ReturnToPreviousForm" value="redirect:HotelProductEditForm.aspx" />
+        <entry key="TransferToAreaEdit" value="redirect:AreaMasterEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="HotelSubMarkUpMainForm" type="~/Page/ProductNew/HotelSubMarkUpMainForm.aspx">
+    <property name="RangeMarkupMasterController" ref="RangeMarkupMasterController" />
+  </object>
+
+  <object name="PackageProductController" type="NHibernatePackageProductController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <!--<object name="InsuranceProductItemController" type="NHibernateInsuranceProductItemController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>-->
+
+  <object name="PackageProductMainForm" type="~/Page/ProductNew/PackageProductMainForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="ObjectEditController" ref="AttachedEditController" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToEditForm" value="redirect:PackageProductEditForm.aspx" />
+        <entry key="TransferToViewForm" value="redirect:PackageProductViewForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="PackageProductEditForm"  type="~/Page/ProductNew/PackageProductEditForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="ProductItemGroupService" ref="ProductItemGroupService" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="Return" value="redirect:PackageProductMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="PackageProductViewForm"  type="~/Page/ProductNew/PackageProductViewForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="BaseService" ref="BaseService" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="PackageMarkupService" ref="PackageMarkupService" />
+    <property name="PackageSubMarkupService" ref="PackageSubMarkupService" />
+    <property name="HotelProductItemService" ref="HotelProductItemService" />
+    <property name="AirProductItemService" ref="AirProductItemService" />
+    <!--<property name="InsuranceProductItemService" ref="InsuranceProductItemService" />-->
+    <property name="HotelSearchRuleService" ref="HotelSearchRuleService" />
+    <property name="AirSearchRuleService" ref="AirSearchRuleService" />
+    <!--<property name="InsuranceSearchRuleService" ref="InsuranceSearchRuleService" />-->
+    <property name="ProductItemGroupService" ref="ProductItemGroupService" />
+  </object>
+
+
+  <!--<object name="InsuranceProductItemEditNewForm"  type="~/Page/Product/InsuranceProductItemEditNewForm.aspx">
+    <property name="ContractService" ref="ContractService" />
+    <property name="ContractItemHotelService" ref="ContractItemHotelService" />
+    <property name="InsuranceProductItemService" ref="InsuranceProductItemService" />
+    <property name="InsuranceSearchRuleService" ref="InsuranceSearchRuleService" />
+    <property name="ProductItemGroupService" ref="ProductItemGroupService" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="InsuranceProductItemController" ref="InsuranceProductItemController" />   
+  </object>
+
+  <object name="InsuranceSearchRuleMainForm" type="~/Page/Product/InsuranceSearchRuleMainForm.aspx">
+    <property name="InsuranceSearchRuleService" ref="InsuranceSearchRuleService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="InsuranceSearchRuleController" ref="InsuranceSearchRuleController" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToEditForm" value="redirect:InsuranceSearchRuleEditForm.aspx" />
+        <entry key="ReturnToPreviousForm" value="redirect:InsuranceSearchRuleEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="InsuranceSearchRuleEditForm" type="~/Page/Product/InsuranceSearchRuleEditForm.aspx">
+    <property name="InsuranceSearchRuleService" ref="InsuranceSearchRuleService" />
+    <property name="ContractService" ref="ContractService" />
+    <property name="ContractItemHotelService" ref="ContractItemHotelService" />
+    <property name="InsuranceSearchRuleController" ref="InsuranceSearchRuleController" />
+    -->
+  <!--<property name="AreaMasterService" ref="AreaMasterService" />-->
+  <!--
+    <property name="Results">
+      <dictionary>
+        <entry key="ReturnToMainForm" value="redirect:InsuranceSearchRuleMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>-->
+
+  <!--<object name="InsuranceSearchRuleController" type="NHibernateInsuranceSearchRuleController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>-->
+
+  <object name="PackageMarkupMainForm" type="~/Page/ProductNew/PackageMarkupMainForm.aspx">
+    <property name="PackageMarkupService" ref="PackageMarkupService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="BaseService" ref="BaseService" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToAreaEdit" value="redirect:AreaMasterEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+
+
+  <object name="PackageSubMarkUpMainForm" type="~/Page/ProductNew/PackageSubMarkUpMainForm.aspx">
+    <property name="PackageSubMarkUpService" ref="PackageSubMarkUpService" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="PackageMarkUpService" ref="PackageMarkUpService" />
+  </object>
+
+  <object type="~/Page/ProductNew/AirProductMainForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="AirProductController" ref="AirProductController" />
+    <property name="AirProductItemService" ref="AirProductItemService" />
+    <property name="ObjectEditController" ref="AttachedEditController" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToEditForm" value="redirect:AirProductEditForm.aspx" />
+        <entry key="TransferToDetail" value="redirect:AirProductDetailForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="AirProductEditForm"  type="~/Page/ProductNew/AirProductEditForm.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="ProductItemGroupService" ref="ProductItemGroupService" />
+    <property name="AirProductItemService" ref="AirProductItemService" />
+    <property name="AirProductController" ref="AirProductController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="Return" value="redirect:HotelProductMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="AirProductItemEditNewForm"  type="~/Page/ProductNew/AirProductItemEditNewForm.aspx">
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="AirProductItemService" ref="AirProductItemService" />
+    <property name="AirProductController" ref="AirProductController" />
+    <property name="TourProductController" ref="TourProductController" />
+    <property name="AirSearchRuleService" ref="AirSearchRuleService" />
+    <property name="ContractService" ref="ContractService" />
+    <property name="ContractPageService" ref="ContractPageService" />
+    <property name="ContractItemAirService" ref="ContractItemAirService" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToAreaEdit" value="redirect:AreaMasterEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+
+  <object name="AirMarkupMainForm" type="~/Page/ProductNew/AirMarkupMainForm.aspx">
+    <property name="AirMarkUpService" ref="AirMarkUpService" />
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="ProductService" ref="ProductService" />
+    <property name="AirProductController" ref="AirProductController" />
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="BaseService" ref="BaseService" />
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToEditForm" value="redirect:AirMarkupEditForm.aspx" />
+        <entry key="TransferToAreaEdit" value="redirect:AreaMasterEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="AirProductDetailForm" type="~/Page/ProductNew/AirProductDetailForm.aspx">
+    <property name="AirProductItemService" ref="AirProductItemService" />
+    <property name="AirSearchRuleService" ref="AirSearchRuleService" />
+    <property name="AirProductController" ref="AirProductController" />
+    <property name="Results">
+      <dictionary>
+        <entry key="ReturnToMainForm" value="redirect:AirProductMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="AirProductController" type="NHibernateAirProductController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+  <object type="~/UserConrols/SelectAreaDetailControl.ascx">
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="AreaDetailService" ref="AreaDetailService" />
+  </object>
+
+  <object type="~/UserConrols/EditAreaMaster.ascx">
+    <property name="AreaMasterService" ref="AreaMasterService" />
+    <property name="AreaDetailService" ref="AreaDetailService" />
+  </object>
+
+  <!--<object type="Spring.Aop.Framework.ProxyFactoryObject, Spring.Aop" >
+		<property name="Target">
+			<ref object="HotelProductEditForm" />
+		</property>
+		<property name="InterceptorNames">
+			<list>
+				<value>AfterThrowAdvice</value>
+			</list>
+		</property>
+	</object>-->
+
+  <object name="AttachedImageForm" type="~/Page/Global/AttachedImageForm.aspx" parent="AttachedEditPage">
+    <property name="BaseService" ref="ProductBaseService" />
+  </object>
+
+  <object name="AttachedTextForm" type="~/Page/Global/AttachedTextForm.aspx" parent="AttachedEditPage">
+    <property name="BaseService" ref="ProductBaseService" />
+  </object>
+
+  <object name="AttachedEditPage" abstract="true">
+    <property name="ObjectEditController" ref="AttachedEditController" />
+  </object>
+
+  <object name="ProductMenu2" type="~/Page/ProductNew/ProductMenu2.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="AirProductItemService" ref="AirProductItemService" />
+    <property name="HotelProductItemService" ref="HotelProductItemService" />
+    <property name="AirProductController" ref="AirProductController" />
+    <property name="HotelProductController" ref="HotelProductController" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <!--<property name="TourProductController" ref="TourProductController" />-->
+  </object>
+
+  <object name="ProductMenu" type="~/Page/ProductNew/ProductMenu.aspx">
+    <property name="ProductService" ref="ProductService" />
+    <property name="AirProductItemService" ref="AirProductItemService" />
+    <property name="HotelProductItemService" ref="HotelProductItemService" />
+    <property name="AirProductController" ref="AirProductController" />
+    <property name="HotelProductController" ref="HotelProductController" />
+    <property name="PackageProductController" ref="PackageProductController" />
+    <property name="ProductItemGroupService" ref="ProductItemGroupService" />
+  </object>
+
+
+  <object name="ProductMain" type="~/Page/ProductNew/ProductMain.aspx">
+    <property name="Results">
+      <dictionary>
+        <entry key="TransferToAirSearchRule" value="redirect:AirProductEditForm.aspx" />
+        <entry key="TransferToHotelSearchRule" value="redirect:HotelProductEditForm.aspx" />
+        <entry key="TransferToPackageSearchRule" value="redirect:PackageProductEditForm.aspx" />
+        <!--<entry key="TransferToTour" value="redirect:TourProductEditForm.aspx" />-->
+      </dictionary>
+    </property>
+  </object>
+
+  <object name="AttachedEditController" type="NHibernateAttachedEditController" scope="session">
+    <constructor-arg name="sessionFactory" ref="BaseSessionFactory"/>
+  </object>
+
+  <object name="LocationController" type="NHibernateLocationController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object name="PubTourInfo" type="~/Page/Distribution/PubTourInfo.aspx">   
+  </object>
+
+  <object name="TourPublishForm" type="~/Page/Distribution/TourPublishForm.aspx">
+    <property name="AreaMasterController" ref="AreaMasterController" />
+    <property name="RangeMarkupMasterController" ref="RangeMarkupMasterController" />
+  </object>
+
+  <object name="TourRangeMarkupSectionForm" type="~/Page/Distribution/TourRangeMarkupSectionForm.aspx">
+    <property name="RangeMarkupMasterController" ref="RangeMarkupMasterController" />
+  </object>
+</objects>

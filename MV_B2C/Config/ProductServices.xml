@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms service layer definitions
+	</description>
+
+	<!-- Property placeholder configurer for database settings -->
+
+  <object id="InsuranceProductItemService" type="Terms.Product.Service.InsuranceProductItemService, Terms.Product.Service">
+    <property name="InsuranceProductItemDao" ref="InsuranceProductItemDao"/>
+  </object>
+  
+	<object id="HotelProductItemService" type="Terms.Product.Service.HotelProductItemService, Terms.Product.Service">
+		<property name="HotelProductItemDao" ref="HotelProductItemDao"/>
+		<property name="CityDao" ref="CityDao"/>
+	</object>
+
+	<object id="HotelMarkUpService" type="Terms.Product.Service.HotelMarkUpService, Terms.Product.Service">
+		<property name="HotelMarkUpDao" ref="HotelMarkUpDao"/>
+	</object>
+
+  <object id="SubMarkUpService" type="Terms.Product.Service.SubMarkUpService, Terms.Product.Service">
+    <property name="SubMarkUpDao" ref="SubMarkUpDao"/>
+  </object>
+
+  <object id="PackageSubMarkUpService" type="Terms.Product.Service.PackageSubMarkUpService, Terms.Product.Service">
+    <property name="PackageSubMarkUpDao" ref="PackageSubMarkUpDao"/>
+  </object>
+
+	<object id="PackageMarkupService" type="Terms.Product.Service.PackageMarkupService, Terms.Product.Service">
+		<property name="PackageMarkupDao" ref="PackageMarkupDao"/>
+	</object>
+
+  <object id="ProductItemService" type="Terms.Product.Service.ProductItemService, Terms.Product.Service">
+    <property name="ProductItemDao" ref="ProductItemDao"/>    
+  </object>
+
+	<object id="AirProductItemService" type="Terms.Product.Service.AirProductItemService, Terms.Product.Service">
+		<property name="AirProductItemDao" ref="AirProductItemDao"/>
+		<property name="CityDao" ref="CityDao"/>
+    <property name="AirportDao" ref="AirportDao"/>
+	</object>
+
+	<object id="OriginalAirItemService" type="Terms.Product.Service.AirProductItemService, Terms.Product.Service">
+		<property name="ProductItemDao" ref="AirItemDao"/>
+	</object>
+
+	<object id="AirItemService" parent="BussProxyConfigurationTemplate">
+		<property name="Target" ref="OriginalAirItemService"/>
+	</object>
+  
+	<!--<object id="HotelItemService" type="Terms.Product.Service.HotelItemService, Terms.Product.Service">
+		<property name="ProductItemDao" ref="HotelItemDao"/>
+	</object>-->
+
+	<object id="ProductService" type="Terms.Product.Service.ProductService, Terms.Product.Service">
+		<property name="AreaMasterDao" ref="AreaMasterDao"/>
+		<property name="ProductDao" ref="ProductDao"/>
+		<property name="ProductItemGroupDao" ref="ProductItemGroupDao"/>
+    <property name="CityDao" ref="CityDao"/>
+    <property name="AirportDao" ref="AirportDao"/>
+	</object>
+
+	<object id="ProductItemGroupService" type="Terms.Product.Service.ProductItemGroupService, Terms.Product.Service">
+		<property name="ProductItemGroupDao" ref="ProductItemGroupDao"/>
+	</object>
+
+  <object id="ProductItemGroupService_dbCn" type="Terms.Product.Service.ProductItemGroupService, Terms.Product.Service">
+    <property name="ProductItemGroupDao" ref="ProductItemGroupDao_dbCn"/>
+  </object>
+  
+	<object id="InsuranceSearchRuleService" type="Terms.Product.Service.InsuranceSearchRuleService, Terms.Product.Service">
+    <property name="InsuranceSearchRuleDao" ref="InsuranceSearchRuleDao"/>
+  </object>
+
+	<object id="HotelSearchRuleService" type="Terms.Product.Service.HotelSearchRuleService, Terms.Product.Service">
+		<property name="HotelSearchRuleDao" ref="HotelSearchRuleDao"/>
+	</object>
+
+	<object id="AirSearchRuleService" type="Terms.Product.Service.AirSearchRuleService, Terms.Product.Service">
+		<property name="AirSearchRuleDao" ref="AirSearchRuleDao"/>
+	</object>
+
+	<object id="AirMarkUpService" type="Terms.Product.Service.AirMarkUpService, Terms.Product.Service">
+		<property name="AirMarkUpDao" ref="AirMarkUpDao"/>
+	</object>
+
+	<!--<object id="ExchangeRateService" parent="BussProxyConfigurationTemplate">
+		<property name="Target" >
+			<object type="Terms.Product.Service.ExchangeRateService, Terms.Product.Service">
+				<property name="ExchangeRateDao" ref="ExchangeRateDao"/>
+			</object>
+		</property>
+	</object>-->
+
+	<object id="FareService" type="Terms.Product.Service.FareService, Terms.Product.Service">
+		<property name="FareDao" ref="FareDao"/>
+	</object>
+
+	<object id="ProxyFareService" parent="BussProxyConfigurationTemplate">
+		<property name="Target" ref="OriginalFareService"/>
+	</object>
+
+	<object id="FareMasterService" type="Terms.Product.Service.FareMasterService, Terms.Product.Service">
+		<property name="FareMasterDao" ref="FareMasterDao"/>
+	</object>
+
+	<!--<object id="autoProxyCreator"
+        type="Spring.Aop.Framework.AutoProxy.DefaultAdvisorAutoProxyCreator, Spring.Aop">
+  </object>-->
+
+	<!-- Using ObjectNameAutoProxyCreator -->
+	<!-- Apply 'aroundAdvisor' on all objects with id that ends by 'HotelComponentService' -->
+	<!--<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>HotelComponentService</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>-->
+
+	<object id="AttachedImageService" type="Terms.Product.Service.AttachedImageService, Terms.Product.Service">
+		<property name="AttachedImageDao" ref="ProductAttachedImageDao"/>
+	</object>
+
+	<object id="AttachedTextService" type="Terms.Product.Service.AttachedTextService, Terms.Product.Service">
+		<property name="AttachedTextDao" ref="ProductAttachedTextDao"/>
+	</object>
+
+  <object id="AttachedTextService_dbCn" type="Terms.Product.Service.AttachedTextService, Terms.Product.Service">
+    <property name="AttachedTextDao" ref="ProductAttachedTextDao_dbCn"/>
+  </object>
+
+	<object id="AreaMasterService" type="Terms.Product.Service.AreaMasterService, Terms.Product.Service">
+		<property name="AreaMasterDao" ref="AreaMasterDao"/>
+		<property name="TypeDetailDao" ref="TypeDetailDao"/>
+	</object>
+
+	<object id="AreaDetailService" type="Terms.Product.Service.AreaDetailService, Terms.Product.Service">
+		<property name="AreaDetailDao" ref="AreaDetailDao"/>
+	</object>
+
+	<object id="PackageSearchRuleService" type="Terms.Product.Service.PackageSearchRuleService, Terms.Product.Service">
+		<property name="PackageSearchRuleDao" ref="PackageSearchRuleDao"/>
+		<property name="TypeDetailDao" ref="TypeDetailDao"/>
+	</object>
+
+	<!--<object id="PackageSearchRuleService" parent="BussProxyConfigurationTemplate">
+    <property name="Target" ref="OriginalPackageSearchRuleService"/>
+  </object>-->
+
+	<object id="MarketService" type="Terms.Product.Service.MarketService, Terms.Product.Service">
+		<property name="MarketDao" ref="MarketDao"/>
+	</object>
+
+	<!--<import resource="DeclarativeServicesTxProxyFactoryDriven.xml" />-->
+	<!--<import resource="DeclarativeServicesAttributeDriven.xml" />-->
+
+	<object id="BussProxyConfigurationTemplate" abstract="true"
+			type="Spring.Transaction.Interceptor.TransactionProxyFactoryObject, Spring.Data">
+		<property name="PlatformTransactionManager" ref="BussHibernateTransactionManager"/>
+		<property name="TransactionAttributes">
+			<name-values>
+				<!--Add common methods across your services here-->
+				<add key="Process*" value="PROPAGATION_REQUIRED"/>
+				<add key="Save*" value="PROPAGATION_REQUIRED"/>
+				<add key="Delete*" value="PROPAGATION_REQUIRED"/>
+				<add key="Update*" value="PROPAGATION_REQUIRED"/>
+				<add key="Insert*" value="PROPAGATION_REQUIRED"/>
+				<add key="Add*" value="PROPAGATION_REQUIRED"/>
+
+				<add key="Get*" value="PROPAGATION_REQUIRED,readOnly"/>
+				<add key="Find*" value="PROPAGATION_REQUIRED,readOnly"/>
+				<add key="Load*" value="PROPAGATION_REQUIRED,readOnly"/>
+				<add key="Select*" value="PROPAGATION_REQUIRED,readOnly"/>
+				<add key="*" value="PROPAGATION_REQUIRED,readOnly"/>
+			</name-values>
+		</property>
+		<!--note you can use alias names so that this configuration file is 
+     not dependent on the precise object name of the logging advice  
+     defined in Aspects.xml-->
+		<property name="PreInterceptors" ref="CommonLoggingAroundAdvice"/>
+	</object>
+
+	<!-- didn't configure correctly yet - don't use
+  <import resource="~/Config/DeclarativeServicesObjectNameDriven.xml"/>  
+  -->
+
+	<!--<object id="HotelComponentService" type="Terms.Product.Service.HotelComponentService, Terms.Product.Service">
+    <property name="HotelComponentDao" ref="HotelComponentDao"/>
+    <property name="CommCityDao" ref="CommCityDao"/>
+  </object>
+
+  <object id="ProxyHotelComponentService" parent="BussProxyConfigurationTemplate">
+    <property name="Target" ref="HotelComponentService"/>
+  </object>-->
+
+	<!--<object id="HotelComponentService" parent="BussProxyConfigurationTemplate">
+		<property name="Target">
+			<object type="Terms.Product.Service.HotelComponentService, Terms.Product.Service">
+				<property name="HotelComponentDao" ref="HotelComponentDao"/>
+				<property name="CommCityDao" ref="CommCityDao"/>
+			</object>
+		</property>
+	</object>-->
+
+
+	<!--<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <idref local="ProxyHotelComponentService"/>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>transactionInterceptor</value>
+      </list>
+    </property>
+  </object>
+
+  <object id="transactionAdvisor"
+     type="Spring.Transaction.Interceptor.TransactionAttributeSourceAdvisor, Spring.Data"
+     autowire="constructor">
+  </object>
+  <object id="transactionInterceptor"
+        type="Spring.Transaction.Interceptor.TransactionInterceptor, Spring.Data">
+    <property name="TransactionManager" ref="BussHibernateTransactionManager"/>
+    <property name="TransactionAttributeSource" ref="attributeTransactionAttributeSource"/>
+    <property name="TransactionAttributes">
+      <name-values>
+        <add key="*" value="PROPAGATION_REQUIRED"/>
+      </name-values>
+    </property>
+  </object>
+  <object id="attributeTransactionAttributeSource"
+        type="Spring.Transaction.Interceptor.AttributesTransactionAttributeSource, Spring.Data">
+  </object>-->
+
+	<!--<object id="transactionInterceptor" type="Spring.Transaction.Interceptor.TransactionInterceptor, Spring.Data">
+
+    <property name="TransactionManager" ref="BussHibernateTransactionManager"/>
+
+    -->
+	<!-- note do not have converter from string to this property type registered -->
+	<!--
+    <property name="TransactionAttributeSource" ref="methodMapTransactionAttributeSource"/>
+  </object>
+
+  <object name="methodMapTransactionAttributeSource"
+          type="Spring.Transaction.Interceptor.MethodMapTransactionAttributeSource, Spring.Data">
+    <property name="MethodMap">
+      <dictionary>
+        <entry key="Spring.Data.TestObjectManager.SaveTwoTestObjects, Spring.Data.Integration.Tests"
+               value="PROPAGATION_REQUIRED"/>
+        <entry key="Spring.Data.TestObjectManager.DeleteTwoTestObjects, Spring.Data.Integration.Tests"
+               value="PROPAGATION_REQUIRED"/>
+      </dictionary>
+    </property>
+  </object>-->
+
+	<object id="ProductBaseService" type="Terms.Base.Service.BaseService, Terms.Base.Service">
+		<property name="AttachmentMasterDao" ref="ProductAttachmentMasterDao"/>
+		<property name="AttachedTextDao" ref="ProductAttachedTextDao"/>
+		<property name="AttachedImageDao" ref="ProductAttachedImageDao"/>
+    <property name="TypeDetailDao" ref="TypeDetailDao"/>
+  </object>
+
+  <object id="ProductBaseServiceCn" type="Terms.Base.Service.BaseService, Terms.Base.Service">
+    <property name="AttachmentMasterDao" ref="ProductAttachmentMasterDao_dbCn"/>
+    <property name="AttachedTextDao" ref="ProductAttachedTextDao_dbCn"/>
+    <property name="AttachedImageDao" ref="ProductAttachedImageDao"/>
+    <property name="TypeDetailDao" ref="TypeDetailDao"/>
+  </object>
+
+</objects>

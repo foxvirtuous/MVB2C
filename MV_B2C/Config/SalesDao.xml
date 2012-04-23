@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		The Terms object definitions for the Data Access Objects.
+	</description>
+
+	<!-- Database and NHibernate Configuration -->
+	<object id="SalesHibernateTransactionManager"
+		  type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="OrderDbProvider"/>
+		<property name="SessionFactory" ref="SalesSessionFactory"/>
+	</object>
+
+	<object id="SalesHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+		<property name="SessionFactory" ref="SalesSessionFactory" />
+		<property name="TemplateFlushMode" value="Auto" />
+		<property name="CacheQueries" value="true" />
+	</object>
+
+	<object id="SalesSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="OrderDbProvider"/>
+		<property name="MappingAssemblies">
+			<list>
+				<value>Terms.Sales.Dao.NHibernate</value>
+			</list>
+		</property>
+		<property name="HibernateProperties">
+			<dictionary>
+				<entry key="hibernate.connection.provider"
+					   value="NHibernate.Connection.DriverConnectionProvider"/>
+				<entry key="hibernate.dialect"
+					   value="NHibernate.Dialect.MsSql2000Dialect"/>
+				<entry key="hibernate.connection.driver_class"
+					   value="NHibernate.Driver.SqlClientDriver"/>
+			</dictionary>
+		</property>
+	</object>
+
+	<!-- Data Access Objects -->
+	<object id="PayerDao" type="Terms.Sales.Dao.NHibernate.HibernatePayerDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--
+  <object id="OrderContractDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderContractDao, Terms.Sales.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+  </object>-->
+	<object id="OrderMaterialDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialAirFareDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialAirFareDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialAirLegDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialAirLegDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialAirSubtripDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialAirSubtripDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialHotelFareDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialHotelFareDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialHotelDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialHotelDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMerchandiseDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMerchandiseDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderOperationDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderOperationDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderContractDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderContractDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderPaymentDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderPaymentDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderPassengerInfoDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderPassengerInfoDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="StatusDao" type="Terms.Sales.Dao.NHibernate.HibernateStatusDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderTermsConditionsDao" type="Terms.Sales.Dao.NHibernate.HibernateTermsConditionsDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderInsuranceDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderInsuranceDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialPassengerDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialPassengerDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderSalesDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderSalesDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialItineraryDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialItineraryDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialMealDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialMealDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMerchandiseTourDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMerchandiseTourDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMerchandiseTourFareDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMerchandiseTourFareDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMerchandiseTourLandFareDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMerchandiseTourLandFareDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OpTourGroupDao" type="Terms.Sales.Dao.NHibernate.HibernateOpTourGroupDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OpTourOrderDao" type="Terms.Sales.Dao.NHibernate.HibernateOpTourOrderDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="ShipmentLandDao" type="Terms.Sales.Dao.NHibernate.HibernateShipmentLandDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderContractDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderContractDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderInsuranceDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderInsuranceDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialAirFareDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialAirFareDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialAirLegDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialAirLegDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialAirSubtripDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialAirSubtripDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialHotelDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialHotelDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialHotelFareDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialHotelFareDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialItineraryDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialItineraryDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialMealDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialMealDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMaterialPassengerDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMaterialPassengerDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMerchandiseDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMerchandiseDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMerchandiseTourDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMerchandiseTourDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderMerchandiseTourFareDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderMerchandiseTourFareDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderOperationDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderOperationDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderPassengerInfoDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderPassengerInfoDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderPayerDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderPayerDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderPaymentDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderPaymentDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="HisOrderSalesDao" type="Terms.Sales.Dao.NHibernate.HibernateHisOrderSalesDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderHistoryIndexDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderHistoryIndexDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="ShipmentDao" type="Terms.Sales.Dao.NHibernate.HibernateShipmentDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="ShipmentHotelDao" type="Terms.Sales.Dao.NHibernate.HibernateShipmentHotelDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="ShipmentMaterialDao" type="Terms.Sales.Dao.NHibernate.HibernateShipmentMaterialDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="SubagentMarkupDao" type="Terms.Sales.Dao.NHibernate.HibernateSubagentMarkupDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="ShipmentAccountingDao" type="Terms.Sales.Dao.NHibernate.HibernateShipmentAccountingDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="TransferDao" type="Terms.Sales.Dao.NHibernate.HiberbateTransferDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="TransferVehicleDao" type="Terms.Sales.Dao.NHibernate.HiberbateTransferVehicleDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OutOfHoursSupplementDao" type="Terms.Sales.Dao.NHibernate.HiberbateOutOfHoursSupplementDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderAIMInfoDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderAIMInfoDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OperationalRecordsDao" type="Terms.Sales.Dao.NHibernate.HiberbateOperationalRecordsDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialIncentiveTourDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialIncentiveTourDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialPolicyDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialPolicyDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--add zyll 2009-11-13-->
+	<object id="OrderCostOrderMarkUpDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderCostOrderMarkUpDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--add zyll 2010-1-19-->
+	<object id="OrderInvoiceDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderInvoiceDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--add zyll 2010-2-11-->
+	<object id="OrderRebateDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderRebateDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--add zyll 2010-11-22-->
+	<object id="OrderMaterialVehcileWarningDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialVehcileWarningDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialVehcileMessageDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialVehcileMessageDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialVehcileDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialVehcileDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialVehcileSpecialDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialVehcileSpecialDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialVehcileLocationDetailDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialVehcileLocationDetailDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="OrderMaterialSubIncentiveTourDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialSubIncentiveTourDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--zyl 2011-6-13-->
+	<object id="SubIncentiveTourConfigDao" type="Terms.Sales.Dao.NHibernate.HibernateSubIncentiveTourConfigDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--zyl 2011-9-13-->
+	<object id="OrderMaterialHotelEmergencyTelDao" type="Terms.Sales.Dao.NHibernate.HibernateOrderMaterialHotelEmergencyTelDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--zyl 2011-9-28-->
+	<object id="TopDestinationsMasterConfigDao" type="Terms.Sales.Dao.NHibernate.HibernateTopDestinationsMasterConfigDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<object id="TopDestinationsDetailConfigDao" type="Terms.Sales.Dao.NHibernate.HibernateTopDestinationsDetailConfigDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+	<!--zyl 2011-9-30-->
+	<object id="AdvertiseDao" type="Terms.Sales.Dao.NHibernate.HibernateAdvertiseDao, Terms.Sales.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SalesHibernateTemplate"/>
+	</object>
+</objects>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <object name="TermsSalesIndexForm"  type="Index.aspx" >
+    <property name="AirService" ref="AirService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="BaseService" ref="BaseService" />
+    <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+  </object>
+
+	<object name="TestAAAA"  type="Test.aspx" >
+		<property name="OPSaleOrderService" ref="OPSaleOrderService" />
+		<property name="OrderMaterialHotelService" ref="OrderMaterialHotelService" />
+		<property name="OrderMaterialService" ref="OrderMaterialService" />
+		<property name="OrderService" ref="OrderService" />
+
+	</object>
+
+
+	
+
+
+	<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Form</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+
+</objects>

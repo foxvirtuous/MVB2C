@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btn_SearchFare.Text" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="btnContinue.Text" xml:space="preserve">
+    <value>Continue Search</value>
+  </data>
+  <data name="btnLogin.Text" xml:space="preserve">
+    <value>Login &amp; Search</value>
+  </data>
+  <data name="btnRegisterNow.Text" xml:space="preserve">
+    <value>Register Now</value>
+  </data>
+  <data name="item1.Text" xml:space="preserve">
+    <value>Economy</value>
+  </data>
+  <data name="item2.Text" xml:space="preserve">
+    <value>Business</value>
+  </data>
+  <data name="item3.Text" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="lblAdults.Text" xml:space="preserve">
+    <value>Adults</value>
+  </data>
+  <data name="lblAirlineCode.Text" xml:space="preserve">
+    <value>Airline Code</value>
+  </data>
+  <data name="lblChildren.Text" xml:space="preserve">
+    <value>Children</value>
+  </data>
+  <data name="lblCityOrAirport.Text" xml:space="preserve">
+    <value>(City or Airport)</value>
+  </data>
+  <data name="lblClass.Text" xml:space="preserve">
+    <value>Class</value>
+  </data>
+  <data name="lblDeparture.Text" xml:space="preserve">
+    <value>Depart</value>
+  </data>
+  <data name="lblDepartureDate.Text" xml:space="preserve">
+    <value>Departure Date</value>
+  </data>
+  <data name="lblFlexible.Text" xml:space="preserve">
+    <value>My dates are flexible +/- 1 day</value>
+  </data>
+  <data name="lblFlights.Text" xml:space="preserve">
+    <value>Flights</value>
+  </data>
+  <data name="lblFoget.Text" xml:space="preserve">
+    <value>Forget your password?</value>
+  </data>
+  <data name="lblFrom.Text" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="lblGoToLogin.Text" xml:space="preserve">
+    <value>Go to Login</value>
+  </data>
+  <data name="lblIfNotMember.Text" xml:space="preserve">
+    <value>If you are not yet a member, please click the button
+                    below to register or continue search.</value>
+  </data>
+  <data name="lblIndeReminderInfo1.Text" xml:space="preserve">
+    <value>You have not logged in yet.</value>
+  </data>
+  <data name="lblIndeReminderInfo2.Text" xml:space="preserve">
+    <value>If you are a member, please</value>
+  </data>
+  <data name="lblIndeReminderInfo3.Text" xml:space="preserve">
+    <value>(If you are not a member yet, please join in membership today)</value>
+  </data>
+  <data name="lblIndeReminderInfo4.Text" xml:space="preserve">
+    <value>immediately and enjoy the super discount airfares</value>
+  </data>
+  <data name="lblLogin.Text" xml:space="preserve">
+    <value>Log in</value>
+  </data>
+  <data name="lblMultipleCities.Text" xml:space="preserve">
+    <value>Multiple Cities</value>
+  </data>
+  <data name="lblNon.Text" xml:space="preserve">
+    <value>Non-Registered User</value>
+  </data>
+  <data name="lblOneWay.Text" xml:space="preserve">
+    <value>OneWay</value>
+  </data>
+  <data name="lblPassengers.Text" xml:space="preserve">
+    <value>Passengers</value>
+  </data>
+  <data name="lblPassword.Text" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="lblRegisteredUser.Text" xml:space="preserve">
+    <value>Registered User</value>
+  </data>
+  <data name="lblReturn.Text" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="lblReturnDate.Text" xml:space="preserve">
+    <value>Return Date</value>
+  </data>
+  <data name="lblRoundTrip.Text" xml:space="preserve">
+    <value>RoundTrip</value>
+  </data>
+  <data name="lblTo.Text" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="lblUserName.Text" xml:space="preserve">
+    <value>User name</value>
+  </data>
+  <data name="lblViewFullResults.Text" xml:space="preserve">
+    <value>(View Full Results)</value>
+  </data>
+  <data name="lblViewLimitedResults.Text" xml:space="preserve">
+    <value>(View Limited Results)</value>
+  </data>
+  <data name="lblWithOut.Text" xml:space="preserve">
+    <value>Continue without login</value>
+  </data>
+  <data name="lnHelper.Text" xml:space="preserve">
+    <value>choose airline</value>
+  </data>
+  <data name="rfvPassword.ErrorMessage" xml:space="preserve">
+    <value>Please enter password</value>
+  </data>
+  <data name="rfvUserName.ErrorMessage" xml:space="preserve">
+    <value>Please enter user name</value>
+  </data>
+</root>

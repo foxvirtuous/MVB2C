@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TourInfos>
+	<Tour>
+		<Name>USA-East Coast</Name>
+    <Name_CN>美國東岸</Name_CN>
+		<CityList>
+			<city code="NYC">New York City</city>
+		</CityList>
+		<Image>grp_l01_b2b.jpg</Image>
+		<TourArea>U.S.</TourArea>
+	</Tour>
+	<Tour>
+		<Name>USA-West Coast</Name>
+    <Name_CN>美國西岸</Name_CN>
+		<CityList>
+			<city code="LAX">LOS ANGELES</city>
+		</CityList>
+		<Image>grp_l02_b2b.jpg</Image>
+		<TourArea>U.S.</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Orlando</Name>
+    <Name_CN>奧蘭多</Name_CN>
+		<CityList>
+			<city code="ORL">Orlando</city>
+		</CityList>
+		<Image>grp_l03_b2b.jpg</Image>
+		<TourArea>U.S.</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Hawaii</Name>
+    <Name_CN>夏威夷</Name_CN>
+		<CityList>
+			<city code="BKH">Kekaha</city>
+			<city code="HPV">Hanalei</city>
+			<city code="ITO">Hilo</city>
+			<city code="HNL">Honolulu</city>
+		</CityList>
+		<Image>grp_l04_b2b.jpg</Image>
+		<TourArea>U.S.</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Canada</Name>
+    <Name_CN>加拿大</Name_CN>
+    <CityList>
+      <city code="YVR">Vancouver</city>
+    </CityList>
+    <Image>grp_l08_b2b.jpg</Image>
+    <TourArea>Canada</TourArea>
+  </Tour>
+	<Tour>
+		<Name>South America</Name>
+    <Name_CN>南美洲</Name_CN>
+		<CityList>
+			<city code="BUE">Buenos Aires</city>
+      <city code="RIO">Rio de Janeiro</city>
+      <city code="SSA">Salvador</city>
+      <city code="MAO">Manaus</city>
+		</CityList>
+		<Image>grp_l12_b2b.jpg</Image>
+		<TourArea>South America</TourArea>
+	</Tour>    
+	<Tour>
+		<Name>Europe</Name>
+    <Name_CN>歐洲</Name_CN>
+		<CityList>
+			<city code="PAR">Paris</city>
+      <city code="LON">London</city>
+		</CityList>
+		<Image>grp_l07_b2b.jpg</Image>
+		<TourArea>Europe</TourArea>
+	</Tour>
+</TourInfos>

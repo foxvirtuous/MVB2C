@@ -1,0 +1,19 @@
+<NewDataSet>
+  <Error>
+    <to></to>
+    <cc></cc>
+    <bcc></bcc>
+  </Error>
+  <Configration>
+    <!--<Host>127.0.0.1</Host>
+    <Username>mailsender</Username>
+    <Password>majestic</Password>-->
+    <Host>smtp.gmail.com</Host>
+    <Username>ibeerror@gmail.com</Username>
+    <Password>Ceoaaa45</Password>
+    <!--<Host>smtp.mail.yahoo.com.cn</Host>
+    <Username>tonglanli</Username>
+    <Password>Srr911888</Password>-->
+    <Port>587</Port>
+  </Configration>
+</NewDataSet>

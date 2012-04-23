@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<objects default-lazy-init="false" xmlns="http://www.springframework.net">
+  
+  <object id="CommonLoggingAroundAdvice" type="Spring.Aspects.Logging.CommonLoggingAroundAdvice, Spring.Aspect">
+    <property name="Level" value="Info" />
+  </object>
+
+  <object id="AutoAfterThrowAdvice" type="Spring.Aspects.Logging.AfterThrowAdvice, Spring.Aspect" >
+  </object>
+
+  <object id="ExceptionAroundAdvice" type="Spring.Aspects.Logging.ExceptionAroundAdvice, Spring.Aspect" >
+  </object>
+
+  <!--<object id="AutoAfterThrowAdvice" type="Spring.Aop.Support.NameMatchMethodPointcutAdvisor, Spring.Aop">
+    <property name="Advice">
+      <object type="Spring.Aspects.Logging.AfterThrowAdvice, Spring.Aspect" />
+    </property>
+    <property name="MappedNames">
+      <list>
+        <value>SaveOrUpdate</value>
+      </list>
+    </property>
+  </object>-->
+
+
+</objects>

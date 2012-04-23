@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+  <object type="~/B2B_SUB/AgentJoinSucceedForm.aspx" parent="BasePage" >
+  </object>
+  <object type="~/B2B_SUB/Flyer_grp.aspx" parent="BasePage" >
+  </object>
+  <object type="~/B2B_SUB/Logout.aspx" parent="BasePage" >
+  </object>
+  
+</objects>

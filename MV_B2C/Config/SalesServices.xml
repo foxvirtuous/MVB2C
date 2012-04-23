@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true"  xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  
+  <description>
+    The Terms service layer definitions
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+
+	<object id="PayerService" type="Terms.Sales.Service.PayerService, Terms.Sales.Service">
+	  <property name="PayerDao" ref="PayerDao"/>
+	</object>
+  <object id="OrderService" type="Terms.Sales.Service.OrderService, Terms.Sales.Service">
+    <property name="OrderDao" ref="OrderDao"/>
+  </object>
+  <object id="OrderMaterialService" type="Terms.Sales.Service.OrderMaterialService, Terms.Sales.Service">
+    <property name="OrderMaterialDao" ref="OrderMaterialDao"/>
+  </object>
+  <object id="OrderMaterialAirFareService" type="Terms.Sales.Service.OrderMaterialAirFareService, Terms.Sales.Service">
+    <property name="OrderMaterialAirFareDao" ref="OrderMaterialAirFareDao"/>
+  </object>
+  <object id="OrderMaterialAirLetService" type="Terms.Sales.Service.OrderMaterialAirLegService, Terms.Sales.Service">
+    <property name="OrderMaterialAirLegDao" ref="OrderMaterialAirLegDao"/>
+  </object>
+  <object id="OrderMaterialHotelService" type="Terms.Sales.Service.OrderMaterialHotelService, Terms.Sales.Service">
+    <property name="OrderMaterialHotelDao" ref="OrderMaterialHotelDao"/>
+  </object>
+  <object id="OrderMaterialHotelFareService" type="Terms.Sales.Service.OrderMaterialHotelFareService, Terms.Sales.Service">
+    <property name="OrderMaterialHotelFareDao" ref="OrderMaterialHotelFareDao"/>
+  </object>
+  <object id="OrderMaterialAirSubtripService" type="Terms.Sales.Service.OrderMaterialAirSubtripService, Terms.Sales.Service">
+    <property name="OrderMaterialAirSubtripDao" ref="OrderMaterialAirSubtripDao"/>
+  </object>
+  <object id="OrderMerchandiseService" type="Terms.Sales.Service.OrderMerchandiseService, Terms.Sales.Service">
+    <property name="OrderMerchandiseDao" ref="OrderMerchandiseDao"/>
+  </object>
+  <object id="OrderOperationService" type="Terms.Sales.Service.OrderOperationService, Terms.Sales.Service">
+    <property name="OrderOperationDao" ref="OrderOperationDao"/>
+  </object>
+  <object id="OrderContractService" type="Terms.Sales.Service.OrderContractService, Terms.Sales.Service">
+    <property name="OrderContractDao" ref="OrderContractDao"/>
+  </object>
+  <object id="OrderPaymentService" type="Terms.Sales.Service.OrderMerchandiseService, Terms.Sales.Service">
+    <property name="OrderPaymentDao" ref="OrderPaymentDao"/>
+  </object>
+
+	<object id="OPSaleOrderService" type="Terms.Sales.Service.OPSaleOrderService, Terms.Sales.Service">
+		<property name="SaleOrderService" ref="SaleOrderService"/>
+		<property name="OrderService" ref="OrderService"/>
+		<property name="CityService" ref="CityService" />
+		<property name="OrderOperationService" ref="OrderOperationService" />
+		<property name="OperationalRecords" ref="OperationalRecordsDao" />
+		<!--<property name="VendorService" ref="VendorService"/>-->
+
+		<property name="OrderMaterialPolicyDao" ref="OrderMaterialPolicyDao"/>
+		<property name="ShipmentService" ref="ShipmentService"/>
+		<property name="ShipmentAccountingService" ref="ShipmentAccountingService" />
+	
+		<property name="OpTourGroupDao" ref="OpTourGroupDao"/>
+		<property name="OpTourOrderDao" ref="OpTourOrderDao" />
+
+		<property name="OrderMaterialHotelEmergencyTelDao" ref="OrderMaterialHotelEmergencyTelDao" />
+	</object>
+	<object id="ShipmentAccountingService" type="Terms.Sales.Service.ShipmentAccountingService, Terms.Sales.Service">
+		<property name="ShipmentAccountingDao" ref="ShipmentAccountingDao"/>
+	</object>
+	<object id="ShipmentService" type="Terms.Sales.Service.ShipmentService, Terms.Sales.Service">
+		<property name="ShipmentDao" ref="ShipmentDao"/>
+	</object>
+	<object id="ShipmentHotelService" type="Terms.Sales.Service.ShipmentHotelService, Terms.Sales.Service">
+		<property name="ShipmentHotelDao" ref="ShipmentHotelDao"/>
+	</object>
+	<object id="ShipmentMaterialService" type="Terms.Sales.Service.ShipmentMaterialService, Terms.Sales.Service">
+		<property name="ShipmentMaterialDao" ref="ShipmentMaterialDao"/>
+	</object>
+	<object id="OrderTermsConditionsService" type="Terms.Sales.Service.OrderTermsConditionsService, Terms.Sales.Service">
+		<property name="OrderTermsConditionsDao" ref="OrderTermsConditionsDao"/>
+	</object>
+	<object id="SaleMerchandiseSearcherService" type="Terms.Sales.Service.SaleMerchandiseSearcherService, Terms.Sales.Service">
+		<property name="TravcoHotelSearcher" ref="HotelTravcoService" />
+		<property name="AirService" ref="AirService" />
+		<property name="CommCityDao" ref="CityDao"/>
+		<property name="GTAHotelSearcher" ref="HotelGTAService" />
+		<property name="TravcoHotelSearcher2" ref="HotelTravcoService2" />
+		<property name="GTAHotelSearcher2" ref="HotelGTAService2" />
+	</object>
+	<object id="SaleOrderService" type="Terms.Sales.Service.SaleOrderService, Terms.Sales.Service">
+		<property name="OrderDao" ref="OrderDao" />
+		<property name="OrderMaterialDao" ref="OrderMaterialDao" />
+		<property name="OrderMaterialAirFareDao" ref="OrderMaterialAirFareDao" />
+		<property name="OrderMaterialAirLegDao" ref="OrderMaterialAirLegDao" />
+		<property name="OrderMaterialAirSubtripDao" ref="OrderMaterialAirSubtripDao" />
+		<property name="OrderMaterialHotelFareDao" ref="OrderMaterialHotelFareDao" />
+		<property name="OrderMaterialHotelDao" ref="OrderMaterialHotelDao" />
+		<property name="OrderMerchandiseDao" ref="OrderMerchandiseDao" />
+		<property name="OrderContractDao" ref="OrderContractDao" />
+		<property name="OrderPaymentDao" ref="OrderPaymentDao" />
+		<property name="OrderInsuranceDao" ref="OrderInsuranceDao" />
+		<property name="OrderOperationDao" ref="OrderOperationDao" />
+		<property name="PayerDao" ref="PayerDao" />
+		<property name="OrderPassengerInfoDao" ref="OrderPassengerInfoDao" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="OrderMaterialPassengerDao" ref="OrderMaterialPassengerDao" />
+		<property name="OrderSalesDao" ref="OrderSalesDao" />
+		<property name="HotelGTAService" ref="HotelGtaService" />
+		<property name="OrderMaterialItineraryDao" ref="OrderMaterialItineraryDao" />
+		<property name="OrderMerchandiseTourDao" ref="OrderMerchandiseTourDao" />
+		<property name="SubagentMarkupDao" ref="SubagentMarkupDao" />
+		<property name="OrderMerchandiseTourFareDao" ref="OrderMerchandiseTourFareDao" />
+		<property name="OrderMaterialMealDao" ref="OrderMaterialMealDao" />
+		<property name="AgentMarkupDao" ref="SubagentMarkupDao" />
+		<property name="OpTourGroupDao" ref="OpTourGroupDao" />
+		<property name="OpTourOrderDao" ref="OpTourOrderDao" />
+		<property name="ShipmentLandDao" ref="ShipmentLandDao" />
+		<property name="OrderMaterialHotelFareService" ref="OrderMaterialHotelFareService"/>
+		<property name="OrderMaterialService" ref="OrderMaterialService"/>
+		<property name="ShipmentService" ref="ShipmentService"/>
+		<property name="ShipmentHotelService" ref="ShipmentHotelService"/>
+		<property name="ShipmentMaterialService" ref="ShipmentMaterialService"/>
+		<property name="OperationalRecords" ref="OperationalRecordsDao" />
+		<property name="TransferDao" ref="TransferDao"/>
+		<property name="TransferVehicleDao" ref="TransferVehicleDao"/>
+		<property name="OutOfHoursSupplementDao" ref="OutOfHoursSupplementDao"/>		
+		<property name="OrderAIMInfoDao" ref="OrderAIMInfoDao"/>
+		<property name="OrderMaterialPolicyDao" ref="OrderMaterialPolicyDao"/>
+		<!--add zyll 2009-11-13-->
+		<property name="OrderCostOrderMarkUpMetaDao" ref="OrderCostOrderMarkUpDao"/>
+		<!--add zyll 2010-1-18-->
+		<property name="OrderInvoiceDao" ref="OrderInvoiceDao"/>
+		<!--add zyll 2010-2-11-->
+		<property name="OrderReBateDao" ref="OrderRebateDao"/>
+		<!--add zyll 2010-6-2-->
+		<property name="OPSaleOrderService" ref="OPSaleOrderService"/>
+		<property name="AirService" ref="AirService" />
+		<!--add zyll 2010-11-22-->
+		<property name="OrderMaterialVehcileWarningDao" ref="OrderMaterialVehcileWarningDao" />
+		<property name="OrderMaterialVehcileMessageDao" ref="OrderMaterialVehcileMessageDao" />
+		<property name="OrderMaterialVehcileDao" ref="OrderMaterialVehcileDao" />
+		<property name="OrderMaterialVehcileSpecialDao" ref="OrderMaterialVehcileSpecialDao" />
+		<property name="OrderMaterialVehcileLocationDetailDao" ref="OrderMaterialVehcileLocationDetailDao" />
+	</object>
+
+	<object id="HisOrderService" type="Terms.Sales.Service.HisOrderService, Terms.Sales.Service">
+		<property name="OrderDao" ref="OrderDao" />
+		<property name="OrderMaterialDao" ref="OrderMaterialDao" />
+		<property name="OrderMaterialAirFareDao" ref="OrderMaterialAirFareDao" />
+		<property name="OrderMaterialAirLegDao" ref="OrderMaterialAirLegDao" />
+		<property name="OrderMaterialAirSubtripDao" ref="OrderMaterialAirSubtripDao" />
+		<property name="OrderMaterialHotelFareDao" ref="OrderMaterialHotelFareDao" />
+		<property name="OrderMaterialHotelDao" ref="OrderMaterialHotelDao" />
+		<property name="OrderMerchandiseDao" ref="OrderMerchandiseDao" />
+		<property name="OrderContractDao" ref="OrderContractDao" />
+		<property name="OrderPaymentDao" ref="OrderPaymentDao" />
+		<property name="OrderInsuranceDao" ref="OrderInsuranceDao" />
+		<property name="OrderOperationDao" ref="OrderOperationDao" />
+		<property name="PayerDao" ref="PayerDao" />
+		<property name="OrderPassengerInfoDao" ref="OrderPassengerInfoDao" />
+		<property name="OrderMaterialPassengerDao" ref="OrderMaterialPassengerDao" />
+		<property name="OrderSalesDao" ref="OrderSalesDao" />
+		<property name="OrderMaterialItineraryDao" ref="OrderMaterialItineraryDao" />
+		<property name="OrderMerchandiseTourDao" ref="OrderMerchandiseTourDao" />
+		<property name="OrderMerchandiseTourFareDao" ref="OrderMerchandiseTourFareDao" />
+		<property name="OrderMaterialMealDao" ref="OrderMaterialMealDao" />
+		<property name="HisOrderDao" ref="HisOrderDao" />
+		<property name="HisOrderMaterialDao" ref="HisOrderMaterialDao" />
+		<property name="HisOrderMaterialAirFareDao" ref="HisOrderMaterialAirFareDao" />
+		<property name="HisOrderMaterialAirLegDao" ref="HisOrderMaterialAirLegDao" />
+		<property name="HisOrderMaterialAirSubtripDao" ref="HisOrderMaterialAirSubtripDao" />
+		<property name="HisOrderMaterialHotelFareDao" ref="HisOrderMaterialHotelFareDao" />
+		<property name="HisOrderMaterialHotelDao" ref="HisOrderMaterialHotelDao" />
+		<property name="HisOrderMerchandiseDao" ref="HisOrderMerchandiseDao" />
+		<property name="HisOrderContractDao" ref="HisOrderContractDao" />
+		<property name="HisOrderPaymentDao" ref="HisOrderPaymentDao" />
+		<property name="HisOrderInsuranceDao" ref="HisOrderInsuranceDao" />
+		<property name="HisOrderOperationDao" ref="HisOrderOperationDao" />
+		<property name="HisOrderPayerDao" ref="HisOrderPayerDao" />
+		<property name="HisOrderPassengerInfoDao" ref="HisOrderPassengerInfoDao" />
+		<property name="HisOrderMaterialPassengerDao" ref="HisOrderMaterialPassengerDao" />
+		<property name="HisOrderSalesDao" ref="HisOrderSalesDao" />
+		<property name="HisOrderMaterialItineraryDao" ref="HisOrderMaterialItineraryDao" />
+		<property name="HisOrderMerchandiseTourDao" ref="HisOrderMerchandiseTourDao" />
+		<property name="HisOrderMerchandiseTourFareDao" ref="HisOrderMerchandiseTourFareDao" />
+		<property name="HisOrderMaterialMealDao" ref="HisOrderMaterialMealDao" />
+		<property name="OrderHistoryIndexDao" ref="OrderHistoryIndexDao" />
+		<property name="SaleOrderService" ref="SaleOrderService" />
+	</object>
+	<object id="IncentiveTourService" type="Terms.Sales.Service.IncentiveTourService, Terms.Sales.Service">
+		<property name="OrderMaterialIncentiveTourDao" ref="OrderMaterialIncentiveTourDao"/>
+	</object>
+	<object id="OpTourGroupService" type="Terms.Sales.Service.OpTourGroupService, Terms.Sales.Service">
+		<property name="OpTourGroupDao" ref="OpTourGroupDao"/>
+	</object>
+	<object id="OpTourOrderService" type="Terms.Sales.Service.OpTourOrderService, Terms.Sales.Service">
+		<property name="OpTourOrderDao" ref="OpTourOrderDao"/>
+	</object>
+	<object id="SubIncentiveTourService" type="Terms.Sales.Service.SubIncentiveTourService, Terms.Sales.Service">
+		<property name="OrderMaterialSubIncentiveTourDao" ref="OrderMaterialSubIncentiveTourDao"/>
+	</object>
+	<!--zyl 2011-6-13-->
+	<object id="SubIncentiveTourConfigService" type="Terms.Sales.Service.SubIncentiveTourConfigService, Terms.Sales.Service">
+		<property name="SubIncentiveTourConfigDao" ref="SubIncentiveTourConfigDao"/>
+	</object>
+	<!--zyl 2011-9-28-->
+	<object id="TopDestinationsMasterConfigService" type="Terms.Sales.Service.TopDestinationsMasterConfigService, Terms.Sales.Service">
+		<property name="TopDestinationsMasterConfigDao" ref="TopDestinationsMasterConfigDao"/>
+	</object>
+	<object id="TopDestinationsDetailConfigService" type="Terms.Sales.Service.TopDestinationsDetailConfigService, Terms.Sales.Service">
+		<property name="TopDestinationsDetailConfigDao" ref="TopDestinationsDetailConfigDao"/>
+	</object>
+	<!--zyl 2011-9-30-->
+	<object id="AdvertiseService" type="Terms.Sales.Service.AdvertiseService, Terms.Sales.Service">
+		<property name="AdvertiseDao" ref="AdvertiseDao"/>
+	</object>
+
+  <!--<import resource="DeclarativeServicesTxProxyFactoryDriven.xml"/>-->
+	
+	<!--<import resource="DeclarativeServicesAttributeDriven.xml"/>-->
+  
+  <!-- didn't configure correctly yet - don't use
+  <import resource="~/Config/DeclarativeServicesObjectNameDriven.xml"/>  
+  -->
+	
+</objects>

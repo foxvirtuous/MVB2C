@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sets>	
+	<set name="initial">
+		<url name="a">/TermsMV/WebResource.axd?d=nUPHYIjNvs4jJPAH0crIXw2&amp;amp;t=633436050645625000</url>
+		<!--<url name="b">/TermsMV/ScriptResource.axd?d=sHxJEkmcWZAG7nFCzf03ddChzxbNHshFcoErzHmf-91korZ85bcV2Nt7avJ0pQxbGBEoLLUj46sNYS0X91guaQ2&amp;amp;t=633436050645625000</url>
+		<url name="c">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp5weH_UO2bRW1waz0VUCHt0IrPvn4x5m73ptX5hZbaRu747whkcF68vvyYpeOckvpU1&amp;amp;t=633348663194375000</url>
+		<url name="d">/TermsMV/ScriptResource.axd?d=4t3bcB__Xcryhsf0ebw-HaFRUBLZhkjrHwXvsiCw849BpM3Xxhy0NTFcHR-sC2UJ4pgQpPnGmvxhS8GqRFF_bW529uDc9ICPkUkIUFndHzg1&amp;amp;t=633349627485156250</url>
+		<url name="e">/TermsMV/ScriptResource.axd?d=4t3bcB__Xcryhsf0ebw-HaFRUBLZhkjrHwXvsiCw849BpM3Xxhy0NTFcHR-sC2UJ4pgQpPnGmvxhS8GqRFF_bZFA7q9Ic7it2eAYIo67pTY1&amp;amp;t=633349627485156250</url>-->
+	</set>
+	<set name="post">
+    <url name="A">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp44q-crfayr_OIX_9j-Thn81Iq4tgPJdngUzfqqzKRD0A2&amp;amp;t=633348663194375000</url>
+    <url name="B">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp6d5RxSTXFGbdozpJwwPkox2OLKIvGFqiT9j9_vLmawCw2&amp;amp;t=633348663194375000</url>
+    <url name="C">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp4ONLO43X-cakUE2m06QCYBLwYkgz3olLIIkLXF4CWtaOY1hJxFODhVKxEVvguIbJ81&amp;amp;t=633348663194375000</url>
+    <url name="D">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp5weH_UO2bRW1waz0VUCHt0IrPvn4x5m73ptX5hZbaRu747whkcF68vvyYpeOckvpU1&amp;amp;t=633348663194375000</url>
+    <url name="E">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp5weH_UO2bRW1waz0VUCHt0phVXeEl8cJPGIEzBOTW_D-_oNU09UVf42R9xhREHQTM1&amp;amp;t=633348663194375000</url>
+    <url name="F">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp7bPzSxjyWtXz1J9QFfxputl6QIKSuhn3yWfeA5jhC6eg2&amp;amp;t=633348663194375000</url>
+    <url name="G">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp4lFR5ba5S6cXZ-28AoMBeZO-mWfJlYwKinrabBgPbu2UuK_HLRiPd12qdtL8Rygt9unAcY2YNRi5wLquWZeOR70&amp;amp;t=633348663194375000</url>
+    <url name="H">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp7F3DNLKGsREpaRfQGMMO-vUEJYEOyrkX8lwuiW0qxfBqYeoQ6zM9W8aHhvfYSBFfGH8kI7B0-RmW_L7YsQsjjk0&amp;amp;t=633348663194375000</url>
+    <url name="I">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp7bPzSxjyWtXz1J9QFfxputYETlGFJzdGFDT2j8dhAzkw-vOlOjZ5tCBJY0hxg6C_g1&amp;amp;t=633348663194375000</url>
+    <url name="J">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp6OU_Wq8NtsZoXKnPzi27G58jO9Xe7zfzIbyfWC9rurJ9MuMzrBZEbPSf45cWd5b6Y1&amp;amp;t=633348663194375000</url>
+    <url name="K">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp6pcEHXdbZ85dnEWX0831jZJQBHrwKM4yQ_or_j1thl9g_Rv3TWqk1nbeBK2JZtzDxNkqJd0Iq6N1RAcJlYXmQF0&amp;amp;t=633348663194375000</url>
+    <url name="L">/TermsMV/ScriptResource.axd?d=oyulkRF7qC5BquXG7D57vPdBuP-5JwVjidxK8x51Hp79JJ9_P9mqiY8771B-LWuIzDQ2dzS2wCHviCygHdPuogxhKlxIrIqRHl7iCaEpjYoIRghkK3sK2uATdRdwVfBl0&amp;amp;t=633348663194375000</url>
+	</set>
+</sets>
+
+

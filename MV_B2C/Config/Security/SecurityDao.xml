@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		The Terms object definitions for the Data Access Objects.
+	</description>
+
+	<!-- Database and NHibernate Configuration -->
+	<object id="SecurityHibernateTransactionManager" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="SecurityDbProvider"/>
+		<property name="SessionFactory" ref="SecuritySessionFactory"/>
+	</object>
+
+	<object id="SecurityHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+		<property name="SessionFactory" ref="SecuritySessionFactory" />
+		<property name="TemplateFlushMode" value="Auto" />
+		<property name="CacheQueries" value="true" />
+	</object>
+
+	<object id="SecuritySessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="SecurityDbProvider"/>
+		<property name="MappingAssemblies">
+			<list>
+				<value>Terms.Security.Dao.NHibernate</value>
+			</list>
+		</property>
+		<property name="HibernateProperties">
+			<dictionary>
+				<entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+				<entry key="hibernate.dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
+				<entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+				<entry key="hibernate.current_session_context_class"  value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate12"/>
+			</dictionary>
+		</property>
+	</object>
+
+	<!-- Data Access Objects -->
+	<object id="AspnetApplicationsDao" type="Terms.Security.Dao.NHibernate.AspnetApplicationsDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="AspnetMembershipDao" type="Terms.Security.Dao.NHibernate.AspnetMembershipDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="AspnetProfileDao" type="Terms.Security.Dao.NHibernate.AspnetProfileDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="AspnetRolesDao" type="Terms.Security.Dao.NHibernate.AspnetRolesDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="AspnetSchemaVersionsDao" type="Terms.Security.Dao.NHibernate.AspnetSchemaVersionsDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="AspnetUsersDao" type="Terms.Security.Dao.NHibernate.AspnetUsersDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysActionsDao" type="Terms.Security.Dao.NHibernate.TttSysActionsDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysApplicationsDao" type="Terms.Security.Dao.NHibernate.TttSysApplicationsDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysAuthorizationDao" type="Terms.Security.Dao.NHibernate.TttSysAuthorizationDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysOperationLogDao" type="Terms.Security.Dao.NHibernate.TttSysOperationLogDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysResourcesDao" type="Terms.Security.Dao.NHibernate.TttSysResourcesDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysRolesDao" type="Terms.Security.Dao.NHibernate.TttSysRolesDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysUsersDao" type="Terms.Security.Dao.NHibernate.TttSysUsersDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+  <object id="TttSysUsersInApplicationsDao" type="Terms.Security.Dao.NHibernate.TttSysUsersInApplicationsDao, Terms.Security.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+  </object>
+
+  <object id="TttSysUsersInRolesDao" type="Terms.Security.Dao.NHibernate.TttSysUsersInRolesDao, Terms.Security.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+  </object>
+  
+	<object id="TttSysDataActionDao" type="Terms.Security.Dao.NHibernate.TttSysDataActionDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysDataAuthorizationDao" type="Terms.Security.Dao.NHibernate.TttSysDataAuthorizationDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysDataOperationLogDao" type="Terms.Security.Dao.NHibernate.TttSysDataOperationLogDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+	<object id="TttSysDataResourceDao" type="Terms.Security.Dao.NHibernate.TttSysDataResourceDao, Terms.Security.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="SecurityHibernateTemplate"/>
+	</object>
+
+  <object id="HibernatePersonDao" type="Terms.Security.Dao.NHibernate.HibernatePersonDao, Terms.Security.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="HibernatePersonUserDao" type="Terms.Security.Dao.NHibernate.HibernatePersonUserDao, Terms.Security.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="HibernateEntityDao" type="Terms.Security.Dao.NHibernate.HibernateEntityDao, Terms.Security.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  <object id="HibernateEntityPersonDao" type="Terms.Security.Dao.NHibernate.HibernateEntityPersonDao, Terms.Security.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="ProductHibernateTemplate"/>
+  </object>
+
+  
+
+</objects>

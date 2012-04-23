@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+  
+	<description>
+		The Terms service layer definitions
+	</description>
+
+	<!-- Property placeholder configurer for database settings -->
+
+
+  <object id="WebSiteService" type="Terms.Configuration.Service.WebSiteService, Terms.Configuration.Service">
+    <property name="WebSiteDao" ref="WebSiteDao"/>
+  </object>
+
+  <object id="AirSearchDetailLogService" type="Terms.Configuration.Service.AirSearchDetailLogService, Terms.Configuration.Service">
+    <property name="AirSearchDetailLogDao" ref="AirSearchDetailLogDao"/>
+  </object>
+  
+</objects>

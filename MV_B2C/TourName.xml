@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TourInfos>
+	<Tour>
+		<Name>USA-East Coast</Name>
+		<Name_CN>美國東岸</Name_CN>
+		<CityList>
+			<city code="NYC">New York City</city>
+		</CityList>
+		<Image>grp_l01.jpg</Image>
+		<TourArea>U.S.</TourArea>
+	</Tour>
+	<Tour>
+		<Name>USA-West Coast</Name>
+		<Name_CN>美國西岸</Name_CN>
+		<CityList>
+			<city code="LAX">LOS ANGELES</city>
+			<city code="DEN">Denver</city>
+			<city code="SLC">Salt lake city</city>
+			<city code="LAS">Las Vegas</city>
+			<city code="PHX">Phoenix</city>
+			<city code="SFO">San Francisco</city>
+		</CityList>
+		<Image>grp_l02.jpg</Image>
+		<TourArea>U.S.</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Orlando</Name>
+		<Name_CN>奧蘭多</Name_CN>
+		<CityList>
+			<city code="ORL">Orlando</city>
+		</CityList>
+		<Image>grp_l03.jpg</Image>
+		<TourArea>U.S.</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Hawaii</Name>
+		<Name_CN>夏威夷</Name_CN>
+		<CityList>
+			<city code="BKH">Kekaha</city>
+			<city code="HPV">Hanalei</city>
+			<city code="ITO">Hilo</city>
+			<city code="HNL">Honolulu</city>
+		</CityList>
+		<Image>grp_l04.jpg</Image>
+		<TourArea>U.S.</TourArea>
+	</Tour>
+	<Tour>
+		<Name>China</Name>
+		<Name_CN>中國</Name_CN>
+		<CityList>
+			<city code="PEK">beijing</city>
+			<city code="SHA">shanghai</city>
+			<city code="HKG">hong kong</city>
+			<city code="BJS">beijing</city>
+			<city code="CTU">Chengdu</city>
+			<city code="KMG">Kunming</city>
+			<city code="XIY">XiAn</city>
+		</CityList>
+		<Image>grp_l05.jpg</Image>
+		<TourArea>Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Japan &amp; Korea</Name>
+		<Name_CN>日本 &amp; 韓國</Name_CN>
+		<CityList>
+			<city code="TYO">Tokyo</city>
+			<city code="OSA">Osaka</city>
+			<city code="SEL">Seoul</city>
+			<city code="CJU">Cheju</city>
+		</CityList>
+		<Image>grp_l06.jpg</Image>
+		<TourArea>Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Europe</Name>
+		<Name_CN>歐洲</Name_CN>
+		<CityList>
+			<city code="PAR">Paris</city>
+			<city code="LON">London</city>
+			<city code="MUC">Munich</city>
+			<city code="ROM">Rome</city>
+			<city code="MAD">Madrid</city>
+			<city code="BCN">Barcelona</city>
+			<city code="PRG">Prague</city>
+			<city code="LED">Saint Petersburg</city>
+			<city code="CPH">Copenhagen</city>
+			<city code="ATH">Athens</city>
+			<city code="FRA">Frankfurt</city>
+			<city code="MIL">Milan</city>
+		</CityList>
+		<Image>grp_l07.jpg</Image>
+		<TourArea>Europe</TourArea>
+	</Tour>	
+	<Tour>
+		<Name>Taiwan</Name>
+		<Name_CN>台湾</Name_CN>
+		<CityList>
+			<city code="TPE">Taipei</city>
+		</CityList>
+		<Image>grp_l10.jpg</Image>
+		<TourArea>Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>South East Asia</Name>
+		<Name_CN>東南亞</Name_CN>
+		<CityList>
+			<city code="SIN">Singapore</city>
+			<city code="BKK">Bangkok</city>
+			<city code="SGN">Saigon</city>
+			<city code="DPS">Bali</city>
+			<city code="REP">Siem Reap</city>
+		</CityList>
+		<Image>grp_l09.jpg</Image>
+		<TourArea>Southeast Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Middle East&amp;Africa&amp;India</Name>
+		<Name_CN>中東 &amp; 非洲 &amp; 印度</Name_CN>
+		<CityList>
+			<city code="CAI">Cairo</city>
+			<city code="DEL">Delhi</city>
+		</CityList>
+		<Image>grp_l11.jpg</Image>
+		<TourArea>Middle East &amp; Africa &amp; India</TourArea>
+	</Tour>
+	<Tour>
+		<Name>South America</Name>
+		<Name_CN>南美洲</Name_CN>
+		<CityList>
+			<city code="BUE">Buenos Aires</city>
+			<city code="RIO">Rio de Janeiro</city>
+			<city code="SSA">Salvador</city>
+			<city code="MAO">Manaus</city>
+			<city code="LIM">Lima</city>
+			<city code="CUN">Cancun</city>
+			<city code="SJO">San Jose</city>
+		</CityList>
+		<Image>grp_l12.jpg</Image>
+		<TourArea>South America</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Australia&amp;New Zealand</Name>
+		<Name_CN>澳洲&amp;紐西蘭</Name_CN>
+		<CityList>
+			<city code="AKL">Auckland</city>
+			<city code="SYD">Sydney</city>
+		</CityList>
+		<Image>grp_l13.jpg</Image>
+		<TourArea>Australia&amp;New Zealand</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Canada</Name>
+		<Name_CN>加拿大</Name_CN>
+		<CityList>
+			<city code="YVR">Vancouver</city>
+			<city code="SEA">Seattle</city>
+		</CityList>
+		<Image>grp_l08.jpg</Image>
+		<TourArea>Canada</TourArea>
+	</Tour>
+</TourInfos>

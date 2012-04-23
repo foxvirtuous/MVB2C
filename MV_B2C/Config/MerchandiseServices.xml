@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  
+  <description>
+    The Terms service layer definitions
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+
+  <!--<object id="MerchandiseItemService" type="Terms.Merchandise.Service.MerchandiseItemService, Terms.Merchandise.Service">
+    <property name="MerchandiseItemDao" ref="MerchandiseItemDao"/>
+  </object>-->
+  
+  <object id="MerchandiseService" type="Terms.Merchandise.Service.MerchandiseService, Terms.Merchandise.Service">
+    <property name="MerchandiseDao" ref="MerchandiseDao"/>
+  </object>
+	<object id="MerchandiseItemService" type="Terms.Merchandise.Service.MerchandiseItemService, Terms.Merchandise.Service">
+		<property name="MerchandiseItemDao" ref="MerchandiseItemDao"/>
+	</object>
+
+  <import resource="DeclarativeServicesTxProxyFactoryDriven.xml"/>
+	
+  <import resource="DeclarativeServicesAttributeDriven.xml"/>
+  
+  <!-- didn't configure correctly yet - don't use
+  <import resource="~/Config/DeclarativeServicesObjectNameDriven.xml"/>  
+  -->
+	
+</objects>

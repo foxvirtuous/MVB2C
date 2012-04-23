@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<object type="~/Terms.Member.Web/register.aspx">
+		<property name="ConstantMasterService" ref="ConstantMasterService" />
+		<property name="ConstantDetailService" ref="ConstantDetailService" />
+		<property name="AnswerService" ref="AnswerService" />
+		<property name="QuestionService" ref="QuestionService" />
+		<property name="AdsServiceService" ref="AdsServiceService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/ManageQuestions.aspx">
+		<property name="ConstantMasterService" ref="ConstantMasterService" />
+		<property name="ConstantDetailService" ref="ConstantDetailService" />
+		<property name="AnswerService" ref="AnswerService" />
+		<property name="QuestionService" ref="QuestionService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/ServiceInformation.aspx">
+		<property name="AdsServiceService" ref="AdsServiceService" />
+		<property name="ConstantMasterService" ref="ConstantMasterService" />
+		<property name="ConstantDetailService" ref="ConstantDetailService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/UserView.aspx">
+		<property name="UserService" ref="UserService" />
+		<property name="RoleService" ref="RoleService" />
+		<property name="UserGroupService" ref="UserGroupService" />
+		<property name="RoleUserService" ref="RoleUserService" />
+		<property name="UserUserGroupService" ref="UserUserGroupService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/RoleView.aspx">
+		<property name="RoleService" ref="RoleService" />
+		<property name="LimitService" ref="LimitService" />
+		<property name="RoleUserService" ref="RoleUserService" />
+		<property name="UserGroupService" ref="UserGroupService" />
+		<property name="PrincipalService" ref="PrincipalService" />
+		<property name="RoleUserGroupService" ref="RoleUserGroupService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/UserGroupView.aspx">
+		<property name="RoleService" ref="RoleService" />
+		<property name="UserGroupService" ref="UserGroupService" />
+		<property name="RoleUserGroupService" ref="RoleUserGroupService" />
+		<property name="UserUserGroupService" ref="UserUserGroupService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/StuffView.aspx">
+		<property name="StuffService" ref="StuffService" />
+		<property name="UserService" ref="UserService" />
+		<property name="BranchOfficeService" ref="BranchOfficeService" />
+		<property name="DepartmentService" ref="DepartmentService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/BranchOfficeView.aspx">
+		<property name="BranchOfficeService" ref="BranchOfficeService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/PrincipalView.aspx">
+		<property name="PrincipalService" ref="PrincipalService" />
+	</object>
+
+	<object type="~/Terms.Member.Web/PrincipalItemView.aspx">
+		<property name="PrincipalService" ref="PrincipalService" />
+		<property name="PrincipalItemService" ref="PrincipalItemService" />
+	</object>
+
+</objects>

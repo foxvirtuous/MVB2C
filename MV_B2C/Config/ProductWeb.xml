@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+	<object type="~/Terms.Product.Web/AirItemBrowserForm.aspx">
+		<property name="AirItemService" ref="AirItemService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/AirItemMainForm.aspx">
+		<property name="AirItemService" ref="AirItemService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/AirItemEditForm.aspx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/AreaMasterMainForm.aspx">
+		<property name="AreaMasterService" ref="AreaMasterService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/ExchangeRateMainForm.aspx">
+		<property name="ExchangeRateService" ref="ExchangeRateService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/ExchangeRateEditForm.aspx">
+		<property name="ExchangeRateService" ref="ExchangeRateService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/FareMainForm.aspx">
+		<property name="FareService" ref="FareService" />
+		<property name="ComponentEditController" ref="ComponentEditController" />
+	</object>
+	<object type="~/Terms.Product.Web/FareEditForm.aspx">
+		<property name="FareService" ref="FareService" />
+		<property name="FareMasterService" ref="FareMasterService" />
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<!--<object type="~/Terms.Product.Web/AreaMasterEditForm.aspx">
+		<property name="AreaMasterService" ref="AreaMasterService" />
+	</object>
+  
+	<object type="~/Terms.Product.Web/AreaDetailMainForm.aspx">
+		<property name="AreaDetailService" ref="AreaDetailService" />
+	</object>-->
+
+	<object type="~/Terms.Product.Web/AreaDetailEditForm.aspx">
+		<property name="AreaDetailService" ref="AreaDetailService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/AirSearchRuleMainForm.aspx">
+		<property name="AirSearchRuleService" ref="AirSearchRuleService" />
+	</object>
+  
+	<object type="~/Terms.Product.Web/AirSearchRuleEditForm.aspx">
+		<property name="AirSearchRuleService" ref="AirSearchRuleService" />
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/PackageSearchRuleEditForm.aspx">
+	<property name="PackageSearchRuleService" ref="PackageSearchRuleService" />    
+	</object>
+
+	<object type="~/Terms.Product.Web/PackageSearchRuleMainForm.aspx">
+		<property name="PackageSearchRuleService" ref="PackageSearchRuleService" />
+		<property name="ComponentEditController" ref="ComponentEditController" />
+	</object>
+
+	<object type="~/Terms.Product.Web/MarketMainForm.aspx">
+		<property name="MarketService" ref="MarketService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/MarketEditForm.aspx">
+		<property name="MarketService" ref="MarketService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/MarketSubForm.aspx">
+		<property name="MarketService" ref="MarketService" />
+	</object>
+
+	<object type="~/Terms.Product.Web/ChildMarketListForm.aspx">
+		<property name="MarketService" ref="MarketService" />
+	</object>
+
+	<!--<object type="~/Terms.Product.Web/SelectPackageSerachRuleForm.aspx">
+		<property name="PackageSearchRuleService" ref="PackageSearchRuleService" />
+		<property name="MerchandiseService" ref="MerchandiseService" />
+		<property name="ProductService" ref="ProductService" />
+	</object>-->
+
+	<object type="~/Terms.Product.Web/SelectHotelSearchRuleForm.aspx" parent="ComponentEditPage">
+		<property name="PackageSearchRuleService" ref="PackageSearchRuleService" />
+		<property name="MerchandiseService" ref="MerchandiseService" />
+    <property name="ProductService" ref="ProductService" />    
+    <!--<property name="HotelSearchRuleService" ref="HotelSearchRuleService" />-->
+		<!--<property name="ComponentEditController" ref="ComponentEditController" />-->
+	</object>
+
+	<object name="ComponentEditController" type="NHibernateComponentEditController" scope="session">
+		<constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+	</object>
+
+  <object name="HotelComponentEditController" type="NHibernateHotelComponentEditController" scope="session">
+    <constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+  </object>
+
+  <object name="HotelRuleEditController" type="NHibernateHotelSearchRuleEditController" scope="session">
+		<constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+	</object>
+
+	<object name="SelectPackageSearchRuleEditController" type="NHibernateSelectPackageSearchRuleEditController" scope="session">
+		<constructor-arg name="sessionFactory" ref="ProductSessionFactory"/>
+	</object>
+
+	<object type="~/Terms.Product.Web/HotelSearchRuleMainForm.aspx" parent="ComponentEditPage">
+		<property name="HotelSearchRuleService" ref="HotelSearchRuleService" />
+		<!--<property name="PackageSearchRuleService" ref="PackageSearchRuleService" />-->
+		<!--<property name="ComponentEditController" ref="ComponentEditController" />-->
+		<property name="HotelRuleEditController" ref="HotelRuleEditController" />
+	</object>
+
+	<object type="~/Terms.Product.Web/HotelSearchRuleEditForm.aspx">
+		<property name="HotelSearchRuleService" ref="HotelSearchRuleService" />
+		<property name="PackageSearchRuleService" ref="PackageSearchRuleService" />
+		<property name="ComponentEditController" ref="ComponentEditController" />
+		<property name="HotelRuleEditController" ref="HotelRuleEditController" />
+    <property name="AreaMasterService" ref="AreaMasterService" />
+  </object>
+
+	<object name="ComponentEditPage" abstract="true">
+		<property name="ComponentEditController" ref="ComponentEditController" />
+	</object>
+
+  <object name="HotelComponentEditPage" abstract="true">
+    <property name="HotelComponentEditController" ref="HotelComponentEditController" />
+  </object>
+  
+	<object type="~/Terms.Product.Web/HotelComponentMainForm.aspx" parent="HotelComponentEditPage">
+		<property name="HotelComponentService" ref="HotelComponentService" />
+	</object>
+  
+  <object type="~/Terms.Product.Web/HotelProductMainForm.aspx" parent="HotelComponentEditPage">
+    <property name="HotelComponentService" ref="HotelComponentService" />
+    <property name="Results">
+      <dictionary>
+        <entry key="Edit" value="redirect:HotelProductEditForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object id="HotelProductEditForm"  type="~/Terms.Product.Web/HotelProductEditForm.aspx" parent="HotelComponentEditPage">
+    <property name="HotelComponentService" ref="HotelComponentService" />
+    <property name="Results">
+      <dictionary>
+        <entry key="Return" value="redirect:HotelProductMainForm.aspx" />
+      </dictionary>
+    </property>
+  </object>
+
+  <object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Form</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+	
+</objects>

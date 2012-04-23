@@ -1,0 +1,291 @@
+﻿body{ font-family:Verdana, Arial, Helvetica, sans-serif;}
+
+/*MV_hotel布局样式区*/
+.MV_hotel_main{width: 920px; margin: 0 auto;}
+.MV_hotel_mainLeft{width: 170px; float: left;}
+.MV_hotel_mainCenter{width: 20px; float: left; height:100px;}
+.MV_hotel_mainRight{width:730px; float:left;}
+
+
+/*MV_hotel进度条样式区*/
+.MV_hotel_Dstep{width:100%; float:left; margin:20px 0px;}
+.MV_hotel_Dstepof  { background: #CCCCCC;}
+.MV_hotel_Dsteptf  { background: #FFFFFF; font-size: 9px; line-height: 12px; color: #777777; font-family: Verdana;}
+
+
+
+/*MV_hotel进度条更改样式区*/
+.MV_hotel_Dstepon  { background: #F85000;}
+.MV_hotel_Dstepto  { background: #FFFFFF; font-size: 9px; line-height: 12px; color: #F85000; font-family: Verdana;}
+
+
+
+/*MV_hotel_reSearch样式区*/
+.MV_hotel_reSearch{width: 170px;font-size: 10px;font-family: Verdana; }
+.MV_hotel_reSearch_title{width:170px; float:left; height:23px; line-height:23px; text-align:center; color:#fff;}
+.MV_hotel_reSearch_main{width:168px;  float:left; border:1px solid #FD4C00;}
+.MV_hotel_reSearch_main_step1{ margin:0px 8px;}
+.MV_hotel_reSearch_main_step1 li{ width:100%; float:left; height:18px; line-height:18px; }
+.MV_hotel_reSearch_ddl{ width:145px; height:18px; margin:0px; padding:0px;}
+.MV_hotel_reSearch_tb{ width:80px;}
+.MV_hotel_reSearch_CT{margin:0px 4px; display:inline;  float:left; width:155px; height:22px; line-height:22px; margin-top:32px; font-weight:bold; font-size:11px; padding-left:5px;}
+.MV_hotel_reSearch_CT_main{width:152px; float:left; padding:8px; margin-bottom:35px;}
+
+
+/*MV_hotel_reSearch更改样式区*/
+.MV_hotel_R_step01{ background:#FD4C00; background-image: url(../images/v2/bg_s01.gif); font-size: 10px; color: #FFFFFF; font-family: Verdana; font-weight: bold;}
+.MV_hotel_D_stepb  { color: #FF6600; font-family: Verdana; font-weight: bold;font-size:9px;}
+.MV_hotel_reSearch_CT_C{background:#fdf1c1; color: #FF6600;}
+
+
+/*MV_hotel_SearchCondition更改样式区*/
+.MV_hotel_SearchCondition_T_step02{ background: #999999; border: 0;}
+.MV_hotel_SearchCondition_R_step02{ background: #EAEAEA;}
+.MV_hotel_SearchCondition_D_stepr{ color:#000000; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.MV_hotel_SearchCondition_T_step03{ background: #CCCCCC; border: 0;}
+.MV_hotel_SearchCondition_R_stepw{ background: #FFFFFF; font-size: 12px; line-height: 19px;}
+.MV_hotel_SearchCondition_f06{ color:#005599; font-size: 11px; font-weight: bold;}
+.MV_hotel_SearchCondition_f09 {font-size: 9px; line-height: 18px; color: #005599; text-decoration: underline; font-family: Verdana;}
+
+
+
+/*MV_hotel_step更改样式区*/
+.MV_hotel_step{ width:100%; float:left;color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold; margin:25px 0px 10px 0px;}
+.MV_hotel_step_T_line01{ background:#FF3300; font-size: 16px;width:20px; height:20px; color: #FFFFFF;  font-family: Arial; font-weight: bold; text-align:center; !important}
+
+
+
+/*MV_hotel_step样式区*/
+.MV_hotel_List{ width:712px; float:left;border:1px solid #999999;background: #FDF1C1; padding:8px;}
+.MV_hotel_List_changeCondition{ width:100%; float:left; font-size:11px; margin:15px 0px 15px 0px;}
+.MV_hotel_List_dl{ width:710px; float:left; border:1px solid #ccc; background:#fff; margin-bottom:12px;}
+.MV_hotel_List_DIV{width: 712px; float: left;}
+.MV_hotel_List_dl_list{width: 680px; margin: 15px; display: inline; float: left;}
+.MV_hotel_List_dl_I1{width: 100px; float: left;}
+.MV_hotel_returnDetail{width:723px; border:1px solid #999; height:34px; line-height:34px; padding-right:5px; text-align:right; margin-top:14px; float:left;}
+.MV_hotel_List_dl_hotelInfo{width:420px; float:left; margin-left:15px; display:inline; padding-right:12px;}
+.MV_hotel_List_dl_hotelInfo li{ width:100%; float:left; line-height:17px;}
+
+
+/*MV_hotel_step更改样式区*/
+.MV_hotel_List_dl_I2{width:133px; float:left; background: #FDF1C1; text-align:center; padding:5px 0px;}
+.MV_hotel_List_dl_t01{ color:#FF3300; font-size: 11px; line-height: 14px; font-family: Verdana;}
+.MV_hotel_List_dl_call{ color:#FF6600; font-size: 32px; line-height: 24px; font-family: Verdana; font-weight: bold;}
+.MV_hotel_List_dl_step{margin:5px 0 0 0; padding:3px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; color:#777; height:16px;}
+.MV_hotel_List_dl_t11{ color:#FF3300; font-size: 15px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.MV_hotel_List_dl_d09{font-size: 11px;  color: #005599; text-decoration: underline; font-family: Verdana;}
+
+
+
+
+
+
+/*MV_hotel_分页样式区*/
+.MV_hotel_List_stepg{ width:100%; float:left; text-align:right; font-size: 9px; line-height: 18px; font-family: Verdana;color:#000000;}
+
+
+
+/*step3_price样式区*/
+.step3_price_price{ color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.step3_price_price_t06{ color:#005599; font-size: 11px; line-height: 16px; font-family: Verdana; font-weight: bold;}
+
+
+
+
+/*MV_hotel_hotelInfor样式区*/
+.MV_hotel_hotelInfor_Tab{width: 612px; float: left;}
+.MV_hotel_hotelInfor_Tab li{ float:left;	height: 32;background-color: #F3F3F3;font-size: 14px;font-family: Arial;font-weight: bold;padding:0px 20px; border:1px solid #ccc; border-bottom:none; line-height:32px; margin-left:12px; display:inline;}
+.MV_hotel_hotelInfor_FandA{width: 690px; border: 1px solid #ccc; float: left; background: #fff; padding: 10px;}
+.MV_hotel_hotelInfor_FandA_f16{ color:#000000; font-size: 16px; font-family: Arial; font-weight: bold;}
+
+
+
+/*MV_hotel_hotelInfor更改样式区*/
+.MV_hotel_hotelInfor{ width:712px; border:1px solid #999; float:left;background: #FDF1C1; padding:8px;}
+.MV_hotel_search_btn02 { font-size: 13px; font-family: Verdana; font-weight: bold; color: #000; border: 0px solid; height: 22px; width:100px; background-color: white; padding: 0 0 2px 0; margin:0px 0 0px 0; border-color: #FD9845; background-image: url(../images/v2/btn_bg.gif)}
+
+
+
+
+
+/*MV_hotel_hotel_RoomType样式区*/
+.MV_hotel_RoomType{ width:712px; border:1px solid #999; background: #FDF1C1; padding:8px; float:left;}
+.MV_hotel_RoomType_title{ width:712px; float:left;}
+.MV_hotel_RoomType_list{ width:690px; float:left; border:1px solid #ccc; background:#fff; padding:0px 10px 10px 10px;}
+.MV_hotel_RoomType_list_R_stepbox{ background: #eeeeee; font-size: 9px; line-height: 12px; color: #000000; font-family: Verdana;}
+.MV_hotel_RoomType_list_T_table{ font-size: 9px; line-height: 12px; color: #000000; font-family: Verdana;}
+.MV_hotel_RoomType_list_t09{ color:#000000; font-size: 16px;font-family: Arial; font-weight: bold;}
+.MV_hotel_RoomType_list_tour_day{ color:#FF9600; font-size: 16px; font-family: Arial; font-weight: bold; padding-top:20px;}
+
+
+
+/*MV_hotel_hotel_RoomType样式区*/
+.MV_hotel_Terms{ width:728px; border:1px solid #ccc; float:left; padding:12px 0px; text-align:center;}
+
+
+
+
+
+
+
+/*MV_hotel_MemberLogIn样式区*/
+.MV_confimMemberLogIn_signIn{ width:339px; float:left; margin-left:15px; display:inline; border-right:1px solid #ccc; font-size:13px; font-family:Arial;}
+.MV_confimMemberLogIn_signIn li{ width:100%; float:left;}
+
+
+
+/*MV_hotel_MemberLogIn更改样式区*/
+.MV_confimMemberLogIn_Bg{ width:710px; float:left; border:1px solid #ccc; background:#fff; padding:8px 0px;}
+.MV_confimMemberLogIn{width:712px; float:left; border:1px solid #999; background:#FDF1C1; padding:12px 8px;font-size: 11px; line-height: 19px; color: #000000; font-family: Verdana;}
+.MV_confimReviewOrder_Content_font1{color:#005599; font-size: 11px; font-family: Verdana; font-weight: bold;}
+.MV_meberLogin_font_a{ font-size: 9px; color: #005599; text-decoration: underline; font-family: Verdana;}
+
+
+
+
+
+/*.MV_hotel_step5_hotelInfo样式区*/
+.MV_hotel_step5_hotelInfo{ width:676px; float:left; border:1px solid #ccc; background:#fff; padding:8px; margin-top:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.MV_hotel_step5_hotelInfo更改样式区*/
+.MV_hotel_step5_hotelInfo_title{ width:100%; float:left; border-bottom:1px solid #ccc; padding-bottom:8px;}
+.MV_hotel_step5_hotelInfo_step1{width:100%; float:left; border-bottom:1px solid #ccc; padding:3px 0px;}
+.MV_hotel_step5_hotelInfo_step1 li{ width:100%; float:left; line-height:22px;}
+.MV_hotel_step5_hotelInfo_price{ width:100%; float:left; margin:8px 0px; text-align:right;}
+
+
+
+/*.MV_hotel_step5_TravelInfo更改样式区*/
+.MV_hotel_step5_TravelInfo_T_step0l{ background: #FD4C00; border: 0; margin-bottom:10px;}
+.MV_hotel_step5_TravelInfo_R_stepw{ background: #FFFFFF; font-size: 12px; line-height: 19px;}
+.MV_hotel_step5_TravelInfo_R_step03{ background-image: url(../images/bg_s03.gif); font-size: 11px; line-height: 13px; color: #FFFFFF; font-family: Verdana; font-weight: bold;}
+.MV_hotel_step5_TravelInfo_ContactInfo_title{ width:692px; height:30px; background:url(../images/bg_01.gif) repeat-x; border:1px solid #ccc; line-height:30px; font-size: 13px; color: #000; font-family: Verdana; font-weight: bold;}
+
+
+
+
+
+/*.MV_hotel_step6_TravelInfo样式区*/
+.MV_hotel_step6_TravelerInformation_title{background-image: url(../images/bg_02.gif); height: 25; color: #005599; font-family: Verdana; font-weight: bold; height:30px; line-height:30px;}
+.MV_hotel_Email{  color: #005599; text-decoration: underline; font-family: Verdana;}
+
+
+
+
+/*.MV_hotel_step7_step1样式区*/
+.MV_hotel_step7_step1{ width:100%; float:left; line-height:20px; font-size:11px; margin-bottom:10px;}
+.MV_hotel_step7_YellowDIV_Right{ width:672px; border:1px solid #999; background: #FDF1C1; padding:10px; float:left;}
+.MV_hotel_step7_YellowDIV_Right_inside{ width:650px; border:1px solid #ccc; background:#fff; padding:10px;}
+.MV_hotel_step7_t09{ color:#000000; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.MV_hotel_step7_t10{ color:#005599; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.MV_hotel_step7_Service{ width:100%; float:left;}
+.MV_hotel_step7_Service ul{list-style:circle inside;}
+.MV_hotel_step7_Service li{ width:100%; float:left; line-height:20px;}
+.MV_hotel_step7_font_a{ font-size: 12px; line-height: 18px; color: #005599; text-decoration: underline; font-family: Verdana;}
+
+
+
+
+/*.MV_hotel_step7_step1更改样式区*/
+.MV_hotel_step7_print{ width:100%; float:left; text-align:center; margin:10px 0px;}
+
+
+
+/*.MV_hotel_searcherror STYLE*/
+.MV_hotel_errorMsg{ width:727px; float:left; border:1px solid #cc0000;  font-size:11px; color:#cc0000; font-weight:bold;}
+.MV_hotel_error_RBL_Title{ width:100%; float:left; border-bottom:1px solid #ffcc96; margin-top:15px; padding-bottom:5px; color:#ff6600; font-weight:bold;}
+.MV_hotel_error_RBL{ width:100%; float:left; margin-top:10px; font-size:12px;}
+.MV_hotel_errorMsg1{ width:100%; float:left; margin-top:20px;}
+.MV_hotel_errorMsg1 a{ text-decoration:underline; color:blue;}
+.MV_hotel_error_submit{ width:100%; float:left; text-align:center; margin-top:30px;}
+
+
+
+
+
+
+
+
+.MV_YellowDIV_Right{ width:712px; border:1px solid #999; background: #fdf1c1; padding:8px; float:left;}
+.MV_YellowDIV_Right_inSide1{width:694px; border:1px solid #ccc; background:#fff; padding:8px; float:left;}
+.MV_YellowDIV_Right_inSide2{width:676px; border:1px solid #ccc; background:#fff; padding:8px; float:left;}
+.MV_YellowDIV_Right_title{ width:100%; float:left; margin-top:3px;}
+
+
+
+
+.MV_GrayDIV_Right{ width:712px; border:1px solid #999; background:#EAEAEA; padding:8px; float:left; padding-bottom:28px; background-image:url(../images/bg_s04.gif); background-position:bottom; background-repeat:repeat-x;}
+.MV_GrayDIV_Right_title{color:#000000; font-size: 16px; font-family: Arial; font-weight: bold; margin:3px 0px;}
+.MV_GrayDIV_Right_inSide1{width:694px; border:1px solid #ccc; background:#fff; padding:8px; float:left; padding-bottom:20px;}
+
+
+
+
+.MV_DIV{width:100%; float:left;}
+.MV_head09{ color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.MV_hotel_RoomType_list_th_border{ border-bottom:1px solid #ccc;border-top:1px solid #ccc;}
+.td_border_bot{border-bottom: 1px solid rgb(216, 216, 216);}
+.step3_t06{ color:#ff3300; font-size: 11px; line-height: 16px; font-family: Verdana; font-weight: bold;}
+.MV_hotel_tour_day{ color:#FF9600; font-size: 16px; font-family: Arial; font-weight: bold; padding-top:20px;}
+.MV_T_step03{ background: #CCCCCC; border: 0; line-height:18px;}
+.MV_R_stepw{ background: #FFFFFF;}
+.Required_t01{ color:#FF3300; font-size: 10px; font-family: Verdana;}
+.MV_t10{ font-size:10px; font-family:Verdana;}
+.MV_hotel_remarks{ width:898px; float:left; border:1px solid #999; padding:8px 10px;}
+
+
+
+/*newMotion ListDetail*/
+
+
+.MV_hotel_List_dl_list_detail{width: 680px; margin-top: 15px; margin-bottom: 15px; margin-left:15px;_margin-left:7px; margin-right:15px;_margin-right:7px; float: left; margin-top:0px; border-top:1px dotted #ccc; padding-top:10px; display:none;}
+.MV_hotel_List_dl_list_detail_title{width:680px; float:left; height:20px; line-height:20px; font-weight:bold;}
+.MV_hotel_List_dl_list_detail_content{width:680px; float:left; list-style-type:circle;}
+.MV_hotel_List_dl_list_detail_content li{ width:300px; padding:6px; float:left; white-space:nowrap; padding-left:0px; font-size:11px;}
+
+.MV_hotel_List_dl_list_map{width: 680px; margin-top: 15px; margin-bottom: 15px; margin-left:15px;_margin-left:7px; margin-right:15px;_margin-right:7px; border-top:1px dotted #ccc; padding-top:10px; display:none;}
+.MV_hotel_List_dl_list_map_img{ width:680px; float:left; text-align:center; margin-top:10px;}
+.MV_hotel_List_dl_list_locations{width:680px; float:left; margin-top:20px; margin-bottom:10px;}
+.MV_hotel_List_dl_list_locations li{ width:680px; float:left;font-size:11px;}
+.MV_hotel_List_dl_list_locations_title{width:680px; float:left;  font-weight:bold; margin-bottom:10px;}
+
+.MV_hotel_List_dl_list_photos{width: 680px; margin-top: 15px; margin-bottom: 15px; margin-left:15px;_margin-left:7px; margin-right:15px;_margin-right:7px; float: left; margin-top:0px; border-top:1px dotted #ccc; padding-top:10px; display:none;}
+.MV_hotel_List_dl_list_photos li{ margin:20px; float:left; display:inline; text-align:center; border:2px solid #77cbfc; padding:3px; margin-top:0px;}
+
+
+
+
+
+
+
+
+
+
+
+.IBE_confimMemberLogIn_Title{ width:664px; float:left;color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold; margin:25px 0px 10px 0px;}
+.IBE_confimMemberLogIn{width:642px; float:left; border:1px solid #999; background: #EDF6F1; padding:10px 8px;font-size: 11px; line-height: 19px; color: #000000; font-family: Verdana;}
+.IBE_confimMemberLogIn_Bg{ width:640px; float:left; border:2px solid #000; background:#fff; padding:8px 0px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px;}
+.IBE_confimMemberLogIn_signIn{ width:296px; float:left; margin-left:15px; display:inline; border-right:1px solid #ccc;}
+.IBE_confimMemberLogIn_signIn li{ width:100%; float:left; margin:2px 0px;}
+.IBE_confimReviewOrder_Content_font1{color:#0E6F00; font-size: 11px; line-height: 16px; font-family: Verdana; font-weight: bold;}
+.IBE_confimReviewOrder_Content_font2{color:#666666; font-size: 9px; line-height: 16px; font-family: Verdana;}
+
+.IBE_confimReviewOrder_Content_font3{color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.IBE_T_line01{ background: #139B00; font-size: 16px;width:20px; height:20px; color: #FFFFFF;  font-family: Arial; font-weight: bold; text-align:center; !important}
+.IBE_search_btn02 { font-size: 13px; font-family: Verdana; font-weight: bold; color: #FFFFFF; border: 0px solid; height: 22px; background-color: white; padding:0px 5px 2px 5px; border-color: #FD9845; background-image: url(btn_bg1.gif)}
+.IBE_search_btn04{font-size: 13px; font-family: Verdana; font-weight: bold; color: #FFFFFF; border: 0px solid; height: 22px; background-color: white;padding:0px 5px 2px 5px; border-color: #FD9845; background-image: url(btn_bg.gif)}
+
+
+

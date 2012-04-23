@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TourInfos>
+
+	<Tour>
+		<Name>China</Name>
+    <Name_CN>中國</Name_CN>
+		<CityList>
+			<city code="PEK">beijing</city>
+			<city code="SHA">shanghai</city>
+			<city code="HKG">hong kong</city>
+		</CityList>
+		<Image>grp_l05_b2b.jpg</Image>
+		<TourArea>Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Japan &amp; Korea</Name>
+    <Name_CN>日本 &amp; 韓國</Name_CN>
+		<CityList>
+			<city code="TYO">Tokyo</city>
+			<city code="OSA">Osaka</city>
+			<city code="SEL">Seoul</city>
+		</CityList>
+		<Image>grp_l06_b2b.jpg</Image>
+		<TourArea>Asia</TourArea>
+	</Tour>
+  <Tour>
+    <Name>Taiwan</Name>
+    <Name_CN>台湾</Name_CN>
+		<CityList>
+			<city code="TPE">Taipei</city>
+		</CityList>
+		<Image>grp_l10_b2b.jpg</Image>
+		<TourArea>Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>South East Asia</Name>
+    <Name_CN>東南亞</Name_CN>
+		<CityList>
+			<city code="SIN">Singapore</city>
+			<city code="BKK">Bangkok</city>
+			<city code="SGN">Saigon</city>
+      <city code="DPS">Bali</city>
+      <city code="REP">Siem Reap</city>
+		</CityList>
+		<Image>grp_l09_b2b.jpg</Image>
+		<TourArea>Southeast Asia</TourArea>
+	</Tour>
+	<Tour>
+		<Name>Middle East &amp; Africa</Name>
+    <Name_CN>中東 &amp; 非洲</Name_CN>
+		<CityList>
+			<city code="CAI">Cairo</city>
+		</CityList>
+		<Image>grp_l11_b2b.jpg</Image>
+		<TourArea>Middle East &amp; Africa</TourArea>
+	</Tour>
+</TourInfos>

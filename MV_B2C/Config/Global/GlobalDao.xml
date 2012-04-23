@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		The Terms object definitions for the Data Access Objects.
+	</description>
+
+	<!-- Database and NHibernate Configuration -->
+
+	<object id="GlobalAdoTemplate" type="Spring.Data.Generic.AdoTemplate">
+		<property name="DbProvider" ref="BaseDbProvider" />
+	</object>
+
+	<object id="GlobalHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+		<property name="SessionFactory" ref="GlobalSessionFactory" />
+		<property name="TemplateFlushMode" value="Auto" />
+		<property name="CacheQueries" value="true" />
+	</object>
+
+	<object id="GlobalSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="BaseDbProvider"/>
+		<property name="MappingAssemblies">
+			<list>
+				<value>Terms.Base.Dao.NHibernate</value>
+			</list>
+		</property>
+		<property name="HibernateProperties">
+			<dictionary>
+				<entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+				<entry key="hibernate.dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
+				<entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+				<entry key="hibernate.current_session_context_class" value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate12"/>
+			</dictionary>
+		</property>
+	</object>
+
+	<object id="GlobalHibernateTransactionManager" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="BaseDbProvider"/>
+		<property name="SessionFactory" ref="GlobalSessionFactory"/>
+	</object>
+
+	<object id="ErrorMessageDao" type="Terms.Base.Dao.NHibernate.ErrorMessageDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="GlobalHibernateTemplate"/>
+	</object>
+
+	<object id="GlobalAttachmentMasterDao" type="Terms.Global.Dao.NHibernate.AttachmentMasterDao, Terms.Global.Dao.NHibernate">
+		<property name="AdoTemplate" ref="GlobalAdoTemplate"/>
+	</object>
+
+	<object id="ProductGlobalAttachmentMasterDao" type="Terms.Global.Dao.NHibernate.AttachmentMasterDao, Terms.Global.Dao.NHibernate">
+		<property name="AdoTemplate" ref="ProductAdoTemplate"/>
+	</object>
+
+	<object id="ProductAdoTemplate" type="Spring.Data.Generic.AdoTemplate">
+		<property name="DbProvider" ref="BussDbProvider" />
+	</object>
+
+</objects>

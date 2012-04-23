@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  
+  <description>
+    The Terms service layer definitions
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+
+  <object id="AirService" type="Terms.Material.Service.AirService, Terms.Material.Service">
+    <property name="CommCityDao" ref="CityDao"/>
+    <property name="CommAirportDao" ref="AirportDao"/>
+  </object>
+  <object id="HotelTravcoService" type="Terms.Material.Service.HotelTravcoService, Terms.Material.Service">
+    <property name="CommCityDao" ref="CityDao"/>
+    <property name="CommCurrencyRateDao" ref="CurrencyDao"/>
+  </object>
+	<object id="HotelTravcoService2" type="Terms.Material.Service.HotelTravcoService, Terms.Material.Service">
+		<property name="CommCityDao" ref="CityDao"/>
+		<property name="CommCurrencyRateDao" ref="CurrencyDao"/>
+	</object>
+  <object id="HotelGTAService" type="Terms.Material.Service.HotelGTAService, Terms.Material.Service">
+    <property name="CommCityDao" ref="CityDao"/>
+  </object>
+	<object id="HotelGTAService2" type="Terms.Material.Service.HotelGTAService, Terms.Material.Service">
+		<property name="CommCityDao" ref="CityDao"/>
+	</object>
+
+	<!--add zyll 2010-1-19-->
+	<object id="InvoiceService" type="Terms.Material.Service.InvoiceService, Terms.Material.Service">
+		<property name="OrderInvoiceDao" ref="OrderInvoiceDao"/>
+	</object>
+</objects>

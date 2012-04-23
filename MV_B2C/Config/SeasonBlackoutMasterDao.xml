@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    The Terms object definitions for the Data Access Objects.
+  </description>
+
+  <!-- Database and NHibernate Configuration -->
+  <db:provider id="BaseDbProvider"
+                   provider="SqlServer-1.1"
+                   connectionString="Integrated Security=false; Data Source=192.168.100.163;Database=TERMS_Base;User ID=sa;Password=sa;"/>
+
+  <object id="BaseHibernateTransactionManager"
+        type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="BaseDbProvider"/>
+    <property name="SessionFactory" ref="BaseSessionFactory"/>
+  </object>
+
+  <object id="BaseHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+    <property name="SessionFactory" ref="BaseSessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+  <object id="BaseSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="BaseDbProvider"/>
+    <property name="MappingAssemblies">
+      <list>
+        <value>Terms.Base.Dao.NHibernate</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider"
+               value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="hibernate.dialect"
+               value="NHibernate.Dialect.MsSql2000Dialect"/>
+        <entry key="hibernate.connection.driver_class"
+               value="NHibernate.Driver.SqlClientDriver"/>
+      </dictionary>
+    </property>
+  </object>	
+  <object id="SeasonBlackoutMasterDao" type="Terms.Contract.Dao.NHibernate.HibernateCoachDao, Terms.Contract.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+  </object>	
+</objects>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+  <object name="SalesRegisterForm" type="~/Page/Common/register.aspx" parent="SalseBasePage">
+    <property name="AnswerService" ref="AnswerService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="AdsServiceService" ref="AdsServiceService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="MemberInformationService" ref="MemberInformationService" />
+  </object>
+
+  <object name="SalesLoginForm" type="~/Page/Common/SalesLogin.aspx" parent="SalseBasePage">
+    <property name="MemberInformationService" ref="MemberInformationService" />
+  </object>
+
+  <object name="TravelerForm" type="~/Page/Common/TravelerForm.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="ErrorMessage" type="~/Page/Common/ErrorMessage.aspx" parent="SalseBasePage">
+  </object>
+
+  <object name="MemberMyAccountForm" type="~/Page/Common/MemberMyAccountForm.aspx" parent="BasePage">
+    <property name="MemberInformationService" ref="MemberInformationService" />
+    <property name="AnswerService" ref="AnswerService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="AdsServiceService" ref="AdsServiceService" />
+  </object>
+
+  <object type="~/Page/Common/MemberUpdateAccountForm.aspx" parent="BasePage">
+    <property name="ConstantMasterService" ref="ConstantMasterService" />
+    <property name="ConstantDetailService" ref="ConstantDetailService" />
+    <property name="AnswerService" ref="AnswerService" />
+    <property name="QuestionService" ref="QuestionService" />
+    <property name="AdsServiceService" ref="AdsServiceService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="MemberInformationService" ref="MemberInformationService" />
+  </object>
+
+  <object type="~/Page/Common/MemberChangePwdForm.aspx" parent="BasePage">
+    <property name="MemberInformationService" ref="MemberInformationService" />
+  </object>    
+  
+  <object type="~/Page/Common/SalesEmailpassword.aspx" parent="SalseBasePage">
+  <property name="MemberInformationService" ref="MemberInformationService" />
+</object>
+
+<object name="CreditCardInfoForm" type="~/Page/Common/CreditCardInfoForm.aspx" parent="SalseBasePage">
+    <property name="SaleOrderService" ref="SaleOrderService" />
+  </object>
+
+  <object name="MyOrderSearchForm"  type="~/Page/Common/MyOrderSearch.aspx" parent="BasePage">
+    <property name="OrderService" ref="OrderService" />
+  </object>
+
+  <object name="AllOrderSearchForm"  type="~/Page/Common/AllOrderSearch.aspx" parent="BasePage">
+    <property name="OrderService" ref="OrderService" />
+    <property name="OrderOperationService" ref="OrderOperationService" />
+    <property name="OrderMaterialService" ref="OrderMaterialService" />
+    <property name="OrderMerchandiseService" ref="OrderMerchandiseService" />
+    <property name="OrderMaterialHotelService" ref="OrderMaterialHotelService" />
+  </object>
+
+  <object name="MyOrderViewForm"  type="~/Page/Common/MyOrderView.aspx" parent="BasePage">
+    <property name="OrderService" ref="OrderService" />
+    <property name="SaleOrderService" ref="SaleOrderService" />
+    <property name="OrderContractService" ref="OrderContractService" />
+	  <property name="OPSaleOrderService" ref="OPSaleOrderService" />
+  </object>
+
+	<object name="SucceedForm" type="~/Page/Common/SucceedForm.aspx" parent="SalseBasePage">
+		<property name="SaleOrderService" ref="SaleOrderService" />
+	</object>
+
+	<object name="SaveOrderWaiting" type="~/Page/Common/SaveOrderWaiting.aspx" parent="SalseBasePage">
+		<property name="SaleOrderService" ref="SaleOrderService" />
+    <!--<property name="SaleOrderTempService" ref="SaleOrderTempService" />-->
+	</object>
+
+	<object name="TransferDetailMain" type="~/Page/Common/TransferDetail.aspx" parent="SalseBasePage">
+		<property name="SaleOrderService" ref="SaleOrderService" />
+		<!--<property name="SaleOrderTempService" ref="SaleOrderTempService" />-->
+	</object>
+
+	<object name="SightseeingDetailMain" type="~/Page/Common/SightseeingDetail.aspx" parent="SalseBasePage">
+		<property name="SaleOrderService" ref="SaleOrderService" />
+		<!--<property name="SaleOrderTempService" ref="SaleOrderTempService" />-->
+	</object>
+
+  <object name="Searching1"  type="~/Page/Common/Searching1.aspx" parent="SalseBasePage">
+	  <property name="CityService" ref="CityService" />
+	  <property name="AirportService" ref="AirportService" />
+	  <property name="AirService" ref="AirService" />
+	  <property name="CommonService" ref="CommonService" />
+	  <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+	  <!--<property name="MemberInformationService" ref="MemberInformationService" />-->
+  </object>
+
+  <object name="HeaderPage"  type="~/Page/Common/HeaderPage.aspx" parent="BasePage">
+  </object>
+
+  <object name="SendPasswordSucceedForm"  type="~/Page/Common/SendPasswordSucceedForm.aspx" parent="BasePage">
+  </object>
+
+  <object name="GeneralTravelerChangeForm"  type="~/Page/Common/GeneralTravelerChangeForm.aspx" parent="SalseBasePage">
+    
+  </object>
+
+  <object name="JoinSucceedForm"  type="~/Page/Common/JoinSucceedForm.aspx" parent="BasePage">
+  </object>
+
+	<object name="MemberMessageForm"  type="~/Page/Common/MemberMessageForm.aspx" parent="BasePage">
+	</object>
+
+	<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Form</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+</objects>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+	<object id="ContractDao" type="Terms.Contract.Dao.NHibernate_0407.ContractDao, Terms.Contract.Dao.NHibernate_0407">
+		<property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+	</object>
+
+	<object id="ContractItemAirDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemAirDao, Terms.Contract.Dao.NHibernate_0407">
+		<property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+	</object>
+
+  <object id="ContractItemHotelDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemHotelDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemInsuranceDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemInsuranceDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalMealPriceDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalMealPriceDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalServiceDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalServiceDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalServiceSectionDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalServiceSectionDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalServicePriceDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalServicePriceDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalApprovedShopDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalApprovedShopDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemComprehensiveLandRateDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemComprehensiveLandRateDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemComprehensiveLandRateSectionDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemComprehensiveLandRateSectionDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemComprehensiveLandRateProrationDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemComprehensiveLandRateProrationDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalGuideDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalGuideDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalGuideLanguageDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalGuideLanguageDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalDiscountPolicyDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalDiscountPolicyDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalExtraMileageFeeDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalExtraMileageFeeDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalAdmissionDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalAdmissionDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalCoachDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalCoachDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalRestaurantsDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalRestaurantsDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalCommissionDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalCommissionDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="ContractItemLocalConditionDao" type="Terms.Contract.Dao.NHibernate_0407.ContractItemLocalConditionDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="HotelFreeRoomPolicyDao" type="Terms.Contract.Dao.NHibernate_0407.HotelFreeRoomPolicyDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+
+  <object id="HotelGroupDefinitionDao" type="Terms.Contract.Dao.NHibernate_0407.HotelGroupDefinitionDao, Terms.Contract.Dao.NHibernate_0407">
+    <property name="HibernateTemplate" ref="Contract0407HibernateTemplate"/>
+  </object>
+</objects>

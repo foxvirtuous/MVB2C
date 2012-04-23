@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<config>
+	<directory>
+		<dtdpath value="trlink/schema"></dtdpath>
+		<schemapath value="trlink/schema"></schemapath>
+	</directory>
+  <!--
+	<server>
+    <linkserver name="xmlv5live.travco.co.uk"></linkserver>
+    <dtdserver name="xmlv5live.travco.co.uk"></dtdserver>
+    <xmlschemaserver name="xmlv5live.travco.co.uk"></xmlschemaserver>
+  </server> -->
+  <server>
+    <linkserver name="xmlv5live.travco.co.uk"></linkserver>
+    <dtdserver name="xmlv5live.travco.co.uk"></dtdserver>
+    <xmlschemaserver name="xmlv5live.travco.co.uk"></xmlschemaserver>
+  </server>
+	<filename>
+		<hotelbooking_schema name="HBookingV4Snd.xsd"></hotelbooking_schema>
+		<hotelbooking_dtd name="HBookingV4Snd.dtd"></hotelbooking_dtd>
+		<bookenquiry_schema name="BookEnquiryV4Snd.xsd"></bookenquiry_schema>
+		<bookenquiry_dtd name="BookEnquiryV4Snd.dtd"></bookenquiry_dtd>
+		<countryrequest_schema name="CountryRequestV4Snd.xsd"></countryrequest_schema>
+		<countryrequest_dtd name="CountryRequestV4Snd.dtd"></countryrequest_dtd>
+		<hotelsforacityrequest_schema name="HotelsForACityRequestV4Snd.xsd"></hotelsforacityrequest_schema>
+		<hotelsforacityrequest_dtd name="HotelsForACityRequestV4Snd.dtd"></hotelsforacityrequest_dtd>
+		<alloctionenquiry_schema name="AllocEnquiryV4Snd.xsd"></alloctionenquiry_schema>
+		<alloctionenquiry_dtd name="AllocEnquiryV4Snd.dtd"></alloctionenquiry_dtd>
+		<hoteldetailrequest_schema name="HotelDetailRequestV4Snd.xsd"></hoteldetailrequest_schema>
+		<hoteldetailrequest_dtd name="HotelDetailRequestV4Snd.dtd"></hoteldetailrequest_dtd>
+		<hotelavailability_schema name="HotelAvailabilityV4Snd.xsd"></hotelavailability_schema>
+		<hotelavailability_dtd name="HotelAvailabilityV4Snd.dtd"></hotelavailability_dtd>
+		<hotelrequest_schema name="HotelRequestsV4Snd.xsd"></hotelrequest_schema>
+		<hotelrequest_dtd name="HotelRequestsV4Snd.dtd"></hotelrequest_dtd>
+		<hotelcancellationdetails_schema name="HotelCancellationDetailsV4Snd.xsd"></hotelcancellationdetails_schema>
+		<hotelcancellationdetails_dtd name="HotelCancellationDetailsV4Snd.dtd"></hotelcancellationdetails_dtd>
+		<cancellationdetails_schema name="CancellationDetailsV4Snd.xsd"></cancellationdetails_schema>
+		<cancellationdetails_dtd name="CancellationDetailsV4Snd.dtd"></cancellationdetails_dtd>
+	</filename>
+	<url>
+		<!--<posturl url="http://xmlv5master.travco.co.uk/trlink/link1/trlink"></posturl>-->
+
+		<posturl url="http://xmlv5test2.travco.co.uk/trlink/link1/trlink"></posturl><!--xmlv5master-->
+
+	</url>
+	<database>
+		<connectionstring value="server=192.168.100.163; database=Foundation; User ID=sa; Password=sa;"></connectionstring>
+		<connectiontimeout value="20"></connectiontimeout>
+	</database>
+
+	<secruity code="HDW237" password="140706DW32"></secruity>
+
+	<!--<secruity code="HDW237" password="050307XUGT"></secruity>-->
+
+	<program agentref="GTTSHA"></program>
+</config>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms service layer definitions
+	</description>
+
+	<!-- Property placeholder configurer for database settings -->
+	<object id="EditFlyerService" type="Terms.Additional.Service.EditFlyerService, Terms.Additional.Service">
+		<property name="FlyerRegionDao" ref="FlyerRegionDao" />
+		<property name="FlyerTypeDao" ref="FlyerTypeDao" />
+		<property name="FlyerDao" ref="FlyerDao" />
+	</object>
+
+</objects>

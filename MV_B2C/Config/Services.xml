@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms service layer definitions
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+
+  <object id="CommonService" type="Terms.Common.Service.CommonService, Terms.Common.Service">
+    <property name="CommCountryDao" ref="CountryDao"/>
+    <property name="ProvinceDao" ref="ProvinceDao"/>
+    <property name="CommCityDao" ref="CityDao"/>
+    <property name="AirportDao" ref="AirportDao"/>
+    <property name="CityEventDao" ref="CityEventDao"/>
+    <property name="SightDao" ref="SightDao"/>
+    <property name="SightImageDao" ref="SightImageDao"/>
+    <property name="SightGroupMasterDao" ref="SightGroupMasterDao"/>
+    <property name="SightGroupDetailDao" ref="SightGroupDetailDao"/>
+    <property name="FeatureMasterDao" ref="FeatureMasterDao"/>
+    <property name="ImageDao" ref="ImageDao"/>
+    <!--<property name="Session" ref="AirportDao"/>-->
+  </object>
+
+  <import resource="DeclarativeServicesTxProxyFactoryDriven.xml"/>
+
+  <import resource="DeclarativeServicesAttributeDriven.xml"/>
+
+  <!-- didn't configure correctly yet - don't use
+  <import resource="~/Config/DeclarativeServicesObjectNameDriven.xml"/>  
+  -->
+
+</objects>

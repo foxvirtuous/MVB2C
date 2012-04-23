@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net" xmlns:db="http://www.springframework.net/database">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		The Terms object definitions for the Data Access Objects.
+	</description>
+
+	<!-- Database and NHibernate Configuration -->
+
+	<object id="CommonHibernateTransactionManager" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="CommDbProvider"/>
+		<property name="SessionFactory" ref="CommonSessionFactory"/>
+	</object>
+
+	<object id="CommonHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+		<property name="SessionFactory" ref="CommonSessionFactory" />
+		<property name="TemplateFlushMode" value="Auto" />
+		<property name="CacheQueries" value="true" />
+	</object>
+
+	<object id="CommonSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="CommDbProvider"/>
+		<property name="MappingAssemblies">
+			<list>
+				<value>Terms.Common.Dao.NHibernate</value>
+			</list>
+		</property>
+		<property name="HibernateProperties">
+			<dictionary>
+				<entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+				<entry key="hibernate.dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
+				<entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+				<entry key="hibernate.current_session_context_class"  value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate12"/>
+			</dictionary>
+		</property>
+	</object>
+
+	<!-- Data Access Objects -->
+
+	<object id="CountryDao" type="Terms.Common.Dao.NHibernate.CountryDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="ProvinceDao" type="Terms.Common.Dao.NHibernate.ProvinceDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="CityDao" type="Terms.Common.Dao.NHibernate.CityDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="AirportDao" type="Terms.Common.Dao.NHibernate.AirportDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="CurrencyDao" type="Terms.Common.Dao.NHibernate.CurrencyDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="ExchangeRateDao" type="Terms.Common.Dao.NHibernate.ExchangeRateDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="AirlinesDao" type="Terms.Common.Dao.NHibernate.AirlinesDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="CommConstantDetailDao" type="Terms.Common.Dao.NHibernate.CommConstantDetailDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="CommConstantMasterDao" type="Terms.Common.Dao.NHibernate.CommConstantMasterDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+
+	<object id="AreaInCityDao" type="Terms.Common.Dao.NHibernate.AreaInCityDao, Terms.Common.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="CommonHibernateTemplate"/>
+	</object>
+</objects>

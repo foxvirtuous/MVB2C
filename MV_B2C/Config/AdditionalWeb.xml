@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<object name="EditAdditionalForm" type="~/B2B_SUB/EditAdditionalForm.aspx" parent="BasePage">
+		<property name="EditFlyerService" ref="EditFlyerService" />
+	</object>
+
+	<object name="Index" type="~/B2B_SUB/Index.aspx" parent="BasePage">
+		<property name="EditFlyerService" ref="EditFlyerService" />
+	</object>
+
+	<object name="Flyergrp" type="~/B2B_SUB/Flyer_grp.aspx" parent="BasePage">
+		<property name="EditFlyerService" ref="EditFlyerService" />
+	</object>
+
+	<object name="Flyerpkg" type="~/B2B_SUB/Flyer_pkg.aspx" parent="SalseBasePage">
+		<property name="EditFlyerService" ref="EditFlyerService" />
+	</object>
+
+	<object name="Join" type="~/B2B_SUB/Join.aspx" parent="SalseBasePage">
+		<property name="CommonService" ref="CommonService" />
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object name="Login" type="~/B2B_SUB/Login.aspx" parent="SalseBasePage">
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object name="AgentJoinSucceedForm" type="~/B2B_SUB/AgentJoinSucceedForm.aspx" parent="SalseBasePage">
+	</object>
+
+	<object name="Forget" type="~/B2B_SUB/Forget.aspx" parent="BasePage">
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object name="AgentChangePassword" type="~/B2B_SUB/AgentChangePassword.aspx" parent="BasePage">
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object name="AgentMyAccountForm" type="~/B2B_SUB/AgentMyAccountForm.aspx" parent="BasePage">
+		<property name="MemberInformationService" ref="MemberInformationService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="AdsServiceService" ref="AdsServiceService" />
+	</object>
+
+	<object name="AgentUpdateAccountForm" type="~/B2B_SUB/AgentUpdateAccountForm.aspx" parent="BasePage">
+		<property name="ConstantMasterService" ref="ConstantMasterService" />
+		<property name="ConstantDetailService" ref="ConstantDetailService" />
+		<property name="AnswerService" ref="AnswerService" />
+		<property name="QuestionService" ref="QuestionService" />
+		<property name="AdsServiceService" ref="AdsServiceService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object name="AgentOrderSearch"  type="~/B2B_SUB/AgentOrderSearch.aspx" parent="BasePage">
+		<property name="OrderService" ref="OrderService" />
+	</object>
+
+	<object name="AgentOrderView"  type="~/B2B_SUB/AgentOrderView.aspx" parent="BasePage">
+		<property name="OrderService" ref="OrderService" />
+		<property name="SaleOrderService" ref="SaleOrderService" />
+		<property name="OrderContractService" ref="OrderContractService" />
+		<property name="OPSaleOrderService" ref="OPSaleOrderService" />
+	</object>
+
+	<object name="TourPrintInvoice"  type="~/B2B_SUB/TourPrintInvoice.aspx" parent="BasePage">
+		<property name="OrderService" ref="OrderService" />
+		<property name="SaleOrderService" ref="SaleOrderService" />
+		<property name="OPSaleOrderService" ref="OPSaleOrderService" />
+	</object>
+
+
+	<object name="GttGlobalSkipIndex" type="~/B2B_SUB/GttGlobalSkipIndex.aspx" parent="BasePage">
+		<property name="CommonService" ref="CommonService" />
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+		<property name="ObjectNames">
+			<list>
+				<value>*Form</value>
+			</list>
+		</property>
+		<property name="InterceptorNames">
+			<list>
+				<value>AutoAfterThrowAdvice</value>
+			</list>
+		</property>
+	</object>
+</objects>

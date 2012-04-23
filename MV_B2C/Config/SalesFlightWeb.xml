@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+	The Terms web layer definitions
+	</description>
+
+	<object name="SearchingForm" type="~/Page/Flight/Searching.aspx">
+	  <property name="AirService" ref="AirService" />
+    <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+  </object>
+  <object name="BookingPageForm"  type="~/Page/Flight/BookingPage.Master">
+    <property name="AirService" ref="AirService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+  </object>
+  <object name="Step2Form" type="~/Page/Flight/Step2.aspx">
+    <property name="AirService" ref="AirService" />
+    <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+  </object>
+
+  <object name="Step3_netForm" type="~/Page/Flight/Step3_net.aspx">
+    <property name="AirService" ref="AirService" />
+    <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+  </object>
+
+  <object name="Step3_bulkForm" type="~/Page/Flight/Step3_bulk.aspx">
+    <property name="AirService" ref="AirService" />
+    <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+  </object>
+
+  <object name="Step3_confirmForm"  type="~/Page/Flight/Step3_confirm.aspx">
+    <property name="AirService" ref="AirService" />
+  </object>
+
+  <object name="SearchConditionsForm"  type="~/Page/Flight/SearchConditionsForm.aspx">
+    <property name="AirService" ref="AirService" />
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object name="SearchConditionsMeaasageForm"  type="~/Page/Flight/SearchConditionsMeaasageForm.aspx">
+    <property name="AirService" ref="AirService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+  </object>
+
+ 
+
+  <object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Form</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+</objects>

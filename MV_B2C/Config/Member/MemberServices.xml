@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms service layer definitions
+	</description>
+
+	<!-- Property placeholder configurer for database settings -->
+
+	<object id="AdsServiceService" type="Terms.Member.Service.AdsServiceService, Terms.Member.Service">
+		<property name="AdsServiceDao" ref="AdsServiceDao"/>
+		<property name="IncreaseByDegreesDao" ref="IncreaseByDegreesDao"/>
+	</object>
+
+	<object id="ConstantMasterService" type="Terms.Member.Service.ConstantMasterService, Terms.Member.Service">
+		<property name="ConstantMasterDao" ref="ConstantMasterDao"/>
+	</object>
+
+	<object id="ConstantDetailService" type="Terms.Member.Service.ConstantDetailService, Terms.Member.Service">
+		<property name="ConstantDetailDao" ref="ConstantDetailDao"/>
+	</object>
+	
+	<object id="UserService" type="Terms.Member.Service.UserService, Terms.Member.Service">
+		<property name="UserDao" ref="UserDao"/>
+	</object>
+
+	<object id="AnswerService" type="Terms.Member.Service.AnswerService, Terms.Member.Service">
+		<property name="AnswerDao" ref="AnswerDao"/>
+	</object>
+
+	<object id="QuestionService" type="Terms.Member.Service.QuestionService, Terms.Member.Service">
+		<property name="QuestionDao" ref="QuestionDao"/>
+		<property name="IncreaseByDegreesDao" ref="IncreaseByDegreesDao"/>
+		<property name="AnswerDao" ref="AnswerDao"/>
+	</object>
+
+	<object id="UserGroupService" type="Terms.Member.Service.UserGroupService, Terms.Member.Service">
+		<property name="UserGroupDao" ref="UserGroupDao"/>
+	</object>
+	
+	<object id="UserUserGroupService" type="Terms.Member.Service.UserUserGroupService, Terms.Member.Service">
+		<property name="UserUserGroupDao" ref="UserUserGroupDao"/>
+	</object>
+
+	<object id="RoleUserGroupService" type="Terms.Member.Service.RoleUserGroupService, Terms.Member.Service">
+		<property name="RoleUserGroupDao" ref="RoleUserGroupDao"/>
+	</object>
+
+	<object id="RoleUserService" type="Terms.Member.Service.RoleUserService, Terms.Member.Service">
+		<property name="RoleUserDao" ref="RoleUserDao"/>
+	</object>
+
+	<object id="LimitService" type="Terms.Member.Service.LimitService, Terms.Member.Service">
+		<property name="LimitDao" ref="LimitDao"/>
+	</object>
+
+	<object id="RoleService" type="Terms.Member.Service.RoleService, Terms.Member.Service">
+		<property name="RoleDao" ref="RoleDao"/>
+	</object>
+
+	<object id="StuffService" type="Terms.Member.Service.StuffService, Terms.Member.Service">
+		<property name="StuffDao" ref="StuffDao"/>
+	</object>
+	
+	<object id="DepartmentService" type="Terms.Member.Service.DepartmentService, Terms.Member.Service">
+		<property name="DepartmentDao" ref="DepartmentDao"/>
+	</object>
+
+  <object id="BranchOfficeService" parent="MemberProxyConfigurationTemplate">
+    <property name="Target">
+      <object type="Terms.Member.Service.BranchOfficeService, Terms.Member.Service">
+        <property name="BranchOfficeDao" ref="BranchOfficeDao"/>
+      </object>
+    </property>
+  </object>
+  
+  <object id="PrincipalService" parent="MemberProxyConfigurationTemplate">
+    <property name="Target">
+      <object type="Terms.Member.Service.PrincipalService, Terms.Member.Service">
+        <property name="PrincipalDao" ref="PrincipalDao"/>
+      </object>
+    </property>
+  </object>
+  
+
+	<object id="PrincipalItemService" type="Terms.Member.Service.PrincipalItemService, Terms.Member.Service">
+		<property name="PrincipalItemDao" ref="PrincipalItemDao"/>
+	</object>
+
+	<object id="MemberInformationService" parent="MemberProxyConfigurationTemplate">
+		<property name="Target">
+			<object type="Terms.Member.Service.MemberInformationService, Terms.Member.Service">
+				<property name="MemberadsDao" ref="MemberadsDao"/>
+				<property name="MemberInformationDao" ref="MemberInformationDao"/>
+				<property name="MemberQuestionAndAnswerDao" ref="MemberQuestionAndAnswerDao"/>
+				<property name="MemberToDataSourceDao" ref="MemberToDataSourceDao"/>
+				<property name="IncreaseByDegreesDao" ref="IncreaseByDegreesDao"/>
+				<property name="MemberToOwnerDa" ref="MemberToOwnerDa"/>
+				<property name="OwnerDao" ref="OwnerDao"/>
+				<property name="MemberInfoByGTTDao" ref="MemberInfoByGTTDao"/>				
+			</object>
+		</property>
+	</object>
+
+	<!--<object id="MemberInformationService" type="Terms.Member.Service.MemberInformationService, Terms.Member.Service">
+		<property name="MemberadsDao" ref="MemberadsDao"/>
+		<property name="MemberInformationDao" ref="MemberInformationDao"/>
+		<property name="MemberQuestionAndAnswerDao" ref="MemberQuestionAndAnswerDao"/>
+		<property name="MemberToDataSourceDao" ref="MemberToDataSourceDao"/>
+		<property name="IncreaseByDegreesDao" ref="IncreaseByDegreesDao"/>
+	</object>-->
+
+  <object id="MemberProxyConfigurationTemplate" abstract="true"
+          type="Spring.Transaction.Interceptor.TransactionProxyFactoryObject, Spring.Data">
+    <property name="PlatformTransactionManager" ref="MemberHibernateTransactionManager"/>
+    <property name="TransactionAttributes">
+      <name-values>
+        <!-- Add common methods across your services here -->
+        <add key="Process*" value="PROPAGATION_REQUIRED"/>
+        <add key="Save*" value="PROPAGATION_REQUIRED"/>
+        <add key="Delete*" value="PROPAGATION_REQUIRED"/>
+        <add key="Update*" value="PROPAGATION_REQUIRED"/>
+        <add key="Insert*" value="PROPAGATION_REQUIRED"/>
+        <add key="Add*" value="PROPAGATION_REQUIRED"/>
+
+        <add key="Get*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Find*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Load*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Select*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="*" value="PROPAGATION_REQUIRED,readOnly"/>
+      </name-values>
+    </property>
+    <!-- note you can use alias names so that this configuration file is -->
+    <!-- not dependent on the precise object name of the logging advice  -->
+    <!-- defined in Aspects.xml                                          -->
+    <!--<property name="PreInterceptors" ref="CommonLoggingAroundAdvice"/>-->
+  </object>
+
+</objects>

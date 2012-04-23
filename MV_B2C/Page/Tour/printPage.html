@@ -1,0 +1,42 @@
+<html>
+<head>
+<meta HTTP-EQUIV="Content-Type" content="text/html; charset=UTF-8">
+<style>
+@media print {
+   .printContent {
+   			display:inline;
+        cursor:hand;
+		}
+		.notPrint{
+			 display:none;
+   }
+}
+
+@media screen {
+   .printContent {
+           display:none;
+    }
+   .notPrint{
+      		display:inline;
+        cursor:hand;
+   }
+}
+</style>
+<script language=javascript>
+    function doPrint(){
+        var par = window.opener;
+        window.document.getElementById("printContent").innerHTML = par.document.getElementById("printArea").innerHTML;
+        window.focus();
+        window.print();
+        window.close();
+    }
+</script>
+</head>
+<body onload = "doPrint()">
+	<div class="notPrint">
+			<H1>Printing ...</H1>
+	</div>
+	<div id="printContent" class="printContent">
+	</div>
+</body>
+</html>

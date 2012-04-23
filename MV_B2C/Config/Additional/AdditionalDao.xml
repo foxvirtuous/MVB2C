@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net"
+		 xmlns:db="http://www.springframework.net/database">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		The Terms object definitions for the Data Access Objects.
+	</description>
+
+	<!-- Database and NHibernate Configuration -->
+
+	<object id="AdditionalHibernateTransactionManager"
+		 type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="AdditionalDbProvider"/>
+		<property name="SessionFactory" ref="AdditionalFactory"/>
+	</object>
+
+	<object id="AdditionalHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+		<property name="SessionFactory" ref="AdditionalFactory" />
+		<property name="TemplateFlushMode" value="Auto" />
+		<property name="CacheQueries" value="true" />
+	</object>
+
+	<object id="AdditionalFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+		<property name="DbProvider" ref="AdditionalDbProvider"/>
+		<property name="MappingAssemblies">
+			<list>
+				<value>Terms.Additional.Dao.NHibernate</value>
+			</list>
+		</property>
+		<property name="HibernateProperties">
+			<dictionary>
+				<entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+				<entry key="hibernate.dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
+				<entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+				<entry key="hibernate.current_session_context_class" value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate12"/>
+			</dictionary>
+		</property>
+	</object>
+
+	<object id="FlyerDao" type="Terms.Additional.Dao.NHibernate.HibernateFlyerDao, Terms.Additional.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="AdditionalHibernateTemplate"/>
+	</object>
+
+	<object id="FlyerRegionDao" type="Terms.Additional.Dao.NHibernate.HibernateFlyerRegionDao, Terms.Additional.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="AdditionalHibernateTemplate"/>
+	</object>
+
+	<object id="FlyerTypeDao" type="Terms.Additional.Dao.NHibernate.HibernateFlyerTypeDao, Terms.Additional.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="AdditionalHibernateTemplate"/>
+	</object>
+</objects>

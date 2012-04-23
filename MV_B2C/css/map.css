@@ -1,0 +1,48 @@
+ul,li{ list-style:none; margin:0px; padding:0px;}
+.IBE_hotel_hotelMapWidth{ width:389px; border:1px solid #ccc; background:url(../../images/bg_detail.gif); padding:6px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.IBE_hotel_map_hotel{ width:387px; float:left; font-size:10px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.IBE_hotel_map_hotel_img{ border:1px solid #ccc; padding:1px; width:65px; float:left;}
+.IBE_hotel_map_hotel_rote{width:291px; float:left; padding-left:12px;}
+.IBE_hotel_map_hotel_rote li{ float:left; width:100%; padding-bottom:10px;}
+.IBE_hotel_map_hotel_btn{ width:15px; float:left; text-align:center;}
+.IBE_hotel_map_hotelName_style{ color:#1253b4; font-weight:bold; font-size:16px; font-family:Arial, Helvetica, sans-serif;}
+.IBE_hotel_map_hotel_price_style1{ color:#cc6600; font-weight:bold;}
+.IBE_hotel_map_hotel_price_style2{ color:#cc6600; font-weight:bold; font-size:18px; font-family:Arial, Helvetica, sans-serif;}
+.IBE_hotel_map_hotel_price_style3{ color:#4985c7;}
+.IBE_hotel_map_hotel_price_style4{ color:#666;}
+.IBE_hotel_map_closeDIV{ background:url(../../images/csdiv_close_btn.gif) no-repeat; width:14px; height:14px; border:0px;}
+.clear{ height: 1px; clear: both; width: 100%;}
+.IBE_hotel_map_hotel_link a{  color:#4985c7; text-decoration:none; font-family:Arial, Helvetica, sans-serif; font-size:11px;}
+.IBE_hotel_map_hotel_link a:hover{  color:#cc6600; text-decoration:underline;}
+.IBE_hotel_map_hotel_collection{ font-size:11px; font-family:Arial, Helvetica, sans-serif;}
+.IBE_hotel_map_arrow{ background:#349b25; font-size:9px; height:12px; float:left; color:#fff; padding:0px 3px; line-height:12px;}
+.IBE_hotel_map_arrow_bg{ background:url(images/SpecialOfferIMG_R.jpg); width:5px; height:12px; float:left;}
+
+
+
+
+.IBE_hotel_maplist{ width:300px; border:1px solid #ccc; overflow-y:scroll; overflow-x:hidden; height:450px;}
+.IBE_hotel_maplist_hotel{ width:288px; float:left; border-bottom:1px solid #ccc; font-size:11px; font-family:Verdana, Arial, Helvetica, sans-serif;}
+.IBE_hotel_maplist_hotel_img{ width:44px; float:left; padding:8px 0px; padding-left:1px; background:url(../../images/markers.gif) no-repeat; background-position:5px -40px; text-align:center; color:#fff;}
+.IBE_hotel_maplist_hotel_rote{width:160px; border-right:1px solid #ccc; float:left; padding-top:8px;}
+.IBE_hotel_maplist_hotel_rote li{ float:left; width:100%; padding-bottom:10px;}
+.IBE_hotel_maplist_hotel_price{ width:71px; float:left; line-height:18px; padding-top:9px; text-align:center;}
+.IBE_hotel_maplist_hotelName_style{ color:#FF3300; font-weight:bold;}
+.IBE_hotel_maplist_hotel_price_style1{ color:#FF3300; font-weight:bold;}
+.IBE_hotel_maplist_hotel_price_style2{ color:#FF3300; font-weight:bold; font-size:18px; font-family:Arial, Helvetica, sans-serif;}
+.IBE_hotel_maplist_hotel_price_style3{ color:#4985c7;font-size:7px;}
+.IBE_hotel_maplist_hotel_price_style4{ color:#666;}
+.clear{ height: 1px; clear: both; width: 100%;}
+
+a.button_link {  display:block; width:76px; height:26px; background:url(../../images/button_link.gif); text-decoration:none;}
+a.button_link:hover { background:url(../../images/button_linkHover.gif);}
+.button_map_click 
+{
+ background:#fdeada; width:150px; height:22px; border:1px solid #ff9900; color:#333333;
+}
+.button_map_click1 
+{
+BACKGROUND: url(../../images/btn_map2.gif) no-repeat; width:100px; height:27px;  border:none; color:#000;
+}
+
+.nonestyle{ display:none;}

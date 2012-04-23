@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<object type="~/UserControls/EditHotel.ascx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<!--<object type="~/UserControls/HotelInfomationService.asmx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>-->
+
+	<object type="~/UserControls/SelectCityControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/EditContractPage.ascx">
+		<property name="ContractService" ref="ContractService" />
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/EditContract.ascx">
+		<property name="ContractService" ref="ContractService" />
+		<property name="MarketService" ref="MarketService" />
+	</object>
+
+	<object type="~/UserControls/EditCountryControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+    <property name="ErrorMessageService" ref="ErrorMessageService" />
+	</object>
+
+	<object type="~/UserControls/EditProvinceControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+    <property name="ErrorMessageService" ref="ErrorMessageService" />
+	</object>
+
+	<object type="~/UserControls/EditAreaMaster.ascx">
+		<property name="AreaMasterService" ref="AreaMasterService" />
+		<property name="AreaDetailService" ref="AreaDetailService" />
+	</object>
+
+  <!--<object type="~/UserControls/SelectLocationIDandHotelID.ascx">    
+    <property name="BaseService" ref="BaseService" />
+    <property name="CommonService" ref="CommonService" />
+  </object>-->
+
+	<object type="~/UserControls/AttachedText.ascx">
+		<property name="BaseService" ref="BaseService" />		
+	</object>
+
+	<object type="~/UserControls/SearchHotel.ascx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/SearchCity.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+	
+	<object type="~/UserControls/SearchCountry.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/UserLogin.ascx">
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+  <object type="~/UserControls/UserLoginControl.ascx">
+    <property name="MemberInformationService" ref="MemberInformationService" />
+  </object>
+</objects>

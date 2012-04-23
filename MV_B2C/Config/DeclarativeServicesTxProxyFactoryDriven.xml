@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="false" xmlns="http://www.springframework.net">
+
+  <description>
+    Transactional Proxy for FulfillmentService using the TransactionProxyFactory
+  </description>
+  
+  
+  <!-- Note if you have many of these objects with similar configuration use -->
+  <!-- an abstract parent object to encapsulate common settings              -->
+  <object id="BussProxyConfigurationTemplate" abstract="true"
+          type="Spring.Transaction.Interceptor.TransactionProxyFactoryObject, Spring.Data">
+    <property name="PlatformTransactionManager" ref="BussHibernateTransactionManager"/>
+    <property name="TransactionAttributes">
+      <name-values>
+        <!-- Add common methods across your services here -->
+        <add key="Process*" value="PROPAGATION_REQUIRED"/>
+		<add key="Save*" value="PROPAGATION_REQUIRED"/>
+        <add key="Delete*" value="PROPAGATION_REQUIRED"/>
+		<add key="Update*" value="PROPAGATION_REQUIRED"/>
+		<add key="Insert*" value="PROPAGATION_REQUIRED"/>
+		<add key="Add*" value="PROPAGATION_REQUIRED"/>
+		  
+		<add key="Get*" value="PROPAGATION_REQUIRED,readOnly"/>
+		<add key="Find*" value="PROPAGATION_REQUIRED,readOnly"/>
+		<add key="Load*" value="PROPAGATION_REQUIRED,readOnly"/>
+		<add key="Select*" value="PROPAGATION_REQUIRED,readOnly"/>
+		<add key="*" value="PROPAGATION_REQUIRED,readOnly"/>
+      </name-values>
+    </property>
+    <!-- note you can use alias names so that this configuration file is -->
+    <!-- not dependent on the precise object name of the logging advice  -->
+    <!-- defined in Aspects.xml                                          -->
+    <!--<property name="PreInterceptors" ref="CommonLoggingAroundAdvice"/>-->
+  </object>
+
+  <!--<object id="ProxyCreator" type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Service</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>transactionInterceptor</value>
+      </list>
+    </property>
+  </object>
+
+  --><!-- transaction management --><!--
+  <object id="transactionAdvisor"
+        type="Spring.Transaction.Interceptor.TransactionAttributeSourceAdvisor, Spring.Data"
+        autowire="constructor">
+  </object>
+  <object id="transactionInterceptor"
+        type="Spring.Transaction.Interceptor.TransactionInterceptor, Spring.Data">
+    <property name="TransactionManager" ref="BussHibernateTransactionManager"/>
+    <property name="TransactionAttributeSource" ref="attributeTransactionAttributeSource"/>
+    <property name="TransactionAttributes">
+      <name-values>
+        --><!-- Add common methods across your services here --><!--
+        <add key="Process*" value="PROPAGATION_REQUIRED"/>
+        <add key="Save*" value="PROPAGATION_REQUIRED"/>
+        <add key="Delete*" value="PROPAGATION_REQUIRED"/>
+        <add key="Update*" value="PROPAGATION_REQUIRED"/>
+        <add key="Insert*" value="PROPAGATION_REQUIRED"/>
+        <add key="Add*" value="PROPAGATION_REQUIRED"/>
+
+        <add key="Get*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Find*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Load*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Select*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="*" value="PROPAGATION_REQUIRED,readOnly"/>
+      </name-values>
+    </property>
+  </object>
+  <object id="attributeTransactionAttributeSource"
+        type="Spring.Transaction.Interceptor.AttributesTransactionAttributeSource, Spring.Data">
+  </object>-->
+	
+</objects>

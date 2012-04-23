@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<object name="InputIncentiveTour" type="~/Page/IncentiveTour/InputIncentiveTour.aspx" parent="SalseBasePage">
+		<property name="IncentiveTourService" ref="IncentiveTourService" />
+	</object>
+
+	<object name="SuccessIncentiveTour" type="~/Page/IncentiveTour/SuccessIncentiveTour.aspx" parent="SalseBasePage">
+	</object>
+
+
+	<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+		<property name="ObjectNames">
+			<list>
+				<value>*Form</value>
+			</list>
+		</property>
+		<property name="InterceptorNames">
+			<list>
+				<value>AutoAfterThrowAdvice</value>
+			</list>
+		</property>
+	</object>
+</objects>
+

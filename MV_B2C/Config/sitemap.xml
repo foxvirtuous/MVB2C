@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--index page-->
+<url>
+  <loc>http://www.majestic-vacations.com</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+</url>
+<!--flights page-->
+<url>
+  <loc>http://www.majestic-vacations.com/Flightindex.aspx?tab=F</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Flight/SearchConditionsMeaasageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<!--Tour page-->
+<url>
+  <loc>http://www.majestic-vacations.com/Tourindex.aspx?tab=F</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_cn_main.htm&areacode=cn</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_se_main.htm&areacode=se</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_ne_main.htm&areacode=ne</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_ne_main.htm&areacode=ne</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_af_main.htm&areacode=af</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_ca_main.htm&areacode=ca</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_sa_main.htm&areacode=sa</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_eu_main.htm&areacode=eu</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/IndexArea.aspx?pagename=area_us_main.htm&areacode=us</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<!--Air+Hotels pages-->
+<url>
+  <loc>http://www.majestic-vacations.com/PackageIndex.aspx?tab=AH</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Package/SearchConditionsMeassageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Package/SearchConditionsMeassageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Package/SearchConditionsMeassageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Package/SearchConditionsMeassageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Package/SearchConditionsMeassageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Package/SearchConditionsMeassageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Package/SearchConditionsMeassageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Package/SearchConditionsMeassageForm.aspx</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/tour_southamerica/080405.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/080516.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<!--Hotels pages-->
+<url>
+  <loc>http://www.majestic-vacations.com/HotelIndex.aspx?tab=H</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=SHA</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=PEK</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=PEK</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=PEK</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=PEK</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=PEK</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=PEK</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=PEK</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Hotel/HotelSearchConditionsMeaasageForm.aspx?CountryCode=CN&CityCode=PEK</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<!---->
+<url>
+  <loc>http://www.majestic-vacations.com/CruiseIndex.aspx</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/080520_1.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/080520_2.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/080520_4.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/080520_6.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/080520_7.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/cruise/Europe_080613_6.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/cruise/Europe_080613_2.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/cruise/Europe_080613_3.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/cruise/Europe_080613_4.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/cruise/Europe_080613_5.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/cruise/princess_080618_1.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Promos/cruise/canada_080702_1.htm</loc>
+  <priority>0.5</priority>
+  <changefreq>daily</changefreq>
+</url>
+<!--Travel agent pages-->
+<url>
+  <loc>http://www.majestic-vacations.com/B2B_SUB/Login.aspx</loc>
+  <priority>0.8</priority>
+  <changefreq>daily</changefreq>
+</url>
+<!--General pages-->
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Common/register.aspx</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Page/Common/SalesLogin.aspx</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Html/aboutus.htm</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Html/contactus.htm</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Html/terms.htm</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Html/feedback.htm</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Html/privacy.htm</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Html/guide.htm</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Html/insurance.htm</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+<url>
+  <loc>http://www.majestic-vacations.com/Html/aboutus.htm</loc>
+  <priority>0.8</priority>
+  <changefreq>weekly</changefreq>
+</url>
+
+  </urlset>

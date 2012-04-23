@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+  
+  <description>
+    The Terms service layer definitions
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+
+  <object id="BaseService" type="Terms.Base.Service.BaseService, Terms.Base.Service">	  
+	  <property name="CoachDao" ref="CoachDao"/>
+	  <!--<property name="EventDao" ref="EventDao"/>-->
+	  <!--<property name="FoodDao" ref="FoodDao"/>-->
+	  <property name="HotelDao" ref="HotelDao"/>
+	  <property name="HotelRoomDao" ref="HotelRoomDao"/>
+	  <!--<property name="RestaurantDao" ref="RestaurantDao"/>-->
+	  <property name="SightDao" ref="SightDao"/>
+	  <property name="VesselDao" ref="VesselDao"/>
+	  <property name="AttachmentMasterDao" ref="AttachmentMasterDao"/>
+    <property name="TypeDetailDao" ref="TypeDetailDao"/>
+    <property name="AttachedTextDao" ref="AttachedTextDao"/>
+    <property name="AttachedImageDao" ref="AttachedImageDao"/>
+  </object>
+  
+  <object id="ErrorMessageService" type="Terms.Base.Service.ErrorMessageService, Terms.Base.Service">
+    <property name="ErrorMessageDao" ref="ErrorMessageDao"/>
+  </object>
+
+  <object id="CoachService" type="Terms.Base.Service.CoachService, Terms.Base.Service">
+    <property name="CoachDao" ref="CoachDao"/>
+  </object>
+
+  <object id="FoodService" type="Terms.Base.Service.FoodService, Terms.Base.Service">
+    <property name="FoodDao" ref="FoodDao"/>
+  </object>
+
+  <object id="RestaurantService" type="Terms.Base.Service.RestaurantService, Terms.Base.Service">
+    <property name="RestaurantDao" ref="RestaurantDao"/>
+  </object>
+
+  <object id="VesselService" type="Terms.Base.Service.VesselService, Terms.Base.Service">
+    <property name="VesselDao" ref="VesselDao"/>
+  </object>
+
+  <!--<object id="ErrorMessageService" type="Terms.Base.Service.ErrorMessageService, Terms.Base.Service">
+		<property name="ErrorMessageDao" ref="ErrorMessageDao"/>
+	</object>-->
+
+  <object id="SightService" type="Terms.Base.Service.SightService, Terms.Base.Service">
+    <property name="SightDao" ref="SightDao"/>
+  </object>
+
+  <object id="HotelService" type="Terms.Base.Service.HotelService, Terms.Base.Service">
+    <property name="HotelDao" ref="HotelDao"/>
+  </object>
+
+  <object id="HotelRoomService" type="Terms.Base.Service.HotelRoomService, Terms.Base.Service">
+    <property name="HotelRoomDao" ref="HotelRoomDao"/>
+  </object>
+</objects>

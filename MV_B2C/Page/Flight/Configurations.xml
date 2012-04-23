@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Configurations>
+  <WorldSpan host="xmlpro.worldspan.com" port="443" userID="usagateway" pwd="usagateway0000" session="W1XML" pcc="V85"></WorldSpan>
+</Configurations>
+

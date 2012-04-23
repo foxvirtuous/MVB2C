@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+  <object type="~/Terms.Common.Web/CountryMainForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <!--<object type="~/Terms.Common.Web/CountryEditForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>-->
+
+  <object type="~/Terms.Common.Web/CityMainForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object type="~/Terms.Common.Web/CityAddForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object type="~/Terms.Common.Web/CityEditForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object type="~/Terms.Common.Web/CurrencyMainForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+    <!--<property name="Message" value="This is ContextB's page message!" />-->
+    <!--<property name="GlobalMessage" ref="GlobalMessage" />-->
+  </object>
+
+  <object type="~/Terms.Common.Web/CurrencyEditForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object type="~/Terms.Common.Web/AirportMainForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object type="~/Terms.Common.Web/AirportEditForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <!--<object type="~/Terms.Common.Web/ProvinceEditForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>-->
+
+  <object type="~/Terms.Common.Web/ProvinceMainForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object type="~/Terms.Common.Web/ProvinceAddForm.aspx">
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+
+</objects>

@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms service layer definitions
+	</description>
+
+	<!-- Property placeholder configurer for database settings -->
+
+	<object id="CommonService" type="Terms.Common.Service.CommonService, Terms.Common.Service">
+		<property name="CountryDao" ref="CountryDao"/>
+		<property name="ProvinceDao" ref="ProvinceDao"/>
+		<property name="CityDao" ref="CityDao"/>
+		<property name="AirportDao" ref="AirportDao"/>
+	</object>
+
+	<object id="CountryService" type="Terms.Common.Service.CountryService, Terms.Common.Service">
+		<property name="CountryDao" ref="CountryDao"/>
+	</object>
+
+	<object id="CurrencyService" type="Terms.Common.Service.CurrencyService, Terms.Common.Service">
+		<property name="CurrencyDao" ref="CurrencyDao"/>
+	</object>
+
+	<object id="ProvinceService" type="Terms.Common.Service.ProvinceService, Terms.Common.Service">
+		<property name="ProvinceDao" ref="ProvinceDao"/>
+	</object>
+
+	<object id="CityService" type="Terms.Common.Service.CityService, Terms.Common.Service">
+		<property name="CityDao" ref="CityDao"/>
+	</object>
+
+	<object id="AirportService" type="Terms.Common.Service.AirportService, Terms.Common.Service">
+		<property name="AirportDao" ref="AirportDao"/>
+	</object>
+
+	<object id="ExchangeRateService" type="Terms.Common.Service.ExchangeRateService, Terms.Common.Service">
+		<property name="ExchangeRateDao" ref="ExchangeRateDao"/>
+		<!--<property name="CityEventDao" ref="CityEventDao"/>
+		<property name="SightDao" ref="SightDao"/>
+		<property name="SightImageDao" ref="SightImageDao"/>
+		<property name="SightGroupMasterDao" ref="SightGroupMasterDao"/>
+		<property name="SightGroupDetailDao" ref="SightGroupDetailDao"/>
+		<property name="FeatureMasterDao" ref="FeatureMasterDao"/>
+		<property name="ImageDao" ref="ImageDao"/>
+		<property name="FeatureDetailDao" ref="FeatureDetailDao"/>
+		<property name="HotelDao" ref="HotelDao"/>
+		<property name="HotelRoomDao" ref="HotelRoomDao"/>-->
+
+		<!--<property name="Session" ref="AirportDao"/>-->
+	</object>
+
+	<object id="AirlinesService" type="Terms.Common.Service.AirlinesService, Terms.Common.Service">
+		<property name="AirlinesDao" ref="AirlinesDao"/>
+	</object>
+
+	<object id="CommConstantDetailService" type="Terms.Common.Service.CommConstantDetailService, Terms.Common.Service">
+		<property name="CommConstantDetailDao" ref="CommConstantDetailDao"/>
+	</object>
+
+	<object id="CommConstantMasterService" type="Terms.Common.Service.CommConstantMasterService, Terms.Common.Service">
+		<property name="CommConstantMasterDao" ref="CommConstantMasterDao"/>
+	</object>
+
+	<object id="AreaInCityService" type="Terms.Common.Service.AreaInCityService, Terms.Common.Service">
+		<property name="AreaInCityDao" ref="AreaInCityDao"/>
+	</object>
+
+	<!--didn't configure correctly yet - don't use-->
+	<!--<import resource="~/Config/DeclarativeServicesObjectNameDriven.xml"/>-->
+</objects>

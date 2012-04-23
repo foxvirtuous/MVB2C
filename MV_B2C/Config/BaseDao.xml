@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    The Terms object definitions for the Data Access Objects.
+  </description>
+
+  <!-- Database and NHibernate Configuration -->
+
+  <object id="BaseHibernateTransactionManager"
+        type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="BaseDbProvider"/>
+    <property name="SessionFactory" ref="BaseSessionFactory"/>
+  </object>
+
+  <object id="BaseHibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+    <property name="SessionFactory" ref="BaseSessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+  <object id="BaseSessionFactory" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="BaseDbProvider"/>
+    <property name="MappingAssemblies">
+      <list>
+        <value>Terms.Base.Dao.NHibernate</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider"
+               value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="hibernate.dialect"
+               value="NHibernate.Dialect.MsSql2000Dialect"/>
+        <entry key="hibernate.connection.driver_class"
+               value="NHibernate.Driver.SqlClientDriver"/>
+		<entry key="hibernate.current_session_context_class"
+		  value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate12"/>
+	  </dictionary>
+    </property>
+  </object>
+	
+  <object id="CoachDao" type="Terms.Base.Dao.NHibernate.CoachDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+  </object>
+	<object id="EventDao" type="Terms.Base.Dao.NHibernate.EventDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+	</object>
+	<object id="FoodDao" type="Terms.Base.Dao.NHibernate.FoodDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+	</object>
+	<object id="HotelDao" type="Terms.Base.Dao.NHibernate.HotelDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+	</object>
+	<object id="HotelRoomDao" type="Terms.Base.Dao.NHibernate.HotelRoomDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+	</object>
+	<object id="RestaurantDao" type="Terms.Base.Dao.NHibernate.RestaurantDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+	</object>
+	<object id="SightDao" type="Terms.Base.Dao.NHibernate.SightDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+	</object>
+	<object id="VesselDao" type="Terms.Base.Dao.NHibernate.VesselDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+	</object>
+	<object id="AttachmentMasterDao" type="Terms.Base.Dao.NHibernate.AttachmentMasterDao, Terms.Base.Dao.NHibernate">
+		<property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+	</object>
+  <object id="AttachedTextDao" type="Terms.Base.Dao.NHibernate.AttachedTextDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+  </object>
+  <object id="AttachedImageDao" type="Terms.Base.Dao.NHibernate.AttachedImageDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+  </object>
+  <!--<object id="TypeMasterDao" type="Terms.Base.Dao.NHibernate.HibernateTypeMasterDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+  </object>-->
+  <object id="TypeDetailDao" type="Terms.Base.Dao.NHibernate.TypeDetailDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+  </object>
+  <object id="ErrorMessageDao" type="Terms.Base.Dao.NHibernate.ErrorMessageDao, Terms.Base.Dao.NHibernate">
+    <property name="HibernateTemplate" ref="BaseHibernateTemplate"/>
+  </object>
+</objects>

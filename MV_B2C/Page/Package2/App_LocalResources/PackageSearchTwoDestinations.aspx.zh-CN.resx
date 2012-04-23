@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="btnSearch.Text" xml:space="preserve">
+    <value>搜尋</value>
+  </data>
+  <data name="chbFlexible.Text" xml:space="preserve">
+    <value>去回程日期是否彈性 加/減 1天</value>
+  </data>
+  <data name="class1.Text" xml:space="preserve">
+    <value>經濟艙</value>
+  </data>
+  <data name="class2.Text" xml:space="preserve">
+    <value>商務艙</value>
+  </data>
+  <data name="class3.Text" xml:space="preserve">
+    <value>頭等艙</value>
+  </data>
+  <data name="lblAirline.Text" xml:space="preserve">
+    <value>航空公司名稱</value>
+  </data>
+  <data name="lblCheckIn.Text" xml:space="preserve">
+    <value>入住日期</value>
+  </data>
+  <data name="lblCheckOut.Text" xml:space="preserve">
+    <value>退房日期</value>
+  </data>
+  <data name="lblDepartDate.Text" xml:space="preserve">
+    <value>出發日期</value>
+  </data>
+  <data name="lblDepartFrom.Text" xml:space="preserve">
+    <value>出發地 (城市或機場名)</value>
+  </data>
+  <data name="lblDepartureReturn.Text" xml:space="preserve">
+    <value>出發 / 返程</value>
+  </data>
+  <data name="lblDestination1.Text" xml:space="preserve">
+    <value>目的地 #1 (城市或機場名)</value>
+  </data>
+  <data name="lblDestination2.Text" xml:space="preserve">
+    <value>目的地 #2 (城市或機場名)</value>
+  </data>
+  <data name="lblDestinationsDate.Text" xml:space="preserve">
+    <value>目的地 &amp;amp; 日期</value>
+  </data>
+  <data name="lblEnterDate.Text" xml:space="preserve">
+    <value>請輸入日期</value>
+  </data>
+  <data name="lblMultiple.Text" xml:space="preserve">
+    <value>雙目的地</value>
+  </data>
+  <data name="lblPackageSearch.Text" xml:space="preserve">
+    <value>飛機+酒店自由行搜尋</value>
+  </data>
+  <data name="lblPreference.Text" xml:space="preserve">
+    <value>指定艙等或航空公司(可選)</value>
+  </data>
+  <data name="lblReturnDate.Text" xml:space="preserve">
+    <value>返程日期</value>
+  </data>
+  <data name="lblRoundTrip.Text" xml:space="preserve">
+    <value>單目的地</value>
+  </data>
+  <data name="lblSelectAirport.Text" xml:space="preserve">
+    <value>請選擇機場名</value>
+  </data>
+  <data name="lblTraveler.Text" xml:space="preserve">
+    <value>旅客</value>
+  </data>
+  <data name="lblTypeOfTrip.Text" xml:space="preserve">
+    <value>類型</value>
+  </data>
+  <data name="line0.Text" xml:space="preserve">
+    <value>無選擇</value>
+  </data>
+  <data name="line1.Text" xml:space="preserve">
+    <value>美國航空公司</value>
+  </data>
+  <data name="line2.Text" xml:space="preserve">
+    <value>西北航空公司</value>
+  </data>
+  <data name="line3.Text" xml:space="preserve">
+    <value>聯合航空公司</value>
+  </data>
+  <data name="Title.Text" xml:space="preserve">
+    <value>最便宜機票,酒店預訂,套裝行程,旅遊,郵輪, 旅遊渡假, 美國到中國機票,從美國出發, 旅遊同業代理商</value>
+  </data>
+</root>

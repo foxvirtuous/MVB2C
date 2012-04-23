@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    
+  </description>
+
+  <!-- Database and NHibernate Configuration -->
+
+  <object id="ApplicationCacheFoundationDate" type="Terms.Sales.Service.ApplicationCacheFoundationDate, Terms.Sales.Service">
+    <property name="CommonService" ref="CommonService" />
+	  <property name="CountryService" ref="CountryService" />
+  </object>
+  
+</objects>

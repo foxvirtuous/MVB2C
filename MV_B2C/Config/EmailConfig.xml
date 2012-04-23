@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AppConfiguration>
+	<add key="Web.EnableSsl" value="False" />
+	<add key="SendEmailReally" value="False" />
+	<add key="Web.Ssl.Port" value="800" />
+	<add key="SendMailAmountRecordCycle" value="24" />
+	<add key="RequestPageAmountRecordCycle" value="60" />
+	<add key="LogPath" value="LOG" />
+</AppConfiguration>

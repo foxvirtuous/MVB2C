@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		The Terms service layer definitions
+	</description>
+
+	<!-- Property placeholder configurer for database settings -->
+	<!--<object id="SecurityService" type="Terms.Security.Service.SecurityService, Terms.Security.Service">
+		<property name="AspnetApplicationsDao" ref="AspnetApplicationsDao"/>
+		<property name="AspnetMembershipDao" ref="AspnetMembershipDao"/>
+		<property name="AspnetProfileDao" ref="AspnetProfileDao"/>
+		<property name="AspnetRolesDao" ref="AspnetRolesDao"/>
+		<property name="AspnetSchemaVersionsDao" ref="AspnetSchemaVersionsDao"/>
+		<property name="AspnetUsersDao" ref="AspnetUsersDao"/>
+		<property name="TttSysActionsDao" ref="TttSysActionsDao"/>
+		<property name="TttSysApplicationsDao" ref="TttSysApplicationsDao"/>
+		<property name="TttSysAuthorizationDao" ref="TttSysAuthorizationDao"/>
+		<property name="TttSysOperationLogDao" ref="TttSysOperationLogDao"/>
+		<property name="TttSysResourcesDao" ref="TttSysResourcesDao"/>
+		<property name="TttSysRolesDao" ref="TttSysRolesDao"/>
+		<property name="TttSysUsersDao" ref="TttSysUsersDao"/>
+    <property name="TttSysUsersInApplicationsDao" ref="TttSysUsersInApplicationsDao"/>
+    <property name="TttSysUsersInRolesDao" ref="TttSysUsersInRolesDao"/>
+	</object>-->
+
+	<object id="AspnetApplicationsService" type="Terms.Security.Service.AspnetApplicationsService, Terms.Security.Service">
+		<property name="AspnetApplicationsDao" ref="AspnetApplicationsDao"/>
+	</object>
+
+	<object id="AspnetMembershipService" type="Terms.Security.Service.AspnetMembershipService, Terms.Security.Service">
+		<property name="AspnetMembershipDao" ref="AspnetMembershipDao"/>
+	</object>
+
+	<object id="AspnetProfileService" type="Terms.Security.Service.AspnetProfileService, Terms.Security.Service">
+		<property name="AspnetProfileDao" ref="AspnetProfileDao"/>
+	</object>
+
+	<object id="AspnetRolesService" type="Terms.Security.Service.AspnetRolesService, Terms.Security.Service">
+		<property name="AspnetRolesDao" ref="AspnetRolesDao"/>
+	</object>
+
+	<object id="AspnetSchemaVersionsService" type="Terms.Security.Service.AspnetSchemaVersionsService, Terms.Security.Service">
+		<property name="AspnetSchemaVersionsDao" ref="AspnetSchemaVersionsDao"/>
+	</object>
+
+	<object id="AspnetUsersService" type="Terms.Security.Service.AspnetUsersService, Terms.Security.Service">
+		<property name="AspnetUsersDao" ref="AspnetUsersDao"/>
+	</object>
+
+	<object id="TttSysActionsService" type="Terms.Security.Service.TttSysActionsService, Terms.Security.Service">
+		<property name="TttSysActionsDao" ref="TttSysActionsDao"/>
+	</object>
+
+	<object id="TttSysApplicationsService" type="Terms.Security.Service.TttSysApplicationsService, Terms.Security.Service">
+		<property name="TttSysApplicationsDao" ref="TttSysApplicationsDao"/>
+	</object>
+
+	<object id="TttSysAuthorizationService" type="Terms.Security.Service.TttSysAuthorizationService, Terms.Security.Service">
+		<property name="TttSysAuthorizationDao" ref="TttSysAuthorizationDao"/>
+	</object>
+
+	<object id="TttSysOperationLogService" type="Terms.Security.Service.TttSysOperationLogService, Terms.Security.Service">
+		<property name="TttSysOperationLogDao" ref="TttSysOperationLogDao"/>
+	</object>
+
+	<object id="TttSysResourcesService" type="Terms.Security.Service.TttSysResourcesService, Terms.Security.Service">
+		<property name="TttSysResourcesDao" ref="TttSysResourcesDao"/>
+	</object>
+
+	<object id="TttSysRolesService" type="Terms.Security.Service.TttSysRolesService, Terms.Security.Service">
+		<property name="TttSysRolesDao" ref="TttSysRolesDao"/>
+	</object>
+
+	<object id="TttSysUsersService" type="Terms.Security.Service.TttSysUsersService, Terms.Security.Service">
+		<property name="TttSysUsersDao" ref="TttSysUsersDao"/>
+	</object>
+
+  <object id="TttSysUsersInApplicationsService" type="Terms.Security.Service.TttSysUsersInApplicationsService, Terms.Security.Service">
+    <property name="TttSysUsersInApplicationsDao" ref="TttSysUsersInApplicationsDao"/>
+  </object>
+
+  <object id="TttSysUsersInRolesService" type="Terms.Security.Service.TttSysUsersInRolesService, Terms.Security.Service">
+    <property name="TttSysUsersInRolesDao" ref="TttSysUsersInRolesDao"/>
+  </object>
+
+	<object id="TttSysDataActionService" type="Terms.Security.Service.TttSysDataActionService, Terms.Security.Service">
+		<property name="TttSysDataActionDao" ref="TttSysDataActionDao"/>
+	</object>
+
+	<object id="TttSysDataAuthorizationService" type="Terms.Security.Service.TttSysDataAuthorizationService, Terms.Security.Service">
+		<property name="TttSysDataAuthorizationDao" ref="TttSysDataAuthorizationDao"/>
+	</object>
+
+	<object id="TttSysDataOperationLogService" type="Terms.Security.Service.TttSysDataOperationLogService, Terms.Security.Service">
+		<property name="TttSysDataOperationLogDao" ref="TttSysDataOperationLogDao"/>
+	</object>
+
+	<object id="TttSysDataResourceService" type="Terms.Security.Service.TttSysDataResourceService, Terms.Security.Service">
+		<property name="TttSysDataResourceDao" ref="TttSysDataResourceDao"/>
+	</object>
+
+  <object id="PersonService" type="Terms.Security.Service.PersonService, Terms.Security.Service">
+    <property name="PersonDao" ref="HibernatePersonDao"/>
+  </object>
+
+  <object id="PersonUserService" type="Terms.Security.Service.PersonUserService, Terms.Security.Service">
+    <property name="PersonUserDao" ref="HibernatePersonUserDao"/>
+  </object>
+
+  <object id="EntityService" type="Terms.Security.Service.EntityService, Terms.Security.Service">
+    <property name="EntityDao" ref="HibernateEntityDao"/>
+  </object>
+
+  <object id="EntityPersonService" type="Terms.Security.Service.EntityPersonService, Terms.Security.Service">
+    <property name="EntityPersonDao" ref="HibernateEntityPersonDao"/>
+  </object>
+
+  
+
+  <object id="DataSecurityService" type="Terms.Security.Service.DataSecurityService, Terms.Security.Service">
+    <property name="TttSysDataOperationLogDao" ref="TttSysDataOperationLogDao"/>
+    <property name="TttSysDataResourceDao" ref="TttSysDataResourceDao"/>
+    <property name="TttSysApplicationsDao" ref="TttSysApplicationsDao"/>
+    <property name="TttSysResourcesDao" ref="TttSysResourcesDao"/>
+    <property name="TttSysDataAuthorizationDao" ref="TttSysDataAuthorizationDao"/>
+    <property name="TttSysDataActionDao" ref="TttSysDataActionDao"/>
+  </object>
+
+</objects>

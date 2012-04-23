@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<object id="cultureResolver" type="Spring.Globalization.Resolvers.SessionCultureResolver, Spring.Web" >
+		<property name="DefaultCulture" value="en-US"/>
+	</object>
+
+	<object id="localizer" type="Spring.Globalization.Localizers.ResourceSetLocalizer, Spring.Core"/>
+
+	<object id="ErrorMessageForm"  type="~/ErrorPages/ErrorMessage.aspx">
+	</object>
+
+	<object type="~/Index.aspx" parent="BasePage" >
+	</object>
+	<object type="~/CJ-Ads.aspx" parent="BasePage" >
+	</object>
+	<object type="~/FlightIndex.aspx" parent="BasePage" >
+	</object>
+	<object type="~/PromosIndex.aspx" parent="BasePage" >
+	</object>
+	<object type="~/flytochina.aspx" parent="BasePage" >
+	</object>
+	<object type="~/CruiseIndex.aspx" parent="BasePage" >
+	</object>
+	<object type="~/HotelIndex.aspx" parent="BasePage" >
+	</object>
+	<object type="~/PackageIndex.aspx" parent="BasePage" >
+	</object>
+	<object type="~/TourIndex.aspx" parent="BasePage" >
+	</object>
+	<object type="~/Html/header1.aspx" parent="BasePage" >
+	</object>
+	<object type="~/IndexArea.aspx" parent="BasePage" >
+	</object>
+	<object type="~/Html/footer1.aspx" parent="BasePage" >
+	</object>
+	<object type="~/Promos/header.aspx" parent="BasePage" >
+	</object>
+	<object type="~/Promos/footer.aspx" parent="BasePage" >
+	</object>
+	<object type="~/IndexForFlight.aspx" parent="BasePage" >
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+	<object type="~/Promos/promo090319.aspx" parent="SalseBasePage" >
+	</object>
+	<object type="~/Promos/promo090417.aspx" parent="SalseBasePage" >
+	</object>
+	<object type="~/ErrorPages/ErrorMessage.aspx" parent="BasePage" >
+	</object>
+	<object type="~/ErrorPages/GenericErrorPage.aspx" parent="BasePage" >
+	</object>
+	<object type="~/B2B_SUB/TourIndex.aspx" parent="BasePage" >
+	</object>
+	<object type="~/Page/Cruise/CuriseMoreSearchResultFrom.aspx" parent="BasePage">
+		<property name="EditFlyerService" ref="EditFlyerService" />
+	</object>
+	<object type="~/TrafalgarFrom.aspx" parent="BasePage" >
+	</object>
+	<object type="~/Page/B2BIncentiveTour/TourListView.aspx" parent="BasePage" >
+	</object>
+
+	<object name="IncentiveTourSelectForm" type="~/Page/B2BIncentiveTour/IncentiveTourSelectForm.aspx" parent="SalseBasePage">
+		<property name="AirService" ref="AirService" />
+		<property name="SubIncentiveTourService" ref="SubIncentiveTourService" />
+	</object>
+	<!--<object id="UserInfo" type="TurboTT.Security.User,TurboTT.Security">
+    <constructor-arg name="username" value="ben"/>
+    <constructor-arg name="password" value="ben"/>
+  </object>-->
+
+	<!--<object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Form</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>-->
+
+</objects>

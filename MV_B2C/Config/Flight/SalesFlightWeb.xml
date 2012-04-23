@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+	The Terms web layer definitions
+	</description>
+
+	<object name="SearchingForm" type="~/Page/Flight/Searching.aspx" parent="SalseBasePage">
+	  <property name="AirService" ref="AirService" />
+  </object>
+  <object name="BookingPageForm"  type="~/Page/Flight/BookingPage.Master">
+    <property name="AirService" ref="AirService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+  </object>
+
+	<object name="FightRedirect"  type="~/Page/Flight/FightRedirect.aspx">
+		<property name="AirService" ref="AirService" /> 
+    <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+    <property name="CommonService" ref="CommonService" />
+  </object>
+	
+  <object name="Step2Form" type="~/Page/Flight/NewStep2.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+    <!--<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+  </object>
+
+ <!-- <object name="Step3_netForm" type="~/Page/Flight/Step3_net.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+    <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+  </object>-->
+  
+  <object name="Step3_bulkForm" type="~/Page/Flight/Step3_bulk.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+   <!-- <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />-->
+  </object>
+
+  <object name="Step3_confirmForm"  type="~/Page/Flight/Step3_confirm.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+  </object>
+
+  <object name="SearchConditionsForm"  type="~/Page/Flight/SearchConditionsForm.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+    <property name="CommonService" ref="CommonService" />
+  </object>
+
+  <object name="SearchConditionsMeaasageForm"  type="~/Page/Flight/SearchConditionsMeaasageForm.aspx" parent="SalseBasePage">
+    <property name="AirService" ref="AirService" />
+    <property name="CommonService" ref="CommonService" />
+    <property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+  </object>
+
+
+	<object name="PromosForm"  type="~/Page/Promos/Promos.Master">
+		<property name="AirService" ref="AirService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+	</object>
+
+	<object name="PromosAirListForm" type="~/Page/Promos/PromosAirListForm.aspx" parent="SalseBasePage">
+		<property name="AirService" ref="AirService" />
+	</object>
+
+	<object name="PromosSearchingForm" type="~/Page/Promos/PromosSearching.aspx" parent="SalseBasePage">
+		<property name="AirService" ref="AirService" />
+	</object>
+
+	<object name="Error" type="~/Page/Flight/Error.aspx" parent="SalseBasePage">
+	</object>
+
+  <object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*Form</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+</objects>

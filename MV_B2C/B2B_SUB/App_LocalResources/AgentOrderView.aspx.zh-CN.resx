@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Contact1.Text" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="Contact2.Text" xml:space="preserve">
+    <value>電子郵件</value>
+  </data>
+  <data name="Contact3.Text" xml:space="preserve">
+    <value>白天聯絡電話</value>
+  </data>
+  <data name="Contact4.Text" xml:space="preserve">
+    <value>晚上聯絡電話</value>
+  </data>
+  <data name="Contact5.Text" xml:space="preserve">
+    <value>傳真電話</value>
+  </data>
+  <data name="Contact6.Text" xml:space="preserve">
+    <value>區域</value>
+  </data>
+  <data name="Contact7.Text" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="Contact8.Text" xml:space="preserve">
+    <value>備註說明</value>
+  </data>
+  <data name="Flight1.HeaderText" xml:space="preserve">
+    <value>航班編號</value>
+  </data>
+  <data name="Flight2.HeaderText" xml:space="preserve">
+    <value>航段</value>
+  </data>
+  <data name="Flight3.HeaderText" xml:space="preserve">
+    <value>日期</value>
+  </data>
+  <data name="Flight4.HeaderText" xml:space="preserve">
+    <value>出發/抵達</value>
+  </data>
+  <data name="Flight5.HeaderText" xml:space="preserve">
+    <value>艙等/等級</value>
+  </data>
+  <data name="Hotel1.Text" xml:space="preserve">
+    <value>酒店名稱</value>
+  </data>
+  <data name="Hotel2.Text" xml:space="preserve">
+    <value>入住</value>
+  </data>
+  <data name="Hotel3.Text" xml:space="preserve">
+    <value>退房</value>
+  </data>
+  <data name="Hotel4.Text" xml:space="preserve">
+    <value>總共幾晚</value>
+  </data>
+  <data name="Hotel5.Text" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="Hotel6.Text" xml:space="preserve">
+    <value>房間資訊</value>
+  </data>
+  <data name="Hotel7.Text" xml:space="preserve">
+    <value>房間狀態</value>
+  </data>
+  <data name="Insurance1.Text" xml:space="preserve">
+    <value>保險名稱</value>
+  </data>
+  <data name="Insurance2.Text" xml:space="preserve">
+    <value>保險狀態</value>
+  </data>
+  <data name="Insurance3.Text" xml:space="preserve">
+    <value>總價</value>
+  </data>
+  <data name="lblAgentOrderView1.Text" xml:space="preserve">
+    <value>會員:我的訂單</value>
+  </data>
+  <data name="lblAgentOrderView10.Text" xml:space="preserve">
+    <value>旅遊行程資訊</value>
+  </data>
+  <data name="lblAgentOrderView11.Text" xml:space="preserve">
+    <value>酒店資訊</value>
+  </data>
+  <data name="lblAgentOrderView12.Text" xml:space="preserve">
+    <value>保險資訊</value>
+  </data>
+  <data name="lblAgentOrderView13.Text" xml:space="preserve">
+    <value>價格資訊</value>
+  </data>
+  <data name="lblAgentOrderView14.Text" xml:space="preserve">
+    <value>成人數</value>
+  </data>
+  <data name="lblAgentOrderView15.Text" xml:space="preserve">
+    <value>小孩數</value>
+  </data>
+  <data name="lblAgentOrderView16.Text" xml:space="preserve">
+    <value>總價</value>
+  </data>
+  <data name="lblAgentOrderView17.Text" xml:space="preserve">
+    <value>聯絡資訊</value>
+  </data>
+  <data name="lblAgentOrderView18.Text" xml:space="preserve">
+    <value>付款資訊</value>
+  </data>
+  <data name="lblAgentOrderView19.Text" xml:space="preserve">
+    <value>回到上頁</value>
+  </data>
+  <data name="lblAgentOrderView2.Text" xml:space="preserve">
+    <value>訂單詳情</value>
+  </data>
+  <data name="lblAgentOrderView20.Text1" xml:space="preserve">
+    <value>加價</value>
+  </data>
+  <data name="lblAgentOrderView3.Text" xml:space="preserve">
+    <value>訂單編號 :</value>
+  </data>
+  <data name="lblAgentOrderView4.Text" xml:space="preserve">
+    <value>訂位記錄 :</value>
+  </data>
+  <data name="lblAgentOrderView5.Text" xml:space="preserve">
+    <value>付款狀態:</value>
+  </data>
+  <data name="lblAgentOrderView6.Text" xml:space="preserve">
+    <value>OP狀態:</value>
+  </data>
+  <data name="lblAgentOrderView7.Text" xml:space="preserve">
+    <value>顧客資訊</value>
+  </data>
+  <data name="lblAgentOrderView8.Text" xml:space="preserve">
+    <value>航班資訊</value>
+  </data>
+  <data name="lblAgentOrderView9.Text" xml:space="preserve">
+    <value>旅遊資訊</value>
+  </data>
+  <data name="Passenger1.HeaderText" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="Passenger2.HeaderText" xml:space="preserve">
+    <value>旅客</value>
+  </data>
+  <data name="Passenger3.HeaderText" xml:space="preserve">
+    <value>生日</value>
+  </data>
+  <data name="Passenger4.HeaderText" xml:space="preserve">
+    <value>餐食</value>
+  </data>
+  <data name="Passenger5.HeaderText" xml:space="preserve">
+    <value>護照號碼</value>
+  </data>
+  <data name="Payment1.Text" xml:space="preserve">
+    <value>付款方式</value>
+  </data>
+  <data name="Payment10.Text" xml:space="preserve">
+    <value>所在區域</value>
+  </data>
+  <data name="Payment11.Text" xml:space="preserve">
+    <value>帳單地址</value>
+  </data>
+  <data name="Payment12.Text" xml:space="preserve">
+    <value>電話</value>
+  </data>
+  <data name="Payment13.Text" xml:space="preserve">
+    <value>信用卡銀行名稱:</value>
+  </data>
+  <data name="Payment14.Text" xml:space="preserve">
+    <value>信用卡24小時客戶服務電話:</value>
+  </data>
+  <data name="Payment2.Text" xml:space="preserve">
+    <value>付款人姓</value>
+  </data>
+  <data name="Payment3.Text" xml:space="preserve">
+    <value>信用卡</value>
+  </data>
+  <data name="Payment4.Text" xml:space="preserve">
+    <value>付款人名</value>
+  </data>
+  <data name="Payment5.Text" xml:space="preserve">
+    <value>信用卡號</value>
+  </data>
+  <data name="Payment6.Text" xml:space="preserve">
+    <value>付款人中間名</value>
+  </data>
+  <data name="Payment7.Text" xml:space="preserve">
+    <value>信用卡有效期限</value>
+  </data>
+  <data name="Payment8.Text" xml:space="preserve">
+    <value>城市</value>
+  </data>
+  <data name="Payment9.Text" xml:space="preserve">
+    <value>所以洲省</value>
+  </data>
+  <data name="Tour1.HeaderText" xml:space="preserve">
+    <value>旅遊名稱</value>
+  </data>
+  <data name="Tour2.HeaderText" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Tour3.HeaderText" xml:space="preserve">
+    <value>導覽</value>
+  </data>
+  <data name="Tour4.HeaderText" xml:space="preserve">
+    <value>天數</value>
+  </data>
+  <data name="Tour5.HeaderText" xml:space="preserve">
+    <value>晚</value>
+  </data>
+  <data name="Tour6.HeaderText" xml:space="preserve">
+    <value>開始日期</value>
+  </data>
+  <data name="TourItinerary1.HeaderText" xml:space="preserve">
+    <value>天數</value>
+  </data>
+  <data name="TourItinerary2.HeaderText" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="TourItinerary3.HeaderText" xml:space="preserve">
+    <value>餐食類別</value>
+  </data>
+  <data name="TourItinerary4.HeaderText" xml:space="preserve">
+    <value>酒店資訊</value>
+  </data>
+</root>

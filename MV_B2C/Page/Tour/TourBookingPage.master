@@ -1,0 +1,357 @@
+<%@ Master Language="C#" AutoEventWireup="true" Inherits="TourBookingPage" Codebehind="TourBookingPage.master.cs" %>
+<%@ Register Src="~/UserControls/LocationTextBoxControl.ascx" TagName="LocationTextBoxControl"
+    TagPrefix="uc6" %>
+<%@ Register Src="~/UserControls/Calendar.ascx" TagName="Calendar" TagPrefix="uc3" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title meta:resourcekey="Title">Cheap air tickets, Hotels, Vacation Packages, Cruises,
+        Tours, Depart from USA, Online Booking</title>
+    <meta http-equiv="cache-control" content="no-cache" />
+
+    <script language="javascript" type="text/javascript">
+    function ShowList(url){
+        window.open(url,"ORDERLIST", "height=600, width=800, top=0, left=0, toolbar=no, menubar=no, scrollbars=yes, resizable=no,location=no, status=no");
+    }
+    function RefreshStatus(){
+        var btnRefresh = document.getElementById("ctl00$btnRefresh");
+        btnRefresh.click();
+    }
+    </script>
+
+    <link href="<%=SaleWebSuffix + MainCssPath + "style_new.css"%>" rel="stylesheet"
+        type="text/css" />
+    <link href="<%=SaleWebSuffix + MainCssPath + "style_index.css"%>" rel="stylesheet"
+        type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" />
+    <link href="" rel="stylesheet" type="text/css" id="printcss" />
+</head>
+<body>
+    <form id="form2" runat="server">
+        <asp:ScriptManager ID="MainScriptManager" runat="server" />
+        <iframe style="visibility: hidden; position: absolute; width: 148px; height: 194px;
+            z-index: 100; display: none; left: 9px; top: 0px;" id="calendarDateFrame" name="calendarDateFrame"
+            marginheight="0" marginwidth="0" noresize frameborder="0" scrolling="NO" src="../../CommJs/Mvcalx.htm">
+        </iframe>
+        <uc1:Header ID="Header1" runat="server" />
+        <table width="920" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td align="center">
+                    <table width="920" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td height="15">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="10">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tr>
+                                        <td height="25" align="right" valign="top">
+                                            <!-- StepBar -->
+                                            <div class="P_table">
+                                                <asp:Table ID="tableStep" runat="server" Width="305" HorizontalAlign="right" CellPadding="0"
+                                                    CellSpacing="0" CssClass="T_step">
+                                                </asp:Table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <div id="box">
+                        <table width="100%" border="0" cellspacing="0" cellpadding="3" class="T_table" align="center">
+                            <tr>
+                                <td width="185" align="left" valign="top">
+                                    <!-- Left -->
+                                    <!-- Modify Search -->
+                                    <asp:PlaceHolder ID="phModifySearch" runat="server">
+
+                                        <script type="text/javascript" language="javascript">
+	          
+		           
+		            function UpperCase(obj)
+		            {
+			            obj.value = obj.value.toUpperCase();
+		            }
+                                        </script>
+
+                                        <div>
+                                            <table cellpadding="0" cellspacing="1" width="170" class="T_step0l">
+                                                <tr align="center" class="R_step01">
+                                                    <td height="23">
+                                                        <asp:Label ID="Label11" runat="server" meta:resourcekey="lblChangYourSearch">Change Your Search</asp:Label></td>
+                                                </tr>
+                                                <tr class="R_stepbox">
+                                                    <td>
+                                                        <table align="center" border="0" cellpadding="3" cellspacing="0" width="95%">
+                                                            <tr>
+                                                                <td height="30">
+                                                                    <input value="OneWay" name="rdbType" id="rdbLandOnly" onclick="ChangeTourType('LandOnly')"
+                                                                        checked type="radio" runat="server" />
+                                                                    <asp:Label ID="Label1" runat="server" meta:resourcekey="lblLandOnly">Land Only</asp:Label>
+                                                                    <input value="RoundTrip" name="rdbType" id="rdbAirLand" onclick="ChangeTourType('AirLand')"
+                                                                        type="radio" runat="server" visible="false" />
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table align="center" border="0" cellpadding="3" cellspacing="0" width="95%">
+                                                            <tr>
+                                                                <td width="50" class="D_stepb">
+                                                                    <asp:Label ID="Label2" runat="server" meta:resourcekey="lblRegion">Region</asp:Label></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <asp:DropDownList ID="ddlArea_T" runat="server" CssClass="search_sle" ValidationGroup="TourSearch"
+                                                                        Width="150px">
+                                                                    </asp:DropDownList><asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server"
+                                                                        ControlToValidate="ddlArea_T" Display="Dynamic" ErrorMessage="Please select area."
+                                                                        SetFocusOnError="True" ValidationGroup="TourSearch"></asp:RequiredFieldValidator>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="D_stepb">
+                                                                    <asp:Label ID="Label3" runat="server" meta:resourcekey="lblCountry">Country or Area</asp:Label></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <asp:DropDownList ID="ddlCountry_T" runat="server" CssClass="search_sle" ValidationGroup="TourSearch"
+                                                                        Width="150px">
+                                                                    </asp:DropDownList><asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server"
+                                                                        ControlToValidate="ddlCountry_T" Display="Dynamic" ErrorMessage="Please select country or area."
+                                                                        SetFocusOnError="True" ValidationGroup="TourSearch"></asp:RequiredFieldValidator>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td class="D_stepb">
+                                                                    <asp:Label ID="Label4" runat="server" meta:resourcekey="lblCity">City</asp:Label></td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>
+                                                                    <asp:DropDownList ID="ddlCity_T" runat="server" Width="150px" CssClass="search_sle"
+                                                                        ValidationGroup="TourSearch">
+                                                                    </asp:DropDownList><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server"
+                                                                        ControlToValidate="ddlCity_T" Display="Dynamic" ErrorMessage="Please select city."
+                                                                        SetFocusOnError="True" ValidationGroup="TourSearch"></asp:RequiredFieldValidator>
+                                                                </td>
+                                                            </tr>
+                                                            <%-- <div id="div_DeptCity">
+                                                                <tr>
+                                                                    <td class="D_stepb">
+                                                                        Departure Place</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <uc6:LocationTextBoxControl ID="depCity" runat="server" />
+                                                                    </td>
+                                                                </tr>
+                                                            </div>--%>
+                                                            <tr>
+                                                                <td class="D_stepb">
+                                                                    <asp:Label ID="Label5" runat="server" meta:resourcekey="lblDepartureDate">Departure Date</asp:Label>
+                                                                    <uc3:Calendar ID="depCalendar" runat="server" />
+                                                                    &nbsp;&nbsp;
+                                                                    <asp:Label ID="lblMsg" runat="server" ForeColor="Red" Text="Please enter date" Visible="False"></asp:Label>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table align="center" border="0" cellpadding="3" cellspacing="0" width="95%">
+                                                            <tr>
+                                                                <td height="20" valign="bottom" class="D_stepb">
+                                                                    <asp:Label ID="Label6" runat="server" meta:resourcekey="lblDuration">Duration</asp:Label>:
+                                                                    <asp:DropDownList ID="ddlTravelDate" runat="server" Width="100px" CssClass="search_sle"
+                                                                        ValidationGroup="TourOnlySearch">
+                                                                        <asp:ListItem Value="5" meta:resourcekey="item1">less than 10 days</asp:ListItem>
+                                                                        <asp:ListItem Value="11" meta:resourcekey="item2">11 - 15 days</asp:ListItem>
+                                                                        <asp:ListItem Value="15" meta:resourcekey="item3">over 15 days</asp:ListItem>
+                                                                        <asp:ListItem Value="16" meta:resourcekey="item4">All</asp:ListItem>
+                                                                    </asp:DropDownList>
+                                                                </td>
+                                                            </tr>
+                                                            <%--<tr>
+                                                                <td>
+                                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="radio" name="RadioGroup1" value="5" id="rdTravelDate0" runat="server"
+                                                                                    checked />
+                                                                                under 5 days
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="radio" name="RadioGroup1" value="6" id="rdTravelDate1" runat="server" />
+                                                                                6 days</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="radio" name="RadioGroup1" value="7" id="rdTravelDate2" runat="server" />
+                                                                                7 days</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                <input type="radio" name="RadioGroup1" value="8" id="rdTravelDate3" runat="server" />
+                                                                                over 8 days</td>
+                                                                        </tr>
+                                                                    </table>
+                                                                </td>
+                                                            </tr>--%>
+                                                            <tr valign="top">
+                                                                <td align="center" height="35">
+                                                                    <asp:Button ID="btn_Search" runat="server" Text="Search" OnClick="btn_Search_Click"
+                                                                        CssClass="search_btn01" Style="cursor: hand" meta:resourcekey="btnSearch" />
+                                                                    <!-- <a href="#" id="P_redS">Detailed Search</a>-->
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <!-- Tour Search Body End -->
+                                                        <ajaxToolkit:CascadingDropDown ID="cddArea" runat="server" TargetControlID="ddlArea_T"
+                                                            Category="TourArea" PromptText="Please select a area" LoadingText="[Loading areas...]"
+                                                            ServiceMethod="GetDropDownContents" ParentControlID="" meta:resourcekey="CddArea" />
+                                                        <ajaxToolkit:CascadingDropDown ID="cddCountry" runat="server" TargetControlID="ddlCountry_T"
+                                                            Category="TourCountry" PromptText="Please select a country" LoadingText="[Loading countries...]"
+                                                            ServiceMethod="GetDropDownContents" ParentControlID="ddlArea_T" meta:resourcekey="CddCountry" />
+                                                        <ajaxToolkit:CascadingDropDown ID="cddCity" runat="server" TargetControlID="ddlCity_T"
+                                                            Category="TourCity" PromptText="Please select a city" LoadingText="[Loading cities...]"
+                                                            ServiceMethod="GetDropDownContents" ParentControlID="ddlCountry_T" meta:resourcekey="CddCity" />
+                                                        <!-- Tour Search Body End -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </asp:PlaceHolder>
+                                    <asp:PlaceHolder ID="phTopDestinations" runat="server">
+                                        <div>
+                                            <table class="T_step0l" cellpadding="0" cellspacing="1" width="170" runat=server id="tbDeparturePlace" >
+                                                <tbody>
+                                                    <tr class="R_step01-1" align="center">
+                                                        <td height="23">
+                                                            <span id="ctl00_Label">By Departure Place</span></td>
+                                                    </tr>
+                                                    <tr class="R_stepbox-1">
+                                                        <td valign="top">
+                                                            <br />
+                                                            <table align="center" border="0" cellpadding="0" cellspacing="0" width="90%">
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td valign="top">
+                                                                            <ul>
+                                                                                <asp:Repeater ID="rpDeparturePlace" runat="server">
+                                                                                    <ItemTemplate>
+                                                                                        <li>&bull;&nbsp;<asp:HyperLink ID="hlDeparturePlace" runat="server" CssClass="d13"></asp:HyperLink></li>
+                                                                                    </ItemTemplate>
+                                                                                </asp:Repeater>
+                                                                            </ul>
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                            <br />
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <p>
+                                                &nbsp;</p>
+                                            <table class="T_step0l" cellpadding="0" cellspacing="1" width="170">
+                                                <tbody>
+                                                    <tr class="R_step01-1" align="center">
+                                                        <td height="23">
+                                                            <asp:Label ID="Label7" runat="server" meta:resourcekey="lblMostPopular" Text="Most Popular"></asp:Label></td>
+                                                    </tr>
+                                                    <tr class="R_stepbox-1">
+                                                        <td valign="top">
+                                                            <br />
+                                                            <asp:Repeater ID="rpMostPopular" runat="server" OnItemCommand="rpMostPopular_ItemCommand">
+                                                                <ItemTemplate>
+                                                                    <table align="center" border="0" cellpadding="0" cellspacing="0" width="90%">
+                                                                        <tbody>
+                                                                            <tr>
+                                                                                <td class="D_stepb-1">
+                                                                                    <asp:LinkButton ID="lblName" runat="server" CommandName="Select" CssClass="tour_12b_o"></asp:LinkButton><asp:Label
+                                                                                        ID="lblLine" runat="server" Text="" Visible="false"></asp:Label><asp:Label ID="lblID"
+                                                                                            runat="server" Text="" Visible="false"></asp:Label><asp:Label ID="lblTourCode1" runat="server"
+                                                                                                Text="" Visible="false"></asp:Label><asp:Label ID="lblTourCode2" runat="server" Text=""
+                                                                                                    Visible="false"></asp:Label></td>
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <asp:Image ID="imgMost" runat="server" Width="150" Height="60" vspace="5" border="0"
+                                                                                        onerror="this.src='http://www.majestic-vacations.com/images/default_pic_2.gif';" />
+                                                                            </tr>
+                                                                            <tr>
+                                                                                <td>
+                                                                                    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+                                                                                        <tr>
+                                                                                            <td align="left">
+                                                                                                <asp:LinkButton ID="imgbtnCity1" runat="server" CommandName="CityCode1" CssClass="tour_11_b"></asp:LinkButton>
+                                                                                            </td>
+                                                                                            <td align="right">
+                                                                                                <asp:LinkButton ID="imgbtnPrice1" runat="server" CommandName="Price1" CssClass="tour_11_b"></asp:LinkButton><asp:Label
+                                                                                                    ID="lblCityCode1" runat="server" Text="" Visible="false"></asp:Label><asp:Label ID="lblPrice1"
+                                                                                                        runat="server" Text="" Visible="false"></asp:Label>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                        <tr>
+                                                                                            <td align="left">
+                                                                                                <asp:LinkButton ID="imgbtnCity2" runat="server" CommandName="CityCode2" CssClass="tour_11_b"></asp:LinkButton>
+                                                                                            </td>
+                                                                                            <td align="right">
+                                                                                                <asp:LinkButton ID="imgbtnPrice2" runat="server" CommandName="Price2" CssClass="tour_11_b"></asp:LinkButton><asp:Label
+                                                                                                    ID="lblCityCode2" runat="server" Text="" Visible="false"></asp:Label><asp:Label ID="lblPrice2"
+                                                                                                        runat="server" Text="" Visible="false"></asp:Label>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                    <hr size="1" color="#CCCCCC" runat="server" id="hrCCCCC" />
+                                                                </ItemTemplate>
+                                                            </asp:Repeater>
+                                                            <br />
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </asp:PlaceHolder>
+                                    <br />
+                                    <asp:PlaceHolder ID="phAdvertise" runat="server" Visible="false">
+                                        <asp:Repeater ID="rpAdvertise" runat="server">
+                                            <ItemTemplate>
+                                                <table width="170" border="0" cellspacing="0" cellpadding="0">
+                                                    <tr>
+                                                        <td height="350" align="center">
+                                                            <a runat="server" id="aAdvertise" target="_blank">
+                                                                <asp:Image ID="imgbtnAdvertise" runat="server" Width="170" Height="350" border="0"
+                                                                    onerror="this.src='http://www.majestic-vacations.com/images/default_pic_170x350.gif';" /></a></td>
+                                                    </tr>
+                                                </table>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </asp:PlaceHolder>
+                                </td>
+                                <td align="right" valign="top">
+                                    <!-- Right -->
+                                    <!-- Content -->
+                                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <uc2:Footer ID="Footer" runat="server" />
+    </form>
+
+    <script language="javascript" type="text/javascript">
+        history.go(1);
+    </script>
+
+</body>
+</html>

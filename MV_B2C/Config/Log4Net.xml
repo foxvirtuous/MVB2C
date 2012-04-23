@@ -1,0 +1,363 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<log4net debug="false">
+  
+  <appender name="AspNetTraceAppender" type="log4net.Appender.AspNetTraceAppender">
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="[%thread] %-5level - %message" />
+    </layout>
+  </appender>
+
+ <appender name="TraceAppender" type="log4net.Appender.TraceAppender">
+	<layout type="log4net.Layout.PatternLayout">
+		<conversionPattern value="%-5level %M - %message%newline" />
+	</layout>
+ </appender>
+
+  <!--<appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+	<file value="Logs/log0229.xml" />
+	<appendToFile value="true" />
+	<rollingStyle value="Size" />
+	<maxSizeRollBackups value="10" />
+	<maximumFileSize value="100KB" />
+	<staticLogFileName value="true" />
+	<layout type="log4net.Layout.PatternLayout">
+		<Header value="&lt;LOG&gt;&#13;&#10;" />
+		<Footer value="&lt;/LOG&gt;" />
+		--><!--<conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />--><!--
+		<conversionPattern value="		&lt;CASE&gt;%newline				&lt;DateTime&gt;%date&lt;/DateTime&gt;%newline				&lt;ID&gt;%thread&lt;/ID&gt;%newline				&lt;Module&gt;%-5level&lt;/Module&gt;%newline				&lt;Logger&gt;%logger&lt;/Logger&gt;%newline				&lt;NDC&gt;%property{NDC}&lt;/NDC&gt;%newline				&lt;Message&gt;%message&lt;/Message&gt;%newline		&lt;/CASE&gt;%newline" />
+	</layout>
+  </appender>-->
+
+  <!--<appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/log.xml" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="100KB" />
+    <staticLogFileName value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <Header value="&lt;LOG&gt;&#13;&#10;" />
+      <Footer value="&lt;/LOG&gt;" />
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+      <conversionPattern value="		&lt;LOG&gt;%newline				&lt;DateTime&gt;%date&lt;/DateTime&gt;%newline				&lt;ID&gt;%thread&lt;/ID&gt;%newline				&lt;Module&gt;%-5level&lt;/Module&gt;%newline				&lt;Logger&gt;%logger&lt;/Logger&gt;%newline				&lt;NDC&gt;%property{NDC}&lt;/NDC&gt;%newline				&lt;Message&gt;%message&lt;/Message&gt;%newline		&lt;/LOG&gt;%newline" />
+    </layout>
+  </appender>-->
+
+  <appender name="RollingFileAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/log0318.txt" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="100KB" />
+    <staticLogFileName value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+
+	<appender name="RollingFileAppender1" type="log4net.Appender.RollingFileAppender">
+		<file value="Logs/OrderInfo.txt" />
+		<appendToFile value="true" />
+		<rollingStyle value="Size" />
+		<maxSizeRollBackups value="10" />
+		<maximumFileSize value="10000KB" />
+		<staticLogFileName value="true" />
+		<layout type="log4net.Layout.PatternLayout">
+			<conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+		</layout>
+	</appender>
+
+	<appender name="RollingFileAppender3" type="log4net.Appender.RollingFileAppender">
+		<file value="Logs/OrderInfo1.txt" />
+		<appendToFile value="true" />
+		<rollingStyle value="Size" />
+		<maxSizeRollBackups value="10" />
+		<maximumFileSize value="10000KB" />
+		<staticLogFileName value="true" />
+		<layout type="log4net.Layout.PatternLayout">
+			<conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+		</layout>
+	</appender>
+
+  <appender name="rfaFlightPreBooking" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/FlightPreBooking.txt" />
+    <appendToFile value="true" />
+    <rollingStyle value="Size" />
+    <maxSizeRollBackups value="10" />
+    <maximumFileSize value="10000KB" />
+    <staticLogFileName value="true" />
+    <layout type="log4net.Layout.PatternLayout">
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+  </appender>
+
+	<appender name="CancelInfo" type="log4net.Appender.RollingFileAppender">
+		<file value="Logs/CancelInfo.txt" />
+		<appendToFile value="true" />
+		<rollingStyle value="Size" />
+		<maxSizeRollBackups value="10" />
+		<maximumFileSize value="10000KB" />
+		<staticLogFileName value="true" />
+		<layout type="log4net.Layout.PatternLayout">
+			<conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+		</layout>
+	</appender>
+
+	<appender name="RollingFileAppender2" type="log4net.Appender.RollingFileAppender">
+		<file value="Logs/DiffTimeInf.txt" />
+		<appendToFile value="true" />
+		<rollingStyle value="Size" />
+		<maxSizeRollBackups value="10" />
+		<maximumFileSize value="10000KB" />
+		<staticLogFileName value="true" />
+		<layout type="log4net.Layout.PatternLayout">
+			<conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+		</layout>
+	</appender>
+	<appender name="ApplicationErrorAppender" type="log4net.Appender.RollingFileAppender">
+		<file value="Logs/log_Errors_ApplicationError.txt" />
+		<appendToFile value="true" />
+		<!--<rollingStyle value="Size" />-->
+		<maxSizeRollBackups value="10" />
+		<maximumFileSize value="100KB" />
+		<!--<staticLogFileName value="true" />-->
+		<layout type="log4net.Layout.PatternLayout">
+      <footer value="*********************************" />
+      <conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+    </layout>
+	</appender>
+
+  <appender name="RollingTxtFile" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/Log_toSearch.txt"/>
+    <appendToFile value="true"/>
+    <!--容量最大为3KB-->
+    <maximumFileSize value="100KB"/>
+    <!--最大允许有两个备份文件-->
+    <maxSizeRollBackups value="10"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="SearchHotelAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/Log_SearchHotel.txt"/>
+    <appendToFile value="true"/>
+    <!--容量最大为3KB-->
+    <maximumFileSize value="100KB"/>
+    <!--最大允许有两个备份文件-->
+    <maxSizeRollBackups value="10"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="SearchTourAppender" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/Log_SearchTour.txt"/>
+    <appendToFile value="true"/>
+    <!--容量最大为3KB-->
+    <maximumFileSize value="100KB"/>
+    <!--最大允许有两个备份文件-->
+    <maxSizeRollBackups value="10"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n"/>
+    </layout>
+  </appender>
+
+
+	<appender name="SearchHotelByZyl" type="log4net.Appender.RollingFileAppender">
+		<file value="Logs/SearchHotelByZyl.txt"/>
+		<appendToFile value="true"/>
+		<!--容量最大为3KB-->
+		<maximumFileSize value="10000KB"/>
+		<!--最大允许有两个备份文件-->
+		<maxSizeRollBackups value="10"/>
+		<layout type="log4net.Layout.PatternLayout">
+			<param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n"/>
+		</layout>
+	</appender>
+
+  <appender name="AirSearching" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/AirSearching.txt"/>
+    <appendToFile value="true"/>
+    <!--容量最大为3KB-->
+    <maximumFileSize value="1024KB"/>
+    <!--最大允许有两个备份文件-->
+    <maxSizeRollBackups value="10"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="HotelSearching" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/HotelSearching.txt"/>
+    <appendToFile value="true"/>
+    <!--容量最大为3KB-->
+    <maximumFileSize value="10000KB"/>
+    <!--最大允许有两个备份文件-->
+    <maxSizeRollBackups value="10"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="PackageSearching" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/PackageSearching.txt"/>
+    <appendToFile value="true"/>
+    <!--容量最大为3KB-->
+    <maximumFileSize value="10000KB"/>
+    <!--最大允许有两个备份文件-->
+    <maxSizeRollBackups value="10"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="TourSearching" type="log4net.Appender.RollingFileAppender">
+    <file value="Logs/TourSearching.txt"/>
+    <appendToFile value="true"/>
+    <!--容量最大为3KB-->
+    <maximumFileSize value="10000KB"/>
+    <!--最大允许有两个备份文件-->
+    <maxSizeRollBackups value="10"/>
+    <layout type="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d [%t] %-5p %c [%x] - %m%n"/>
+    </layout>
+  </appender>
+
+  <appender name="ALLERROR" class="log4net.Appender.RollingFileAppender">
+    <param name="File" value="Logs/Error.log" />
+    <appendToFile value="true"/>
+    <param name="MaxFileSize" value="5120KB" />
+    <param name="MaxBackupIndex" value="10" />
+    <layout class="log4net.Layout.PatternLayout">
+      <param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %c {%F:%L} - %m%n" />
+    </layout>
+  </appender>
+
+	<appender name="AirGetter" class="log4net.Appender.RollingFileAppender">
+		<param name="File" value="Logs/AirGetter.log" />
+		<appendToFile value="true"/>
+		<param name="MaxFileSize" value="10000KB" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="log4net.Layout.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyy-MM-dd HH:mm:ss} [%-5p] %c {%F:%L} - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="OrderManagement" type="log4net.Appender.RollingFileAppender">
+		<file value="Logs/OrderManagement.txt" />
+		<appendToFile value="true" />
+		<rollingStyle value="Size" />
+		<maxSizeRollBackups value="10" />
+		<maximumFileSize value="10000KB" />
+		<staticLogFileName value="true" />
+		<layout type="log4net.Layout.PatternLayout">
+			<conversionPattern value="%date [%thread] %-5level %logger [%property{NDC}] - %message%newline" />
+		</layout>
+	</appender>
+
+  <logger name="ApplicationError">
+		<level value="Error" />
+		<appender-ref ref="ApplicationErrorAppender" />
+	</logger>
+
+	<!-- Set default logging level to DEBUG -->
+  <root>
+    <level value="Error" />
+    <!--<appender-ref ref="AspNetTraceAppender" />
+    <appender-ref ref="TraceAppender" />-->
+    <appender-ref ref="RollingFileAppender" />
+  </root>
+  <!--
+    In Spring.NET there is a 1-1 correspondence between the logger name and
+    the namespace of the class doing the logging...
+  -->
+  <logger name="Spring">
+    <level value="Error" />
+  </logger>
+  <logger name="Terms">
+    <level value="Info" />
+	  <appender-ref ref="RollingFileAppender1" />
+  </logger>
+	<logger name="PackageSearchResultForm">
+		<level value="DEBUG" />
+		<appender-ref ref="RollingFileAppender2" />
+	</logger>
+	<logger name="SaveOrderWaiting">
+		<!-- <appender-ref ref="B" /> -->
+		<level value="Info" />
+		<appender-ref ref="RollingFileAppender3" />
+	</logger>
+	<logger name="SaleOrderService">
+		<!-- <appender-ref ref="B" /> -->
+		<level value="Info" />
+		<appender-ref ref="RollingFileAppender1" />
+	</logger>
+
+	<logger name="SaleOrderService">
+		<!-- <appender-ref ref="B" /> -->
+		<level value="Error" />
+		<appender-ref ref="CancelInfo" />
+	</logger>
+	
+  <logger name="FlightPreBooking">
+    <!-- <appender-ref ref="B" /> -->
+    <level value="All" />
+    <appender-ref ref="rfaFlightPreBooking" />
+  </logger>
+
+  <logger name="AirSearchTime">
+    <level value="Info" />
+    <appender-ref ref="RollingTxtFile" />
+  </logger>
+
+  <logger name="HotelSearchTime">
+    <level value="Info" />
+    <appender-ref ref="SearchHotelAppender" />
+  </logger>
+
+  <logger name="TourSearchTime">
+    <level value="Info" />
+    <appender-ref ref="SearchTourAppender" />
+  </logger>
+
+	<logger name="HotelSearchPerformanceDebugging">
+		<level value="Debug" />
+		<appender-ref ref="SearchHotelByZyl" />
+	</logger>
+
+  <logger name="AirSearching">
+    <level value="Debug" />
+    <appender-ref ref="AirSearching" />
+  </logger>
+
+  <logger name="HotelSearching">
+    <level value="Debug" />
+    <appender-ref ref="HotelSearching" />
+  </logger>
+
+  <logger name="PackageSearching">
+    <level value="Debug" />
+    <appender-ref ref="PackageSearching" />
+  </logger>
+
+  <logger name="TourSearching">
+    <level value="Debug" />
+    <appender-ref ref="TourSearching" />
+  </logger>
+
+  <logger name="AllError">
+    <level value="Error" />
+    <appender-ref ref="ALLERROR" />
+  </logger>
+
+	<logger name="AirGetter">
+		<level value="All" />
+		<appender-ref ref="AirGetter" />
+	</logger>
+
+	<logger name="Terms.Sales.Service.OrderManagements.OrderManagement">
+		<level value="All" />
+		<appender-ref ref="OrderManagement" />
+	</logger>
+</log4net>

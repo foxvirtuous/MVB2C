@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net"
+         xmlns:db="http://www.springframework.net/database">
+
+  <!-- Referenced by main application context configuration file -->
+  <description>
+    The Terms object definitions for the Data Access Objects.
+  </description>
+
+   <!--Property placeholder configurer for database settings--> 
+  <object type="Spring.Objects.Factory.Config.PropertyPlaceholderConfigurer, Spring.Core">
+    <property name="ConfigSections" value="databaseSettings"/>
+  </object>
+
+   <!--Database and NHibernate Configuration--> 
+  <!--<db:provider id="DbProvider"
+                   provider="SqlServer-1.1"
+                   connectionString="Integrated Security=false; Data Source=${db.datasource};Database=${db.database};User ID=${db.user};Password=${db.password};"/>
+
+  
+  <object id="DbProvider" type="Spring.Data.Support.SqlProvider, Spring.Data">
+    <property name="ConnectionString"
+                value="Data Source=${db.datasource};Database=${db.database};User ID=${db.user};Password=${db.password};Trusted_Connection=False"/>
+  </object>
+  
+
+  <object id="HibernateTransactionManager"
+        type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="DbProvider"/>
+    <property name="SessionFactory" ref="SessionFactory"/>
+  </object>
+
+  <object id="HibernateTemplate" type="Spring.Data.NHibernate.HibernateTemplate">
+    <property name="SessionFactory" ref="SessionFactory" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>-->
+
+	<db:provider id="CommDbProvider"
+		 provider="SqlServer-1.1"
+		 connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=terms_comm_demo;User ID=sa;Password=Ceoaaa45;"/>
+
+	<db:provider id="BaseExcelProvider"
+		 provider="OleDb-2.0"
+		 connectionString="driver={microsoft   excel   driver   (*.xls)};Data Source=c:\\TERMS_BABE.xsl;Extended Properties=Excel 8.0;"/>
+
+	<db:provider id="BaseDbProvider"
+		 provider="SqlServer-1.1"
+		 connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=terms_base_demo;User ID=sa;Password=Ceoaaa45;"/>
+
+	<db:provider id="BussDbProvider"
+		 provider="SqlServer-1.1"
+		 connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=TERMS_BUSS_DEMO;User ID=sa;Password=Ceoaaa45;"/>
+
+	<db:provider id="MemberDbProvider"
+							 provider="SqlServer-1.1"
+							 connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=terms_member_MV;User ID=sa;Password=Ceoaaa45;"/>
+
+  <db:provider id="BussDbProvider_dbCn"
+  provider="SqlServer-1.1"
+  connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=TERMS_BUSS_CN;User ID=sa;Password=Ceoaaa45;"/>
+
+	<db:provider id="Contract0407DbProvider"
+		  provider="SqlServer-1.1"
+		  connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=terms_contract_demo;User ID=sa;Password=Ceoaaa45;"/>
+  
+	<db:provider id="OrderDbProvider"
+		  provider="SqlServer-1.1"
+		  connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=TERMS_ORDER;User ID=sa;Password=Ceoaaa45;"/>
+
+	<db:provider id="AdditionalDbProvider"
+		  provider="SqlServer-1.1"
+		  connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=Gtt_Additional;User ID=sa;Password=Ceoaaa45;"/>
+
+  <db:provider id="ECModuleDbProvider"
+		provider="SqlServer-1.1"
+		connectionString="Integrated Security=false; Data Source=SERVER161\SERVER161_TEST;Database=TERMS_ECMODULE_MV;User ID=sa;Password=Ceoaaa45;"/>
+
+</objects>

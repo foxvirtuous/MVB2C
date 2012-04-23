@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<object name="HotelCommonInfo"  type="~/UserControls/HotelCommonInfo.ascx" parent="SalesBaseUserControl">
+	</object>
+
+	<object name="HotelCommonInfoControl"  type="~/UserControls/HotelCommonInfoControl.ascx" parent="SalesBaseUserControl">
+	</object>
+
+	<object name="ShowAllFlights"  type="~/UserControls/ShowAllFlights.ascx" parent="SalesBaseUserControl">
+	</object>
+
+	<object name="TourInfoControl"  type="~/UserControls/TourInfoControl.ascx" parent="SalesBaseUserControl">
+		<property name="AreaMasterService" ref="AreaMasterService" />
+	</object>
+	<object name="SUBTourInfoControl"  type="~/UserControls/SUBTourInfoControl.ascx" parent="SalesBaseUserControl">
+		<property name="AreaMasterService" ref="AreaMasterService" />
+	</object>
+	<object name="SubTourRequestControl"  type="~/UserControls/SubTourRequestControl.ascx" parent="SalesBaseUserControl">
+		<property name="AreaMasterService" ref="AreaMasterService" />
+		<property name="SubIncentiveTourConfigService" ref="SubIncentiveTourConfigService" />
+	</object>
+	<object name="VehcileOnlySearchControl"  type="~/UserControls/VehcileOnlySearchControl.ascx" parent="SalesBaseUserControl">
+		<property name="CityService" ref="CityService" />
+		<property name="AirportService" ref="AirportService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+	</object>
+
+	<object name="VehcileInfoViewControl"  type="~/UserControls/VehcileInfoViewControl.ascx" parent="SalesBaseUserControl">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object name="VehcileInfoControl"  type="~/UserControls/VehcileInfoControl.ascx" parent="SalesBaseUserControl">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object name="VehcileListViewControl"  type="~/UserControls/VehcileListViewControl.ascx" parent="SalesBaseUserControl">
+		<property name="AirportService" ref="AirportService" />
+	</object>
+
+	<object name="NewVehcileSendEamilControl"  type="~/UserControls/NewVehcileSendEamilControl.ascx" parent="SalesBaseUserControl">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<!--<object type="~/UserControls/HotelInfomationService.asmx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>-->
+
+
+
+	<!--<object type="~/UserControls/EditContractPage.ascx">
+		<property name="ContractService" ref="ContractService" />
+		<property name="BaseService" ref="BaseService" />
+		<property name="CurrencyService" ref="CurrencyService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>-->
+
+	<!--<object type="~/UserControls/EditContract.ascx">
+		<property name="ContractService" ref="ContractService" />
+		-->
+	<!--<property name="MarketService" ref="MarketService" />-->
+	<!--
+	</object>-->
+
+
+
+	<!--<object type="~/UserControls/EditAreaMaster.ascx">
+		<property name="AreaMasterService" ref="AreaMasterService" />
+		<property name="AreaDetailService" ref="AreaDetailService" />
+	</object>-->
+
+	<!--<object type="~/UserControls/SelectLocationIDandHotelID.ascx">    
+    <property name="BaseService" ref="BaseService" />
+    <property name="CommonService" ref="CommonService" />
+  </object>-->
+
+	<!--<object type="~/UserControls/AttachedText.ascx">
+		<property name="BaseService" ref="BaseService" />		
+	</object>-->
+
+	<!--<object type="~/UserControls/SearchHotel.ascx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+  <object type="~/UserControls/SearchCity.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/SearchCountry.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>-->
+
+	<object type="~/UserControls/SearchEngineAH.ascx">
+		<property name="CommonService" ref="CommonService" />
+		<property name="AirService" ref="AirService" />
+		<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+	</object>
+
+	<object type="~/UserControls/SearchEngineA.ascx">
+		<property name="CommonService" ref="CommonService" />
+		<property name="AirService" ref="AirService" />
+		<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+	<object type="~/UserControls/SearchEngineT.ascx">
+		<property name="AirService" ref="AirService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+	<object type="~/UserControls/SearchEngineH.ascx">
+		<property name="CityService" ref="CityService" />
+		<property name="AirportService" ref="AirportService" />
+	</object>
+	<object type="~/UserControls/ContactInfoControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+	<object type="~/UserControls/TourContactInfoControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+	<object type="~/UserControls/PHContactInfoControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/CreditCardInfoControl.ascx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/OrderPassengerInfoControl.ascx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<!--<object type="~/UserControls/Package/ShowPackageHotels.ascx">
+    <property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+  </object>
+
+  <object type="~/UserControls/SearchEngineH.ascx">
+  </object>-->
+
+	<object type="~/UserControls/UserLoginControl.ascx">
+		<!--<property name="CommonService" ref="CommonService" />-->
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object type="~/UserControls/HotelInfoControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/HotelDetailedInformationListControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<!--<object type="~/UserControls/HotelOnlySearchControl.ascx">
+    <property name="CommonService" ref="CommonService" />
+  </object>-->
+
+	<object type="~/UserControls/UserLogin.ascx">
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object type="~/UserControls/HotelOrderPassengerInfoControl.ascx">
+		<property name="BaseService" ref="BaseService" />
+	</object>
+
+	<object type="~/UserControls/CreditCardInformationControl.ascx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/PackageLeftSelect.ascx">
+		<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="AirService" ref="AirService" />
+		<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+	</object>
+
+	<object name="SalesBaseUserControl" abstract="true">
+		<property name="MerchandiseSearcher" ref="MerchandiseSearcher" />
+	</object>
+
+	<object type="~/UserControls/InsuranceControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+	<object type="~/UserControls/TourMainInfoControl.ascx">
+		<property name="AirService" ref="AirService" />
+	</object>
+
+	<object type="~/UserControls/TourPriceInfoControl.ascx">
+		<property name="AirService" ref="AirService" />
+	</object>
+
+	<object type="~/UserControls/TourTravelerAndPriceInfoControl.ascx">
+		<property name="AirService" ref="AirService" />
+	</object>
+
+	<object type="~/UserControls/UserLoginControl.ascx">
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object type="~/UserControls/HotelOnlySearchControl.ascx">
+		<property name="CityService" ref="CityService" />
+		<property name="AirportService" ref="AirportService" />
+	</object>
+
+	<object type="~/UserControls/HTLInfoControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/HTLDetailedInformationListControl.ascx" >
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/HTLSelectRoomTypeControl.ascx" >
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/PKGPackageDetailsInfoControl.ascx" >
+		<property name="CommonService" ref="CommonService" />
+		<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+	</object>
+
+	<object type="~/UserControls/PKGLeftSelectCondtions.ascx">
+		<property name="SaleMerchandiseSearcherService" ref="SaleMerchandiseSearcherService" />
+		<property name="CommonService" ref="CommonService" />
+		<property name="AirService" ref="AirService" />
+		<property name="ApplicationCacheFoundationDate" ref="ApplicationCacheFoundationDate" />
+	</object>
+
+	<object type="~/UserControls/PKGUserLogin.ascx">
+		<property name="MemberInformationService" ref="MemberInformationService" />
+	</object>
+
+	<object name="HTLDetailedInformationListControl"  type="~/UserControls/HTLDetailedInformationListControl.ascx" parent="SalesBaseUserControl">
+	</object>
+
+	<!--<object type="~/UserControls/Header.ascx"  parent="BasePage">
+  </object>-->
+
+	<object type="~/UserControls/NewInsuranceTravelersInformationControl.ascx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/NewInsuranceContactInformationControl.ascx">
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/UserControls/NewInsurancePaymentInformationControl.ascx">
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<!--zyl 2011-9-28-->
+	<object type="~/UserControls/TopDestinationsControl.ascx">
+		<property name="TopDestinationsMasterConfigService" ref="TopDestinationsMasterConfigService" />
+		<property name="TopDestinationsDetailConfigService" ref="TopDestinationsDetailConfigService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+	
+</objects>

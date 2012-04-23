@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms service layer definitions
+  </description>
+
+  <!-- Property placeholder configurer for database settings -->
+
+  <object id="BussProxyConfigurationTemplate" abstract="true"
+			type="Spring.Transaction.Interceptor.TransactionProxyFactoryObject, Spring.Data">
+    <property name="PlatformTransactionManager" ref="BussHibernateTransactionManager"/>
+    <property name="TransactionAttributes">
+      <name-values>
+        <add key="Process*" value="PROPAGATION_REQUIRED"/>
+        <add key="Save*" value="PROPAGATION_REQUIRED"/>
+        <add key="Delete*" value="PROPAGATION_REQUIRED"/>
+        <add key="Update*" value="PROPAGATION_REQUIRED"/>
+        <add key="Insert*" value="PROPAGATION_REQUIRED"/>
+        <add key="Add*" value="PROPAGATION_REQUIRED"/>
+
+        <add key="Get*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Find*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Load*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="Select*" value="PROPAGATION_REQUIRED,readOnly"/>
+        <add key="*" value="PROPAGATION_REQUIRED,readOnly"/>
+      </name-values>
+    </property>
+    <property name="PreInterceptors" ref="CommonLoggingAroundAdvice"/>
+  </object> 
+  
+  
+  <object id="MarkupMasterService" type="Terms.Product.Service.MarkupMasterService, Terms.Product.Service">
+    <property name="MarkupMasterDao" ref="MarkupMasterDao"/>
+  </object>
+
+  <object id="AirMarkupRuleService" type="Terms.Product.Service.AirMarkupRuleService, Terms.Product.Service">
+    <property name="AirMarkupRuleDao" ref="AirMarkupRuleDao"/>
+  </object>
+
+  <object id="TourPassedCityService" type="Terms.Product.Service.TourPassedCityService, Terms.Product.Service">
+    <property name="TourPassedCityDao" ref="TourPassedCityDao"/>
+    <property name="EntityDao" ref="HibernateEntityDao"/>
+  </object>
+
+  <object id="TourProductProfileService" type="Terms.Product.Service.TourProductProfileService, Terms.Product.Service">
+    <property name="TourProductProfileDao" ref="TourProductProfileDao"/>
+  </object>
+
+  <object id="TourProductProfileService_dbCn" type="Terms.Product.Service.TourProductProfileService, Terms.Product.Service">
+    <property name="TourProductProfileDao" ref="TourProductProfileDao_dbCn"/>
+  </object>
+
+  <object id="TourUsedAirlinesService" type="Terms.Product.Service.TourUsedAirlinesService, Terms.Product.Service">
+    <property name="TourUsedAirlinesDao" ref="TourUsedAirlinesDao"/>
+  </object>
+
+  <object id="TourItineraryProfileService" type="Terms.Product.Service.TourItineraryProfileService, Terms.Product.Service">
+    <property name="TourItineraryProfileDao" ref="TourItineraryProfileDao"/>
+  </object>
+
+  <object id="TourItineraryProfileServiceCn" type="Terms.Product.Service.TourItineraryProfileService, Terms.Product.Service">
+    <property name="TourItineraryProfileDao" ref="TourItineraryProfileDaoCn"/>
+  </object>
+
+  <object id="TourPriceService" type="Terms.Product.Service.TourPriceService, Terms.Product.Service">
+    <property name="TourPriceDao" ref="TourPriceDao"/>
+  </object> 
+
+  <object id="HotelProductItemService" type="Terms.Product.Service.HotelProductItemService, Terms.Product.Service">
+    <property name="HotelProductItemDao" ref="HotelProductItemDao"/>
+    <property name="CityDao" ref="CityDao"/>
+    <property name="EntityDao" ref="HibernateEntityDao"/>
+  </object>
+
+  <object id="HotelMarkUpService" type="Terms.Product.Service.HotelMarkUpService, Terms.Product.Service">
+    <property name="HotelMarkUpDao" ref="HotelMarkUpDao"/>
+  </object>
+
+  <object id="SubMarkUpService" type="Terms.Product.Service.SubMarkUpService, Terms.Product.Service">
+    <property name="SubMarkUpDao" ref="SubMarkUpDao"/>
+  </object>
+
+  <object id="PackageSubMarkUpService" type="Terms.Product.Service.PackageSubMarkUpService, Terms.Product.Service">
+    <property name="PackageSubMarkUpDao" ref="PackageSubMarkUpDao"/>
+  </object>
+
+  <object id="PackageMarkupService" type="Terms.Product.Service.PackageMarkupService, Terms.Product.Service">
+    <property name="PackageMarkupDao" ref="PackageMarkupDao"/>
+  </object>
+
+  <object id="ProductItemService" type="Terms.Product.Service.ProductItemService, Terms.Product.Service">
+    <property name="ProductItemDao" ref="ProductItemDao"/>
+  </object>
+
+  <object id="ProductItemService_dbCn" type="Terms.Product.Service.ProductItemService, Terms.Product.Service">
+    <property name="ProductItemDao" ref="ProductItemDao_dbCn"/>
+  </object>
+
+  <object id="AirProductItemService" type="Terms.Product.Service.AirProductItemService, Terms.Product.Service">
+    <property name="AirProductItemDao" ref="AirProductItemDao"/>
+    <property name="CityDao" ref="CityDao"/>
+    <property name="AirportDao" ref="AirportDao"/>
+    <property name="EntityDao" ref="HibernateEntityDao"/>
+  </object>
+
+  <object id="OriginalAirItemService" type="Terms.Product.Service.AirProductItemService, Terms.Product.Service">
+    <property name="ProductItemDao" ref="AirItemDao"/>
+  </object>
+
+  <object id="AirItemService" parent="BussProxyConfigurationTemplate">
+    <property name="Target" ref="OriginalAirItemService"/>
+  </object>
+
+  <object id="ProductService" type="Terms.Product.Service.ProductService, Terms.Product.Service">
+    <property name="AreaMasterDao" ref="AreaMasterDao"/>
+    <property name="ProductDao" ref="ProductDao"/>
+    <property name="ProductItemGroupDao" ref="ProductItemGroupDao"/>
+    <property name="CityDao" ref="CityDao"/>
+    <property name="AirportDao" ref="AirportDao"/>
+    <property name="EntityDao" ref="HibernateEntityDao"/>
+  </object>
+
+  <object id="ProductService_dbCn" type="Terms.Product.Service.ProductService, Terms.Product.Service">
+    <property name="AreaMasterDao" ref="AreaMasterDao"/>
+    <property name="ProductDao" ref="ProductDao_dbCn"/>
+    <property name="ProductItemGroupDao" ref="ProductItemGroupDao_dbCn"/>
+    <property name="CityDao" ref="CityDao"/>
+    <property name="AirportDao" ref="AirportDao"/>
+    <property name="EntityDao" ref="HibernateEntityDao"/>
+  </object>
+
+  <object id="ProductItemGroupService" type="Terms.Product.Service.ProductItemGroupService, Terms.Product.Service">
+    <property name="ProductItemGroupDao" ref="ProductItemGroupDao"/>
+  </object>
+
+  <object id="ProductItemGroupService_dbCn" type="Terms.Product.Service.ProductItemGroupService, Terms.Product.Service">
+    <property name="ProductItemGroupDao" ref="ProductItemGroupDao_dbCn"/>
+  </object>
+
+  <object id="HotelSearchRuleService" type="Terms.Product.Service.HotelSearchRuleService, Terms.Product.Service">
+    <property name="HotelSearchRuleDao" ref="HotelSearchRuleDao"/>
+  </object>
+
+  <object id="AirSearchRuleService" type="Terms.Product.Service.AirSearchRuleService, Terms.Product.Service">
+    <property name="AirSearchRuleDao" ref="AirSearchRuleDao"/>
+  </object>
+
+  <object id="AirMarkUpService" type="Terms.Product.Service.AirMarkUpService, Terms.Product.Service">
+    <property name="AirMarkUpDao" ref="AirMarkUpDao"/>
+  </object>
+
+  <object id="FareService" type="Terms.Product.Service.FareService, Terms.Product.Service">
+    <property name="FareDao" ref="FareDao"/>
+  </object>
+
+  <object id="ProxyFareService" parent="BussProxyConfigurationTemplate">
+    <property name="Target" ref="OriginalFareService"/>
+  </object>
+
+  <object id="FareMasterService" type="Terms.Product.Service.FareMasterService, Terms.Product.Service">
+    <property name="FareMasterDao" ref="FareMasterDao"/>
+  </object>
+
+  <object id="DistributionService" type="Terms.Product.Service.DistributionService, Terms.Product.Service">
+    <property name="DistributionDao" ref="HibernateDistributionDao"/>
+  </object>
+
+  <object id="AttachedImageService" type="Terms.Product.Service.AttachedImageService, Terms.Product.Service">
+    <property name="AttachedImageDao" ref="ProductAttachedImageDao"/>
+  </object>
+
+  <object id="AttachedTextService" type="Terms.Product.Service.AttachedTextService, Terms.Product.Service">
+    <property name="AttachedTextDao" ref="ProductAttachedTextDao"/>
+  </object>
+
+  <object id="AttachedTextService_dbCn" type="Terms.Product.Service.AttachedTextService, Terms.Product.Service">
+    <property name="AttachedTextDao" ref="ProductAttachedTextDao_dbCn"/>
+  </object>
+
+  <object id="AreaMasterService" type="Terms.Product.Service.AreaMasterService, Terms.Product.Service">
+    <property name="AreaMasterDao" ref="AreaMasterDao"/>
+    <property name="TypeDetailDao" ref="TypeDetailDao"/>
+  </object>
+
+
+  <object id="AreaDetailService" type="Terms.Product.Service.AreaDetailService, Terms.Product.Service">
+    <property name="AreaDetailDao" ref="AreaDetailDao"/>
+  </object>
+
+  <object id="PackageSearchRuleService" type="Terms.Product.Service.PackageSearchRuleService, Terms.Product.Service">
+    <property name="PackageSearchRuleDao" ref="PackageSearchRuleDao"/>
+    <property name="TypeDetailDao" ref="TypeDetailDao"/>
+  </object>
+
+  <object id="MarketService" type="Terms.Product.Service.MarketService, Terms.Product.Service">
+    <property name="MarketDao" ref="MarketDao"/>
+  </object>
+
+  <object id="ProductBaseService" type="Terms.Base.Service.BaseService, Terms.Base.Service">
+    <property name="AttachmentMasterDao" ref="ProductAttachmentMasterDao"/>
+    <property name="AttachedTextDao" ref="ProductAttachedTextDao"/>
+    <property name="AttachedImageDao" ref="ProductAttachedImageDao"/>
+    <property name="TypeDetailDao" ref="TypeDetailDao"/>
+  </object>
+
+  <object id="ProductBaseServiceCn" type="Terms.Base.Service.BaseService, Terms.Base.Service">
+    <property name="AttachmentMasterDao" ref="ProductAttachmentMasterDao_dbCn"/>
+    <property name="AttachedTextDao" ref="ProductAttachedTextDao_dbCn"/>
+    <property name="AttachedImageDao" ref="ProductAttachedImageDao"/>
+    <property name="TypeDetailDao" ref="TypeDetailDao"/>
+  </object>
+
+  <object id="AirMarkupRuleMasterService" type="Terms.Product.Service.AirMarkupRuleMasterService, Terms.Product.Service">
+    <property name="AirMarkupRuleMasterDao" ref="AirMarkupRuleMasterDao"/>
+  </object>
+
+  <object id="AirMarkupRuleDetailService" type="Terms.Product.Service.AirMarkupRuleDetailService, Terms.Product.Service">
+    <property name="AirMarkupRuleDetailDao" ref="AirMarkupRuleDetailDao"/>
+  </object>
+
+  <object id="HotelMarkupRuleDetailService" type="Terms.Product.Service.HotelMarkupRuleDetailService, Terms.Product.Service">
+    <property name="HotelMarkupRuleDetailDao" ref="HotelMarkupRuleDetailDao"/>
+  </object>
+
+  <object id="TourMarkupRuleDetailService" type="Terms.Product.Service.TourMarkupRuleDetailService, Terms.Product.Service">
+    <property name="TourMarkupRuleDetailDao" ref="TourMarkupRuleDetailDao"/>
+  </object>
+
+  <object id="GeneralMarkupService" type="Terms.Product.Service.GeneralMarkupService, Terms.Product.Service">
+    <property name="GeneralMarkupDao" ref="GeneralMarkupDao"/>
+  </object>
+
+  <object id="RangeMarkupMasterService" type="Terms.Product.Service.RangeMarkupMasterService, Terms.Product.Service">
+    <property name="RangeMarkupMasterDao" ref="RangeMarkupMasterDao"/>
+  </object>
+
+  <object id="RangeMarkupSectionService" type="Terms.Product.Service.RangeMarkupSectionService, Terms.Product.Service">
+    <property name="RangeMarkupSectionDao" ref="RangeMarkupSectionDao"/>
+  </object>
+
+  <object id="ProductSeasonService" type="Terms.Product.Service.ProductSeasonService, Terms.Product.Service">
+    <property name="ProductPeriodDao" ref="ProductPeriodDao"/>
+  </object>
+  
+  <object id="SuggestedRetailPriceService" type="Terms.Product.Service.SuggestedRetailPriceService, Terms.Product.Service">
+    <property name="SuggestedRetailPriceDao" ref="SuggestedRetailPriceDao"/>
+  </object>
+
+	<object id="VehicleProductItemService" type="Terms.Product.Service.VehicleProductItemService, Terms.Product.Service">
+		<property name="VehicleProductItemDao" ref="VehicleProductItemDao"/>
+		<property name="CityDao" ref="CityDao"/>
+		<property name="EntityDao" ref="HibernateEntityDao"/>
+	</object>
+
+	<object id="VehicleSearchRuleService" type="Terms.Product.Service.VehicleSearchRuleService, Terms.Product.Service">
+		<property name="VehicleSearchRuleDao" ref="VehicleSearchRuleDao"/>
+	</object>
+</objects>

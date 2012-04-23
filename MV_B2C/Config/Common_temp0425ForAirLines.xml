@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+
+	<description>
+		The Terms service layer definitions
+	</description>
+
+	<!-- Property placeholder configurer for database settings -->
+
+  <object id="CommonHibernateTransactionManager_temp0425ForAirLines" type="Spring.Data.NHibernate.HibernateTransactionManager, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="CommDbProvider"/>
+    <property name="SessionFactory" ref="CommonSessionFactory_temp0425ForAirLines"/>
+  </object>
+  
+	<object id="AirlinesService_temp0425ForAirLines" type="Terms.Common.Service.AirlinesService, Terms.Common.Service_temp0425ForAirLines">
+		<property name="AirlinesDao" ref="AirlinesDao_temp0425ForAirLines"/>
+	</object>
+
+  <object id="AirlinesDao_temp0425ForAirLines" type="Terms.Common.Dao.NHibernate.AirlinesDao, Terms.Common.Dao.NHibernate_temp0425ForAirLines">
+    <property name="HibernateTemplate" ref="CommonHibernateTemplate_temp0425ForAirLines"/>
+  </object>
+
+  <object id="CommonHibernateTemplate_temp0425ForAirLines" type="Spring.Data.NHibernate.HibernateTemplate">
+    <property name="SessionFactory" ref="CommonSessionFactory_temp0425ForAirLines" />
+    <property name="TemplateFlushMode" value="Auto" />
+    <property name="CacheQueries" value="true" />
+  </object>
+
+  <object id="CommonSessionFactory_temp0425ForAirLines" type="Spring.Data.NHibernate.LocalSessionFactoryObject, Spring.Data.NHibernate12">
+    <property name="DbProvider" ref="CommDbProvider"/>
+    <property name="MappingAssemblies">
+      <list>
+        <value>Terms.Common.Dao.NHibernate_temp0425ForAirLines</value>
+      </list>
+    </property>
+    <property name="HibernateProperties">
+      <dictionary>
+        <entry key="hibernate.connection.provider" value="NHibernate.Connection.DriverConnectionProvider"/>
+        <entry key="hibernate.dialect" value="NHibernate.Dialect.MsSql2000Dialect"/>
+        <entry key="hibernate.connection.driver_class" value="NHibernate.Driver.SqlClientDriver"/>
+        <entry key="hibernate.current_session_context_class"  value="Spring.Data.NHibernate.SpringSessionContext, Spring.Data.NHibernate12"/>
+      </dictionary>
+    </property>
+  </object>
+  
+	<!--didn't configure correctly yet - don't use-->
+	<!--<import resource="~/Config/DeclarativeServicesObjectNameDriven.xml"/>-->
+</objects>

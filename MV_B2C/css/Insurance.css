@@ -1,0 +1,422 @@
+﻿body{ font-family:Verdana, Arial, Helvetica, sans-serif;font-size:11px;}
+ul,li,ol{ margin:0px; padding:0px; list-style:none;}
+/*IBE_package布局样式区*/
+.IBE_package_main{width: 920px; margin: 0 auto;}
+.IBE_package_mainLeft{width: 170px; float: left;}
+.IBE_package_mainCenter{width: 20px; float: left; height:100px;}
+.IBE_package_mainRight{width:730px; float:left;}
+
+
+/*IBE_package进度条样式区*/
+.IBE_package_Dstep{width:100%; float:left; margin:20px 0px;}
+.IBE_package_Dstepof  { background: #CCCCCC;}
+.IBE_package_Dsteptf  { background: #FFFFFF; font-size: 9px; line-height: 12px; color: #777777; font-family: Verdana;}
+
+
+
+/*IBE_package进度条更改样式区*/
+.IBE_package_Dstepon  { background:#F85000;}
+.IBE_package_Dstepto  { background: #FFFFFF; font-size: 9px; line-height: 12px; color:#F85000; font-family: Verdana;}
+
+
+
+/*IBE_package_reSearch样式区*/
+.IBE_package_reSearch{width: 170px;font-size: 10px;font-family: Verdana; }
+.IBE_package_reSearch_title{width:170px; float:left; height:23px; line-height:23px; text-align:center; color:#fff;}
+
+.IBE_package_reSearch_main_step1{ margin:0px 8px;}
+.IBE_package_reSearch_main_step1 li{ width:100%; float:left;  }
+.IBE_package_reSearch_ddl{ width:145px; height:18px; margin:0px; padding:0px;}
+.IBE_package_reSearch_tb{ width:80px;}
+.IBE_package_reSearch_CT{ display:inline;  float:left; width:155px;  margin-top:18px; font-weight:bold; font-size:9px; padding-left:5px;}
+.IBE_package_reSearch_CT_main{width:152px; float:left; padding:8px; margin-bottom:5px;}
+
+
+/*IBE_package_reSearch更改样式区*/
+.IBE_package_reSearch_main{width:168px;  float:left; border:1px solid #006699;}
+.IBE_package_R_step01{ background:#FD4C00; background-image: url(../images/bg_s01.gif); font-size: 10px; color: #FFFFFF; font-family: Verdana; font-weight: bold;}
+.IBE_package_D_stepb  { color: #005599; font-family: Verdana; font-weight: bold;font-size:9px;}
+.IBE_package_reSearch_CT_C{ color:#005599;}
+
+
+/*IBE_package_SearchCondition更改样式区*/
+.IBE_package_SearchCondition_T_step02{ background: #999999; border: 0;}
+.IBE_package_SearchCondition_R_step02{ background: #EAEAEA;}
+.IBE_package_SearchCondition_D_stepr{ color:#000000; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold; float:left; height:25px; width:696px;}
+.IBE_package_SearchCondition_T_step03{ background: #CCCCCC; border: 0;}
+.IBE_package_SearchCondition_R_stepw{ background: #FFFFFF; font-size: 11px; line-height: 19px; font-family:Verdana;}
+.IBE_package_SearchCondition_f06{ color:#005599; font-size: 11px; font-weight: bold; font-family:Verdana;}
+.IBE_package_SearchCondition_f09 {  font-size: 9px; line-height: 18px; color: #005599; text-decoration: underline; font-family: Verdana;}
+.IBE_package_SearchCondition_f10 {  font-size: 11px; line-height: 18px; color: #005599; text-decoration: underline; font-family: Verdana;}
+.IBE_package_SearchCondition_R_bg1{background: #FFFFFF; font-size: 11px; line-height: 19px; font-family:Verdana; border:1px solid #ccc; padding:8px; float:left; width:694px;}
+
+
+/*IBE_package_step更改样式区*/
+.IBE_package_step{ width:100%; float:left;color:#005599; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold; margin:15px 0px 10px 0px;}
+.IBE_package_step_T_line01{ background:#006699; font-size: 16px;width:20px; height:20px; color: #FFFFFF;  font-family: Arial; font-weight: bold; text-align:center; !important}
+
+
+
+/*IBE_package_step样式区*/
+.IBE_package_List{ width:712px; float:left;border:1px solid #999999;background: #FFF8DC; padding: 18px 8px; padding-bottom:0px; padding-top:15px;}
+.IBE_package_List_title{ width:100%; float:left; height:30px; line-height:30px; margin:8px 0px;}
+.IBE_package_List_title_tg{ color:#000000; font-size: 16px; font-family: Arial; font-weight: bold; float:left;}
+.IBE_package_List_changeCondition{ width:100%; float:left; font-size:11px; margin:15px 0px 15px 0px;}
+.IBE_package_List_dl{ width:710px; float:left; border:1px solid #ccc; background:#fff; margin-bottom:12px;}
+.IBE_package_List_DIV{width: 712px; float: left;}
+.IBE_package_List_dl_list{width: 680px; margin: 15px; display: inline; float: left;}
+.IBE_package_List_dl_I1{width: 100px; float: left;}
+.IBE_package_returnDetail{width:708px; border:1px solid #999; height:27px; line-height:27px;float:left; font-size:11px; color:#fff; margin-bottom:8px; background:url(../images/bg_s03.gif) repeat-x; font-weight:bold; padding:0px 10px;}
+.IBE_package_List_dl_hotelInfo{width:420px; float:left; margin-left:15px; display:inline; padding-right:12px;}
+.IBE_package_List_dl_hotelInfo li{ width:100%; float:left; line-height:17px;}
+
+
+/*IBE_package_step更改样式区*/
+.IBE_package_List_dl_I2{width:131px; float:left; border:1px solid #FDF1C1; text-align:center; padding:5px 0px;}
+.IBE_package_List_dl_t01{ color:#FF3300; font-size: 10px; line-height: 14px; font-family: Verdana;}
+.IBE_package_List_dl_call{ color:#139B00; font-size: 32px; line-height: 24px; font-family: Verdana; font-weight: bold;}
+.IBE_package_List_dl_step{margin:5px 0 0 0; padding:3px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#777; height:16px;}
+.IBE_package_List_dl_t11{ color:#139B00; font-size: 15px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.IBE_package_List_dl_d09{font-size: 9px;  color: #005599; text-decoration: underline; font-family: Verdana;}
+.ShowHotel{ line-height:20px;}
+
+
+
+
+/*IBE_package_step3样式区*/
+.IBE_package_List_dl_list_selectRoom{ width: 692px; margin: 0px; display: inline; float: left; border-bottom:1px solid #ccc; padding-bottom:6px;}
+.IBE_package_List_dl_selectRoom_hotelInfo{width:565px; float:left; margin-left:15px; display:inline;}
+.IBE_package_List_dl_selectRoom_hotelInfo li{ width:100%; float:left; line-height:17px;}
+.IBE_package_step_price{ width:708px; float:left; border:1px solid #ccc; padding:10px; font-size:11px;}
+.IBE_package_List_link_btn{ width:100%; float:left; text-align:right; color: #005599; text-decoration: underline; font-family: Verdana;}
+
+
+
+
+
+
+
+/*IBE_package_分页样式区*/
+.IBE_package_List_stepg{ width:100%; float:left; margin:10px 0px; text-align:right; font-size: 9px; line-height: 18px; font-family: Verdana;color:#000000;}
+
+
+
+/*step3_price样式区*/
+.step3_price_price{ color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.step3_price_price_t06{ color:#005599; font-size: 11px; line-height: 16px; font-family: Verdana; font-weight: bold;}
+.step3_price_price_t02{ color:#FF3300; font-size: 11px; line-height: 16px; font-family: Verdana; font-weight: bold;}
+.
+
+
+
+
+/*IBE_package_hotelInfor样式区*/
+.IBE_package_hotelInfor_Tab{width: 612px; float: left;}
+.IBE_package_hotelInfor_Tab li{ float:left;	height: 32;background-color: #F3F3F3;font-size: 14px;font-family: Arial;font-weight: bold;padding:0px 20px; border:1px solid #ccc; border-bottom:none; line-height:32px; margin-left:12px; display:inline;}
+.IBE_package_hotelInfor_FandA{width: 690px; border: 1px solid #ccc; float: left; background: #fff; padding: 10px;}
+.IBE_package_hotelInfor_FandA_f16{ color:#000000; font-size: 16px; font-family: Arial; font-weight: bold;}
+
+
+
+/*IBE_package_hotelInfor更改样式区*/
+.IBE_package_hotelInfor{ width:712px; border:1px solid #999; float:left;background: #edf6f1; padding:8px;}
+.IBE_package_search_btn02 { font-size: 13px; font-family: Verdana; font-weight: bold; color: #000; border: 0px solid; height: 22px; width:100px; background-color: white; padding: 0 0 2px 0; margin:0px 0 0px 0; border-color: #FD9845; background-image: url(../images/v2/btn_bg.gif)}
+
+
+
+
+
+/*IBE_package_hotel_RoomType样式区*/
+.IBE_package_RoomType{ width:712px; border:1px solid #999; background: #FDF1C1; padding:8px; float:left;}
+.IBE_package_RoomType_title{ width:712px; float:left;}
+.IBE_package_RoomType_list{ width:690px; float:left; border:1px solid #ccc; background:#fff; padding:0px 10px 10px 10px;}
+.IBE_package_RoomType_list_R_stepbox{ background: #eeeeee; font-size: 9px; line-height: 12px; color: #000000; font-family: Verdana;}
+.IBE_package_RoomType_list_T_table{ font-size: 9px; line-height: 12px; color: #000000; font-family: Verdana;}
+.IBE_package_RoomType_list_t09{ color:#000000; font-size: 16px;font-family: Arial; font-weight: bold;}
+.IBE_package_RoomType_list_tour_day{ color:#FF9600; font-size: 16px; font-family: Arial; font-weight: bold; padding-top:20px;}
+
+
+
+
+/*IBE_package_hotel_RoomType样式区*/
+.IBE_package_Terms{ width:728px; border:1px solid #ccc; float:left; padding:12px 0px; text-align:center;}
+
+
+
+
+
+
+
+/*IBE_package_MemberLogIn样式区*/
+.IBE_confimMemberLogIn_signIn{ width:339px; float:left; margin-left:15px; display:inline; border-right:1px solid #ccc; font-size:12px; font-family:Arial;}
+.IBE_confimMemberLogIn_signIn li{ width:100%; float:left;}
+
+
+
+/*IBE_package_MemberLogIn更改样式区*/
+.IBE_confimMemberLogIn_Bg{ width:710px; float:left; border:1px solid #ccc; background:#fff; padding:8px 0px;}
+.IBE_confimMemberLogIn{width:712px; float:left; border:1px solid #999; background:#edf6f1; padding:12px 8px;font-size: 11px; line-height: 19px; color: #000000; font-family: Verdana;}
+.IBE_confimReviewOrder_Content_font1{color:#139B00; font-size: 11px; font-family: Verdana; font-weight: bold;}
+.IBE_meberLogin_font_a{ font-size: 9px; color: #005599; text-decoration: underline; font-family: Verdana;}
+
+
+
+
+
+/*.IBE_package_step5_hotelInfo样式区*/
+.IBE_package_step5_hotelInfo{ width:676px; float:left; border:1px solid #ccc; background:#fff; padding:8px; font-size:11px; font-family:Verdana;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.IBE_package_step5_hotelInfo更改样式区*/
+.IBE_package_step5_hotelInfo_title{ width:100%; float:left; border-bottom:1px solid #ccc; padding-bottom:8px;}
+.IBE_package_step5_hotelInfo_step1{width:100%; float:left; border-bottom:1px solid #ccc; padding:3px 0px;}
+.IBE_package_step5_hotelInfo_step1 li{ width:100%; float:left; line-height:22px;}
+.IBE_package_step5_hotelInfo_price{ width:100%; float:left; margin:8px 0px; text-align:right;}
+
+
+
+/*.IBE_package_step5_TravelInfo更改样式区*/
+.IBE_package_step5_TravelInfo_T_step0l{ background: #006699; border: 0; margin-bottom:10px;}
+.IBE_package_step5_TravelInfo_R_stepw{ background: #FFFFFF; font-size: 11px; line-height: 19px;}
+.IBE_package_step5_TravelInfo_R_step03{ background-image: url(../images/bg_s03.gif); font-size: 11px; line-height: 13px; color: #FFFFFF; font-family: Verdana; font-weight: bold;}
+.IBE_package_step5_TravelInfo_ContactInfo_title{ width:692px; height:30px; background:url(../images/bg_s03.gif) repeat-x; border:1px solid #ccc; line-height:30px; font-size: 11px; color: #fff; font-family: Verdana; font-weight: bold;}
+
+
+
+
+
+/*.IBE_package_step6_TravelInfo样式区*/
+.IBE_package_step6_TravelerInformation_title{background-image: url(../images/bg_s03.gif); color: #fff; font-family: Verdana; font-weight: bold; height:25px; line-height:25px;}
+.IBE_package_Email{  color: #005599; text-decoration: underline; font-family: Verdana;}
+.IBE_package_step6_TravelerInformation_title2{background-image: url(../images/bg_01.gif); color: #000; font-family: Verdana; font-weight: bold; height:30px; line-height:30px; text-align:left; padding-left:10px;}
+.IBE_package_step6_TravelerInformation_title_efs{color: #000; font-family: Verdana;  height:30px; line-height:30px; text-align:left;  width:100%; float:left;}
+.IBE_package_step6_TravelerInformation_list{ padding-left:30px; width:80%; float:left; text-align:left; height:26px; line-height:26px;}
+.IBE_package_step6_TravelerInformation_list li{ float:left; width:100%; color:#666;}
+.detail_link_hall{ color:#333; padding-right:10px;}
+
+
+/*.IBE_package_step7_step1样式区*/
+.IBE_package_step7_step1{ width:100%; float:left; line-height:20px; font-size:11px; margin-bottom:10px;}
+.IBE_package_step7_YellowDIV_Right{ width:672px; border:1px solid #999; background: #FFF8DC; padding:10px; float:left; margin-bottom:8px;}
+.IBE_package_step7_YellowDIV_Right_all{width:862px; border:1px solid #999; background: #FFF8DC; padding:10px; float:left; margin-bottom:8px;}
+.IBE_package_step7_YellowDIV_Right_inside{ width:840px; border:1px solid #ccc; background:#fff; padding:10px; text-align:left;}
+.IBE_package_step7_t09{ color:#000000; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.IBE_package_step7_t10{ color:#006699; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.IBE_package_step7_Service{ width:100%; float:left;}
+.IBE_package_step7_Service ul{list-style:circle inside;}
+.IBE_package_step7_Service li{ width:100%; float:left; line-height:20px;}
+.IBE_package_step7_font_a{ font-size: 12px; line-height: 18px; color: #005599; text-decoration: underline; font-family: Verdana;}
+
+
+
+
+/*.IBE_package_step7_step1更改样式区*/
+.IBE_package_step7_print{ width:100%; float:left; text-align:center; margin:10px 0px;}
+
+
+
+/*.IBE_package_searcherror STYLE*/
+.IBE_package_errorMsg{ width:727px; float:left; border:1px solid #cc0000;  font-size:11px; color:#cc0000; font-weight:bold;}
+.IBE_package_error_RBL_Title{ width:100%; float:left; border-bottom:1px solid #ffcc96; margin-top:15px; padding-bottom:5px; color:#ff6600; font-weight:bold;}
+.IBE_package_error_RBL{ width:100%; float:left; margin-top:10px; font-size:12px;}
+.IBE_package_errorMsg1{ width:100%; float:left; margin-top:20px;}
+.IBE_package_errorMsg1 a{ text-decoration:underline; color:blue;}
+.IBE_package_error_submit{ width:100%; float:left; text-align:center; margin-top:30px;}
+
+
+
+/*IBE_package_Travelers&ContactInformation*/
+.IBE_GrayDIV_Right_travelContact_step4{width:902px; border:1px solid #999; background:#EAEAEA; padding:8px; float:left; padding-bottom:28px; background-image:url(../images/bg_s04.gif); background-position:bottom; background-repeat:repeat-x;}
+.IBE_package_SearchCondition_T_step04{  width:676px; padding:8px; border:1px solid #ccc; margin-top:10px;}
+.IBE_package_SearchCondition_T_step04_all{  width:866px; padding:8px; border:1px solid #ccc; margin-top:10px;}
+.IBE_package_SearchCondition_T_step04_all:after{ display:block; clear:both; overflow:hidden;content:"";}
+.IBE_package_SearchCondition_T_step04_totalPrice{height:30px; line-height:30px; float:right;}
+.IBE_package_SearchCondition_D_title_step4{ color:#000000; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold; float:left; height:25px;}
+.IBE_YellowDIV_Right_travelContact_step4{ width:902px; border:1px solid #999; background: #FFF8DC; padding:16px 8px; float:left; font-size:11px;}
+.IBE_YellowDIV_Right_inSide1_travelContact_step4{width:884px; border:1px solid #ccc; background:#fff; padding:8px; float:left;}
+.IBE_package_step4_TravelInfo_ContactInfo_title{ width:882px; height:30px; background:url(../images/bg_01.gif) repeat-x; border:1px solid #ccc; line-height:30px; font-size: 11px; color: #000; font-family: Verdana; font-weight: bold; margin-top:10px;}
+.IBE_package_step4_TravelInfo_ContactInfo_title2{ width:100%; float:left; background:#EBEAE7; line-height:20px; text-align:left; font-weight:bold;}
+
+.IBE_package_step4_TravelInfo_ContactInfo_title_sub{ height:22px; background:url(../images/bg_01.gif) repeat-x; font-size: 11px; color: #000; font-family: Verdana; font-weight: bold; padding-left:10px;}
+.IBE_package_remarks_travelContact{ width:898px; float:left; border:1px solid #999; padding:8px 10px; font-weight:bold; font-size:11px;}
+.IBE_package_remarks_travelContact li{ width:100%; float:left; height:22px; font-weight:normal; line-height:22px;}
+.IBE_package_SearchCondition_step06_ContactInfo{width:100%; float:left; margin-top:5px;}
+.mailTo{ color:#006699;}
+
+
+
+
+
+
+/*comment style for IBE*/
+
+.IBE_YellowDIV_Right{ width:712px; border:1px solid #999; background: #FFF8DC; padding:8px 8px; float:left; font-size:11px;}
+.IBE_YellowDIV_Right_inSide1{width:694px; border:1px solid #ccc; background:#fff; padding:8px; float:left;}
+.IBE_YellowDIV_Right_inSide2{width:676px; border:1px solid #ccc; background:#fff; padding:8px; float:left;}
+.IBE_YellowDIV_Right_title{ width:100%; float:left; margin-top:3px;}
+
+
+
+
+.IBE_GrayDIV_Right{ width:712px; border:1px solid #999; background:#EAEAEA; padding:8px; float:left; padding-bottom:28px; background-image:url(../images/bg_s04.gif); background-position:bottom; background-repeat:repeat-x;}
+.IBE_GrayDIV_Right_title{color:#000000; font-size: 16px; font-family: Arial; font-weight: bold; margin:3px 0px;}
+.IBE_GrayDIV_Right_inSide1{width:694px; border:1px solid #ccc; background:#fff; padding:8px; float:left; padding-bottom:10px; margin-bottom:6px; font-size:11px;}
+
+
+
+
+.IBE_DIV{width:100%; float:left;}
+.IBE_head09{ color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.IBE_package_RoomType_list_th_border{ border-bottom:1px solid #ccc;border-top:1px solid #ccc;}
+.td_border_bot{border-bottom: 1px solid rgb(216, 216, 216);}
+.step3_t06{ color:#0e6f00; font-size: 11px; line-height: 16px; font-family: Verdana; font-weight: bold;}
+.IBE_t08{ color:#666666; font-size: 9px; line-height: 16px; font-family: Verdana;}
+.IBE_package_tour_day{ color:#FF9600; font-size: 16px; font-family: Arial; font-weight: bold; padding-top:20px;}
+.IBE_T_step03{ background: #CCCCCC; border: 0;}
+.IBE_R_stepw{ background: #FFFFFF;}
+.Required_t01{ color:#FF3300; font-size: 10px; font-family: Verdana;}
+.IBE_t10{ font-size:10px; font-family:Verdana;}
+.IBE_package_remarks{ width:708px; float:left; border:1px solid #999; padding:8px 10px;}
+.IBE_package_changeLB{ margin:10px 0px; float:right;}
+
+
+
+
+/*newMotion ListDetail*/
+
+
+.IBE_package_List_dl_list_detail{width: 680px; margin-top: 15px; margin-bottom: 15px; margin-left:15px;_margin-left:7px; margin-right:15px;_margin-right:7px; float: left; margin-top:0px; border-top:1px dotted #ccc; padding-top:10px; display:none;}
+.IBE_package_List_dl_list_detail_img{width:300px; float:left; text-align:center;}
+.IBE_package_List_dl_list_detail_title{width:380px; float:left; height:20px; line-height:20px; font-weight:bold; text-align:center;}
+.IBE_package_List_dl_list_detail_content{width:380px; float:left; list-style-type:circle;}
+.IBE_package_List_dl_list_detail_content li{ width:360px; padding:6px; white-space:nowrap; padding-left:0px; font-size:11px; text-align:center;}
+
+.IBE_package_List_dl_list_map{width: 680px; margin-top: 15px; margin-bottom: 15px; margin-left:15px;_margin-left:7px; margin-right:15px;_margin-right:7px; border-top:1px dotted #ccc; padding-top:10px; display:none;}
+.IBE_package_List_dl_list_map_img{ width:680px; float:left; text-align:center; margin-top:10px;}
+.IBE_package_List_dl_list_locations{width:680px; float:left; margin-top:0px; margin-bottom:10px;}
+.IBE_package_List_dl_list_locations li{ width:680px; float:left;font-size:11px;}
+.IBE_package_List_dl_list_locations_title{width:680px; float:left;  font-weight:bold; margin-bottom:10px;}
+
+.IBE_package_List_dl_list_photos{width: 680px; margin-top: 15px; margin-bottom: 15px; margin-left:15px;_margin-left:7px; margin-right:15px;_margin-right:7px; float: left; margin-top:0px; border-top:1px dotted #ccc; padding-top:10px; display:none;}
+.IBE_package_List_dl_list_photos li{ margin:20px; float:left; display:inline; text-align:center; border:2px solid #77cbfc; padding:3px; margin-top:0px;}
+
+
+
+.IBE_package_List_dl_list_flights{width: 680px; margin-top: 15px;margin-left:15px;_margin-left:7px; margin-right:15px;_margin-right:7px; float: left; margin-top:0px; border-top:1px dotted #ccc; padding-top:10px; font-family:Verdana; font-size:11px; display:none;}
+.IBE_package_List_dl_list_flights_float1{ width:100%; float:left; margin:6px 0px;}
+
+
+
+
+
+
+
+
+
+.IBE_confimMemberLogIn_Title{ width:664px; float:left;color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold; margin:25px 0px 10px 0px;}
+
+.IBE_confimReviewOrder_Content_font1{color:#0E6F00; font-size: 11px; line-height: 16px; font-family: Verdana; font-weight: bold;}
+.IBE_confimReviewOrder_Content_font2{color:#666666; font-size: 9px; line-height: 16px; font-family: Verdana;}
+
+.IBE_confimReviewOrder_Content_font3{color:#FF3300; font-size: 16px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.IBE_T_line01{ background: #139B00; font-size: 16px;width:20px; height:20px; color: #FFFFFF;  font-family: Arial; font-weight: bold; text-align:center; !important}
+.IBE_search_btn03 { font-size: 13px; font-family: Verdana; color: #000000; border: 0px solid; height: 22px;  background-color: white; padding: 0 0 2px 0; margin:1px 1 1px 1; border-color: #FD9845; background-image: url(../images/btn_bg2.gif)}
+.IBE_search_btn02 { font-size: 13px; font-family: Verdana; font-weight: bold; color: #FFFFFF; border: 0px solid; height: 22px; background-color: white; padding:0px 5px 2px 5px; border-color: #FD9845; background-image: url(../images/btn_bg1.gif)}
+.IBE_search_btn04{font-size: 13px; font-family: Verdana; font-weight: bold; color: #FFFFFF; border: 0px solid; height: 22px; background-color: white;padding:0px 5px 2px 5px; border-color: #FD9845; background-image: url(../images/btn_bg.gif)}
+
+
+
+
+/*form IEB_Flight*/
+
+.outside1T{float:left; border:2px solid #fff; width:676px;}
+.outside2T{border-bottom:2px solid #ccc; float:left; margin:5px; display:inline; width:667px;}
+    .gridview{ width:100%; float:left;font-size: 11px; font-family: Verdana, Arial, Helvetica, sans-serif; white-space: nowrap;padding-bottom: 10px; display:inline; margin-top:20px;}
+    .corpname{color: #5C82E6;
+	font-weight: bold;}
+.Details{color: #3366D5; text-decoration: underline; cursor:pointer;}
+.perPerson{color: #666666; font-size: 9px; float:left; width:100%; margin-top:5px;}
+.PriceByRed{font-size: 12px; font-weight: bold; color: #FF3300;}
+.blueByPrice{	font-size: 20px;
+	color: #3366CC;
+	
+	font-weight: bold;}
+	
+	.dlSubTrips{	float: left;
+	padding-top: 3px;
+	background-color: #F3F3F3;
+	display: block;
+	height: 20px;
+	width: 100%;
+	border-top-width: 1px;
+	border-bottom-width: 1px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: #fff;
+	border-bottom-color: #fff;
+	}
+	
+	
+	
+	/*form style_new*/
+	.IBE_T_step03   { background: #CCCCCC; border: 0;}
+	.IBE_R_stepw  { background: #FFFFFF;}
+	.IBE_R_order03  { background-image: url(../images/bg_02.gif); height: 25; color: #000; font-family: Verdana; font-weight: bold;}
+	.IBE_T_step0l   { background: #006699; border: 0;}
+	.IBE_T_step0l_list{ background: #006699; border: 0; margin-bottom:15px;}
+	.IBE_R_step03  { background-image: url(../images/bg_s03.gif); font-size: 11px; line-height: 13px; color: #FFFFFF; font-family: Verdana; font-weight: bold;}
+	.IBE_R_order  { background-image: url(../images/bg_01.gif); height: 25px; color: #000000; font-family: Verdana; font-weight: bold;}
+	.IBE_R_stepg  { background: #E9E9E9;}
+	.IBE_head08{ color:#FF6600; font-weight:bold; font-size:16px; font-family:Arial;}
+	.IBE_search_btn02 { font-size: 13px; font-family: Verdana; font-weight: bold; color: #FFFFFF; border: 0px solid; height: 22px; width:100px; background-color: white; padding: 0 0 2px 0; margin:0px 0 0px 0; border-color: #FD9845; background-image: url(../images/btn_bg.gif)}
+	.IBE_search_btn04 { font-size: 13px; font-family: Verdana; font-weight: bold; color: #FFFFFF; border: 0px solid; height: 22px; width:200px; background-color: white; padding: 0 0 2px 0; margin:0px 0 0px 0; border-color: #FD9845; background-image: url(../images/btn_bg1.gif)}
+	
+	
+	
+	
+	@charset "utf-8";
+input, option, select, textarea       { font-size: 10px; font-family: Verdana; color: #000000; margin:0px 0 0 0;}
+.menu-on {font-family: Geneva, Arial, Helvetica, sans-serif;font-size: 15px;font-weight: bolder;color: #51A158;background:url(../images/menu_on_m.gif);}
+.menu-off {font-family: Geneva, Arial, Helvetica, sans-serif;font-size: 15px;font-weight: bolder;color: #FF6600;background:url(../images/menu_off_m.gif);text-decoration: none;}
+.menu-link {color: #FF6600;text-decoration: none;}
+.menu-link:hover {text-decoration: underline;}
+
+.MV_hotel_List_dl_I2{width:133px; float:left; background: #FDF1C1; text-align:center; padding:5px 0px;}
+.MV_hotel_List_dl_t01{ color:#FF3300; font-size: 10px; line-height: 14px; font-family: Verdana;}
+.MV_hotel_List_dl_call{ color:#FF6600; font-size: 32px; line-height: 24px; font-family: Verdana; font-weight: bold;}
+.MV_hotel_List_dl_step{margin:5px 0 0 0; padding:3px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:10px; color:#777; height:16px;}
+.MV_hotel_List_dl_t11{ color:#FF3300; font-size: 15px; line-height: 20px; font-family: Arial; font-weight: bold;}
+.MV_hotel_List_dl_d09{font-size: 9px;  color: #005599; text-decoration: underline; font-family: Verdana;}
+.MV_hotel_tour_day{ color:#FF9600; font-size: 16px; font-family: Arial; font-weight: bold; padding-top:20px;}
+	
+	
+	
+	
+.font_s15{color:#0E6F00; font-size:15px; font-weight:bold; font-family:Arial;}
+.font_S9{ font-size:9px;}
+.left{ float:left;}
+.right{ float:right;}
+.clear{ clear:both; height:1px; overflow:hidden;}
+
+
+/*pop stylesheet*/
+.popWidth{ width:580px; margin:0 auto; padding:12px; font-family:Verdana, Arial, Helvetica, sans-serif; font-size:11px; border:1px solid #e0dfdf;}
+.poptitle{ width:100%; float:left; background:#e0e0e0; height:24px; line-height:24px; font-size:13px; font-weight:bold;}
+.popContent{ width:100%; float:left; line-height:16px;}
+.progTitle{ width:100%; float:left; background:#808080; height:24px; line-height:24px;font-weight:bold; color:#fff; margin-top:10px;}
+.prog1{ float:left; background:#fff; margin-top:3px;}
+.prog1 td{ background:#e7f3fc;}
+.prog2{ float:left; background:#fff; margin-top:3px;}
+.prog2 td{ background:#f3f3f3;}
+.closeBtn{ width:100%; float:left; text-align:center; margin-top:20px;}

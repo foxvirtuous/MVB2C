@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+  
+	<description>
+		The Terms service layer definitions
+	</description>
+	<object id="ContractService" type="Terms.Contract.Service_0407.ContractService, Terms.Contract.Service_0407">
+		<property name="ContractDao" ref="ContractDao"/>
+	</object>
+
+	<object id="ContractItemAirService" type="Terms.Contract.Service_0407.ContractItemAirService, Terms.Contract.Service_0407">
+		<property name="ContractItemAirDao" ref="ContractItemAirDao"/>
+	</object>
+
+  <object id="ContractItemHotelService" type="Terms.Contract.Service_0407.ContractItemHotelService, Terms.Contract.Service_0407">
+    <property name="ContractItemHotelDao" ref="ContractItemHotelDao"/>
+  </object>
+
+  <object id="ContractItemInsuranceService" type="Terms.Contract.Service_0407.ContractItemInsuranceService, Terms.Contract.Service_0407">
+    <property name="ContractItemInsuranceDao" ref="ContractItemInsuranceDao"/>
+  </object>
+
+  <object id="ContractItemLocalMealPriceService" type="Terms.Contract.Service_0407.ContractItemLocalMealPriceService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalMealPriceDao" ref="ContractItemLocalMealPriceDao"/>
+  </object>
+
+  <object id="ContractItemLocalServiceService" type="Terms.Contract.Service_0407.ContractItemLocalServiceService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalServiceDao" ref="ContractItemLocalServiceDao"/>
+  </object>
+
+  <object id="ContractItemLocalServiceSectionService" type="Terms.Contract.Service_0407.ContractItemLocalServiceSectionService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalServiceSectionDao" ref="ContractItemLocalServiceSectionDao"/>
+  </object>
+
+  <object id="ContractItemLocalServicePriceService" type="Terms.Contract.Service_0407.ContractItemLocalServicePriceService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalServicePriceDao" ref="ContractItemLocalServicePriceDao"/>
+  </object>
+
+  <object id="ContractItemLocalApprovedShopService" type="Terms.Contract.Service_0407.ContractItemLocalApprovedShopService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalApprovedShopDao" ref="ContractItemLocalApprovedShopDao"/>
+  </object>
+
+  <object id="ContractItemComprehensiveLandRateService" type="Terms.Contract.Service_0407.ContractItemComprehensiveLandRateService, Terms.Contract.Service_0407">
+    <property name="ContractItemComprehensiveLandRateDao" ref="ContractItemComprehensiveLandRateDao"/>
+  </object>
+
+  <object id="ContractItemComprehensiveLandRateSectionService" type="Terms.Contract.Service_0407.ContractItemComprehensiveLandRateSectionService, Terms.Contract.Service_0407">
+    <property name="ContractItemComprehensiveLandRateSectionDao" ref="ContractItemComprehensiveLandRateSectionDao"/>
+  </object>
+
+  <object id="ContractItemComprehensiveLandRateProrationService" type="Terms.Contract.Service_0407.ContractItemComprehensiveLandRateProrationService, Terms.Contract.Service_0407">
+    <property name="ContractItemComprehensiveLandRateProrationDao" ref="ContractItemComprehensiveLandRateProrationDao"/>
+  </object>
+
+  <object id="ContractItemLocalGuideService" type="Terms.Contract.Service_0407.ContractItemLocalGuideService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalGuideDao" ref="ContractItemLocalGuideDao"/>
+  </object>
+
+  <object id="ContractItemLocalGuideLanguageService" type="Terms.Contract.Service_0407.ContractItemLocalGuideLanguageService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalGuideLanguageDao" ref="ContractItemLocalGuideLanguageDao"/>
+  </object>
+
+  <object id="ContractItemLocalDiscountPolicyService" type="Terms.Contract.Service_0407.ContractItemLocalDiscountPolicyService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalDiscountPolicyDao" ref="ContractItemLocalDiscountPolicyDao"/>
+  </object>
+
+  <object id="ContractItemLocalExtraMileageFeeService" type="Terms.Contract.Service_0407.ContractItemLocalExtraMileageFeeService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalExtraMileageFeeDao" ref="ContractItemLocalExtraMileageFeeDao"/>
+  </object>
+
+  <object id="ContractItemLocalAdmissionService" type="Terms.Contract.Service_0407.ContractItemLocalAdmissionService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalAdmissionDao" ref="ContractItemLocalAdmissionDao"/>
+  </object>
+
+  <object id="ContractItemLocalCoachService" type="Terms.Contract.Service_0407.ContractItemLocalCoachService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalCoachDao" ref="ContractItemLocalCoachDao"/>
+  </object>
+
+  <object id="ContractItemLocalRestaurantsService" type="Terms.Contract.Service_0407.ContractItemLocalRestaurantsService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalRestaurantsDao" ref="ContractItemLocalRestaurantsDao"/>
+  </object>
+
+  <object id="ContractItemLocalCommissionService" type="Terms.Contract.Service_0407.ContractItemLocalCommissionService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalCommissionDao" ref="ContractItemLocalCommissionDao"/>
+  </object>
+
+  <object id="ContractItemLocalConditionService" type="Terms.Contract.Service_0407.ContractItemLocalConditionService, Terms.Contract.Service_0407">
+    <property name="ContractItemLocalConditionDao" ref="ContractItemLocalConditionDao"/>
+  </object>
+
+  <object id="HotelFreeRoomPolicyService" type="Terms.Contract.Service_0407.HotelFreeRoomPolicyService, Terms.Contract.Service_0407">
+    <property name="HotelFreeRoomPolicyDao" ref="HotelFreeRoomPolicyDao"/>
+  </object>
+
+  <object id="HotelGroupDefinitionService" type="Terms.Contract.Service_0407.HotelGroupDefinitionService, Terms.Contract.Service_0407">
+    <property name="HotelGroupDefinitionDao" ref="HotelGroupDefinitionDao"/>
+  </object>
+</objects>

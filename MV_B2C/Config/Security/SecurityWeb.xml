@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+	<!-- Referenced by main application context configuration file -->
+	<description>
+		The Terms web layer definitions
+	</description>
+
+	<!--<object type="~/Page/Security/CountryMainForm.aspx">
+		<property name="CountryService" ref="CountryService" />
+	</object>
+
+	<object type="~/Page/Security/CityMainForm.aspx">
+		<property name="CityService" ref="CityService" />
+	</object>
+
+	<object type="~/Page/Security/CityAddForm.aspx">
+		<property name="CityService" ref="CityService" />
+		<property name="CountryService" ref="CountryService" />
+		<property name="ProvinceService" ref="ProvinceService" />
+	</object>
+
+	<object type="~/Page/Security/CityEditForm.aspx">
+		<property name="CityService" ref="CityService" />
+	</object>
+
+	<object type="~/Page/Security/CurrencyMainForm.aspx" parent="CurrencyEditPage">
+		<property name="CurrencyService" ref="CurrencyService" />
+		<property name="Results">
+			<dictionary>
+				<entry key="TransferToEditForm" value="redirect:CurrencyEditForm.aspx" />
+			</dictionary>
+		</property>
+	</object>
+
+	<object type="~/Page/Security/CurrencyEditForm.aspx" parent="CurrencyEditPage">
+		<property name="CurrencyService" ref="CurrencyService" />
+		<property name="Results">
+			<dictionary>
+				<entry key="ReturnToMainForm" value="redirect:CurrencyMainForm.aspx" />
+			</dictionary>
+		</property>
+	</object>-->
+
+  <object type="~/Page/Security/ActionsMainForm.aspx">
+    <property name="TttSysActionsService" ref="TttSysActionsService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+  </object>
+
+  <object type="~/Page/Security/DataActionMainForm.aspx">
+    <property name="TttSysDataActionService" ref="TttSysDataActionService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+  </object>
+
+  <object type="~/Page/Security/ApplicationsMainForm.aspx">
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+  </object>
+
+  <object type="~/Page/Security/AuthorizationMainForm.aspx">
+    <property name="TttSysActionsService" ref="TttSysActionsService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+    <property name="TttSysAuthorizationService" ref="TttSysAuthorizationService"/>
+    <property name="TttSysResourcesService" ref="TttSysResourcesService"/>
+    <property name="TttSysRolesService" ref="TttSysRolesService"/>
+    <property name="TttSysUsersService" ref="TttSysUsersService"/>
+  </object>
+
+  <object type="~/Page/Security/DataAuthorizationMainForm.aspx">
+    <property name="TttSysDataActionService" ref="TttSysDataActionService"/>
+    <property name="TttSysUsersService" ref="TttSysUsersService"/>
+    <property name="TttSysRolesService" ref="TttSysRolesService"/>
+    <property name="TttSysDataResourceService" ref="TttSysDataResourceService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+    <property name="TttSysDataAuthorizationService" ref="TttSysDataAuthorizationService"/>
+  </object>
+
+  <object type="~/Page/Security/OperationLogMainForm.aspx">
+    <property name="TttSysActionsService" ref="TttSysActionsService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+    <property name="AspnetUsersService" ref="AspnetUsersService"/>
+    <property name="TttSysResourcesService" ref="TttSysResourcesService"/>
+    <property name="TttSysOperationLogService" ref="TttSysOperationLogService"/>
+  </object>
+
+  <object type="~/Page/Security/DataOperationLogMainForm.aspx">
+    <property name="TttSysDataActionService" ref="TttSysDataActionService"/>
+    <property name="TttSysDataResourceService" ref="TttSysDataResourceService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+    <property name="AspnetUsersService" ref="AspnetUsersService"/>
+    <property name="TttSysDataOperationLogService" ref="TttSysDataOperationLogService"/>
+  </object>
+  
+
+  <object type="~/Page/Security/ResourcesMainForm.aspx">
+    <property name="TttSysResourcesService" ref="TttSysResourcesService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+  </object>
+
+  <object type="~/Page/Security/DataResourceMainForm.aspx">
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+    <property name="TttSysDataResourceService" ref="TttSysDataResourceService"/>
+  </object>
+
+  <object type="~/Page/Security/RolesMainForm.aspx">
+    <property name="TttSysRolesService" ref="TttSysRolesService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+  </object>
+
+  <object type="~/Page/Security/UsersInApplicationsMainForm.aspx">
+    <property name="TttSysUsersInApplicationsService" ref="TttSysUsersInApplicationsService"/>
+    <property name="TttSysUsersService" ref="TttSysUsersService"/>
+    <property name="TttSysApplicationsService" ref="TttSysApplicationsService"/>
+  </object>
+
+  <object type="~/Page/Security/UsersInRolesMainForm.aspx">
+    <property name="TttSysUsersInRolesService" ref="TttSysUsersInRolesService"/>
+    <property name="TttSysRolesService" ref="TttSysRolesService"/>
+    <property name="TttSysUsersService" ref="TttSysUsersService"/>
+  </object>
+
+  <object type="~/Page/Security/UsersMainForm.aspx">
+    <property name="TttSysUsersService" ref="TttSysUsersService"/>
+  </object>
+  
+  
+	<!--<object type="~/Page/Security/AirportMainForm.aspx">
+		<property name="AirportService" ref="AirportService"/>
+	</object>
+
+	<object type="~/Page/Security/AirportEditForm.aspx">
+		<property name="AirportService" ref="AirportService" />
+		<property name="CityService" ref="CityService" />
+	</object>
+
+	<object type="~/Page/Security/ProvinceMainForm.aspx">
+		<property name="ProvinceService" ref="ProvinceService" />
+	</object>
+
+	<object type="~/Page/Security/ProvinceAddForm.aspx">
+		<property name="ProvinceService" ref="ProvinceService" />
+		<property name="CountryService" ref="CountryService" />    
+	</object>
+
+	<object type="~/Page/Security/ExchangeRateMainForm.aspx" parent="ExchangeRateEditPage">
+		<property name="ExchangeRateService" ref="ExchangeRateService" />
+		<property name="Results">
+			<dictionary>
+				<entry key="TransferToEditForm" value="redirect:ExchangeRateEditForm.aspx" />
+			</dictionary>
+		</property>
+	</object>
+
+	<object type="~/Page/Security/ExchangeRateEditForm.aspx" parent="ExchangeRateEditPage">
+		<property name="ExchangeRateService" ref="ExchangeRateService" />
+		<property name="Results">
+			<dictionary>
+				<entry key="ReturnToMainForm" value="redirect:ExchangeRateMainForm.aspx" />
+			</dictionary>
+		</property>
+	</object>-->
+
+	<object type="~/UserConrols/EditCountryControl.ascx">
+		<property name="CountryService" ref="CountryService" />
+		<property name="ProvinceService" ref="ProvinceService" />
+		<property name="CityService" ref="CityService" />
+	</object>
+
+	<object type="~/UserConrols/EditProvinceControl.ascx">
+		<property name="ProvinceService" ref="ProvinceService" />
+		<property name="CityService" ref="CityService" />
+	</object>
+
+	<object type="~/UserConrols/SelectCityControl.ascx">
+		<property name="SecurityService" ref="SecurityService" />
+	</object>
+
+	<object name="CurrencyEditPage" abstract="true">
+		<property name="ObjectEditController" ref="CurrencyEditController" />
+	</object>
+
+	<object name="CurrencyEditController" type="NHibernateCurrencyEditController" scope="session">
+		<constructor-arg name="sessionFactory" ref="SecuritySessionFactory"/>
+	</object>
+
+	<object name="ExchangeRateEditPage" abstract="true">
+		<property name="ObjectEditController" ref="ExchangeRateEditController" />
+	</object>
+
+	<object name="ExchangeRateEditController" type="NHibernateExchangeRateEditController" scope="session">
+		<constructor-arg name="sessionFactory" ref="SecuritySessionFactory"/>
+	</object>
+
+	<import resource="~/Config/FormAdvice.xml"/>
+</objects>

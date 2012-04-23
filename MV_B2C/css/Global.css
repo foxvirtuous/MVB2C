@@ -1,0 +1,92 @@
+
+/**********************************
+
+Use: Reset Styles for all browsers
+
+***********************************/
+	
+body,  blockquote {
+	margin: 0;
+	padding: 0;
+	font-size:12px;
+	text-align:left;
+}
+font{font-size:12px;}
+a img, iframe { border: none; }
+	
+/* Headers
+------------------------------*/
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+	padding: 0;
+}
+
+h1 { font-size: 150%; }
+h2 { font-size: 140%; }
+h3 { font-size: 130%; }
+h4 { font-size: 120%; }
+h5 { font-size: 110%; }
+	
+/* Lists
+------------------------------*/
+	
+ul, ol, dl, li, dt, dd,p {
+	margin: 0;
+	padding: 0;
+}
+ul{list-style:none;}
+/* Links
+------------------------------*/
+
+a, a:link {}
+a:visited {}
+a:hover {}
+a:active {}
+
+/* Forms
+------------------------------*/
+
+form, fieldset {
+	margin: 0;
+	padding: 0;
+}
+	
+fieldset { border: 1px solid #000; }
+
+legend {
+	padding: 0;
+	color: #000;
+}
+
+input, textarea, select {
+	margin: 0;
+	padding: 0px;
+	font-size: 100%;
+	font-family: inherit;
+}
+
+
+/* 字体属性 [定义规则，小写f加属性名称] */
+.fB {font-weight: bold;}
+.fI {font-style: italic;}
+/* 字体大小*/
+.f12{ font-size:12px;}
+.f13{ font-size:13px;}
+.f14{ font-size:14px;}
+
+/* 其他属性 */
+.left{ float: left;}
+.right{ float: right;}
+.clear{ clear: both; font-size:1px; width:1px; height:0; visibility: hidden; }
+.hidden {display: none;}
+.unLine ,.unLine a{text-decoration: none;}
+.noBorder{border:none;}
+.underline{text-decoration:underline;}
+
+
+
+
+.t08{ color:#666666; font-size: 9px; line-height: 16px; font-family: Verdana;}
+.t09{ color:#000000; font-size: 9px; font-family: Verdana;}
+.t16{  font-size: 16px; font-family: Arial; font-weight: bold;}

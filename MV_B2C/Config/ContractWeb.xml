@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<objects default-lazy-init="true" xmlns="http://www.springframework.net">
+
+  <!-- Referenced by main application context configuration file -->
+
+  <description>
+    The Terms web layer definitions
+  </description>
+
+	<object type="~/Terms.Contract.Web/SeasonMasterMainFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+	<object type="~/Terms.Contract.Web/SeasonMasterEditFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+
+	<object type="~/Terms.Contract.Web/BlackoutMasterMainFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+	<object type="~/Terms.Contract.Web/BlackoutMasterEditFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+
+	<object type="~/Terms.Contract.Web/ContractMainFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+		<property name="MarketService" ref="MarketService" />
+	</object>
+
+	<object type="~/Terms.Contract.Web/ContractPageMainFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+
+	<object type="~/Terms.Contract.Web/ContractItemHotelMainFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+	
+	<object type="~/Terms.Contract.Web/ContractItemHotelEditFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+		<property name="BaseService" ref="BaseService" />
+		<property name="CommonService" ref="CommonService" />
+	</object>
+
+	<object type="~/Terms.Contract.Web/DayOfWeekGroupMainFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+	
+	<object type="~/Terms.Contract.Web/DayOfWeekGroupEditFrom.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+
+	<object type="~/Terms.Contract.Web/VendorMainForm.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+	
+	<object type="~/Terms.Contract.Web/VendorEditForm.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+  
+	<object type="~/Terms.Contract.Web/PolicyEditForm.aspx">
+		<property name="ContractService" ref="ContractService" />
+	</object>
+
+	<object type="~/Terms.Contract.Web/ContractPageDetail.aspx">
+		<property name="ContractService" ref="ContractService" />
+		<property name="BaseService" ref="BaseService" />
+	</object>
+	
+	<object type="~/Terms.Contract.Web/ContractDetail.aspx">
+		<property name="ContractService" ref="ContractService" />
+		<property name="BaseService" ref="BaseService" />
+		<property name="MarketService" ref="MarketService" />
+	</object>
+
+  <object type="Spring.Aop.Framework.AutoProxy.ObjectNameAutoProxyCreator, Spring.Aop">
+    <property name="ObjectNames">
+      <list>
+        <value>*</value>
+      </list>
+    </property>
+    <property name="InterceptorNames">
+      <list>
+        <value>AutoAfterThrowAdvice</value>
+      </list>
+    </property>
+  </object>
+
+</objects>
